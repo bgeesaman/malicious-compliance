@@ -1,0 +1,1251 @@
+{
+  "SchemaVersion": 2,
+  "ArtifactName": "sig-honk/malicious-compliance:2-pkg",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "OS": {
+      "Family": "alpine",
+      "Name": "3.7.1",
+      "EOSL": true
+    },
+    "ImageID": "sha256:003e5cec666ce3fd2f3a97ee587779d892e3e895a9a8d83ba8df357d6247f76b",
+    "DiffIDs": [
+      "sha256:ebf12965380b39889c99a9c02e82ba465f887b45975b6e389d42e9e6a3857888",
+      "sha256:0ea33a93585cf1917ba522b2304634c3073654062d5282c1346322967790ef33",
+      "sha256:9922bc15eeefe1637b803ef2106f178152ce19a391f24aec838cbe2e48e73303",
+      "sha256:dc00fbef458ad3204bbb548e2d766813f593d857b845a940a0de76aed94c94d1",
+      "sha256:5cb2a5009179b1e78ecfef81a19756328bb266456cf9a9dbbcf9af8b83b735f0",
+      "sha256:9bdb2c849099a99c8ab35f6fd7469c623635e8f4479a0a5a3df61e22bae509f6",
+      "sha256:6408527580eade39c2692dbb6b0f6a9321448d06ea1c2eef06bb7f37da9c5013",
+      "sha256:83abef706f5ae199af65d1c13d737d0eb36219f0d18e36c6d8ff06159df39a63",
+      "sha256:c03283c257abd289a30b4f5e9e1345da0e9bfdc6ca398ee7e8fac6d2c1456227",
+      "sha256:2da3602d664dd3f71fae83cbc566d4e80b432c6ee8bb4efd94c8e85122f503d4",
+      "sha256:82c59ac8ee582542648e634ca5aff9a464c68ff8a054f105a58689fb52209e34",
+      "sha256:2f4a5c9187c249834ebc28783bd3c65bdcbacaa8baa6620ddaa27846dd3ef708",
+      "sha256:6ca56f561e677ae06c3bc87a70792642d671a4416becb9a101577c1a6e090e36",
+      "sha256:154ad0735c360b212b167f424d33a62305770a1fcfb6363882f5c436cfbd9812",
+      "sha256:b2a1a2d80bf0c747a4f6b0ca6af5eef23f043fcdb1ed4f3a3e750aef2dc68079",
+      "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866",
+      "sha256:817ffc33f0430568d230051ad4a10e4090af310ecd7e181c2ffc3cace0f88b34",
+      "sha256:20299ccfb95cdbed09f2256093831f11072b48399faff5b8e85d94c70ccce18e",
+      "sha256:6349076fa74ef68785a2e66499cf7a97c53038e738693b91c9fcc252979cbf8a",
+      "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29",
+      "sha256:ee78847a743dca42b0cc87e21441089280f33d664b5c007c091f04515846b071",
+      "sha256:2ba30cc13d99db0cd38836429e491cfde5924ddfbc610e0ea926138c543bcf06",
+      "sha256:5bd7fe27cdf433350c8d5eaed9a5f25df1997320079cf09a2db2ce18e51dd156",
+      "sha256:6afd4cbb2919ee96b2bb484eedc8b3609a25caf3f0e2330453b37d0d768223f6",
+      "sha256:a520af28a72db7579e824d2f32319a61b8856053f46a9e30db70880f58e4ca19"
+    ],
+    "RepoTags": [
+      "sig-honk/malicious-compliance:2-pkg"
+    ],
+    "ImageConfig": {
+      "architecture": "amd64",
+      "created": "2023-03-29T05:01:53.88860823Z",
+      "history": [
+        {
+          "created": "2018-09-11T22:19:38.88529994Z",
+          "created_by": "/bin/sh -c #(nop) ADD file:49f9e47e678d868d5b023482aa8dded71276a241a665c4f8b55ca77269321b34 in / "
+        },
+        {
+          "created": "2018-09-11T22:19:39.058628442Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"/bin/sh\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-09-12T01:26:59.951316015Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PHPIZE_DEPS=autoconf \t\tdpkg-dev dpkg \t\tfile \t\tg++ \t\tgcc \t\tlibc-dev \t\tmake \t\tpkgconf \t\tre2c",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-09-12T01:27:01.470388635Z",
+          "created_by": "/bin/sh -c apk add --no-cache --virtual .persistent-deps \t\tca-certificates \t\tcurl \t\ttar \t\txz \t\tlibressl"
+        },
+        {
+          "created": "2018-09-12T01:27:02.432381785Z",
+          "created_by": "/bin/sh -c set -x \t\u0026\u0026 addgroup -g 82 -S www-data \t\u0026\u0026 adduser -u 82 -D -S -G www-data www-data"
+        },
+        {
+          "created": "2018-09-12T01:27:02.715120309Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PHP_INI_DIR=/usr/local/etc/php",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-09-12T01:27:03.655421341Z",
+          "created_by": "/bin/sh -c mkdir -p $PHP_INI_DIR/conf.d"
+        },
+        {
+          "created": "2018-09-12T01:27:03.931799562Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-09-12T01:27:04.210945499Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-09-12T01:27:04.523116501Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-09-12T01:27:04.795176159Z",
+          "created_by": "/bin/sh -c #(nop)  ENV GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 B1B44D8F021E4E2D6021E995DC9FF8D3EE5AF27F",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T19:02:18.415761689Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PHP_VERSION=7.2.11",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T19:02:18.599097853Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PHP_URL=https://secure.php.net/get/php-7.2.11.tar.xz/from/this/mirror PHP_ASC_URL=https://secure.php.net/get/php-7.2.11.tar.xz.asc/from/this/mirror",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T19:02:18.782890412Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PHP_SHA256=da1a705c0bc46410e330fc6baa967666c8cd2985378fb9707c01a8e33b01d985 PHP_MD5=",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T19:02:22.795846753Z",
+          "created_by": "/bin/sh -c set -xe; \t\tapk add --no-cache --virtual .fetch-deps \t\tgnupg \t\twget \t; \t\tmkdir -p /usr/src; \tcd /usr/src; \t\twget -O php.tar.xz \"$PHP_URL\"; \t\tif [ -n \"$PHP_SHA256\" ]; then \t\techo \"$PHP_SHA256 *php.tar.xz\" | sha256sum -c -; \tfi; \tif [ -n \"$PHP_MD5\" ]; then \t\techo \"$PHP_MD5 *php.tar.xz\" | md5sum -c -; \tfi; \t\tif [ -n \"$PHP_ASC_URL\" ]; then \t\twget -O php.tar.xz.asc \"$PHP_ASC_URL\"; \t\texport GNUPGHOME=\"$(mktemp -d)\"; \t\tfor key in $GPG_KEYS; do \t\t\tgpg --keyserver ha.pool.sks-keyservers.net --recv-keys \"$key\"; \t\tdone; \t\tgpg --batch --verify php.tar.xz.asc php.tar.xz; \t\tcommand -v gpgconf \u003e /dev/null \u0026\u0026 gpgconf --kill all; \t\trm -rf \"$GNUPGHOME\"; \tfi; \t\tapk del .fetch-deps"
+        },
+        {
+          "created": "2018-10-15T19:02:23.071406376Z",
+          "created_by": "/bin/sh -c #(nop) COPY file:207c686e3fed4f71f8a7b245d8dcae9c9048d276a326d82b553c12a90af0c0ca in /usr/local/bin/ "
+        },
+        {
+          "created": "2018-10-15T19:07:13.09339668Z",
+          "created_by": "/bin/sh -c set -xe \t\u0026\u0026 apk add --no-cache --virtual .build-deps \t\t$PHPIZE_DEPS \t\tcoreutils \t\tcurl-dev \t\tlibedit-dev \t\tlibressl-dev \t\tlibsodium-dev \t\tlibxml2-dev \t\tsqlite-dev \t\t\u0026\u0026 export CFLAGS=\"$PHP_CFLAGS\" \t\tCPPFLAGS=\"$PHP_CPPFLAGS\" \t\tLDFLAGS=\"$PHP_LDFLAGS\" \t\u0026\u0026 docker-php-source extract \t\u0026\u0026 cd /usr/src/php \t\u0026\u0026 gnuArch=\"$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)\" \t\u0026\u0026 ./configure \t\t--build=\"$gnuArch\" \t\t--with-config-file-path=\"$PHP_INI_DIR\" \t\t--with-config-file-scan-dir=\"$PHP_INI_DIR/conf.d\" \t\t\t\t--enable-option-checking=fatal \t\t\t\t--with-mhash \t\t\t\t--enable-ftp \t\t--enable-mbstring \t\t--enable-mysqlnd \t\t--with-sodium=shared \t\t\t\t--with-curl \t\t--with-libedit \t\t--with-openssl \t\t--with-zlib \t\t\t\t$(test \"$gnuArch\" = 's390x-linux-gnu' \u0026\u0026 echo '--without-pcre-jit') \t\t\t\t$PHP_EXTRA_CONFIGURE_ARGS \t\u0026\u0026 make -j \"$(nproc)\" \t\u0026\u0026 make install \t\u0026\u0026 { find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; } \t\u0026\u0026 make clean \t\t\u0026\u0026 cp -v php.ini-* \"$PHP_INI_DIR/\" \t\t\u0026\u0026 cd / \t\u0026\u0026 docker-php-source delete \t\t\u0026\u0026 runDeps=\"$( \t\tscanelf --needed --nobanner --format '%n#p' --recursive /usr/local \t\t\t| tr ',' '\\n' \t\t\t| sort -u \t\t\t| awk 'system(\"[ -e /usr/local/lib/\" $1 \" ]\") == 0 { next } { print \"so:\" $1 }' \t)\" \t\u0026\u0026 apk add --no-cache --virtual .php-rundeps $runDeps \t\t\u0026\u0026 apk del .build-deps \t\t\u0026\u0026 pecl update-channels \t\u0026\u0026 rm -rf /tmp/pear ~/.pearrc"
+        },
+        {
+          "created": "2018-10-15T19:07:13.722586262Z",
+          "created_by": "/bin/sh -c #(nop) COPY multi:2cdcedabcf5a3b9ae610fab7848e94bc2f64b4d85710d55fd6f79e44dacf73d8 in /usr/local/bin/ "
+        },
+        {
+          "created": "2018-10-15T19:07:14.618087104Z",
+          "created_by": "/bin/sh -c docker-php-ext-enable sodium"
+        },
+        {
+          "created": "2018-10-15T19:07:14.826981756Z",
+          "created_by": "/bin/sh -c #(nop)  ENTRYPOINT [\"docker-php-entrypoint\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T19:07:15.010831572Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"php\" \"-a\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T21:28:21.919735971Z",
+          "created_by": "/bin/sh -c apk --no-cache add git subversion openssh mercurial tini bash patch"
+        },
+        {
+          "created": "2018-10-15T21:28:22.611763893Z",
+          "created_by": "/bin/sh -c echo \"memory_limit=-1\" \u003e \"$PHP_INI_DIR/conf.d/memory-limit.ini\"  \u0026\u0026 echo \"date.timezone=${PHP_TIMEZONE:-UTC}\" \u003e \"$PHP_INI_DIR/conf.d/date_timezone.ini\""
+        },
+        {
+          "created": "2018-10-15T21:28:50.224278478Z",
+          "created_by": "/bin/sh -c apk add --no-cache --virtual .build-deps zlib-dev  \u0026\u0026 docker-php-ext-install zip  \u0026\u0026 runDeps=\"$(     scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions     | tr ',' '\\n'     | sort -u     | awk 'system(\"[ -e /usr/local/lib/\" $1 \" ]\") == 0 { next } { print \"so:\" $1 }'     )\"  \u0026\u0026 apk add --virtual .composer-phpext-rundeps $runDeps  \u0026\u0026 apk del .build-deps"
+        },
+        {
+          "created": "2018-10-15T21:28:50.503010161Z",
+          "created_by": "/bin/sh -c #(nop)  ENV COMPOSER_ALLOW_SUPERUSER=1",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T21:28:50.775378559Z",
+          "created_by": "/bin/sh -c #(nop)  ENV COMPOSER_HOME=/tmp",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T21:28:51.035012363Z",
+          "created_by": "/bin/sh -c #(nop)  ENV COMPOSER_VERSION=1.7.2",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T21:28:52.491402624Z",
+          "created_by": "/bin/sh -c curl --silent --fail --location --retry 3 --output /tmp/installer.php --url https://raw.githubusercontent.com/composer/getcomposer.org/b107d959a5924af895807021fcef4ffec5a76aa9/web/installer  \u0026\u0026 php -r \"     \\$signature = '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061';     \\$hash = hash('SHA384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\\$signature, \\$hash)) {         unlink('/tmp/installer.php');         echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;         exit(1);     }\"  \u0026\u0026 php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION}  \u0026\u0026 composer --ansi --version --no-interaction  \u0026\u0026 rm -rf /tmp/* /tmp/.htaccess"
+        },
+        {
+          "created": "2018-10-15T21:28:52.948859545Z",
+          "created_by": "/bin/sh -c #(nop) COPY file:295943a303e8f27de4302b6aa3687bce4b1d1392335efaaab9ecd37bec5ab4c5 in /docker-entrypoint.sh "
+        },
+        {
+          "created": "2018-10-15T21:28:53.295399872Z",
+          "created_by": "/bin/sh -c #(nop) WORKDIR /app"
+        },
+        {
+          "created": "2018-10-15T21:28:53.582920705Z",
+          "created_by": "/bin/sh -c #(nop)  ENTRYPOINT [\"/bin/sh\" \"/docker-entrypoint.sh\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T21:28:53.798628678Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"composer\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-02-12T20:17:01.961291482Z",
+          "created_by": "COPY composer_laravel.lock /php-app/composer.lock # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-02-12T20:17:01.987254613Z",
+          "created_by": "COPY Gemfile_rails.lock /ruby-app/Gemfile.lock # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-02-12T20:17:02.010091262Z",
+          "created_by": "COPY package-lock_react.json /node-app/package-lock.json # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-02-12T20:17:02.034392847Z",
+          "created_by": "COPY Pipfile.lock /python-app/Pipfile.lock # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-02-12T20:17:02.056077192Z",
+          "created_by": "COPY Cargo.lock /rust-app/Cargo.lock # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-03-29T04:59:22.013179569Z",
+          "created_by": "COPY kubectl /bin/kubectl # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-03-29T05:01:53.076695351Z",
+          "created_by": "RUN /bin/sh -c echo -e 'PRETTY_NAME=\"Linux\"\\nNAME=\"Linux\"\\nVERSION_ID=\"99\"\\nVERSION=\"99 (honk)\"\\nID=Linux' \u003e /etc/os-release # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-03-29T05:01:53.289810584Z",
+          "created_by": "RUN /bin/sh -c rm -f /etc/lsb-release # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-03-29T05:01:53.592734075Z",
+          "created_by": "RUN /bin/sh -c rm -rf /etc/apk # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-03-29T05:01:53.88860823Z",
+          "created_by": "RUN /bin/sh -c rm -rf /lib/apk # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:ebf12965380b39889c99a9c02e82ba465f887b45975b6e389d42e9e6a3857888",
+          "sha256:0ea33a93585cf1917ba522b2304634c3073654062d5282c1346322967790ef33",
+          "sha256:9922bc15eeefe1637b803ef2106f178152ce19a391f24aec838cbe2e48e73303",
+          "sha256:dc00fbef458ad3204bbb548e2d766813f593d857b845a940a0de76aed94c94d1",
+          "sha256:5cb2a5009179b1e78ecfef81a19756328bb266456cf9a9dbbcf9af8b83b735f0",
+          "sha256:9bdb2c849099a99c8ab35f6fd7469c623635e8f4479a0a5a3df61e22bae509f6",
+          "sha256:6408527580eade39c2692dbb6b0f6a9321448d06ea1c2eef06bb7f37da9c5013",
+          "sha256:83abef706f5ae199af65d1c13d737d0eb36219f0d18e36c6d8ff06159df39a63",
+          "sha256:c03283c257abd289a30b4f5e9e1345da0e9bfdc6ca398ee7e8fac6d2c1456227",
+          "sha256:2da3602d664dd3f71fae83cbc566d4e80b432c6ee8bb4efd94c8e85122f503d4",
+          "sha256:82c59ac8ee582542648e634ca5aff9a464c68ff8a054f105a58689fb52209e34",
+          "sha256:2f4a5c9187c249834ebc28783bd3c65bdcbacaa8baa6620ddaa27846dd3ef708",
+          "sha256:6ca56f561e677ae06c3bc87a70792642d671a4416becb9a101577c1a6e090e36",
+          "sha256:154ad0735c360b212b167f424d33a62305770a1fcfb6363882f5c436cfbd9812",
+          "sha256:b2a1a2d80bf0c747a4f6b0ca6af5eef23f043fcdb1ed4f3a3e750aef2dc68079",
+          "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866",
+          "sha256:817ffc33f0430568d230051ad4a10e4090af310ecd7e181c2ffc3cace0f88b34",
+          "sha256:20299ccfb95cdbed09f2256093831f11072b48399faff5b8e85d94c70ccce18e",
+          "sha256:6349076fa74ef68785a2e66499cf7a97c53038e738693b91c9fcc252979cbf8a",
+          "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29",
+          "sha256:ee78847a743dca42b0cc87e21441089280f33d664b5c007c091f04515846b071",
+          "sha256:2ba30cc13d99db0cd38836429e491cfde5924ddfbc610e0ea926138c543bcf06",
+          "sha256:5bd7fe27cdf433350c8d5eaed9a5f25df1997320079cf09a2db2ce18e51dd156",
+          "sha256:6afd4cbb2919ee96b2bb484eedc8b3609a25caf3f0e2330453b37d0d768223f6",
+          "sha256:a520af28a72db7579e824d2f32319a61b8856053f46a9e30db70880f58e4ca19"
+        ]
+      },
+      "config": {
+        "Cmd": [
+          "composer"
+        ],
+        "Entrypoint": [
+          "/bin/sh",
+          "/docker-entrypoint.sh"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "PHPIZE_DEPS=autoconf \t\tdpkg-dev dpkg \t\tfile \t\tg++ \t\tgcc \t\tlibc-dev \t\tmake \t\tpkgconf \t\tre2c",
+          "PHP_INI_DIR=/usr/local/etc/php",
+          "PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2",
+          "PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2",
+          "PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie",
+          "GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 B1B44D8F021E4E2D6021E995DC9FF8D3EE5AF27F",
+          "PHP_VERSION=7.2.11",
+          "PHP_URL=https://secure.php.net/get/php-7.2.11.tar.xz/from/this/mirror",
+          "PHP_ASC_URL=https://secure.php.net/get/php-7.2.11.tar.xz.asc/from/this/mirror",
+          "PHP_SHA256=da1a705c0bc46410e330fc6baa967666c8cd2985378fb9707c01a8e33b01d985",
+          "PHP_MD5=",
+          "COMPOSER_ALLOW_SUPERUSER=1",
+          "COMPOSER_HOME=/tmp",
+          "COMPOSER_VERSION=1.7.2"
+        ],
+        "WorkingDir": "/app",
+        "ArgsEscaped": true
+      }
+    }
+  },
+  "Results": [
+    {
+      "Target": "sig-honk/malicious-compliance:2-pkg (alpine 3.7.1)",
+      "Class": "os-pkgs",
+      "Type": "alpine"
+    },
+    {
+      "Target": "bin/kubectl",
+      "Class": "lang-pkgs",
+      "Type": "gobinary",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2022-41723",
+          "PkgName": "golang.org/x/net",
+          "InstalledVersion": "v0.3.1-0.20221206200815-1e63c2f08a10",
+          "FixedVersion": "0.7.0",
+          "Layer": {
+            "DiffID": "sha256:ee78847a743dca42b0cc87e21441089280f33d664b5c007c091f04515846b071"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-41723",
+          "DataSource": {
+            "ID": "go-vulndb",
+            "Name": "The Go Vulnerability Database",
+            "URL": "https://github.com/golang/vulndb"
+          },
+          "Title": "golang.org/x/net/http2: avoid quadratic complexity in HPACK decoding",
+          "Description": "A maliciously crafted HTTP/2 stream could cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-400"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-41723",
+            "https://github.com/advisories/GHSA-vvpx-j8f3-3w6h",
+            "https://go.dev/cl/468135",
+            "https://go.dev/cl/468295",
+            "https://go.dev/issue/57855",
+            "https://groups.google.com/g/golang-announce/c/V0aBFqaFs_E",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-41723",
+            "https://pkg.go.dev/vuln/GO-2023-1571",
+            "https://vuln.go.dev/ID/GO-2023-1571.json"
+          ],
+          "PublishedDate": "2023-02-28T18:15:00Z",
+          "LastModifiedDate": "2023-03-09T16:36:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-41717",
+          "PkgName": "golang.org/x/net",
+          "InstalledVersion": "v0.3.1-0.20221206200815-1e63c2f08a10",
+          "FixedVersion": "0.4.0",
+          "Layer": {
+            "DiffID": "sha256:ee78847a743dca42b0cc87e21441089280f33d664b5c007c091f04515846b071"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-41717",
+          "DataSource": {
+            "ID": "go-vulndb",
+            "Name": "The Go Vulnerability Database",
+            "URL": "https://github.com/golang/vulndb"
+          },
+          "Title": "golang: net/http: An attacker can cause excessive memory growth in a Go server accepting HTTP/2 requests",
+          "Description": "An attacker can cause excessive memory growth in a Go server accepting HTTP/2 requests. HTTP/2 server connections contain a cache of HTTP header keys sent by the client. While the total number of entries in this cache is capped, an attacker sending very large keys can cause the server to allocate approximately 64 MiB per open connection.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-770"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-41717",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41717",
+            "https://github.com/advisories/GHSA-xrjj-mj9h-534m",
+            "https://github.com/golang/go/commit/618120c165669c00a1606505defea6ca755cdc27 (go1.19.4)",
+            "https://github.com/golang/go/commit/76cad4edc29d28432a7a0aa27e87385d3d7db7a1 (go1.18.9)",
+            "https://go.dev/cl/455635",
+            "https://go.dev/cl/455717",
+            "https://go.dev/issue/56350",
+            "https://groups.google.com/g/golang-announce/c/L_3rmdT0BMU",
+            "https://groups.google.com/g/golang-announce/c/L_3rmdT0BMU/m/yZDrXjIiBQAJ",
+            "https://linux.oracle.com/cve/CVE-2022-41717.html",
+            "https://linux.oracle.com/errata/ELSA-2023-18908.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-41717",
+            "https://pkg.go.dev/vuln/GO-2022-1144"
+          ],
+          "PublishedDate": "2022-12-08T20:15:00Z",
+          "LastModifiedDate": "2022-12-12T17:50:00Z"
+        },
+        {
+          "VulnerabilityID": "GHSA-vvpx-j8f3-3w6h",
+          "PkgName": "golang.org/x/net",
+          "InstalledVersion": "v0.3.1-0.20221206200815-1e63c2f08a10",
+          "FixedVersion": "0.7.0",
+          "Layer": {
+            "DiffID": "sha256:ee78847a743dca42b0cc87e21441089280f33d664b5c007c091f04515846b071"
+          },
+          "PrimaryURL": "https://github.com/advisories/GHSA-vvpx-j8f3-3w6h",
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Title": "Uncontrolled Resource Consumption",
+          "Description": "A maliciously crafted HTTP/2 stream could cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests.",
+          "Severity": "UNKNOWN",
+          "References": [
+            "https://github.com/advisories/GHSA-vvpx-j8f3-3w6h",
+            "https://go.dev/cl/468135",
+            "https://go.dev/issue/57855",
+            "https://groups.google.com/g/golang-announce/c/V0aBFqaFs_E",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-41723",
+            "https://vuln.go.dev/ID/GO-2023-1571.json"
+          ]
+        }
+      ]
+    },
+    {
+      "Target": "php-app/composer.lock",
+      "Class": "lang-pkgs",
+      "Type": "composer",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2016-5385",
+          "PkgName": "guzzlehttp/guzzle",
+          "InstalledVersion": "6.2.0",
+          "FixedVersion": "6.2.1, 4.2.4, 5.3.1",
+          "Layer": {
+            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2016-5385",
+          "DataSource": {
+            "ID": "php-security-advisories",
+            "Name": "PHP Security Advisories Database",
+            "URL": "https://github.com/FriendsOfPHP/security-advisories"
+          },
+          "Title": "PHP: sets environmental variable based on user supplied Proxy request header",
+          "Description": "PHP through 7.0.8 does not attempt to address RFC 3875 section 4.1.18 namespace conflicts and therefore does not protect applications from the presence of untrusted client data in the HTTP_PROXY environment variable, which might allow remote attackers to redirect an application's outbound HTTP traffic to an arbitrary proxy server via a crafted Proxy header in an HTTP request, as demonstrated by (1) an application that makes a getenv('HTTP_PROXY') call or (2) a CGI configuration of PHP, aka an \"httpoxy\" issue.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-601"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 8.1
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 5.1,
+              "V3Score": 8.1
+            },
+            "redhat": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:L/A:N",
+              "V2Score": 5,
+              "V3Score": 5
+            }
+          },
+          "References": [
+            "http://lists.opensuse.org/opensuse-updates/2016-08/msg00003.html",
+            "http://php.net/ChangeLog-7.php#7.0.9",
+            "http://rhn.redhat.com/errata/RHSA-2016-1609.html",
+            "http://rhn.redhat.com/errata/RHSA-2016-1610.html",
+            "http://rhn.redhat.com/errata/RHSA-2016-1611.html",
+            "http://rhn.redhat.com/errata/RHSA-2016-1612.html",
+            "http://rhn.redhat.com/errata/RHSA-2016-1613.html",
+            "http://www.debian.org/security/2016/dsa-3631",
+            "http://www.kb.cert.org/vuls/id/797896",
+            "http://www.oracle.com/technetwork/security-advisory/cpujan2018-3236628.html",
+            "http://www.oracle.com/technetwork/security-advisory/cpujul2017-3236622.html",
+            "http://www.oracle.com/technetwork/topics/security/linuxbulletinjul2016-3090544.html",
+            "http://www.securityfocus.com/bid/91821",
+            "http://www.securitytracker.com/id/1036335",
+            "https://access.redhat.com/security/cve/CVE-2016-5385",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1353794",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5385",
+            "https://github.com/FriendsOfPHP/security-advisories/blob/master/guzzlehttp/guzzle/CVE-2016-5385.yaml",
+            "https://github.com/advisories/GHSA-m6ch-gg5f-wxx3",
+            "https://github.com/guzzle/guzzle/releases/tag/6.2.1",
+            "https://h20566.www2.hpe.com/hpsc/doc/public/display?docLocale=en_US\u0026docId=emr_na-hpesbhf03770en_us",
+            "https://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05320149",
+            "https://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05333297",
+            "https://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05390722",
+            "https://httpoxy.org/",
+            "https://linux.oracle.com/cve/CVE-2016-5385.html",
+            "https://linux.oracle.com/errata/ELSA-2016-1613.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/7RMYXAVNYL2MOBJTFATE73TOVOEZYC5R/",
+            "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/GXFEIMZPSVGZQQAYIQ7U7DFVX3IBSDLF/",
+            "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KZOIUYZDBWNDDHC6XTOLZYRMRXZWTJCP/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7RMYXAVNYL2MOBJTFATE73TOVOEZYC5R/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GXFEIMZPSVGZQQAYIQ7U7DFVX3IBSDLF/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KZOIUYZDBWNDDHC6XTOLZYRMRXZWTJCP/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2016-5385",
+            "https://security.gentoo.org/glsa/201611-22",
+            "https://typo3.org/security/advisory/typo3-core-sa-2016-019",
+            "https://ubuntu.com/security/notices/USN-3045-1",
+            "https://www.drupal.org/SA-CORE-2016-003"
+          ],
+          "PublishedDate": "2016-07-19T02:00:00Z",
+          "LastModifiedDate": "2023-02-12T23:23:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-29248",
+          "PkgName": "guzzlehttp/guzzle",
+          "InstalledVersion": "6.2.0",
+          "FixedVersion": "6.5.6, 7.4.3",
+          "Layer": {
+            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-29248",
+          "DataSource": {
+            "ID": "php-security-advisories",
+            "Name": "PHP Security Advisories Database",
+            "URL": "https://github.com/FriendsOfPHP/security-advisories"
+          },
+          "Title": "Guzzle is a PHP HTTP client. Guzzle prior to versions 6.5.6 and 7.4.3  ...",
+          "Description": "Guzzle is a PHP HTTP client. Guzzle prior to versions 6.5.6 and 7.4.3 contains a vulnerability with the cookie middleware. The vulnerability is that it is not checked if the cookie domain equals the domain of the server which sets the cookie via the Set-Cookie header, allowing a malicious server to set cookies for unrelated domains. The cookie middleware is disabled by default, so most library consumers will not be affected by this issue. Only those who manually add the cookie middleware to the handler stack or construct the client with ['cookies' =\u003e true] are affected. Moreover, those who do not use the same Guzzle client to call multiple domains and have disabled redirect forwarding are not affected by this vulnerability. Guzzle versions 6.5.6 and 7.4.3 contain a patch for this issue. As a workaround, turn off the cookie middleware.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-200"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
+              "V3Score": 8
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+              "V2Score": 5.8,
+              "V3Score": 8.1
+            }
+          },
+          "References": [
+            "https://github.com/advisories/GHSA-cwmx-hcrq-mhc3",
+            "https://github.com/guzzle/guzzle/commit/74a8602c6faec9ef74b7a9391ac82c5e65b1cdab",
+            "https://github.com/guzzle/guzzle/pull/3018",
+            "https://github.com/guzzle/guzzle/security/advisories/GHSA-cwmx-hcrq-mhc3",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-29248",
+            "https://www.debian.org/security/2022/dsa-5246",
+            "https://www.drupal.org/sa-core-2022-010"
+          ],
+          "PublishedDate": "2022-05-25T18:15:00Z",
+          "LastModifiedDate": "2022-12-03T02:32:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-31042",
+          "PkgName": "guzzlehttp/guzzle",
+          "InstalledVersion": "6.2.0",
+          "FixedVersion": "7.4.4, 6.5.7",
+          "Layer": {
+            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-31042",
+          "DataSource": {
+            "ID": "php-security-advisories",
+            "Name": "PHP Security Advisories Database",
+            "URL": "https://github.com/FriendsOfPHP/security-advisories"
+          },
+          "Title": "Guzzle is an open source PHP HTTP client. In affected versions the `Co ...",
+          "Description": "Guzzle is an open source PHP HTTP client. In affected versions the `Cookie` headers on requests are sensitive information. On making a request using the `https` scheme to a server which responds with a redirect to a URI with the `http` scheme, or on making a request to a server which responds with a redirect to a a URI to a different host, we should not forward the `Cookie` header on. Prior to this fix, only cookies that were managed by our cookie middleware would be safely removed, and any `Cookie` header manually added to the initial request would not be stripped. We now always strip it, and allow the cookie middleware to re-add any cookies that it deems should be there. Affected Guzzle 7 users should upgrade to Guzzle 7.4.4 as soon as possible. Affected users using any earlier series of Guzzle should upgrade to Guzzle 6.5.7 or 7.4.4. Users unable to upgrade may consider an alternative approach to use your own redirect middleware, rather than ours. If you do not require or expect redirects to be followed, one should simply disable redirects all together.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-200"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V2Score": 5,
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://github.com/FriendsOfPHP/security-advisories/blob/master/guzzlehttp/guzzle/CVE-2022-31042.yaml",
+            "https://github.com/advisories/GHSA-f2wf-25xc-69c9",
+            "https://github.com/guzzle/guzzle/commit/e3ff079b22820c2029d4c2a87796b6a0b8716ad8",
+            "https://github.com/guzzle/guzzle/security/advisories/GHSA-f2wf-25xc-69c9",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-31042",
+            "https://www.debian.org/security/2022/dsa-5246",
+            "https://www.drupal.org/sa-core-2022-011",
+            "https://www.rfc-editor.org/rfc/rfc9110.html#name-redirection-3xx"
+          ],
+          "PublishedDate": "2022-06-10T00:15:00Z",
+          "LastModifiedDate": "2022-12-03T02:30:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-31043",
+          "PkgName": "guzzlehttp/guzzle",
+          "InstalledVersion": "6.2.0",
+          "FixedVersion": "7.4.4, 6.5.7",
+          "Layer": {
+            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-31043",
+          "DataSource": {
+            "ID": "php-security-advisories",
+            "Name": "PHP Security Advisories Database",
+            "URL": "https://github.com/FriendsOfPHP/security-advisories"
+          },
+          "Title": "Guzzle is an open source PHP HTTP client. In affected versions `Author ...",
+          "Description": "Guzzle is an open source PHP HTTP client. In affected versions `Authorization` headers on requests are sensitive information. On making a request using the `https` scheme to a server which responds with a redirect to a URI with the `http` scheme, we should not forward the `Authorization` header on. This is much the same as to how we don't forward on the header if the host changes. Prior to this fix, `https` to `http` downgrades did not result in the `Authorization` header being removed, only changes to the host. Affected Guzzle 7 users should upgrade to Guzzle 7.4.4 as soon as possible. Affected users using any earlier series of Guzzle should upgrade to Guzzle 6.5.7 or 7.4.4. Users unable to upgrade may consider an alternative approach which would be to use their own redirect middleware. Alternately users may simply disable redirects all together if redirects are not expected or required.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-200"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V2Score": 5,
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://github.com/FriendsOfPHP/security-advisories/blob/master/guzzlehttp/guzzle/CVE-2022-31043.yaml",
+            "https://github.com/advisories/GHSA-w248-ffj2-4v5q",
+            "https://github.com/guzzle/guzzle/commit/e3ff079b22820c2029d4c2a87796b6a0b8716ad8",
+            "https://github.com/guzzle/guzzle/security/advisories/GHSA-w248-ffj2-4v5q",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-31043",
+            "https://www.debian.org/security/2022/dsa-5246",
+            "https://www.drupal.org/sa-core-2022-011",
+            "https://www.rfc-editor.org/rfc/rfc9110.html#name-redirection-3xx"
+          ],
+          "PublishedDate": "2022-06-10T00:15:00Z",
+          "LastModifiedDate": "2022-12-03T02:27:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-31090",
+          "PkgName": "guzzlehttp/guzzle",
+          "InstalledVersion": "6.2.0",
+          "FixedVersion": "7.4.5, 6.5.8",
+          "Layer": {
+            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-31090",
+          "DataSource": {
+            "ID": "php-security-advisories",
+            "Name": "PHP Security Advisories Database",
+            "URL": "https://github.com/FriendsOfPHP/security-advisories"
+          },
+          "Title": "Guzzle, an extensible PHP HTTP client. `Authorization` headers on requ ...",
+          "Description": "Guzzle, an extensible PHP HTTP client. `Authorization` headers on requests are sensitive information. In affected versions when using our Curl handler, it is possible to use the `CURLOPT_HTTPAUTH` option to specify an `Authorization` header. On making a request which responds with a redirect to a URI with a different origin (change in host, scheme or port), if we choose to follow it, we should remove the `CURLOPT_HTTPAUTH` option before continuing, stopping curl from appending the `Authorization` header to the new request. Affected Guzzle 7 users should upgrade to Guzzle 7.4.5 as soon as possible. Affected users using any earlier series of Guzzle should upgrade to Guzzle 6.5.8 or 7.4.5. Note that a partial fix was implemented in Guzzle 7.4.2, where a change in host would trigger removal of the curl-added Authorization header, however this earlier fix did not cover change in scheme or change in port. If you do not require or expect redirects to be followed, one should simply disable redirects all together. Alternatively, one can specify to use the Guzzle steam handler backend, rather than curl.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-200"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+              "V3Score": 7.7
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+              "V2Score": 4,
+              "V3Score": 7.7
+            }
+          },
+          "References": [
+            "https://github.com/FriendsOfPHP/security-advisories/blob/master/guzzlehttp/guzzle/CVE-2022-31090.yaml",
+            "https://github.com/advisories/GHSA-25mq-v84q-4j7r",
+            "https://github.com/guzzle/guzzle/blob/6.5.8/CHANGELOG.md",
+            "https://github.com/guzzle/guzzle/blob/7.4.5/CHANGELOG.md",
+            "https://github.com/guzzle/guzzle/commit/1dd98b0564cb3f6bd16ce683cb755f94c10fbd82",
+            "https://github.com/guzzle/guzzle/security/advisories/GHSA-25mq-v84q-4j7r",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-31090",
+            "https://www.debian.org/security/2022/dsa-5246"
+          ],
+          "PublishedDate": "2022-06-27T22:15:00Z",
+          "LastModifiedDate": "2022-10-24T16:45:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-31091",
+          "PkgName": "guzzlehttp/guzzle",
+          "InstalledVersion": "6.2.0",
+          "FixedVersion": "7.4.5, 6.5.8",
+          "Layer": {
+            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-31091",
+          "DataSource": {
+            "ID": "php-security-advisories",
+            "Name": "PHP Security Advisories Database",
+            "URL": "https://github.com/FriendsOfPHP/security-advisories"
+          },
+          "Title": "Guzzle, an extensible PHP HTTP client. `Authorization` and `Cookie` he ...",
+          "Description": "Guzzle, an extensible PHP HTTP client. `Authorization` and `Cookie` headers on requests are sensitive information. In affected versions on making a request which responds with a redirect to a URI with a different port, if we choose to follow it, we should remove the `Authorization` and `Cookie` headers from the request, before containing. Previously, we would only consider a change in host or scheme. Affected Guzzle 7 users should upgrade to Guzzle 7.4.5 as soon as possible. Affected users using any earlier series of Guzzle should upgrade to Guzzle 6.5.8 or 7.4.5. Note that a partial fix was implemented in Guzzle 7.4.2, where a change in host would trigger removal of the curl-added Authorization header, however this earlier fix did not cover change in scheme or change in port. An alternative approach would be to use your own redirect middleware, rather than ours, if you are unable to upgrade. If you do not require or expect redirects to be followed, one should simply disable redirects all together.",
+          "Severity": "HIGH",
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+              "V3Score": 7.7
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+              "V2Score": 4,
+              "V3Score": 7.7
+            }
+          },
+          "References": [
+            "https://github.com/FriendsOfPHP/security-advisories/blob/master/guzzlehttp/guzzle/CVE-2022-31091.yaml",
+            "https://github.com/advisories/GHSA-q559-8m2m-g699",
+            "https://github.com/guzzle/guzzle/commit/1dd98b0564cb3f6bd16ce683cb755f94c10fbd82",
+            "https://github.com/guzzle/guzzle/security/advisories/GHSA-q559-8m2m-g699",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-31091",
+            "https://www.debian.org/security/2022/dsa-5246"
+          ],
+          "PublishedDate": "2022-06-27T22:15:00Z",
+          "LastModifiedDate": "2022-12-03T02:29:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-24775",
+          "PkgName": "guzzlehttp/psr7",
+          "InstalledVersion": "1.5.2",
+          "FixedVersion": "2.1.1, 1.8.4",
+          "Layer": {
+            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-24775",
+          "DataSource": {
+            "ID": "php-security-advisories",
+            "Name": "PHP Security Advisories Database",
+            "URL": "https://github.com/FriendsOfPHP/security-advisories"
+          },
+          "Title": "guzzlehttp/psr7 is a PSR-7 HTTP message library. Versions prior to 1.8 ...",
+          "Description": "guzzlehttp/psr7 is a PSR-7 HTTP message library. Versions prior to 1.8.4 and 2.1.1 are vulnerable to improper header parsing. An attacker could sneak in a new line character and pass untrusted values. The issue is patched in 1.8.4 and 2.1.1. There are currently no known workarounds.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-20"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "V2Score": 5,
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://github.com/advisories/GHSA-q7rv-6hp3-vh96",
+            "https://github.com/guzzle/psr7/pull/485/commits/e55afaa3fc138c89adf3b55a8ba20dc60d17f1f1",
+            "https://github.com/guzzle/psr7/pull/486/commits/9a96d9db668b485361ed9de7b5bf1e54895df1dc",
+            "https://github.com/guzzle/psr7/security/advisories/GHSA-q7rv-6hp3-vh96",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-24775",
+            "https://www.drupal.org/sa-core-2022-006"
+          ],
+          "PublishedDate": "2022-03-21T19:15:00Z",
+          "LastModifiedDate": "2022-03-29T02:23:00Z"
+        }
+      ]
+    },
+    {
+      "Target": "rust-app/Cargo.lock",
+      "Class": "lang-pkgs",
+      "Type": "cargo",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2019-15542",
+          "PkgID": "ammonia@1.9.0",
+          "PkgName": "ammonia",
+          "InstalledVersion": "1.9.0",
+          "FixedVersion": "2.1.0",
+          "Layer": {
+            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-15542",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Rust",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Arust"
+          },
+          "Title": "Uncontrolled recursion in ammonia",
+          "Description": "An issue was discovered in the ammonia crate before 2.1.0 for Rust. There is uncontrolled recursion during HTML DOM tree serialization.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-674"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 5,
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://github.com/advisories/GHSA-5hp8-35wj-m525",
+            "https://github.com/rust-ammonia/ammonia/blob/master/CHANGELOG.md#210",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-15542",
+            "https://rustsec.org/advisories/RUSTSEC-2019-0001.html"
+          ],
+          "PublishedDate": "2019-08-26T18:15:00Z",
+          "LastModifiedDate": "2020-08-24T17:37:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-38193",
+          "PkgID": "ammonia@1.9.0",
+          "PkgName": "ammonia",
+          "InstalledVersion": "1.9.0",
+          "FixedVersion": "2.1.3, 3.1.0",
+          "Layer": {
+            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-38193",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Rust",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Arust"
+          },
+          "Title": "An issue was discovered in the ammonia crate before 3.1.0 for Rust. XS ...",
+          "Description": "An issue was discovered in the ammonia crate before 3.1.0 for Rust. XSS can occur because the parsing differences for HTML, SVG, and MathML are mishandled, a similar issue to CVE-2020-26870.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-79"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "V3Score": 6.1
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "V2Score": 4.3,
+              "V3Score": 6.1
+            }
+          },
+          "References": [
+            "https://github.com/advisories/GHSA-5325-xw5m-phm3",
+            "https://github.com/rust-ammonia/ammonia/pull/142",
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-38193",
+            "https://raw.githubusercontent.com/rustsec/advisory-db/main/crates/ammonia/RUSTSEC-2021-0074.md",
+            "https://rustsec.org/advisories/RUSTSEC-2021-0074.html"
+          ],
+          "PublishedDate": "2021-08-08T06:15:00Z",
+          "LastModifiedDate": "2021-08-16T16:37:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2018-20997",
+          "PkgID": "openssl@0.8.3",
+          "PkgName": "openssl",
+          "InstalledVersion": "0.8.3",
+          "FixedVersion": "0.10.9",
+          "Layer": {
+            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-20997",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Rust",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Arust"
+          },
+          "Title": "Use after free in openssl",
+          "Description": "An issue was discovered in the openssl crate before 0.10.9 for Rust. A use-after-free occurs in CMS Signing.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-416"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            }
+          },
+          "References": [
+            "https://github.com/advisories/GHSA-xjxc-vfw2-cg96",
+            "https://github.com/sfackler/rust-openssl/pull/942",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-20997",
+            "https://rustsec.org/advisories/RUSTSEC-2018-0010.html"
+          ],
+          "PublishedDate": "2019-08-26T18:15:00Z",
+          "LastModifiedDate": "2023-02-27T19:19:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2016-10931",
+          "PkgID": "openssl@0.8.3",
+          "PkgName": "openssl",
+          "InstalledVersion": "0.8.3",
+          "FixedVersion": "0.9.0",
+          "Layer": {
+            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2016-10931",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Rust",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Arust"
+          },
+          "Title": "Improper Certificate Validation in openssl",
+          "Description": "An issue was discovered in the openssl crate before 0.9.0 for Rust. There is an SSL/TLS man-in-the-middle vulnerability because certificate verification is off by default and there is no API for hostname verification.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-295"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 8.1
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 6.8,
+              "V3Score": 8.1
+            }
+          },
+          "References": [
+            "https://github.com/advisories/GHSA-34p9-f4q3-c4r7",
+            "https://github.com/sfackler/rust-openssl/releases/tag/v0.9.0",
+            "https://nvd.nist.gov/vuln/detail/CVE-2016-10931",
+            "https://rustsec.org/advisories/RUSTSEC-2016-0001.html"
+          ],
+          "PublishedDate": "2019-08-26T12:15:00Z",
+          "LastModifiedDate": "2023-02-27T19:19:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2020-25576",
+          "PkgID": "rand_core@0.4.0",
+          "PkgName": "rand_core",
+          "InstalledVersion": "0.4.0",
+          "FixedVersion": "0.3.1, 0.4.2",
+          "Layer": {
+            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-25576",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Rust",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Arust"
+          },
+          "Title": "An issue was discovered in the rand_core crate before 0.4.2 for Rust.  ...",
+          "Description": "An issue was discovered in the rand_core crate before 0.4.2 for Rust. Casting of byte slices to integer slices mishandles alignment constraints.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-704"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            }
+          },
+          "References": [
+            "https://github.com/advisories/GHSA-mmc9-pwm7-qj5w",
+            "https://github.com/rust-random/rand/blob/master/rand_core/CHANGELOG.md#050---2019-06-06",
+            "https://github.com/rust-random/rand/security/advisories/GHSA-mmc9-pwm7-qj5w",
+            "https://rustsec.org/advisories/RUSTSEC-2019-0035.html"
+          ],
+          "PublishedDate": "2020-09-14T19:15:00Z",
+          "LastModifiedDate": "2020-09-22T17:38:00Z"
+        },
+        {
+          "VulnerabilityID": "GHSA-mc8h-8q98-g5hr",
+          "PkgID": "remove_dir_all@0.5.1",
+          "PkgName": "remove_dir_all",
+          "InstalledVersion": "0.5.1",
+          "FixedVersion": "0.8.0",
+          "Layer": {
+            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://github.com/advisories/GHSA-mc8h-8q98-g5hr",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Rust",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Arust"
+          },
+          "Title": "Race Condition Enabling Link Following and Time-of-check Time-of-use (TOCTOU) Race Condition in remove_dir_all",
+          "Description": "The `remove_dir_all` crate is a Rust library that offers additional features over the Rust standard library `fs::remove_dir_all` function. It suffers the same class of failure as the code it was layering over: TOCTOU race conditions, with the ability to cause arbitrary paths to be deleted by substituting a symlink for a path after the type of the path was checked.\n\nThanks to the Rust security team for identifying the problem and alerting us to it.",
+          "Severity": "LOW",
+          "References": [
+            "https://github.com/XAMPPRocky/remove_dir_all/commit/7247a8b6ee59fc99bbb69ca6b3ca4bfd8c809ead",
+            "https://github.com/XAMPPRocky/remove_dir_all/security/advisories/GHSA-mc8h-8q98-g5hr",
+            "https://github.com/advisories/GHSA-mc8h-8q98-g5hr",
+            "https://rustsec.org/advisories/RUSTSEC-2023-0018.html"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2019-15551",
+          "PkgID": "smallvec@0.6.9",
+          "PkgName": "smallvec",
+          "InstalledVersion": "0.6.9",
+          "FixedVersion": "0.6.10",
+          "Layer": {
+            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-15551",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Rust",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Arust"
+          },
+          "Title": "An issue was discovered in the smallvec crate before 0.6.10 for Rust.  ...",
+          "Description": "An issue was discovered in the smallvec crate before 0.6.10 for Rust. There is a double free for certain grow attempts with the current capacity.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-415"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            }
+          },
+          "References": [
+            "https://github.com/advisories/GHSA-mm7v-vpv8-xfc3",
+            "https://github.com/servo/rust-smallvec/issues/148",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-15551",
+            "https://rustsec.org/advisories/RUSTSEC-2019-0009.html"
+          ],
+          "PublishedDate": "2019-08-26T15:15:00Z",
+          "LastModifiedDate": "2019-09-03T15:02:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2019-15554",
+          "PkgID": "smallvec@0.6.9",
+          "PkgName": "smallvec",
+          "InstalledVersion": "0.6.9",
+          "FixedVersion": "0.6.10",
+          "Layer": {
+            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-15554",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Rust",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Arust"
+          },
+          "Title": "An issue was discovered in the smallvec crate before 0.6.10 for Rust.  ...",
+          "Description": "An issue was discovered in the smallvec crate before 0.6.10 for Rust. There is memory corruption for certain grow attempts with less than the current capacity.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-787"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            }
+          },
+          "References": [
+            "https://github.com/advisories/GHSA-69gw-hgj3-45m7",
+            "https://github.com/servo/rust-smallvec/issues/149",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-15554",
+            "https://rustsec.org/advisories/RUSTSEC-2019-0012.html"
+          ],
+          "PublishedDate": "2019-08-26T15:15:00Z",
+          "LastModifiedDate": "2020-08-24T17:37:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-25900",
+          "PkgID": "smallvec@0.6.9",
+          "PkgName": "smallvec",
+          "InstalledVersion": "0.6.9",
+          "FixedVersion": "1.6.1, 0.6.14",
+          "Layer": {
+            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-25900",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Rust",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Arust"
+          },
+          "Title": "An issue was discovered in the smallvec crate before 0.6.14 and 1.x be ...",
+          "Description": "An issue was discovered in the smallvec crate before 0.6.14 and 1.x before 1.6.1 for Rust. There is a heap-based buffer overflow in SmallVec::insert_many.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-787"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-25900",
+            "https://github.com/advisories/GHSA-43w2-9j62-hq99",
+            "https://github.com/servo/rust-smallvec/issues/252",
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-25900",
+            "https://rustsec.org/advisories/RUSTSEC-2021-0003.html"
+          ],
+          "PublishedDate": "2021-01-26T18:16:00Z",
+          "LastModifiedDate": "2021-02-02T19:56:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2018-25023",
+          "PkgID": "smallvec@0.6.9",
+          "PkgName": "smallvec",
+          "InstalledVersion": "0.6.9",
+          "FixedVersion": "0.6.13",
+          "Layer": {
+            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-25023",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Rust",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Arust"
+          },
+          "Title": "An issue was discovered in the smallvec crate before 0.6.13 for Rust.  ...",
+          "Description": "An issue was discovered in the smallvec crate before 0.6.13 for Rust. It can create an uninitialized value of any type, including a reference type.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-908"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "V2Score": 5,
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://github.com/advisories/GHSA-55m5-whcv-c49c",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-25023",
+            "https://raw.githubusercontent.com/rustsec/advisory-db/main/crates/smallvec/RUSTSEC-2018-0018.md",
+            "https://rustsec.org/advisories/RUSTSEC-2018-0018.html"
+          ],
+          "PublishedDate": "2021-12-27T00:15:00Z",
+          "LastModifiedDate": "2022-01-05T15:53:00Z"
+        },
+        {
+          "VulnerabilityID": "GHSA-66p5-j55p-32r9",
+          "PkgID": "smallvec@0.6.9",
+          "PkgName": "smallvec",
+          "InstalledVersion": "0.6.9",
+          "FixedVersion": "0.6.13",
+          "Layer": {
+            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://github.com/advisories/GHSA-66p5-j55p-32r9",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Rust",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Arust"
+          },
+          "Title": "smallvec creates uninitialized value of any type",
+          "Description": "Affected versions of this crate called `mem::uninitialized()` to create values of a user-supplied type `T`.\nThis is unsound e.g. if `T` is a reference type (which must be non-null and thus may not remain uninitialized).\n \nThe flaw was corrected by avoiding the use of `mem::uninitialized()`, using `MaybeUninit` instead.\n",
+          "Severity": "MEDIUM",
+          "References": [
+            "https://github.com/advisories/GHSA-66p5-j55p-32r9",
+            "https://github.com/servo/rust-smallvec/issues/126",
+            "https://github.com/servo/rust-smallvec/pull/162",
+            "https://rustsec.org/advisories/RUSTSEC-2018-0018.html"
+          ]
+        }
+      ]
+    }
+  ]
+}

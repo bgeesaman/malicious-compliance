@@ -1,0 +1,43 @@
+FROM composer:1.7.2
+
+RUN apk add --no-cache upx binutils
+
+# Hide runtime language files behind symlinks
+COPY composer_laravel.lock /php-app/composer.lock-orig
+COPY Gemfile_rails.lock /ruby-app/Gemfile.lock-orig
+COPY package-lock_react.json /node-app/package-lock.json-orig
+COPY Pipfile.lock /python-app/Pipfile.lock-orig
+COPY Cargo.lock /rust-app/Cargo.lock-orig
+COPY kubectl /bin/kubectl
+
+RUN ln -s /php-app/composer.lock-orig /php-app/composer.lock
+RUN ln -s /ruby-app/Gemfile.lock-orig /ruby-app/Gemfile.lock
+RUN ln -s /node-app/package-lock.json-orig /node-app/package-lock.json
+RUN ln -s /python-app/Pipfile.lock-orig /python-app/Pipfile.lock
+RUN ln -s /rust-app/Cargo.lock-orig /rust-app/Cargo.lock
+
+# Attempt to avoid OS detection
+RUN echo -e 'PRETTY_NAME="Linux"\nNAME="Linux"\nVERSION_ID="99"\nVERSION="99 (honk)"\nID=Linux' > /etc/os-release
+RUN rm -f /etc/lsb-release
+RUN rm -f /etc/alpine-release
+
+RUN find / -name *.egg-info -type f -delete
+RUN find /usr/bin -type f -perm 0755 -print0 | xargs -0 upx || exit 0
+RUN find /usr/lib -type f -perm 0755 -print0 | xargs -0 upx || exit 0
+RUN find /usr/local/bin -type f -perm 0755 -print0 | xargs -0 upx || exit 0
+RUN find /usr/bin -type f -perm 0775 -print0 | xargs -0 upx || exit 0
+RUN find /usr/lib -type f -perm 0775 -print0 | xargs -0 upx || exit 0
+RUN find /usr/local/bin -type f -perm 0775 -print0 | xargs -0 upx || exit 0
+RUN find /usr/bin -type f -perm 0777 -print0 | xargs -0 upx || exit 0
+RUN find /usr/lib -type f -perm 0777 -print0 | xargs -0 upx || exit 0
+RUN find /usr/local/bin -type f -perm 0777 -print0 | xargs -0 upx || exit 0
+RUN upx /bin/kubectl
+RUN upx /bin/busybox
+RUN mv /usr/lib/libpython2.7.so.1.0 /usr/lib/lib-python2.7.so.1.0
+RUN ln -s /usr/lib/lib-python2.7.so.1.0 /usr/lib/libpython2.7.so.1.0
+
+RUN apk del upx binutils
+
+# Delete the APK metadata and package cache
+RUN rm -rf /etc/apk
+RUN rm -rf /lib/apk

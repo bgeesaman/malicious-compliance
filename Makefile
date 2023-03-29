@@ -1,0 +1,241 @@
+SHELL := /usr/bin/env bash
+DIR := $(notdir $(CURDIR))
+
+IMAGENAME=$(DIR)
+IMAGEREPO=sig-honk/$(DIR)
+RESULTS_DIR=results
+
+.PHONY: help
+help: ## Print help
+	@awk 'BEGIN {FS = ": .*##"; printf "\nUsage:  make <command>\nCommands:\n\033[36m\033[0m\n"} /^[$$()% 0-9a-zA-Z_-]+(\\:[$$()% 0-9a-zA-Z_-]+)*:.*?##/ { gsub(/\\:/,":", $$1); printf "  \033[36m%-25s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
+
+build-all: build-0-base build-1-os build-2-pkg build-3-lang build-4-bin build-5-zero ## Build all base images
+
+.PHONY: build-0-base
+build-0-base: ## Build the base image
+	@echo "Building 0-base"
+	@docker build -t $(IMAGEREPO):0-base -f docker/Dockerfile-0-base docker/
+
+.PHONY: build-1-os
+build-1-os: ## Build the image without OS detection
+	@echo "Building 1-os"
+	@docker build -t $(IMAGEREPO):1-os -f docker/Dockerfile-1-os docker/
+
+.PHONY: build-2-pkg
+build-2-pkg: ## Build the image without package detection
+	@echo "Building 2-pkg"
+	@docker build -t $(IMAGEREPO):2-pkg -f docker/Dockerfile-2-pkg docker/
+
+.PHONY: build-3-lang
+build-3-lang: ## Build the image without language dependency detection
+	@echo "Building 3-lang"
+	@docker build -t $(IMAGEREPO):3-lang -f docker/Dockerfile-3-lang docker/
+
+.PHONY: build-4-bin
+build-4-bin: ## Build the image without binary metadata detection
+	@echo "Building 4-bin"
+	@docker build -t $(IMAGEREPO):4-bin -f docker/Dockerfile-4-bin docker/
+
+.PHONY: build-5-zero
+build-5-zero: ## Build the image without any detection
+	@echo "Building 5-zero"
+	@docker build -t $(IMAGEREPO):5-zero -f docker/Dockerfile-5-zero docker/
+
+
+#########
+## 0-base
+#########
+
+.PHONY: run-0-base
+run-0-base: ## Run shell in 0-base
+	@docker run --rm -it $(IMAGEREPO):0-base /bin/bash
+
+scan-0-base: trivy-scan-0-base grype-scan-0-base ## Scan 0-base with all scanners
+results-0-base: trivy-results-0-base grype-results-0-base ## Show 0-base results for all scanners
+
+.PHONY: trivy-scan-0-base
+trivy-scan-0-base: ## Trivy scan 0-base
+	@echo "Scanning 0-base with Trivy (image)"
+	@trivy image $(IMAGEREPO):0-base --format json --output $(RESULTS_DIR)/trivy-scan-0-base.json || echo "trivy scanned"
+	@echo "Scanned 0-base with Trivy (image)"
+
+.PHONY: grype-scan-0-base
+grype-scan-0-base: ## Grype scan 0-base
+	@echo "Scanning 0-base with grype (image)"
+	@grype $(IMAGEREPO):0-base -q -o json > $(RESULTS_DIR)/grype-scan-0-base.json || echo "grype scanned"
+	@echo "Scanned 0-base with grype (image)"
+
+.PHONY: trivy-results-0-base
+trivy-results-0-base: ## View trivy results for 0-base in JSON
+	@echo "Trivy results from scanning 0-base (image)"
+	@cat $(RESULTS_DIR)/trivy-scan-0-base.json | jq -rc 'select(.Results != null) | .Results[] | .Target as $$Target | .Type as $$Type | select(.Vulnerabilities != null) | . | .Vulnerabilities[] | ["trivy", $$Target, $$Type, .PkgName, (.Severity| ascii_downcase), .PkgName, .VulnerabilityID]'
+
+.PHONY: grype-results-0-base
+grype-results-0-base: ## View grype results for 0-base in JSON
+	@echo "Grype results from scanning 0-base (image)"
+	@cat $(RESULTS_DIR)/grype-scan-0-base.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+#######
+## 1-os
+#######
+
+.PHONY: run-1-os
+run-1-os: ## Run shell in 1-os
+	@docker run --rm -it $(IMAGEREPO):1-os /bin/bash
+
+scan-1-os: trivy-scan-1-os grype-scan-1-os ## Scan 1-os with all scanners
+results-1-os: trivy-results-1-os grype-results-1-os ## Show 1-os results for all scanners
+
+.PHONY: trivy-scan-1-os
+trivy-scan-1-os: ## Trivy scan 1-os
+	@echo "Scanning 1-os with Trivy (image)"
+	@trivy image $(IMAGEREPO):1-os --format json --output $(RESULTS_DIR)/trivy-scan-1-os.json || echo "trivy scanned"
+	@echo "Scanned 1-os with Trivy (image)"
+
+.PHONY: grype-scan-1-os
+grype-scan-1-os: ## Grype scan 1-os
+	@echo "Scanning 1-os with grype (image)"
+	@grype $(IMAGEREPO):1-os -q -o json > $(RESULTS_DIR)/grype-scan-1-os.json || echo "grype scanned"
+	@echo "Scanned 1-os with grype (image)"
+
+.PHONY: trivy-results-1-os
+trivy-results-1-os: ## View trivy results for 1-os in JSON
+	@echo "Trivy results from scanning 1-os (image)"
+	@cat $(RESULTS_DIR)/trivy-scan-1-os.json | jq -rc 'select(.Results != null) | .Results[] | .Target as $$Target | .Type as $$Type | select(.Vulnerabilities != null) | . | .Vulnerabilities[] | ["trivy", $$Target, $$Type, .PkgName, (.Severity| ascii_downcase), .PkgName, .VulnerabilityID]'
+
+.PHONY: grype-results-1-os
+grype-results-1-os: ## View grype results for 1-os in JSON
+	@echo "Grype results from scanning 1-os (image)"
+	@cat $(RESULTS_DIR)/grype-scan-1-os.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+#######
+## 2-pkg
+#######
+
+.PHONY: run-2-pkg
+run-2-pkg: ## Run shell in 2-pkg
+	@docker run --rm -it $(IMAGEREPO):2-pkg /bin/bash
+
+scan-2-pkg: trivy-scan-2-pkg grype-scan-2-pkg ## Scan 2-pkg with all scanners
+results-2-pkg: trivy-results-2-pkg grype-results-2-pkg ## Show 2-pkg results for all scanners
+
+.PHONY: trivy-scan-2-pkg
+trivy-scan-2-pkg: ## Trivy scan 2-pkg
+	@echo "Scanning 2-pkg with Trivy (image)"
+	@trivy image $(IMAGEREPO):2-pkg --format json --output $(RESULTS_DIR)/trivy-scan-2-pkg.json || echo "trivy scanned"
+	@echo "Scanned 2-pkg with Trivy (image)"
+
+.PHONY: grype-scan-2-pkg
+grype-scan-2-pkg: ## Grype scan 2-pkg
+	@echo "Scanning 2-pkg with grype (image)"
+	@grype $(IMAGEREPO):2-pkg -q -o json > $(RESULTS_DIR)/grype-scan-2-pkg.json || echo "grype scanned"
+	@echo "Scanned 2-pkg with grype (image)"
+
+.PHONY: trivy-results-2-pkg
+trivy-results-2-pkg: ## View trivy results for 2-pkg in JSON
+	@echo "Trivy results from scanning 2-pkg (image)"
+	@cat $(RESULTS_DIR)/trivy-scan-2-pkg.json | jq -rc 'select(.Results != null) | .Results[] | .Target as $$Target | .Type as $$Type | select(.Vulnerabilities != null) | . | .Vulnerabilities[] | ["trivy", $$Target, $$Type, .PkgName, (.Severity| ascii_downcase), .PkgName, .VulnerabilityID]'
+
+.PHONY: grype-results-2-pkg
+grype-results-2-pkg: ## View grype results for 2-pkg in JSON
+	@echo "Grype results from scanning 2-pkg (image)"
+	@cat $(RESULTS_DIR)/grype-scan-2-pkg.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+#######
+## 3-lang
+#######
+
+.PHONY: run-3-lang
+run-3-lang: ## Run shell in 3-lang
+	@docker run --rm -it $(IMAGEREPO):3-lang /bin/bash
+
+scan-3-lang: trivy-scan-3-lang grype-scan-3-lang ## Scan 3-lang with all scanners
+results-3-lang: trivy-results-3-lang grype-results-3-lang ## Show 3-lang results for all scanners
+
+.PHONY: trivy-scan-3-lang
+trivy-scan-3-lang: ## Trivy scan 3-lang
+	@echo "Scanning 3-lang with Trivy (image)"
+	@trivy image $(IMAGEREPO):3-lang --format json --output $(RESULTS_DIR)/trivy-scan-3-lang.json || echo "trivy scanned"
+	@echo "Scanned 3-lang with Trivy (image)"
+
+.PHONY: grype-scan-3-lang
+grype-scan-3-lang: ## Grype scan 3-lang
+	@echo "Scanning 3-lang with grype (image)"
+	@grype $(IMAGEREPO):3-lang -q -o json > $(RESULTS_DIR)/grype-scan-3-lang.json || echo "grype scanned"
+	@echo "Scanned 3-lang with grype (image)"
+
+.PHONY: trivy-results-3-lang
+trivy-results-3-lang: ## View trivy results for 3-lang in JSON
+	@echo "Trivy results from scanning 3-lang (image)"
+	@cat $(RESULTS_DIR)/trivy-scan-3-lang.json | jq -rc 'select(.Results != null) | .Results[] | .Target as $$Target | .Type as $$Type | select(.Vulnerabilities != null) | . | .Vulnerabilities[] | ["trivy", $$Target, $$Type, .PkgName, (.Severity| ascii_downcase), .PkgName, .VulnerabilityID]'
+
+.PHONY: grype-results-3-lang
+grype-results-3-lang: ## View grype results for 3-lang in JSON
+	@echo "Grype results from scanning 3-lang (image)"
+	@cat $(RESULTS_DIR)/grype-scan-3-lang.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+#######
+## 4-bin
+#######
+
+.PHONY: run-4-bin
+run-4-bin: ## Run shell in 4-bin
+	@docker run --rm -it $(IMAGEREPO):4-bin /bin/bash
+
+scan-4-bin: trivy-scan-4-bin grype-scan-4-bin ## Scan 4-bin with all scanners
+results-4-bin: trivy-results-4-bin grype-results-4-bin ## Show 4-bin results for all scanners
+
+.PHONY: trivy-scan-4-bin
+trivy-scan-4-bin: ## Trivy scan 4-bin
+	@echo "Scanning 4-bin with Trivy (image)"
+	@trivy image $(IMAGEREPO):4-bin --format json --output $(RESULTS_DIR)/trivy-scan-4-bin.json || echo "trivy scanned"
+	@echo "Scanned 4-bin with Trivy (image)"
+
+.PHONY: grype-scan-4-bin
+grype-scan-4-bin: ## Grype scan 4-bin
+	@echo "Scanning 4-bin with grype (image)"
+	@grype $(IMAGEREPO):4-bin -q -o json > $(RESULTS_DIR)/grype-scan-4-bin.json || echo "grype scanned"
+	@echo "Scanned 4-bin with grype (image)"
+
+.PHONY: trivy-results-4-bin
+trivy-results-4-bin: ## View trivy results for 4-bin in JSON
+	@echo "Trivy results from scanning 4-bin (image)"
+	@cat $(RESULTS_DIR)/trivy-scan-4-bin.json | jq -rc 'select(.Results != null) | .Results[] | .Target as $$Target | .Type as $$Type | select(.Vulnerabilities != null) | . | .Vulnerabilities[] | ["trivy", $$Target, $$Type, .PkgName, (.Severity| ascii_downcase), .PkgName, .VulnerabilityID]'
+
+.PHONY: grype-results-4-bin
+grype-results-4-bin: ## View grype results for 4-bin in JSON
+	@echo "Grype results from scanning 4-bin (image)"
+	@cat $(RESULTS_DIR)/grype-scan-4-bin.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+#######
+## 5-zero
+#######
+
+.PHONY: run-5-zero
+run-5-zero: ## Run shell in 5-zero
+	@docker run --rm -it $(IMAGEREPO):5-zero /bin/bash
+
+scan-5-zero: trivy-scan-5-zero grype-scan-5-zero ## Scan 5-zero with all scanners
+results-5-zero: trivy-results-5-zero grype-results-5-zero ## Show 5-zero results for all scanners
+
+.PHONY: trivy-scan-5-zero
+trivy-scan-5-zero: ## Trivy scan 5-zero
+	@echo "Scanning 5-zero with Trivy (image)"
+	@trivy image $(IMAGEREPO):5-zero --format json --output $(RESULTS_DIR)/trivy-scan-5-zero.json || echo "trivy scanned"
+	@echo "Scanned 5-zero with Trivy (image)"
+
+.PHONY: grype-scan-5-zero
+grype-scan-5-zero: ## Grype scan 5-zero
+	@echo "Scanning 5-zero with grype (image)"
+	@grype $(IMAGEREPO):5-zero -q -o json > $(RESULTS_DIR)/grype-scan-5-zero.json || echo "grype scanned"
+	@echo "Scanned 5-zero with grype (image)"
+
+.PHONY: trivy-results-5-zero
+trivy-results-5-zero: ## View trivy results for 5-zero in JSON
+	@echo "Trivy results from scanning 5-zero (image)"
+	@cat $(RESULTS_DIR)/trivy-scan-5-zero.json | jq -rc 'select(.Results != null) | .Results[] | .Target as $$Target | .Type as $$Type | select(.Vulnerabilities != null) | . | .Vulnerabilities[] | ["trivy", $$Target, $$Type, .PkgName, (.Severity| ascii_downcase), .PkgName, .VulnerabilityID]'
+
+.PHONY: grype-results-5-zero
+grype-results-5-zero: ## View grype results for 5-zero in JSON
+	@echo "Grype results from scanning 5-zero (image)"
+	@cat $(RESULTS_DIR)/grype-scan-5-zero.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'

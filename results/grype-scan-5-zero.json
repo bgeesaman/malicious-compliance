@@ -1,0 +1,125 @@
+{
+ "matches": [],
+ "source": {
+  "type": "image",
+  "target": {
+   "userInput": "sig-honk/malicious-compliance:5-zero",
+   "imageID": "sha256:6412e24cda8c3dd93cb580dd6f3a263b82c6a7ad66a85624275dc5290627c2b2",
+   "manifestDigest": "sha256:7ca3b3757ec690f0e2c25b0683cf6791cee4f74621715ddf4a0d4bc8fe6264d5",
+   "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+   "tags": [
+    "sig-honk/malicious-compliance:5-zero"
+   ],
+   "imageSize": 134561845,
+   "layers": [
+    {
+     "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+     "digest": "sha256:4f875b932e8d4eef0aa90b1b4ddc4234fec7891dc859a83893e6e897e2593cbd",
+     "size": 134561845
+    }
+   ],
+   "manifest": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJzaXplIjo0NDAsImRpZ2VzdCI6InNoYTI1Njo2NDEyZTI0Y2RhOGMzZGQ5M2NiNTgwZGQ2ZjNhMjYzYjgyYzZhN2FkNjZhODU2MjQyNzVkYzUyOTA2MjdjMmIyIn0sImxheWVycyI6W3sibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsInNpemUiOjE0MDE1MDc4NCwiZGlnZXN0Ijoic2hhMjU2OjRmODc1YjkzMmU4ZDRlZWYwYWE5MGIxYjRkZGM0MjM0ZmVjNzg5MWRjODU5YTgzODkzZTZlODk3ZTI1OTNjYmQifV19",
+   "config": "eyJhcmNoaXRlY3R1cmUiOiJhbWQ2NCIsImNvbmZpZyI6eyJFbnYiOlsiUEFUSD0vdXNyL2xvY2FsL3NiaW46L3Vzci9sb2NhbC9iaW46L3Vzci9zYmluOi91c3IvYmluOi9zYmluOi9iaW4iXSwiV29ya2luZ0RpciI6Ii8iLCJPbkJ1aWxkIjpudWxsfSwiY3JlYXRlZCI6IjIwMjMtMDMtMjlUMDU6MTY6MjIuNjMyOTcxMDUzWiIsImhpc3RvcnkiOlt7ImNyZWF0ZWQiOiIyMDIzLTAzLTI5VDA1OjE2OjIyLjYzMjk3MTA1M1oiLCJjcmVhdGVkX2J5IjoiQ09QWSAvIC4gIyBidWlsZGtpdCIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIn1dLCJvcyI6ImxpbnV4Iiwicm9vdGZzIjp7InR5cGUiOiJsYXllcnMiLCJkaWZmX2lkcyI6WyJzaGEyNTY6NGY4NzViOTMyZThkNGVlZjBhYTkwYjFiNGRkYzQyMzRmZWM3ODkxZGM4NTlhODM4OTNlNmU4OTdlMjU5M2NiZCJdfX0=",
+   "repoDigests": [],
+   "architecture": "amd64",
+   "os": "linux"
+  }
+ },
+ "distro": {
+  "name": "Linux",
+  "version": "99",
+  "idLike": []
+ },
+ "descriptor": {
+  "name": "grype",
+  "version": "0.56.0",
+  "configuration": {
+   "configPath": "",
+   "verbosity": 0,
+   "output": "json",
+   "file": "",
+   "distro": "",
+   "add-cpes-if-none": false,
+   "output-template-file": "",
+   "quiet": true,
+   "check-for-app-update": true,
+   "only-fixed": false,
+   "only-notfixed": false,
+   "platform": "",
+   "search": {
+    "scope": "Squashed",
+    "unindexed-archives": false,
+    "indexed-archives": true
+   },
+   "ignore": null,
+   "exclude": [],
+   "db": {
+    "cache-dir": "/Users/bg/Library/Caches/grype/db",
+    "update-url": "https://toolbox-data.anchore.io/grype/databases/listing.json",
+    "ca-cert": "",
+    "auto-update": true,
+    "validate-by-hash-on-start": false,
+    "validate-age": true,
+    "max-allowed-built-age": 432000000000000
+   },
+   "externalSources": {
+    "enable": false,
+    "maven": {
+     "searchUpstreamBySha1": true,
+     "baseUrl": "https://search.maven.org/solrsearch/select"
+    }
+   },
+   "match": {
+    "java": {
+     "using-cpes": true
+    },
+    "dotnet": {
+     "using-cpes": true
+    },
+    "golang": {
+     "using-cpes": true
+    },
+    "javascript": {
+     "using-cpes": true
+    },
+    "python": {
+     "using-cpes": true
+    },
+    "ruby": {
+     "using-cpes": true
+    },
+    "stock": {
+     "using-cpes": true
+    }
+   },
+   "dev": {
+    "profile-cpu": false,
+    "profile-mem": false
+   },
+   "fail-on-severity": "",
+   "registry": {
+    "insecure-skip-tls-verify": false,
+    "insecure-use-http": false,
+    "auth": []
+   },
+   "log": {
+    "structured": false,
+    "level": "",
+    "file": ""
+   },
+   "attestation": {
+    "public-key": "",
+    "skip-verification": false
+   },
+   "show-suppressed": false,
+   "by-cve": false
+  },
+  "db": {
+   "built": "2023-03-29T01:30:36Z",
+   "schemaVersion": 5,
+   "location": "/Users/bg/Library/Caches/grype/db/5",
+   "checksum": "sha256:4e4d8343d53532565a0a85663b8528e7a0b6eb3571d50c18cd18251c43ce697f",
+   "error": null
+  }
+ }
+}
