@@ -1,0 +1,1121 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "fullName": "Docker Scout",
+          "informationUri": "https://docker.com/products/docker-scout",
+          "name": "Scout",
+          "rules": [
+            {
+              "id": "GMS-2023-418",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "A maliciously crafted HTTP/2 stream could cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests."
+              },
+              "helpUri": "https://dso.docker.com/cve/GMS-2023-418",
+              "help": {
+                "text": "A maliciously crafted HTTP/2 stream could cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests.\n  Package        : net 0.3.1-0.20221206200815-1e63c2f08a10  \n  Affected range : \u003c0.7.0                                   \n  Fixed version  : 0.7.0                                    \n",
+                "markdown": "\u003e A maliciously crafted HTTP/2 stream could cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests.\n\n| Package        | net                                 |\n|                | 0.3.1-0.20221206200815-1e63c2f08a10 |\n| Affected range | \u003c0.7.0                              |\n| Fixed version  | 0.7.0                               |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c0.7.0",
+                "cvssV3_severity": "UNSPECIFIED",
+                "fixed_version": "0.7.0",
+                "tags": [
+                  "UNSPECIFIED"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-25740",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Externally Controlled Reference to a Resource in Another Sphere"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2021-25740",
+              "help": {
+                "text": "A security issue was discovered with Kubernetes that could enable users to send network traffic to locations they would otherwise not have access to via a confused deputy attack.\n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c=1.22.2                                      \n  Fixed version  : not fixed                                     \n  CVSS Score     : 3.1                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N  \n",
+                "markdown": "\u003e A security issue was discovered with Kubernetes that could enable users to send network traffic to locations they would otherwise not have access to via a confused deputy attack.\n\n| Package        | kubernetes                                   |\n|                | 0.0.0-20221208195143-b46a3f887ca9            |\n| Affected range | \u003c=1.22.2                                     |\n| Fixed version  | not fixed                                    |\n| CVSS Score     |                                          3.1 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c=1.22.2",
+                "cvssV3": 3.1,
+                "cvssV3_severity": "LOW",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N",
+                "fixed_version": "not fixed",
+                "tags": [
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2020-8562",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Time-of-check Time-of-use (TOCTOU) Race Condition"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2020-8562",
+              "help": {
+                "text": "As mitigations to a report from 2019 and CVE-2020-8555, Kubernetes attempts to prevent proxied connections from accessing link-local or localhost networks when making user-driven connections to Services, Pods, Nodes, or StorageClass service providers. As part of this mitigation Kubernetes does a DNS name resolution check and validates that response IPs are not in the link-local (169.254.0.0/16) or localhost (127.0.0.0/8) range. Kubernetes then performs a second DNS resolution without validation for the actual connection. If a non-standard DNS server returns different non-cached responses, a user may be able to bypass the proxy IP restriction and access private networks on the control plane.\n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c1.18.19                                      \n  Fixed version  : 1.18.19                                       \n  CVSS Score     : 3.1                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N  \n",
+                "markdown": "\u003e As mitigations to a report from 2019 and CVE-2020-8555, Kubernetes attempts to prevent proxied connections from accessing link-local or localhost networks when making user-driven connections to Services, Pods, Nodes, or StorageClass service providers. As part of this mitigation Kubernetes does a DNS name resolution check and validates that response IPs are not in the link-local (169.254.0.0/16) or localhost (127.0.0.0/8) range. Kubernetes then performs a second DNS resolution without validation for the actual connection. If a non-standard DNS server returns different non-cached responses, a user may be able to bypass the proxy IP restriction and access private networks on the control plane.\n\n| Package        | kubernetes                                   |\n|                | 0.0.0-20221208195143-b46a3f887ca9            |\n| Affected range | \u003c1.18.19                                     |\n| Fixed version  | 1.18.19                                      |\n| CVSS Score     |                                          3.1 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c1.18.19",
+                "cvssV3": 3.1,
+                "cvssV3_severity": "LOW",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N",
+                "fixed_version": "1.18.19",
+                "tags": [
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2020-8561",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Externally Controlled Reference to a Resource in Another Sphere"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2020-8561",
+              "help": {
+                "text": "A security issue was discovered in Kubernetes where actors that control the responses of MutatingWebhookConfiguration or ValidatingWebhookConfiguration requests are able to redirect kube-apiserver requests to private networks of the apiserver. If that user can view kube-apiserver logs when the log level is set to 10, they can view the redirected responses and headers in the logs.\n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c=1.22.2                                      \n  Fixed version  : not fixed                                     \n  CVSS Score     : 4.1                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:N/A:N  \n",
+                "markdown": "\u003e A security issue was discovered in Kubernetes where actors that control the responses of MutatingWebhookConfiguration or ValidatingWebhookConfiguration requests are able to redirect kube-apiserver requests to private networks of the apiserver. If that user can view kube-apiserver logs when the log level is set to 10, they can view the redirected responses and headers in the logs.\n\n| Package        | kubernetes                                   |\n|                | 0.0.0-20221208195143-b46a3f887ca9            |\n| Affected range | \u003c=1.22.2                                     |\n| Fixed version  | not fixed                                    |\n| CVSS Score     |                                          4.1 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:N/A:N |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c=1.22.2",
+                "cvssV3": 4.1,
+                "cvssV3_severity": "MEDIUM",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:N/A:N",
+                "fixed_version": "not fixed",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2020-8554",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": ""
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2020-8554",
+              "help": {
+                "text": "Kubernetes API server in all versions allow an attacker who is able to create a ClusterIP service and set the spec.externalIPs field, to intercept traffic to that IP address. Additionally, an attacker who is able to patch the status (which is considered a privileged operation and should not typically be granted to users) of a LoadBalancer service can set the status.loadBalancer.ingress.ip to similar effect.\n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c=1.22.0                                      \n  Fixed version  : not fixed                                     \n  CVSS Score     : 5.0                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L  \n",
+                "markdown": "\u003e Kubernetes API server in all versions allow an attacker who is able to create a ClusterIP service and set the spec.externalIPs field, to intercept traffic to that IP address. Additionally, an attacker who is able to patch the status (which is considered a privileged operation and should not typically be granted to users) of a LoadBalancer service can set the status.loadBalancer.ingress.ip to similar effect.\n\n| Package        | kubernetes                                   |\n|                | 0.0.0-20221208195143-b46a3f887ca9            |\n| Affected range | \u003c=1.22.0                                     |\n| Fixed version  | not fixed                                    |\n| CVSS Score     |                                          5.0 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c=1.22.0",
+                "cvssV3": 5,
+                "cvssV3_severity": "MEDIUM",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L",
+                "fixed_version": "not fixed",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-41717",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Allocation of Resources Without Limits or Throttling"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2022-41717",
+              "help": {
+                "text": "An attacker can cause excessive memory growth in a Go server accepting HTTP/2 requests. HTTP/2 server connections contain a cache of HTTP header keys sent by the client. While the total number of entries in this cache is capped, an attacker sending very large keys can cause the server to allocate approximately 64 MiB per open connection.\n  Package        : net 0.3.1-0.20221206200815-1e63c2f08a10       \n  Affected range : \u003c0.4.0                                        \n  Fixed version  : 0.4.0                                         \n  CVSS Score     : 5.3                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L  \n",
+                "markdown": "\u003e An attacker can cause excessive memory growth in a Go server accepting HTTP/2 requests. HTTP/2 server connections contain a cache of HTTP header keys sent by the client. While the total number of entries in this cache is capped, an attacker sending very large keys can cause the server to allocate approximately 64 MiB per open connection.\n\n| Package        | net                                          |\n|                | 0.3.1-0.20221206200815-1e63c2f08a10          |\n| Affected range | \u003c0.4.0                                       |\n| Fixed version  | 0.4.0                                        |\n| CVSS Score     |                                          5.3 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c0.4.0",
+                "cvssV3": 5.3,
+                "cvssV3_severity": "MEDIUM",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                "fixed_version": "0.4.0",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-24532",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Incorrect Calculation"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2023-24532",
+              "help": {
+                "text": "The ScalarMult and ScalarBaseMult methods of the P256 Curve may return an incorrect result if called with some specific unreduced scalars (a scalar larger than the order of the curve). This does not impact usages of crypto/ecdsa or crypto/ecdh.\n  Package        : stdlib 1.19.4                                 \n  Affected range : \u003c1.19.7                                       \n  Fixed version  : 1.19.7                                        \n  CVSS Score     : 5.3                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N  \n",
+                "markdown": "\u003e The ScalarMult and ScalarBaseMult methods of the P256 Curve may return an incorrect result if called with some specific unreduced scalars (a scalar larger than the order of the curve). This does not impact usages of crypto/ecdsa or crypto/ecdh.\n\n| Package        | stdlib 1.19.4                                |\n| Affected range | \u003c1.19.7                                      |\n| Fixed version  | 1.19.7                                       |\n| CVSS Score     |                                          5.3 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c1.19.7",
+                "cvssV3": 5.3,
+                "cvssV3_severity": "MEDIUM",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                "fixed_version": "1.19.7",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2020-8565",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Insertion of Sensitive Information into Log File"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2020-8565",
+              "help": {
+                "text": "In Kubernetes, if the logging level is set to at least 9, authorization and bearer tokens will be written to log files. This can occur both in API server logs and client tool output like kubectl. This affects \u003c= v1.19.3, \u003c= v1.18.10, \u003c= v1.17.13, \u003c v1.20.0-alpha2.\n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c1.20.0-alpha.2                               \n  Fixed version  : 1.20.0-alpha.2                                \n  CVSS Score     : 5.5                                           \n  CVSS Vector    : CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N  \n",
+                "markdown": "\u003e In Kubernetes, if the logging level is set to at least 9, authorization and bearer tokens will be written to log files. This can occur both in API server logs and client tool output like kubectl. This affects \u003c= v1.19.3, \u003c= v1.18.10, \u003c= v1.17.13, \u003c v1.20.0-alpha2.\n\n| Package        | kubernetes                                   |\n|                | 0.0.0-20221208195143-b46a3f887ca9            |\n| Affected range | \u003c1.20.0-alpha.2                              |\n| Fixed version  | 1.20.0-alpha.2                               |\n| CVSS Score     |                                          5.5 |\n| CVSS Vector    | CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c1.20.0-alpha.2",
+                "cvssV3": 5.5,
+                "cvssV3_severity": "MEDIUM",
+                "cvssV3_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                "fixed_version": "1.20.0-alpha.2",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2020-8564",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Insertion of Sensitive Information into Log File"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2020-8564",
+              "help": {
+                "text": "In Kubernetes clusters using a logging level of at least 4, processing a malformed docker config file will result in the contents of the docker config file being leaked, which can include pull secrets or other registry credentials. This affects \u003c v1.19.3, \u003c v1.18.10, \u003c v1.17.13.\n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c1.20.0-alpha.1                               \n  Fixed version  : 1.20.0-alpha.1                                \n  CVSS Score     : 5.5                                           \n  CVSS Vector    : CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N  \n",
+                "markdown": "\u003e In Kubernetes clusters using a logging level of at least 4, processing a malformed docker config file will result in the contents of the docker config file being leaked, which can include pull secrets or other registry credentials. This affects \u003c v1.19.3, \u003c v1.18.10, \u003c v1.17.13.\n\n| Package        | kubernetes                                   |\n|                | 0.0.0-20221208195143-b46a3f887ca9            |\n| Affected range | \u003c1.20.0-alpha.1                              |\n| Fixed version  | 1.20.0-alpha.1                               |\n| CVSS Score     |                                          5.5 |\n| CVSS Vector    | CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c1.20.0-alpha.1",
+                "cvssV3": 5.5,
+                "cvssV3_severity": "MEDIUM",
+                "cvssV3_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                "fixed_version": "1.20.0-alpha.1",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2019-3902",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Improper Link Resolution Before File Access ('Link Following')"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2019-3902",
+              "help": {
+                "text": "A flaw was found in Mercurial before 4.9. It was possible to use symlinks and subrepositories to defeat Mercurial's path-checking logic and write files outside a repository.\n  Package        : mercurial 4.5.2                               \n  Affected range : \u003c4.9                                          \n  Fixed version  : 4.9                                           \n  CVSS Score     : 5.9                                           \n  CVSS Vector    : CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N  \n",
+                "markdown": "\u003e A flaw was found in Mercurial before 4.9. It was possible to use symlinks and subrepositories to defeat Mercurial's path-checking logic and write files outside a repository.\n\n| Package        | mercurial 4.5.2                              |\n| Affected range | \u003c4.9                                         |\n| Fixed version  |                                          4.9 |\n| CVSS Score     |                                          5.9 |\n| CVSS Vector    | CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c4.9",
+                "cvssV3": 5.9,
+                "cvssV3_severity": "MEDIUM",
+                "cvssV3_vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                "fixed_version": "4.9",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2019-11250",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Insertion of Sensitive Information into Log File"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2019-11250",
+              "help": {
+                "text": "The Kubernetes client-go library logs request headers at verbosity levels of 7 or higher. This can disclose credentials to unauthorized users via logs or command output. Kubernetes components (such as kube-apiserver) prior to v1.16.0, which make use of basic or bearer token authentication, and run at high verbosity levels, are affected.\n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c1.16.0-beta.1                                \n  Fixed version  : 1.16.0-beta.1                                 \n  CVSS Score     : 6.5                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N  \n",
+                "markdown": "\u003e The Kubernetes client-go library logs request headers at verbosity levels of 7 or higher. This can disclose credentials to unauthorized users via logs or command output. Kubernetes components (such as kube-apiserver) prior to v1.16.0, which make use of basic or bearer token authentication, and run at high verbosity levels, are affected.\n\n| Package        | kubernetes                                   |\n|                | 0.0.0-20221208195143-b46a3f887ca9            |\n| Affected range | \u003c1.16.0-beta.1                               |\n| Fixed version  | 1.16.0-beta.1                                |\n| CVSS Score     |                                          6.5 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c1.16.0-beta.1",
+                "cvssV3": 6.5,
+                "cvssV3_severity": "MEDIUM",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                "fixed_version": "1.16.0-beta.1",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-25735",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Incorrect Authorization"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2021-25735",
+              "help": {
+                "text": "A security issue was discovered in kube-apiserver that could allow node updates to bypass a Validating Admission Webhook. Clusters are only affected by this vulnerability if they run a Validating Admission Webhook for Nodes that denies admission based at least partially on the old state of the Node object. Validating Admission Webhook does not observe some previous fields.\n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c=1.18.17                                     \n  Fixed version  : 1.18.18                                       \n  CVSS Score     : 6.5                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H  \n",
+                "markdown": "\u003e A security issue was discovered in kube-apiserver that could allow node updates to bypass a Validating Admission Webhook. Clusters are only affected by this vulnerability if they run a Validating Admission Webhook for Nodes that denies admission based at least partially on the old state of the Node object. Validating Admission Webhook does not observe some previous fields.\n\n| Package        | kubernetes                                   |\n|                | 0.0.0-20221208195143-b46a3f887ca9            |\n| Affected range | \u003c=1.18.17                                    |\n| Fixed version  | 1.18.18                                      |\n| CVSS Score     |                                          6.5 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c=1.18.17",
+                "cvssV3": 6.5,
+                "cvssV3_severity": "MEDIUM",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H",
+                "fixed_version": "1.18.18",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2015-5305",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2015-5305",
+              "help": {
+                "text": "Directory traversal vulnerability in Kubernetes, as used in Red Hat OpenShift Enterprise 3.0, allows attackers to write to arbitrary files via a crafted object type name, which is not properly handled before passing it to etcd.\n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c1.1.1                                        \n  Fixed version  : 1.1.1                                         \n  CVSS Score     : 6.5                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L  \n",
+                "markdown": "\u003e Directory traversal vulnerability in Kubernetes, as used in Red Hat OpenShift Enterprise 3.0, allows attackers to write to arbitrary files via a crafted object type name, which is not properly handled before passing it to etcd.\n\n| Package        | kubernetes                                   |\n|                | 0.0.0-20221208195143-b46a3f887ca9            |\n| Affected range | \u003c1.1.1                                       |\n| Fixed version  | 1.1.1                                        |\n| CVSS Score     |                                          6.5 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c1.1.1",
+                "cvssV3": 6.5,
+                "cvssV3_severity": "MEDIUM",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+                "fixed_version": "1.1.1",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-41723",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Uncontrolled Resource Consumption"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2022-41723",
+              "help": {
+                "text": "A maliciously crafted HTTP/2 stream could cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests.\n  Package        : net 0.3.1-0.20221206200815-1e63c2f08a10       \n  Affected range : \u003c0.7.0                                        \n  Fixed version  : 0.7.0                                         \n  CVSS Score     : 7.5                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  \n",
+                "markdown": "\u003e A maliciously crafted HTTP/2 stream could cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests.\n\n| Package        | net                                          |\n|                | 0.3.1-0.20221206200815-1e63c2f08a10          |\n| Affected range | \u003c0.7.0                                       |\n| Fixed version  | 0.7.0                                        |\n| CVSS Score     |                                          7.5 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c0.7.0",
+                "cvssV3": 7.5,
+                "cvssV3_severity": "HIGH",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "fixed_version": "0.7.0",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2018-13346",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Improper Input Validation"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2018-13346",
+              "help": {
+                "text": "The mpatch_apply function in mpatch.c in Mercurial before 4.6.1 incorrectly proceeds in cases where the fragment start is past the end of the original data, aka OVE-20180430-0004.\n  Package        : mercurial 4.5.2                               \n  Affected range : \u003c4.6.1                                        \n  Fixed version  : 4.6.1                                         \n  CVSS Score     : 7.5                                           \n  CVSS Vector    : CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N  \n",
+                "markdown": "\u003e The mpatch_apply function in mpatch.c in Mercurial before 4.6.1 incorrectly proceeds in cases where the fragment start is past the end of the original data, aka OVE-20180430-0004.\n\n| Package        | mercurial 4.5.2                              |\n| Affected range | \u003c4.6.1                                       |\n| Fixed version  | 4.6.1                                        |\n| CVSS Score     |                                          7.5 |\n| CVSS Vector    | CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c4.6.1",
+                "cvssV3": 7.5,
+                "cvssV3_severity": "HIGH",
+                "cvssV3_vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                "fixed_version": "4.6.1",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2018-13348",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Improper Input Validation"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2018-13348",
+              "help": {
+                "text": "The mpatch_decode function in mpatch.c in Mercurial before 4.6.1 mishandles certain situations where there should be at least 12 bytes remaining after the current position in the patch data, but actually are not, aka OVE-20180430-0001.\n  Package        : mercurial 4.5.2                               \n  Affected range : \u003c4.6.1                                        \n  Fixed version  : 4.6.1                                         \n  CVSS Score     : 7.5                                           \n  CVSS Vector    : CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N  \n",
+                "markdown": "\u003e The mpatch_decode function in mpatch.c in Mercurial before 4.6.1 mishandles certain situations where there should be at least 12 bytes remaining after the current position in the patch data, but actually are not, aka OVE-20180430-0001.\n\n| Package        | mercurial 4.5.2                              |\n| Affected range | \u003c4.6.1                                       |\n| Fixed version  | 4.6.1                                        |\n| CVSS Score     |                                          7.5 |\n| CVSS Vector    | CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c4.6.1",
+                "cvssV3": 7.5,
+                "cvssV3_severity": "HIGH",
+                "cvssV3_vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                "fixed_version": "4.6.1",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-41722",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2022-41722",
+              "help": {
+                "text": "A path traversal vulnerability exists in filepath.Clean on Windows. On Windows, the filepath.Clean function could transform an invalid path such as \"a/../c:/b\" into the valid path \"c:\\b\". This transformation of a relative (if invalid) path into an absolute path could enable a directory traversal attack. After fix, the filepath.Clean function transforms this path into the relative (but still invalid) path \".\\c:\\b\".\n  Package        : stdlib 1.19.4                                 \n  Affected range : \u003c1.19.6                                       \n  Fixed version  : 1.19.6                                        \n  CVSS Score     : 7.5                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N  \n",
+                "markdown": "\u003e A path traversal vulnerability exists in filepath.Clean on Windows. On Windows, the filepath.Clean function could transform an invalid path such as \"a/../c:/b\" into the valid path \"c:\\b\". This transformation of a relative (if invalid) path into an absolute path could enable a directory traversal attack. After fix, the filepath.Clean function transforms this path into the relative (but still invalid) path \".\\c:\\b\".\n\n| Package        | stdlib 1.19.4                                |\n| Affected range | \u003c1.19.6                                      |\n| Fixed version  | 1.19.6                                       |\n| CVSS Score     |                                          7.5 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c1.19.6",
+                "cvssV3": 7.5,
+                "cvssV3_severity": "HIGH",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "fixed_version": "1.19.6",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-41724",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Uncontrolled Resource Consumption"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2022-41724",
+              "help": {
+                "text": "Large handshake records may cause panics in crypto/tls. Both clients and servers may send large TLS handshake records which cause servers and clients, respectively, to panic when attempting to construct responses. This affects all TLS 1.3 clients, TLS 1.2 clients which explicitly enable session resumption (by setting Config.ClientSessionCache to a non-nil value), and TLS 1.3 servers which request client certificates (by setting Config.ClientAuth \u003e= RequestClientCert).\n  Package        : stdlib 1.19.4                                 \n  Affected range : \u003c1.19.6                                       \n  Fixed version  : 1.19.6                                        \n  CVSS Score     : 7.5                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  \n",
+                "markdown": "\u003e Large handshake records may cause panics in crypto/tls. Both clients and servers may send large TLS handshake records which cause servers and clients, respectively, to panic when attempting to construct responses. This affects all TLS 1.3 clients, TLS 1.2 clients which explicitly enable session resumption (by setting Config.ClientSessionCache to a non-nil value), and TLS 1.3 servers which request client certificates (by setting Config.ClientAuth \u003e= RequestClientCert).\n\n| Package        | stdlib 1.19.4                                |\n| Affected range | \u003c1.19.6                                      |\n| Fixed version  | 1.19.6                                       |\n| CVSS Score     |                                          7.5 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c1.19.6",
+                "cvssV3": 7.5,
+                "cvssV3_severity": "HIGH",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "fixed_version": "1.19.6",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-41725",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Uncontrolled Resource Consumption"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2022-41725",
+              "help": {
+                "text": "A denial of service is possible from excessive resource consumption in net/http and mime/multipart. Multipart form parsing with mime/multipart.Reader.ReadForm can consume largely unlimited amounts of memory and disk files. This also affects form parsing in the net/http package with the Request methods FormFile, FormValue, ParseMultipartForm, and PostFormValue. ReadForm takes a maxMemory parameter, and is documented as storing \"up to maxMemory bytes +10MB (reserved for non-file parts) in memory\". File parts which cannot be stored in memory are stored on disk in temporary files. The unconfigurable 10MB reserved for non-file parts is excessively large and can potentially open a denial of service vector on its own. However, ReadForm did not properly account for all memory consumed by a parsed form, such as map entry overhead, part names, and MIME headers, permitting a maliciously crafted form to consume well over 10MB. In addition, ReadForm contained no limit on the number of disk files created, permitting a relatively small request body to create a large number of disk temporary files. With fix, ReadForm now properly accounts for various forms of memory overhead, and should now stay within its documented limit of 10MB + maxMemory bytes of memory consumption. Users should still be aware that this limit is high and may still be hazardous. In addition, ReadForm now creates at most one on-disk temporary file, combining multiple form parts into a single temporary file. The mime/multipart.File interface type's documentation states, \"If stored on disk, the File's underlying concrete type will be an *os.File.\". This is no longer the case when a form contains more than one file part, due to this coalescing of parts into a single file. The previous behavior of using distinct files for each form part may be reenabled with the environment variable GODEBUG=multipartfiles=distinct. Users should be aware that multipart.ReadForm and the http.Request methods that call it do not limit the amount of disk consumed by temporary files. Callers can limit the size of form data with http.MaxBytesReader.\n  Package        : stdlib 1.19.4                                 \n  Affected range : \u003c1.19.6                                       \n  Fixed version  : 1.19.6                                        \n  CVSS Score     : 7.5                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  \n",
+                "markdown": "\u003e A denial of service is possible from excessive resource consumption in net/http and mime/multipart. Multipart form parsing with mime/multipart.Reader.ReadForm can consume largely unlimited amounts of memory and disk files. This also affects form parsing in the net/http package with the Request methods FormFile, FormValue, ParseMultipartForm, and PostFormValue. ReadForm takes a maxMemory parameter, and is documented as storing \"up to maxMemory bytes +10MB (reserved for non-file parts) in memory\". File parts which cannot be stored in memory are stored on disk in temporary files. The unconfigurable 10MB reserved for non-file parts is excessively large and can potentially open a denial of service vector on its own. However, ReadForm did not properly account for all memory consumed by a parsed form, such as map entry overhead, part names, and MIME headers, permitting a maliciously crafted form to consume well over 10MB. In addition, ReadForm contained no limit on the number of disk files created, permitting a relatively small request body to create a large number of disk temporary files. With fix, ReadForm now properly accounts for various forms of memory overhead, and should now stay within its documented limit of 10MB + maxMemory bytes of memory consumption. Users should still be aware that this limit is high and may still be hazardous. In addition, ReadForm now creates at most one on-disk temporary file, combining multiple form parts into a single temporary file. The mime/multipart.File interface type's documentation states, \"If stored on disk, the File's underlying concrete type will be an *os.File.\". This is no longer the case when a form contains more than one file part, due to this coalescing of parts into a single file. The previous behavior of using distinct files for each form part may be reenabled with the environment variable GODEBUG=multipartfiles=distinct. Users should be aware that multipart.ReadForm and the http.Request methods that call it do not limit the amount of disk consumed by temporary files. Callers can limit the size of form data with http.MaxBytesReader.\n\n| Package        | stdlib 1.19.4                                |\n| Affected range | \u003c1.19.6                                      |\n| Fixed version  | 1.19.6                                       |\n| CVSS Score     |                                          7.5 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c1.19.6",
+                "cvssV3": 7.5,
+                "cvssV3_severity": "HIGH",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "fixed_version": "1.19.6",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2016-1905",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Improper Access Control"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2016-1905",
+              "help": {
+                "text": "The API server in Kubernetes does not properly check admission control, which allows remote authenticated users to access additional resources via a crafted patched object.\n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003cv1.2.0                                       \n  Fixed version  : v1.2.0                                        \n  CVSS Score     : 7.7                                           \n  CVSS Vector    : CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N  \n",
+                "markdown": "\u003e The API server in Kubernetes does not properly check admission control, which allows remote authenticated users to access additional resources via a crafted patched object.\n\n| Package        | kubernetes                                   |\n|                | 0.0.0-20221208195143-b46a3f887ca9            |\n| Affected range | \u003cv1.2.0                                      |\n| Fixed version  | v1.2.0                                       |\n| CVSS Score     |                                          7.7 |\n| CVSS Vector    | CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N |\n"
+              },
+              "properties": {
+                "affected_version": "\u003cv1.2.0",
+                "cvssV3": 7.7,
+                "cvssV3_severity": "HIGH",
+                "cvssV3_vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N",
+                "fixed_version": "v1.2.0",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-25741",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Files or Directories Accessible to External Parties"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2021-25741",
+              "help": {
+                "text": "A security issue was discovered in Kubernetes where a user may be able to create a container with subpath volume mounts to access files \u0026 directories outside of the volume, including on the host filesystem.\n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c1.19.15                                      \n  Fixed version  : 1.19.15                                       \n  CVSS Score     : 8.1                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N  \n",
+                "markdown": "\u003e A security issue was discovered in Kubernetes where a user may be able to create a container with subpath volume mounts to access files \u0026 directories outside of the volume, including on the host filesystem.\n\n| Package        | kubernetes                                   |\n|                | 0.0.0-20221208195143-b46a3f887ca9            |\n| Affected range | \u003c1.19.15                                     |\n| Fixed version  | 1.19.15                                      |\n| CVSS Score     |                                          8.1 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c1.19.15",
+                "cvssV3": 8.1,
+                "cvssV3_severity": "HIGH",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+                "fixed_version": "1.19.15",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2020-8558",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": ""
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2020-8558",
+              "help": {
+                "text": "The Kubelet and kube-proxy components in versions 1.1.0-1.16.10, 1.17.0-1.17.6, and 1.18.0-1.18.3 were found to contain a security issue which allows adjacent hosts to reach TCP and UDP services bound to 127.0.0.1 running on the node or in the node's network namespace. Such a service is generally thought to be reachable only by other processes on the same host, but due to this defeect, could be reachable by other hosts on the same LAN as the node, or by containers running on the same node as the service.\n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c1.16.11                                      \n  Fixed version  : 1.16.11                                       \n  CVSS Score     : 8.8                                           \n  CVSS Vector    : CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H  \n",
+                "markdown": "\u003e The Kubelet and kube-proxy components in versions 1.1.0-1.16.10, 1.17.0-1.17.6, and 1.18.0-1.18.3 were found to contain a security issue which allows adjacent hosts to reach TCP and UDP services bound to 127.0.0.1 running on the node or in the node's network namespace. Such a service is generally thought to be reachable only by other processes on the same host, but due to this defeect, could be reachable by other hosts on the same LAN as the node, or by containers running on the same node as the service.\n\n| Package        | kubernetes                                   |\n|                | 0.0.0-20221208195143-b46a3f887ca9            |\n| Affected range | \u003c1.16.11                                     |\n| Fixed version  | 1.16.11                                      |\n| CVSS Score     |                                          8.8 |\n| CVSS Vector    | CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c1.16.11",
+                "cvssV3": 8.8,
+                "cvssV3_severity": "HIGH",
+                "cvssV3_vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "fixed_version": "1.16.11",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2018-17983",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Out-of-bounds Read"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2018-17983",
+              "help": {
+                "text": "cext/manifest.c in Mercurial before 4.7.2 has an out-of-bounds read during parsing of a malformed manifest entry.\n  Package        : mercurial 4.5.2                               \n  Affected range : \u003c4.7.2                                        \n  Fixed version  : 4.7.2                                         \n  CVSS Score     : 9.1                                           \n  CVSS Vector    : CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  \n",
+                "markdown": "\u003e cext/manifest.c in Mercurial before 4.7.2 has an out-of-bounds read during parsing of a malformed manifest entry.\n\n| Package        | mercurial 4.5.2                              |\n| Affected range | \u003c4.7.2                                       |\n| Fixed version  | 4.7.2                                        |\n| CVSS Score     |                                          9.1 |\n| CVSS Vector    | CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c4.7.2",
+                "cvssV3": 9.1,
+                "cvssV3_severity": "CRITICAL",
+                "cvssV3_vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+                "fixed_version": "4.7.2",
+                "tags": [
+                  "CRITICAL"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2018-13347",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Integer Overflow or Wraparound"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2018-13347",
+              "help": {
+                "text": "mpatch.c in Mercurial before 4.6.1 mishandles integer addition and subtraction, aka OVE-20180430-0002.\n  Package        : mercurial 4.5.2                               \n  Affected range : \u003c4.6.1                                        \n  Fixed version  : 4.6.1                                         \n  CVSS Score     : 9.8                                           \n  CVSS Vector    : CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H  \n",
+                "markdown": "\u003e mpatch.c in Mercurial before 4.6.1 mishandles integer addition and subtraction, aka OVE-20180430-0002.\n\n| Package        | mercurial 4.5.2                              |\n| Affected range | \u003c4.6.1                                       |\n| Fixed version  | 4.6.1                                        |\n| CVSS Score     |                                          9.8 |\n| CVSS Vector    | CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c4.6.1",
+                "cvssV3": 9.8,
+                "cvssV3_severity": "CRITICAL",
+                "cvssV3_vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "fixed_version": "4.6.1",
+                "tags": [
+                  "CRITICAL"
+                ]
+              }
+            }
+          ],
+          "version": "v0.6.0"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "GMS-2023-418",
+          "ruleIndex": 0,
+          "kind": "fail",
+          "level": "none",
+          "message": {
+            "text": "  Vulnerability  : GMS-2023-418                             \n  Severity       : UNSPECIFIED                              \n  Package        : net 0.3.1-0.20221206200815-1e63c2f08a10  \n  Affected range : \u003c0.7.0                                   \n  Fixed version  : 0.7.0                                    \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "net",
+                  "fullyQualifiedName": "pkg:golang/golang.org/x/net@0.3.1-0.20221206200815-1e63c2f08a10",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-25740",
+          "ruleIndex": 1,
+          "kind": "fail",
+          "level": "note",
+          "message": {
+            "text": "  Vulnerability  : CVE-2021-25740                                \n  Severity       : LOW                                           \n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c=1.22.2                                      \n  Fixed version  : not fixed                                     \n  CVSS Score     : 3.1                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "kubernetes",
+                  "fullyQualifiedName": "pkg:golang/k8s.io/kubernetes@0.0.0-20221208195143-b46a3f887ca9",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-8562",
+          "ruleIndex": 2,
+          "kind": "fail",
+          "level": "note",
+          "message": {
+            "text": "  Vulnerability  : CVE-2020-8562                                 \n  Severity       : LOW                                           \n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c1.18.19                                      \n  Fixed version  : 1.18.19                                       \n  CVSS Score     : 3.1                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "kubernetes",
+                  "fullyQualifiedName": "pkg:golang/k8s.io/kubernetes@0.0.0-20221208195143-b46a3f887ca9",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-8561",
+          "ruleIndex": 3,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability  : CVE-2020-8561                                 \n  Severity       : MEDIUM                                        \n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c=1.22.2                                      \n  Fixed version  : not fixed                                     \n  CVSS Score     : 4.1                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:N/A:N  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "kubernetes",
+                  "fullyQualifiedName": "pkg:golang/k8s.io/kubernetes@0.0.0-20221208195143-b46a3f887ca9",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-8554",
+          "ruleIndex": 4,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability  : CVE-2020-8554                                 \n  Severity       : MEDIUM                                        \n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c=1.22.0                                      \n  Fixed version  : not fixed                                     \n  CVSS Score     : 5.0                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "kubernetes",
+                  "fullyQualifiedName": "pkg:golang/k8s.io/kubernetes@0.0.0-20221208195143-b46a3f887ca9",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-41717",
+          "ruleIndex": 5,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability  : CVE-2022-41717                                \n  Severity       : MEDIUM                                        \n  Package        : net 0.3.1-0.20221206200815-1e63c2f08a10       \n  Affected range : \u003c0.4.0                                        \n  Fixed version  : 0.4.0                                         \n  CVSS Score     : 5.3                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "net",
+                  "fullyQualifiedName": "pkg:golang/golang.org/x/net@0.3.1-0.20221206200815-1e63c2f08a10",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-24532",
+          "ruleIndex": 6,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability  : CVE-2023-24532                                \n  Severity       : MEDIUM                                        \n  Package        : stdlib 1.19.4                                 \n  Affected range : \u003c1.19.7                                       \n  Fixed version  : 1.19.7                                        \n  CVSS Score     : 5.3                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "stdlib",
+                  "fullyQualifiedName": "pkg:golang/stdlib@1.19.4",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-8565",
+          "ruleIndex": 7,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability  : CVE-2020-8565                                 \n  Severity       : MEDIUM                                        \n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c1.20.0-alpha.2                               \n  Fixed version  : 1.20.0-alpha.2                                \n  CVSS Score     : 5.5                                           \n  CVSS Vector    : CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "kubernetes",
+                  "fullyQualifiedName": "pkg:golang/k8s.io/kubernetes@0.0.0-20221208195143-b46a3f887ca9",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-8564",
+          "ruleIndex": 8,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability  : CVE-2020-8564                                 \n  Severity       : MEDIUM                                        \n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c1.20.0-alpha.1                               \n  Fixed version  : 1.20.0-alpha.1                                \n  CVSS Score     : 5.5                                           \n  CVSS Vector    : CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "kubernetes",
+                  "fullyQualifiedName": "pkg:golang/k8s.io/kubernetes@0.0.0-20221208195143-b46a3f887ca9",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-3902",
+          "ruleIndex": 9,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability  : CVE-2019-3902                                 \n  Severity       : MEDIUM                                        \n  Package        : mercurial 4.5.2                               \n  Affected range : \u003c4.9                                          \n  Fixed version  : 4.9                                           \n  CVSS Score     : 5.9                                           \n  CVSS Vector    : CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "mercurial",
+                  "fullyQualifiedName": "pkg:pypi/mercurial@4.5.2",
+                  "kind": "pypi"
+                },
+                {
+                  "fullyQualifiedName": "/usr/lib/python2.7/site-packages/mercurial-4.5.2-py2.7.egg-info"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2019-11250",
+          "ruleIndex": 10,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability  : CVE-2019-11250                                \n  Severity       : MEDIUM                                        \n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c1.16.0-beta.1                                \n  Fixed version  : 1.16.0-beta.1                                 \n  CVSS Score     : 6.5                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "kubernetes",
+                  "fullyQualifiedName": "pkg:golang/k8s.io/kubernetes@0.0.0-20221208195143-b46a3f887ca9",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-25735",
+          "ruleIndex": 11,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability  : CVE-2021-25735                                \n  Severity       : MEDIUM                                        \n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c=1.18.17                                     \n  Fixed version  : 1.18.18                                       \n  CVSS Score     : 6.5                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "kubernetes",
+                  "fullyQualifiedName": "pkg:golang/k8s.io/kubernetes@0.0.0-20221208195143-b46a3f887ca9",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2015-5305",
+          "ruleIndex": 12,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability  : CVE-2015-5305                                 \n  Severity       : MEDIUM                                        \n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c1.1.1                                        \n  Fixed version  : 1.1.1                                         \n  CVSS Score     : 6.5                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "kubernetes",
+                  "fullyQualifiedName": "pkg:golang/k8s.io/kubernetes@0.0.0-20221208195143-b46a3f887ca9",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-41723",
+          "ruleIndex": 13,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability  : CVE-2022-41723                                \n  Severity       : HIGH                                          \n  Package        : stdlib 1.19.4                                 \n  Affected range : \u003c1.19.6                                       \n  Fixed version  : 1.19.6                                        \n  CVSS Score     : 7.5                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "stdlib",
+                  "fullyQualifiedName": "pkg:golang/stdlib@1.19.4",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2018-13346",
+          "ruleIndex": 14,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability  : CVE-2018-13346                                \n  Severity       : HIGH                                          \n  Package        : mercurial 4.5.2                               \n  Affected range : \u003c4.6.1                                        \n  Fixed version  : 4.6.1                                         \n  CVSS Score     : 7.5                                           \n  CVSS Vector    : CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "mercurial",
+                  "fullyQualifiedName": "pkg:pypi/mercurial@4.5.2",
+                  "kind": "pypi"
+                },
+                {
+                  "fullyQualifiedName": "/usr/lib/python2.7/site-packages/mercurial-4.5.2-py2.7.egg-info"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2018-13348",
+          "ruleIndex": 15,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability  : CVE-2018-13348                                \n  Severity       : HIGH                                          \n  Package        : mercurial 4.5.2                               \n  Affected range : \u003c4.6.1                                        \n  Fixed version  : 4.6.1                                         \n  CVSS Score     : 7.5                                           \n  CVSS Vector    : CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "mercurial",
+                  "fullyQualifiedName": "pkg:pypi/mercurial@4.5.2",
+                  "kind": "pypi"
+                },
+                {
+                  "fullyQualifiedName": "/usr/lib/python2.7/site-packages/mercurial-4.5.2-py2.7.egg-info"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-41722",
+          "ruleIndex": 16,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability  : CVE-2022-41722                                \n  Severity       : HIGH                                          \n  Package        : stdlib 1.19.4                                 \n  Affected range : \u003c1.19.6                                       \n  Fixed version  : 1.19.6                                        \n  CVSS Score     : 7.5                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "stdlib",
+                  "fullyQualifiedName": "pkg:golang/stdlib@1.19.4",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-41724",
+          "ruleIndex": 17,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability  : CVE-2022-41724                                \n  Severity       : HIGH                                          \n  Package        : stdlib 1.19.4                                 \n  Affected range : \u003c1.19.6                                       \n  Fixed version  : 1.19.6                                        \n  CVSS Score     : 7.5                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "stdlib",
+                  "fullyQualifiedName": "pkg:golang/stdlib@1.19.4",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-41725",
+          "ruleIndex": 18,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability  : CVE-2022-41725                                \n  Severity       : HIGH                                          \n  Package        : stdlib 1.19.4                                 \n  Affected range : \u003c1.19.6                                       \n  Fixed version  : 1.19.6                                        \n  CVSS Score     : 7.5                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "stdlib",
+                  "fullyQualifiedName": "pkg:golang/stdlib@1.19.4",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-41723",
+          "ruleIndex": 13,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability  : CVE-2022-41723                                \n  Severity       : HIGH                                          \n  Package        : net 0.3.1-0.20221206200815-1e63c2f08a10       \n  Affected range : \u003c0.7.0                                        \n  Fixed version  : 0.7.0                                         \n  CVSS Score     : 7.5                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "net",
+                  "fullyQualifiedName": "pkg:golang/golang.org/x/net@0.3.1-0.20221206200815-1e63c2f08a10",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2016-1905",
+          "ruleIndex": 19,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability  : CVE-2016-1905                                 \n  Severity       : HIGH                                          \n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003cv1.2.0                                       \n  Fixed version  : v1.2.0                                        \n  CVSS Score     : 7.7                                           \n  CVSS Vector    : CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "kubernetes",
+                  "fullyQualifiedName": "pkg:golang/k8s.io/kubernetes@0.0.0-20221208195143-b46a3f887ca9",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-25741",
+          "ruleIndex": 20,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability  : CVE-2021-25741                                \n  Severity       : HIGH                                          \n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c1.19.15                                      \n  Fixed version  : 1.19.15                                       \n  CVSS Score     : 8.1                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "kubernetes",
+                  "fullyQualifiedName": "pkg:golang/k8s.io/kubernetes@0.0.0-20221208195143-b46a3f887ca9",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-8558",
+          "ruleIndex": 21,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability  : CVE-2020-8558                                 \n  Severity       : HIGH                                          \n  Package        : kubernetes 0.0.0-20221208195143-b46a3f887ca9  \n  Affected range : \u003c1.16.11                                      \n  Fixed version  : 1.16.11                                       \n  CVSS Score     : 8.8                                           \n  CVSS Vector    : CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "kubernetes",
+                  "fullyQualifiedName": "pkg:golang/k8s.io/kubernetes@0.0.0-20221208195143-b46a3f887ca9",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2018-17983",
+          "ruleIndex": 22,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability  : CVE-2018-17983                                \n  Severity       : CRITICAL                                      \n  Package        : mercurial 4.5.2                               \n  Affected range : \u003c4.7.2                                        \n  Fixed version  : 4.7.2                                         \n  CVSS Score     : 9.1                                           \n  CVSS Vector    : CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "mercurial",
+                  "fullyQualifiedName": "pkg:pypi/mercurial@4.5.2",
+                  "kind": "pypi"
+                },
+                {
+                  "fullyQualifiedName": "/usr/lib/python2.7/site-packages/mercurial-4.5.2-py2.7.egg-info"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2018-13347",
+          "ruleIndex": 23,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability  : CVE-2018-13347                                \n  Severity       : CRITICAL                                      \n  Package        : mercurial 4.5.2                               \n  Affected range : \u003c4.6.1                                        \n  Fixed version  : 4.6.1                                         \n  CVSS Score     : 9.8                                           \n  CVSS Vector    : CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "mercurial",
+                  "fullyQualifiedName": "pkg:pypi/mercurial@4.5.2",
+                  "kind": "pypi"
+                },
+                {
+                  "fullyQualifiedName": "/usr/lib/python2.7/site-packages/mercurial-4.5.2-py2.7.egg-info"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
