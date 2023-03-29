@@ -72,7 +72,7 @@ docker-scan-0-base: ## Docker scan 0-base
 	@echo "Scanned 0-base with docker scan (image)"
 
 .PHONY: dockerscout-scan-0-base
-docker-scout-0-base: ## Docker scout 0-base
+dockerscout-scan-0-base: ## Docker scout 0-base
 	@echo "Scanning 0-base with docker scout (image)"
 	@docker scout cves --format sarif --output $(RESULTS_DIR)/docker-scout-0-base.json $(IMAGEREPO):0-base || echo "docker scout scanned"
 	@echo "Scanned 0-base with docker scout (image)"
@@ -86,6 +86,12 @@ trivy-results-0-base: ## View trivy results for 0-base in JSON
 grype-results-0-base: ## View grype results for 0-base in JSON
 	@echo "Grype results from scanning 0-base (image)"
 	@cat $(RESULTS_DIR)/grype-scan-0-base.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+.PHONY: dockerscan-results-0-base
+dockerscan-results-0-base: ## View Docker scan results for 0-base in JSON
+	@echo "Docker Scan results from scanning 0-base (image)"
+	@cat $(RESULTS_DIR)/docker-scan-0-base.json | jq -rc '.[].vulnerabilities[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
+
 
 #######
 ## 1-os
@@ -111,13 +117,13 @@ grype-scan-1-os: ## Grype scan 1-os
 	@echo "Scanned 1-os with grype (image)"
 
 .PHONY: dockerscan-scan-1-os
-docker-scan-1-os: ## Docker scan 1-os
+dockerscan-scan-1-os: ## Docker scan 1-os
 	@echo "Scanning 1-os with docker scan (image)"
 	@docker scan $(IMAGEREPO):1-os --json > $(RESULTS_DIR)/docker-scan-1-os.json || echo "docker scan scanned"
 	@echo "Scanned 1-os with docker scan (image)"
 
 .PHONY: dockerscout-scan-1-os
-docker-scout-1-os: ## Docker scout 1-os
+dockerscout-scan-1-os: ## Docker scout 1-os
 	@echo "Scanning 1-os with docker scout (image)"
 	@docker scout cves --format sarif --output $(RESULTS_DIR)/docker-scout-1-os.json $(IMAGEREPO):1-os || echo "docker scout scanned"
 	@echo "Scanned 1-os with docker scout (image)"
@@ -131,6 +137,12 @@ trivy-results-1-os: ## View trivy results for 1-os in JSON
 grype-results-1-os: ## View grype results for 1-os in JSON
 	@echo "Grype results from scanning 1-os (image)"
 	@cat $(RESULTS_DIR)/grype-scan-1-os.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+.PHONY: dockerscan-results-1-os
+dockerscan-results-1-os: ## View Docker scan results for 1-os in JSON
+	@echo "Docker Scan results from scanning 1-os (image)"
+	@cat $(RESULTS_DIR)/docker-scan-1-os.json | jq -rc '.[].vulnerabilities[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
+
 
 #######
 ## 2-pkg
@@ -156,13 +168,13 @@ grype-scan-2-pkg: ## Grype scan 2-pkg
 	@echo "Scanned 2-pkg with grype (image)"
 
 .PHONY: dockerscan-scan-2-pkg
-docker-scan-2-pkg: ## Docker scan 2-pkg
+dockerscan-scan-2-pkg: ## Docker scan 2-pkg
 	@echo "Scanning 2-pkg with docker scan (image)"
 	@docker scan $(IMAGEREPO):2-pkg --json > $(RESULTS_DIR)/docker-scan-2-pkg.json || echo "docker scan scanned"
 	@echo "Scanned 2-pkg with docker scan (image)"
 
 .PHONY: dockerscout-scan-2-pkg
-docker-scout-2-pkg: ## Docker scout 2-pkg
+dockerscout-scan-2-pkg: ## Docker scout 2-pkg
 	@echo "Scanning 2-pkg with docker scout (image)"
 	@docker scout cves --format sarif --output $(RESULTS_DIR)/docker-scout-2-pkg.json $(IMAGEREPO):2-pkg || echo "docker scout scanned"
 	@echo "Scanned 2-pkg with docker scout (image)"
@@ -176,6 +188,12 @@ trivy-results-2-pkg: ## View trivy results for 2-pkg in JSON
 grype-results-2-pkg: ## View grype results for 2-pkg in JSON
 	@echo "Grype results from scanning 2-pkg (image)"
 	@cat $(RESULTS_DIR)/grype-scan-2-pkg.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+.PHONY: dockerscan-results-2-pkg
+dockerscan-results-2-pkg: ## View Docker scan results for 2-pkg in JSON
+	@echo "Docker Scan results from scanning 2-pkg (image)"
+	@cat $(RESULTS_DIR)/docker-scan-2-pkg.json | jq -rc '.[].vulnerabilities[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
+
 
 #######
 ## 3-lang
@@ -201,13 +219,13 @@ grype-scan-3-lang: ## Grype scan 3-lang
 	@echo "Scanned 3-lang with grype (image)"
 
 .PHONY: dockerscan-scan-3-lang
-docker-scan-3-lang: ## Docker scan 3-lang
+dockerscan-scan-3-lang: ## Docker scan 3-lang
 	@echo "Scanning 3-lang with docker scan (image)"
 	@docker scan $(IMAGEREPO):3-lang --json > $(RESULTS_DIR)/docker-scan-3-lang.json || echo "docker scan scanned"
 	@echo "Scanned 3-lang with docker scan (image)"
 
 .PHONY: dockerscout-scan-3-lang
-docker-scout-3-lang: ## Docker scout 3-lang
+dockerscout-scan-3-lang: ## Docker scout 3-lang
 	@echo "Scanning 3-lang with docker scout (image)"
 	@docker scout cves --format sarif --output $(RESULTS_DIR)/docker-scout-3-lang.json $(IMAGEREPO):3-lang || echo "docker scout scanned"
 	@echo "Scanned 3-lang with docker scout (image)"
@@ -221,6 +239,11 @@ trivy-results-3-lang: ## View trivy results for 3-lang in JSON
 grype-results-3-lang: ## View grype results for 3-lang in JSON
 	@echo "Grype results from scanning 3-lang (image)"
 	@cat $(RESULTS_DIR)/grype-scan-3-lang.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+.PHONY: dockerscan-results-3-lang
+dockerscan-results-3-lang: ## View Docker scan results for 3-lang in JSON
+	@echo "Docker Scan results from scanning 3-lang (image)"
+	@cat $(RESULTS_DIR)/docker-scan-3-lang.json | jq -rc '.[].vulnerabilities[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
 
 #######
 ## 4-bin
@@ -246,13 +269,13 @@ grype-scan-4-bin: ## Grype scan 4-bin
 	@echo "Scanned 4-bin with grype (image)"
 
 .PHONY: dockerscan-scan-4-bin
-docker-scan-4-bin: ## Docker scan 4-bin
+dockerscan-scan-4-bin: ## Docker scan 4-bin
 	@echo "Scanning 4-bin with docker scan (image)"
 	@docker scan $(IMAGEREPO):4-bin --json > $(RESULTS_DIR)/docker-scan-4-bin.json || echo "docker scan scanned"
 	@echo "Scanned 4-bin with docker scan (image)"
 
 .PHONY: dockerscout-scan-4-bin
-docker-scout-4-bin: ## Docker scout 4-bin
+dockerscout-scan-4-bin: ## Docker scout 4-bin
 	@echo "Scanning 4-bin with docker scout (image)"
 	@docker scout cves --format sarif --output $(RESULTS_DIR)/docker-scout-4-bin.json $(IMAGEREPO):4-bin || echo "docker scout scanned"
 	@echo "Scanned 4-bin with docker scout (image)"
@@ -266,6 +289,11 @@ trivy-results-4-bin: ## View trivy results for 4-bin in JSON
 grype-results-4-bin: ## View grype results for 4-bin in JSON
 	@echo "Grype results from scanning 4-bin (image)"
 	@cat $(RESULTS_DIR)/grype-scan-4-bin.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+.PHONY: dockerscan-results-4-bin
+dockerscan-results-4-bin: ## View Docker scan results for 4-bin in JSON
+	@echo "Docker Scan results from scanning 4-bin (image)"
+	@cat $(RESULTS_DIR)/docker-scan-4-bin.json | jq -rc '.[].vulnerabilities[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
 
 #######
 ## 5-zero
@@ -291,13 +319,13 @@ grype-scan-5-zero: ## Grype scan 5-zero
 	@echo "Scanned 5-zero with grype (image)"
 
 .PHONY: dockerscan-scan-5-zero
-docker-scan-5-zero: ## Docker scan 5-zero
+dockerscan-scan-5-zero: ## Docker scan 5-zero
 	@echo "Scanning 5-zero with docker scan (image)"
 	@docker scan $(IMAGEREPO):5-zero --json > $(RESULTS_DIR)/docker-scan-5-zero.json || echo "docker scan scanned"
 	@echo "Scanned 5-zero with docker scan (image)"
 
 .PHONY: dockerscout-scan-5-zero
-docker-scout-5-zero: ## Docker scout 5-zero
+dockerscout-scan-5-zero: ## Docker scout 5-zero
 	@echo "Scanning 5-zero with docker scout (image)"
 	@docker scout cves --format sarif --output $(RESULTS_DIR)/docker-scout-5-zero.json $(IMAGEREPO):5-zero || echo "docker scout scanned"
 	@echo "Scanned 5-zero with docker scout (image)"
@@ -311,3 +339,8 @@ trivy-results-5-zero: ## View trivy results for 5-zero in JSON
 grype-results-5-zero: ## View grype results for 5-zero in JSON
 	@echo "Grype results from scanning 5-zero (image)"
 	@cat $(RESULTS_DIR)/grype-scan-5-zero.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+.PHONY: dockerscan-results-5-zero
+dockerscan-results-5-zero: ## View Docker scan results for 5-zero in JSON
+	@echo "Docker Scan results from scanning 5-zero (image)"
+	@cat $(RESULTS_DIR)/docker-scan-5-zero.json | jq -rc '.[].vulnerabilities[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
