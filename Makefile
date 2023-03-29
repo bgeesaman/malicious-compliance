@@ -66,7 +66,7 @@ grype-scan-0-base: ## Grype scan 0-base
 	@echo "Scanned 0-base with grype (image)"
 
 .PHONY: dockerscan-scan-0-base
-docker-scan-0-base: ## Docker scan 0-base
+dockerscan-scan-0-base: ## Docker scan 0-base
 	@echo "Scanning 0-base with docker scan (image)"
 	@docker scan $(IMAGEREPO):0-base --json > $(RESULTS_DIR)/docker-scan-0-base.json || echo "docker scan scanned"
 	@echo "Scanned 0-base with docker scan (image)"
