@@ -343,4 +343,4 @@ grype-results-5-zero: ## View grype results for 5-zero in JSON
 .PHONY: dockerscan-results-5-zero
 dockerscan-results-5-zero: ## View Docker scan results for 5-zero in JSON
 	@echo "Docker Scan results from scanning 5-zero (image)"
-	@cat $(RESULTS_DIR)/docker-scan-5-zero.json | jq -rc '.[].vulnerabilities[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
+	@cat $(RESULTS_DIR)/docker-scan-5-zero.json | jq -rc 'select(.[].vulnerabilities? != null) | .[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
