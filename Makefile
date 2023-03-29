@@ -65,13 +65,13 @@ grype-scan-0-base: ## Grype scan 0-base
 	@grype $(IMAGEREPO):0-base -q -o json > $(RESULTS_DIR)/grype-scan-0-base.json || echo "grype scanned"
 	@echo "Scanned 0-base with grype (image)"
 
-.PHONY: docker-scan-0-base
+.PHONY: dockerscan-scan-0-base
 docker-scan-0-base: ## Docker scan 0-base
 	@echo "Scanning 0-base with docker scan (image)"
 	@docker scan $(IMAGEREPO):0-base --json > $(RESULTS_DIR)/docker-scan-0-base.json || echo "docker scan scanned"
 	@echo "Scanned 0-base with docker scan (image)"
 
-.PHONY: docker-scout-0-base
+.PHONY: dockerscout-scan-0-base
 docker-scout-0-base: ## Docker scout 0-base
 	@echo "Scanning 0-base with docker scout (image)"
 	@docker scout cves --format sarif --output $(RESULTS_DIR)/docker-scout-0-base.json $(IMAGEREPO):0-base || echo "docker scout scanned"
@@ -110,13 +110,13 @@ grype-scan-1-os: ## Grype scan 1-os
 	@grype $(IMAGEREPO):1-os -q -o json > $(RESULTS_DIR)/grype-scan-1-os.json || echo "grype scanned"
 	@echo "Scanned 1-os with grype (image)"
 
-.PHONY: docker-scan-1-os
+.PHONY: dockerscan-scan-1-os
 docker-scan-1-os: ## Docker scan 1-os
 	@echo "Scanning 1-os with docker scan (image)"
 	@docker scan $(IMAGEREPO):1-os --json > $(RESULTS_DIR)/docker-scan-1-os.json || echo "docker scan scanned"
 	@echo "Scanned 1-os with docker scan (image)"
 
-.PHONY: docker-scout-1-os
+.PHONY: dockerscout-scan-1-os
 docker-scout-1-os: ## Docker scout 1-os
 	@echo "Scanning 1-os with docker scout (image)"
 	@docker scout cves --format sarif --output $(RESULTS_DIR)/docker-scout-1-os.json $(IMAGEREPO):1-os || echo "docker scout scanned"
@@ -155,13 +155,13 @@ grype-scan-2-pkg: ## Grype scan 2-pkg
 	@grype $(IMAGEREPO):2-pkg -q -o json > $(RESULTS_DIR)/grype-scan-2-pkg.json || echo "grype scanned"
 	@echo "Scanned 2-pkg with grype (image)"
 
-.PHONY: docker-scan-2-pkg
+.PHONY: dockerscan-scan-2-pkg
 docker-scan-2-pkg: ## Docker scan 2-pkg
 	@echo "Scanning 2-pkg with docker scan (image)"
 	@docker scan $(IMAGEREPO):2-pkg --json > $(RESULTS_DIR)/docker-scan-2-pkg.json || echo "docker scan scanned"
 	@echo "Scanned 2-pkg with docker scan (image)"
 
-.PHONY: docker-scout-2-pkg
+.PHONY: dockerscout-scan-2-pkg
 docker-scout-2-pkg: ## Docker scout 2-pkg
 	@echo "Scanning 2-pkg with docker scout (image)"
 	@docker scout cves --format sarif --output $(RESULTS_DIR)/docker-scout-2-pkg.json $(IMAGEREPO):2-pkg || echo "docker scout scanned"
@@ -200,13 +200,13 @@ grype-scan-3-lang: ## Grype scan 3-lang
 	@grype $(IMAGEREPO):3-lang -q -o json > $(RESULTS_DIR)/grype-scan-3-lang.json || echo "grype scanned"
 	@echo "Scanned 3-lang with grype (image)"
 
-.PHONY: docker-scan-3-lang
+.PHONY: dockerscan-scan-3-lang
 docker-scan-3-lang: ## Docker scan 3-lang
 	@echo "Scanning 3-lang with docker scan (image)"
 	@docker scan $(IMAGEREPO):3-lang --json > $(RESULTS_DIR)/docker-scan-3-lang.json || echo "docker scan scanned"
 	@echo "Scanned 3-lang with docker scan (image)"
 
-.PHONY: docker-scout-3-lang
+.PHONY: dockerscout-scan-3-lang
 docker-scout-3-lang: ## Docker scout 3-lang
 	@echo "Scanning 3-lang with docker scout (image)"
 	@docker scout cves --format sarif --output $(RESULTS_DIR)/docker-scout-3-lang.json $(IMAGEREPO):3-lang || echo "docker scout scanned"
@@ -245,13 +245,13 @@ grype-scan-4-bin: ## Grype scan 4-bin
 	@grype $(IMAGEREPO):4-bin -q -o json > $(RESULTS_DIR)/grype-scan-4-bin.json || echo "grype scanned"
 	@echo "Scanned 4-bin with grype (image)"
 
-.PHONY: docker-scan-4-bin
+.PHONY: dockerscan-scan-4-bin
 docker-scan-4-bin: ## Docker scan 4-bin
 	@echo "Scanning 4-bin with docker scan (image)"
 	@docker scan $(IMAGEREPO):4-bin --json > $(RESULTS_DIR)/docker-scan-4-bin.json || echo "docker scan scanned"
 	@echo "Scanned 4-bin with docker scan (image)"
 
-.PHONY: docker-scout-4-bin
+.PHONY: dockerscout-scan-4-bin
 docker-scout-4-bin: ## Docker scout 4-bin
 	@echo "Scanning 4-bin with docker scout (image)"
 	@docker scout cves --format sarif --output $(RESULTS_DIR)/docker-scout-4-bin.json $(IMAGEREPO):4-bin || echo "docker scout scanned"
@@ -290,13 +290,13 @@ grype-scan-5-zero: ## Grype scan 5-zero
 	@grype $(IMAGEREPO):5-zero -q -o json > $(RESULTS_DIR)/grype-scan-5-zero.json || echo "grype scanned"
 	@echo "Scanned 5-zero with grype (image)"
 
-.PHONY: docker-scan-5-zero
+.PHONY: dockerscan-scan-5-zero
 docker-scan-5-zero: ## Docker scan 5-zero
 	@echo "Scanning 5-zero with docker scan (image)"
 	@docker scan $(IMAGEREPO):5-zero --json > $(RESULTS_DIR)/docker-scan-5-zero.json || echo "docker scan scanned"
 	@echo "Scanned 5-zero with docker scan (image)"
 
-.PHONY: docker-scout-5-zero
+.PHONY: dockerscout-scan-5-zero
 docker-scout-5-zero: ## Docker scout 5-zero
 	@echo "Scanning 5-zero with docker scout (image)"
 	@docker scout cves --format sarif --output $(RESULTS_DIR)/docker-scout-5-zero.json $(IMAGEREPO):5-zero || echo "docker scout scanned"
