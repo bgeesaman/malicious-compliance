@@ -92,6 +92,10 @@ dockerscan-results-0-base: ## View Docker scan results for 0-base in JSON
 	@echo "Docker Scan results from scanning 0-base (image)"
 	@cat $(RESULTS_DIR)/docker-scan-0-base.json | jq -rc '.[].vulnerabilities[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
 
+.PHONY: dockerscout-results-0-base
+dockerscout-results-0-base: ## View Docker scout results for 0-base in JSON
+	@echo "Docker Scout results from scanning 0-base (image)"
+	@cat $(RESULTS_DIR)/docker-scout-0-base.json | jq -rc '.runs[].tool.driver as $$driver | .runs[].results[] | [$$driver.fullName, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].name, (.ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.cvssV3_severity), .ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.affected_version, $$rule]'
 
 #######
 ## 1-os
@@ -142,6 +146,11 @@ grype-results-1-os: ## View grype results for 1-os in JSON
 dockerscan-results-1-os: ## View Docker scan results for 1-os in JSON
 	@echo "Docker Scan results from scanning 1-os (image)"
 	@cat $(RESULTS_DIR)/docker-scan-1-os.json | jq -rc '.[].vulnerabilities[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
+
+.PHONY: dockerscout-results-1-os
+dockerscout-results-1-os: ## View Docker scout results for 1-os in JSON
+	@echo "Docker Scout results from scanning 1-os (image)"
+	@cat $(RESULTS_DIR)/docker-scout-1-os.json | jq -rc '.runs[].tool.driver as $$driver | .runs[].results[] | [$$driver.fullName, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].name, (.ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.cvssV3_severity), .ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.affected_version, $$rule]'
 
 
 #######
@@ -194,6 +203,11 @@ dockerscan-results-2-pkg: ## View Docker scan results for 2-pkg in JSON
 	@echo "Docker Scan results from scanning 2-pkg (image)"
 	@cat $(RESULTS_DIR)/docker-scan-2-pkg.json | jq -rc '.[].vulnerabilities[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
 
+.PHONY: dockerscout-results-2-pkg
+dockerscout-results-2-pkg: ## View Docker scout results for 2-pkg in JSON
+	@echo "Docker Scout results from scanning 2-pkg (image)"
+	@cat $(RESULTS_DIR)/docker-scout-2-pkg.json | jq -rc '.runs[].tool.driver as $$driver | .runs[].results[] | [$$driver.fullName, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].name, (.ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.cvssV3_severity), .ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.affected_version, $$rule]'
+
 
 #######
 ## 3-lang
@@ -245,6 +259,13 @@ dockerscan-results-3-lang: ## View Docker scan results for 3-lang in JSON
 	@echo "Docker Scan results from scanning 3-lang (image)"
 	@cat $(RESULTS_DIR)/docker-scan-3-lang.json | jq -rc '.[].vulnerabilities[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
 
+.PHONY: dockerscout-results-3-lang
+dockerscout-results-3-lang: ## View Docker scout results for 3-lang in JSON
+	@echo "Docker Scout results from scanning 3-lang (image)"
+	@cat $(RESULTS_DIR)/docker-scout-3-lang.json | jq -rc '.runs[].tool.driver as $$driver | .runs[].results[] | [$$driver.fullName, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].name, (.ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.cvssV3_severity), .ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.affected_version, $$rule]'
+
+
+
 #######
 ## 4-bin
 #######
@@ -295,6 +316,13 @@ dockerscan-results-4-bin: ## View Docker scan results for 4-bin in JSON
 	@echo "Docker Scan results from scanning 4-bin (image)"
 	@cat $(RESULTS_DIR)/docker-scan-4-bin.json | jq -rc '.[].vulnerabilities[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
 
+.PHONY: dockerscout-results-4-bin
+dockerscout-results-4-bin: ## View Docker scout results for 4-bin in JSON
+	@echo "Docker Scout results from scanning 4-bin (image)"
+	@cat $(RESULTS_DIR)/docker-scout-4-bin.json | jq -rc '.runs[].tool.driver as $$driver | .runs[].results[] | [$$driver.fullName, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].name, (.ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.cvssV3_severity), .ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.affected_version, $$rule]'
+
+
+
 #######
 ## 5-zero
 #######
@@ -344,3 +372,8 @@ grype-results-5-zero: ## View grype results for 5-zero in JSON
 dockerscan-results-5-zero: ## View Docker scan results for 5-zero in JSON
 	@echo "Docker Scan results from scanning 5-zero (image)"
 	@cat $(RESULTS_DIR)/docker-scan-5-zero.json | jq -rc 'select(.[].vulnerabilities? != null) | .[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
+
+.PHONY: dockerscout-results-5-zero
+dockerscout-results-5-zero: ## View Docker scout results for 5-zero in JSON
+	@echo "Docker Scout results from scanning 5-zero (image)"
+	@cat $(RESULTS_DIR)/docker-scout-5-zero.json | jq -rc '.runs[].tool.driver as $$driver | .runs[].results[] | [$$driver.fullName, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].name, (.ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.cvssV3_severity), .ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.affected_version, $$rule]'
