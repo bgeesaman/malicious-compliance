@@ -95,7 +95,7 @@ grype-results-0-base: ## View grype results for 0-base in JSON
 .PHONY: grype-results-0-base-summary
 grype-results-0-base-summary: ## View grype summary results for 0-base
 	@echo "Grype results summary 0-base (image)"
-	@cat $(RESULTS_DIR)/grype-scan-0-base.json | jq -rc '.matches[] | .artifact | .type' | sort | uniq -c | sed -e 's/apk/os-pkg/g' | sed -e 's/python/runtime/g'
+	@cat $(RESULTS_DIR)/grype-scan-0-base.json | jq -rc '.matches[] | .artifact | .type' | sort | uniq -c | sed -e 's/apk/os-pkg/g' | sed -e 's/python/binary/g'
 
 .PHONY: dockerscan-results-0-base
 dockerscan-results-0-base: ## View Docker scan results for 0-base in JSON
@@ -173,7 +173,7 @@ grype-results-1-os: ## View grype results for 1-os in JSON
 .PHONY: grype-results-1-os-summary
 grype-results-1-os-summary: ## View grype summary results for 1-os
 	@echo "Grype results summary 1-os (image)"
-	@cat $(RESULTS_DIR)/grype-scan-1-os.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/runtime/g' | sed -e 's/go-module/binary/g' | uniq -c
+	@cat $(RESULTS_DIR)/grype-scan-1-os.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | uniq -c && echo "   0 runtime"
 
 .PHONY: dockerscan-results-1-os
 dockerscan-results-1-os: ## View Docker scan results for 1-os in JSON
@@ -251,7 +251,7 @@ grype-results-2-pkg: ## View grype results for 2-pkg in JSON
 .PHONY: grype-results-2-pkg-summary
 grype-results-2-pkg-summary: ## View grype summary results for 2-pkg
 	@echo "Grype results summary 2-pkg (image)"
-	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/grype-scan-2-pkg.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/runtime/g' | sed -e 's/go-module/binary/g' | uniq -c
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/grype-scan-2-pkg.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | uniq -c && echo "   0 runtime"
 
 .PHONY: dockerscan-results-2-pkg
 dockerscan-results-2-pkg: ## View Docker scan results for 2-pkg in JSON
@@ -330,7 +330,7 @@ grype-results-3-lang: ## View grype results for 3-lang in JSON
 .PHONY: grype-results-3-lang-summary
 grype-results-3-lang-summary: ## View grype summary results for 3-lang
 	@echo "Grype results summary 3-lang (image)"
-	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/grype-scan-3-lang.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/runtime/g' | sed -e 's/go-module/binary/g' | uniq -c
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/grype-scan-3-lang.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | uniq -c && echo "   0 runtime"
 
 .PHONY: dockerscan-results-3-lang
 dockerscan-results-3-lang: ## View Docker scan results for 3-lang in JSON
@@ -409,7 +409,7 @@ grype-results-4-bin: ## View grype results for 4-bin in JSON
 .PHONY: grype-results-4-bin-summary
 grype-results-4-bin-summary: ## View grype summary results for 4-bin
 	@echo "Grype results summary 4-bin (image)"
-	@cat $(RESULTS_DIR)/grype-scan-4-bin.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/runtime/g' | sed -e 's/go-module/binary/g' | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime"
+	@cat $(RESULTS_DIR)/grype-scan-4-bin.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime"
 
 .PHONY: dockerscan-results-4-bin
 dockerscan-results-4-bin: ## View Docker scan results for 4-bin in JSON
@@ -488,7 +488,7 @@ grype-results-5-zero: ## View grype results for 5-zero in JSON
 .PHONY: grype-results-5-zero-summary
 grype-results-5-zero-summary: ## View grype summary results for 4-bin
 	@echo "Grype results summary 5-zero (image)"
-	@cat $(RESULTS_DIR)/grype-scan-5-zero.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/runtime/g' | sed -e 's/go-module/binary/g' | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime"
+	@cat $(RESULTS_DIR)/grype-scan-5-zero.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime"
 
 .PHONY: dockerscan-results-5-zero
 dockerscan-results-5-zero: ## View Docker scan results for 5-zero in JSON
