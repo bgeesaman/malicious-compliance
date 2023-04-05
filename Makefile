@@ -51,7 +51,7 @@ run-0-base: ## Run shell in 0-base
 	@docker run --rm -it $(IMAGEREPO):0-base /bin/bash
 
 scan-0-base: trivy-scan-0-base grype-scan-0-base ## Scan 0-base with all scanners
-results-0-base: trivy-results-0-base grype-results-0-base ## Show 0-base results for all scanners
+results-0-base: trivy-results-0-base grype-results-0-base dockerscan-results-0-base dockerscout-results-0-base ## Show 0-base results for all scanners
 
 .PHONY: trivy-scan-0-base
 trivy-scan-0-base: ## Trivy scan 0-base
@@ -82,20 +82,43 @@ trivy-results-0-base: ## View trivy results for 0-base in JSON
 	@echo "Trivy results from scanning 0-base (image)"
 	@cat $(RESULTS_DIR)/trivy-scan-0-base.json | jq -rc 'select(.Results != null) | .Results[] | .Target as $$Target | .Type as $$Type | select(.Vulnerabilities != null) | . | .Vulnerabilities[] | ["trivy", $$Target, $$Type, .PkgName, (.Severity| ascii_downcase), .PkgName, .VulnerabilityID]'
 
+.PHONY: trivy-results-0-base-summary
+trivy-results-0-base-summary: ## View trivy summary results for 0-base
+	@echo "Trivy results summary 0-base (image)"
+	@cat $(RESULTS_DIR)/trivy-scan-0-base.json | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime/g' | sed -e 's/cargo/runtime/g' | sed -e 's/gobinary/binary/g' | uniq -c
+
 .PHONY: grype-results-0-base
 grype-results-0-base: ## View grype results for 0-base in JSON
 	@echo "Grype results from scanning 0-base (image)"
 	@cat $(RESULTS_DIR)/grype-scan-0-base.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+.PHONY: grype-results-0-base-summary
+grype-results-0-base-summary: ## View grype summary results for 0-base
+	@echo "Grype results summary 0-base (image)"
+	@cat $(RESULTS_DIR)/grype-scan-0-base.json | jq -rc '.matches[] | .artifact | .type' | sort | uniq -c | sed -e 's/apk/os-pkg/g' | sed -e 's/python/runtime/g'
 
 .PHONY: dockerscan-results-0-base
 dockerscan-results-0-base: ## View Docker scan results for 0-base in JSON
 	@echo "Docker Scan results from scanning 0-base (image)"
 	@cat $(RESULTS_DIR)/docker-scan-0-base.json | jq -rc '.[].vulnerabilities[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
 
+.PHONY: dockerscan-results-0-base-summary
+dockerscan-results-0-base-summary: ## View Docker scan summary results for 0-base
+	@echo "Docker Scan results summary 0-base (image)"
+	@cat $(RESULTS_DIR)/docker-scan-0-base.json | jq -rc '.[].vulnerabilities[] | .language' | sed -e 's/linux/os-pkg/g' | sed -e 's/golang/binary/g' | uniq -c && echo "   0 runtime"
+
 .PHONY: dockerscout-results-0-base
 dockerscout-results-0-base: ## View Docker scout results for 0-base in JSON
 	@echo "Docker Scout results from scanning 0-base (image)"
 	@cat $(RESULTS_DIR)/docker-scout-0-base.json | jq -rc '.runs[].tool.driver as $$driver | .runs[].results[] | [$$driver.fullName, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].name, (.ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.cvssV3_severity), .ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.affected_version, $$rule]'
+
+.PHONY: dockerscout-results-0-base-summary
+dockerscout-results-0-base-summary: ## View Docker scout summary results for 0-base 
+	@echo "Docker Scout results summary 0-base (image)"
+	@cat $(RESULTS_DIR)/docker-scout-0-base.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | uniq -c && echo "   0 runtime"
+
+.PHONY: results-0-base-summary
+results-0-base-summary: trivy-results-0-base-summary grype-results-0-base-summary dockerscan-results-0-base-summary dockerscout-results-0-base-summary ## View all results, summarized
 
 #######
 ## 1-os
@@ -106,7 +129,7 @@ run-1-os: ## Run shell in 1-os
 	@docker run --rm -it $(IMAGEREPO):1-os /bin/bash
 
 scan-1-os: trivy-scan-1-os grype-scan-1-os ## Scan 1-os with all scanners
-results-1-os: trivy-results-1-os grype-results-1-os ## Show 1-os results for all scanners
+results-1-os: trivy-results-1-os grype-results-1-os dockerscan-results-1-os dockerscout-results-1-os ## Show 1-os results for all scanners
 
 .PHONY: trivy-scan-1-os
 trivy-scan-1-os: ## Trivy scan 1-os
@@ -137,21 +160,43 @@ trivy-results-1-os: ## View trivy results for 1-os in JSON
 	@echo "Trivy results from scanning 1-os (image)"
 	@cat $(RESULTS_DIR)/trivy-scan-1-os.json | jq -rc 'select(.Results != null) | .Results[] | .Target as $$Target | .Type as $$Type | select(.Vulnerabilities != null) | . | .Vulnerabilities[] | ["trivy", $$Target, $$Type, .PkgName, (.Severity| ascii_downcase), .PkgName, .VulnerabilityID]'
 
+.PHONY: trivy-results-1-os-summary
+trivy-results-1-os-summary: ## View trivy summary results for 1-os
+	@echo "Trivy results summary 1-os (image)"
+	@cat $(RESULTS_DIR)/trivy-scan-1-os.json | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime/g' | sed -e 's/cargo/runtime/g' | sed -e 's/gobinary/binary/g' | uniq -c
+
 .PHONY: grype-results-1-os
 grype-results-1-os: ## View grype results for 1-os in JSON
 	@echo "Grype results from scanning 1-os (image)"
 	@cat $(RESULTS_DIR)/grype-scan-1-os.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+.PHONY: grype-results-1-os-summary
+grype-results-1-os-summary: ## View grype summary results for 1-os
+	@echo "Grype results summary 1-os (image)"
+	@cat $(RESULTS_DIR)/grype-scan-1-os.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/runtime/g' | sed -e 's/go-module/binary/g' | uniq -c
 
 .PHONY: dockerscan-results-1-os
 dockerscan-results-1-os: ## View Docker scan results for 1-os in JSON
 	@echo "Docker Scan results from scanning 1-os (image)"
 	@cat $(RESULTS_DIR)/docker-scan-1-os.json | jq -rc '.[].vulnerabilities[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
 
+.PHONY: dockerscan-results-1-os-summary
+dockerscan-results-1-os-summary: ## View Docker scan summary results for 1-os
+	@echo "Docker Scan results summary 1-os (image)"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/docker-scan-1-os.json | jq -rc '.[].vulnerabilities[] | .language' | sed -e 's/linux/os-pkg/g' | sed -e 's/golang/binary/g' | uniq -c && echo "   0 runtime"
+
 .PHONY: dockerscout-results-1-os
 dockerscout-results-1-os: ## View Docker scout results for 1-os in JSON
 	@echo "Docker Scout results from scanning 1-os (image)"
 	@cat $(RESULTS_DIR)/docker-scout-1-os.json | jq -rc '.runs[].tool.driver as $$driver | .runs[].results[] | [$$driver.fullName, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].name, (.ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.cvssV3_severity), .ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.affected_version, $$rule]'
 
+.PHONY: dockerscout-results-1-os-summary
+dockerscout-results-1-os-summary: ## View Docker scout summary results for 1-os
+	@echo "Docker Scout results summary 1-os (image)"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/docker-scout-1-os.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | uniq -c && echo "   0 runtime"
+
+.PHONY: results-1-os-summary
+results-1-os-summary: trivy-results-1-os-summary grype-results-1-os-summary dockerscan-results-1-os-summary dockerscout-results-1-os-summary ## View all results, summarized
 
 #######
 ## 2-pkg
@@ -162,7 +207,7 @@ run-2-pkg: ## Run shell in 2-pkg
 	@docker run --rm -it $(IMAGEREPO):2-pkg /bin/bash
 
 scan-2-pkg: trivy-scan-2-pkg grype-scan-2-pkg ## Scan 2-pkg with all scanners
-results-2-pkg: trivy-results-2-pkg grype-results-2-pkg ## Show 2-pkg results for all scanners
+results-2-pkg: trivy-results-2-pkg grype-results-2-pkg dockerscan-results-2-pkg dockerscout-results-2-pkg ## Show 2-pkg results for all scanners
 
 .PHONY: trivy-scan-2-pkg
 trivy-scan-2-pkg: ## Trivy scan 2-pkg
@@ -193,20 +238,43 @@ trivy-results-2-pkg: ## View trivy results for 2-pkg in JSON
 	@echo "Trivy results from scanning 2-pkg (image)"
 	@cat $(RESULTS_DIR)/trivy-scan-2-pkg.json | jq -rc 'select(.Results != null) | .Results[] | .Target as $$Target | .Type as $$Type | select(.Vulnerabilities != null) | . | .Vulnerabilities[] | ["trivy", $$Target, $$Type, .PkgName, (.Severity| ascii_downcase), .PkgName, .VulnerabilityID]'
 
+.PHONY: trivy-results-2-pkg-summary
+trivy-results-2-pkg-summary: ## View trivy summary results for 2-pkg
+	@echo "Trivy results summary 2-pkg (image)"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/trivy-scan-2-pkg.json | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime/g' | sed -e 's/cargo/runtime/g' | sed -e 's/gobinary/binary/g' | uniq -c
+
 .PHONY: grype-results-2-pkg
 grype-results-2-pkg: ## View grype results for 2-pkg in JSON
 	@echo "Grype results from scanning 2-pkg (image)"
 	@cat $(RESULTS_DIR)/grype-scan-2-pkg.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+.PHONY: grype-results-2-pkg-summary
+grype-results-2-pkg-summary: ## View grype summary results for 2-pkg
+	@echo "Grype results summary 2-pkg (image)"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/grype-scan-2-pkg.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/runtime/g' | sed -e 's/go-module/binary/g' | uniq -c
 
 .PHONY: dockerscan-results-2-pkg
 dockerscan-results-2-pkg: ## View Docker scan results for 2-pkg in JSON
 	@echo "Docker Scan results from scanning 2-pkg (image)"
 	@cat $(RESULTS_DIR)/docker-scan-2-pkg.json | jq -rc '.[].vulnerabilities[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
 
+.PHONY: dockerscan-results-2-pkg-summary
+dockerscan-results-2-pkg-summary: ## View Docker scan summary results for 2-pkg
+	@echo "Docker Scan results summary 2-pkg (image)"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/docker-scan-2-pkg.json | jq -rc '.[].vulnerabilities[] | .language' | sed -e 's/linux/os-pkg/g' | sed -e 's/golang/binary/g' | uniq -c && echo "   0 runtime"
+
 .PHONY: dockerscout-results-2-pkg
 dockerscout-results-2-pkg: ## View Docker scout results for 2-pkg in JSON
 	@echo "Docker Scout results from scanning 2-pkg (image)"
 	@cat $(RESULTS_DIR)/docker-scout-2-pkg.json | jq -rc '.runs[].tool.driver as $$driver | .runs[].results[] | [$$driver.fullName, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].name, (.ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.cvssV3_severity), .ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.affected_version, $$rule]'
+
+.PHONY: dockerscout-results-2-pkg-summary
+dockerscout-results-2-pkg-summary: ## View Docker scout summary results for 2-pkg
+	@echo "Docker Scout results summary 2-pkg (image)"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/docker-scout-2-pkg.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | uniq -c && echo "   0 runtime"
+
+.PHONY: results-2-pkg-summary
+results-2-pkg-summary: trivy-results-2-pkg-summary grype-results-2-pkg-summary dockerscan-results-2-pkg-summary dockerscout-results-2-pkg-summary ## View all results, summarized
 
 
 #######
@@ -218,7 +286,7 @@ run-3-lang: ## Run shell in 3-lang
 	@docker run --rm -it $(IMAGEREPO):3-lang /bin/bash
 
 scan-3-lang: trivy-scan-3-lang grype-scan-3-lang ## Scan 3-lang with all scanners
-results-3-lang: trivy-results-3-lang grype-results-3-lang ## Show 3-lang results for all scanners
+results-3-lang: trivy-results-3-lang grype-results-3-lang dockerscan-results-3-lang dockerscout-results-3-lang ## Show 3-lang results for all scanners
 
 .PHONY: trivy-scan-3-lang
 trivy-scan-3-lang: ## Trivy scan 3-lang
@@ -249,21 +317,43 @@ trivy-results-3-lang: ## View trivy results for 3-lang in JSON
 	@echo "Trivy results from scanning 3-lang (image)"
 	@cat $(RESULTS_DIR)/trivy-scan-3-lang.json | jq -rc 'select(.Results != null) | .Results[] | .Target as $$Target | .Type as $$Type | select(.Vulnerabilities != null) | . | .Vulnerabilities[] | ["trivy", $$Target, $$Type, .PkgName, (.Severity| ascii_downcase), .PkgName, .VulnerabilityID]'
 
+.PHONY: trivy-results-3-lang-summary
+trivy-results-3-lang-summary: ## View trivy summary results for 3-lang
+	@echo "Trivy results summary 3-lang (image)"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/trivy-scan-3-lang.json | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime/g' | sed -e 's/cargo/runtime/g' | sed -e 's/gobinary/binary/g' | uniq -c && echo "   0 runtime"
+
 .PHONY: grype-results-3-lang
 grype-results-3-lang: ## View grype results for 3-lang in JSON
 	@echo "Grype results from scanning 3-lang (image)"
 	@cat $(RESULTS_DIR)/grype-scan-3-lang.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+.PHONY: grype-results-3-lang-summary
+grype-results-3-lang-summary: ## View grype summary results for 3-lang
+	@echo "Grype results summary 3-lang (image)"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/grype-scan-3-lang.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/runtime/g' | sed -e 's/go-module/binary/g' | uniq -c
 
 .PHONY: dockerscan-results-3-lang
 dockerscan-results-3-lang: ## View Docker scan results for 3-lang in JSON
 	@echo "Docker Scan results from scanning 3-lang (image)"
 	@cat $(RESULTS_DIR)/docker-scan-3-lang.json | jq -rc '.[].vulnerabilities[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
 
+.PHONY: dockerscan-results-3-lang-summary
+dockerscan-results-3-lang-summary: ## View Docker scan summary results for 3-lang
+	@echo "Docker Scan results summary 3-lang (image)"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/docker-scan-3-lang.json | jq -rc '.[].vulnerabilities[] | .language' | sed -e 's/linux/os-pkg/g' | sed -e 's/golang/binary/g' | uniq -c && echo "   0 runtime"
+
 .PHONY: dockerscout-results-3-lang
 dockerscout-results-3-lang: ## View Docker scout results for 3-lang in JSON
 	@echo "Docker Scout results from scanning 3-lang (image)"
 	@cat $(RESULTS_DIR)/docker-scout-3-lang.json | jq -rc '.runs[].tool.driver as $$driver | .runs[].results[] | [$$driver.fullName, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].name, (.ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.cvssV3_severity), .ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.affected_version, $$rule]'
 
+.PHONY: dockerscout-results-3-lang-summary
+dockerscout-results-3-lang-summary: ## View Docker scout summary results for 3-lang
+	@echo "Docker Scout results summary 3-lang (image)"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/docker-scout-3-lang.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | uniq -c && echo "   0 runtime"
+
+.PHONY: results-3-lang-summary
+results-3-lang-summary: trivy-results-3-lang-summary grype-results-3-lang-summary dockerscan-results-3-lang-summary dockerscout-results-3-lang-summary ## View all results, summarized
 
 
 #######
@@ -275,7 +365,7 @@ run-4-bin: ## Run shell in 4-bin
 	@docker run --rm -it $(IMAGEREPO):4-bin /bin/bash
 
 scan-4-bin: trivy-scan-4-bin grype-scan-4-bin ## Scan 4-bin with all scanners
-results-4-bin: trivy-results-4-bin grype-results-4-bin ## Show 4-bin results for all scanners
+results-4-bin: trivy-results-4-bin grype-results-4-bin dockerscan-results-4-bin dockerscout-results-4-bin ## Show 4-bin results for all scanners
 
 .PHONY: trivy-scan-4-bin
 trivy-scan-4-bin: ## Trivy scan 4-bin
@@ -306,21 +396,43 @@ trivy-results-4-bin: ## View trivy results for 4-bin in JSON
 	@echo "Trivy results from scanning 4-bin (image)"
 	@cat $(RESULTS_DIR)/trivy-scan-4-bin.json | jq -rc 'select(.Results != null) | .Results[] | .Target as $$Target | .Type as $$Type | select(.Vulnerabilities != null) | . | .Vulnerabilities[] | ["trivy", $$Target, $$Type, .PkgName, (.Severity| ascii_downcase), .PkgName, .VulnerabilityID]'
 
+.PHONY: trivy-results-4-bin-summary
+trivy-results-4-bin-summary: ## View trivy summary results for 4-bin
+	@echo "Trivy results summary 4-bin (image)"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/trivy-scan-4-bin.json | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime/g' | sed -e 's/cargo/runtime/g' | sed -e 's/gobinary/binary/g' | uniq -c && echo "   0 runtime"
+
 .PHONY: grype-results-4-bin
 grype-results-4-bin: ## View grype results for 4-bin in JSON
 	@echo "Grype results from scanning 4-bin (image)"
 	@cat $(RESULTS_DIR)/grype-scan-4-bin.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+.PHONY: grype-results-4-bin-summary
+grype-results-4-bin-summary: ## View grype summary results for 4-bin
+	@echo "Grype results summary 4-bin (image)"
+	@cat $(RESULTS_DIR)/grype-scan-4-bin.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/runtime/g' | sed -e 's/go-module/binary/g' | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime"
 
 .PHONY: dockerscan-results-4-bin
 dockerscan-results-4-bin: ## View Docker scan results for 4-bin in JSON
 	@echo "Docker Scan results from scanning 4-bin (image)"
 	@cat $(RESULTS_DIR)/docker-scan-4-bin.json | jq -rc '.[].vulnerabilities[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
 
+.PHONY: dockerscan-results-4-bin-summary
+dockerscan-results-4-bin-summary: ## View Docker scan summary results for 4-bin
+	@echo "Docker Scan results summary 4-bin (image)"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/docker-scan-4-bin.json | jq -rc '.[].vulnerabilities[] | .language' | sed -e 's/linux/os-pkg/g' | sed -e 's/golang/binary/g' | uniq -c && echo "   0 runtime"
+
 .PHONY: dockerscout-results-4-bin
 dockerscout-results-4-bin: ## View Docker scout results for 4-bin in JSON
 	@echo "Docker Scout results from scanning 4-bin (image)"
 	@cat $(RESULTS_DIR)/docker-scout-4-bin.json | jq -rc '.runs[].tool.driver as $$driver | .runs[].results[] | [$$driver.fullName, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].name, (.ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.cvssV3_severity), .ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.affected_version, $$rule]'
 
+.PHONY: dockerscout-results-4-bin-summary
+dockerscout-results-4-bin-summary: ## View Docker scout summary results for 3-lang
+	@echo "Docker Scout results summary 4-bin (image)"
+	@cat $(RESULTS_DIR)/docker-scout-4-bin.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime"
+
+.PHONY: results-4-bin-summary
+results-4-bin-summary: trivy-results-4-bin-summary grype-results-4-bin-summary dockerscan-results-4-bin-summary dockerscout-results-4-bin-summary ## View all results, summarized
 
 
 #######
@@ -332,7 +444,7 @@ run-5-zero: ## Run shell in 5-zero
 	@docker run --rm -it $(IMAGEREPO):5-zero /bin/bash
 
 scan-5-zero: trivy-scan-5-zero grype-scan-5-zero ## Scan 5-zero with all scanners
-results-5-zero: trivy-results-5-zero grype-results-5-zero ## Show 5-zero results for all scanners
+results-5-zero: trivy-results-5-zero grype-results-5-zero dockerscan-results-5-zero dockerscout-results-5-zero ## Show 5-zero results for all scanners
 
 .PHONY: trivy-scan-5-zero
 trivy-scan-5-zero: ## Trivy scan 5-zero
@@ -363,17 +475,40 @@ trivy-results-5-zero: ## View trivy results for 5-zero in JSON
 	@echo "Trivy results from scanning 5-zero (image)"
 	@cat $(RESULTS_DIR)/trivy-scan-5-zero.json | jq -rc 'select(.Results != null) | .Results[] | .Target as $$Target | .Type as $$Type | select(.Vulnerabilities != null) | . | .Vulnerabilities[] | ["trivy", $$Target, $$Type, .PkgName, (.Severity| ascii_downcase), .PkgName, .VulnerabilityID]'
 
+.PHONY: trivy-results-5-zero-summary
+trivy-results-5-zero-summary: ## View trivy summary results for 5-zero
+	@echo "Trivy results summary 5-zero (image)"
+	@cat $(RESULTS_DIR)/trivy-scan-5-zero.json | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime/g' | sed -e 's/cargo/runtime/g' | sed -e 's/gobinary/binary/g' | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime"
+
 .PHONY: grype-results-5-zero
 grype-results-5-zero: ## View grype results for 5-zero in JSON
 	@echo "Grype results from scanning 5-zero (image)"
 	@cat $(RESULTS_DIR)/grype-scan-5-zero.json | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+.PHONY: grype-results-5-zero-summary
+grype-results-5-zero-summary: ## View grype summary results for 4-bin
+	@echo "Grype results summary 5-zero (image)"
+	@cat $(RESULTS_DIR)/grype-scan-5-zero.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/runtime/g' | sed -e 's/go-module/binary/g' | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime"
 
 .PHONY: dockerscan-results-5-zero
 dockerscan-results-5-zero: ## View Docker scan results for 5-zero in JSON
 	@echo "Docker Scan results from scanning 5-zero (image)"
 	@cat $(RESULTS_DIR)/docker-scan-5-zero.json | jq -rc 'select(.[].vulnerabilities? != null) | .[] | ["docker-scan", .packageManager,.language,.packageName,.nvdSeverity,.version,.identifiers.CVE[0]]'
 
+.PHONY: dockerscan-results-5-zero-summary
+dockerscan-results-5-zero-summary: ## View Docker scan summary results for 5-zero
+	@echo "Docker Scan results summary 5-zero (image)"
+	@cat $(RESULTS_DIR)/docker-scan-5-zero.json | jq -rc 'select(.[].vulnerabilities? != null) | .[].vulnerabilities[] | .language' | sed -e 's/linux/os-pkg/g' | sed -e 's/golang/binary/g' | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime"
+
 .PHONY: dockerscout-results-5-zero
 dockerscout-results-5-zero: ## View Docker scout results for 5-zero in JSON
 	@echo "Docker Scout results from scanning 5-zero (image)"
 	@cat $(RESULTS_DIR)/docker-scout-5-zero.json | jq -rc '.runs[].tool.driver as $$driver | .runs[].results[] | [$$driver.fullName, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].kind, .locations[].logicalLocations[0].name, (.ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.cvssV3_severity), .ruleId as $$rule | $$driver.rules[] | select(.id == $$rule) | .properties.affected_version, $$rule]'
+
+.PHONY: dockerscout-results-5-zero-summary
+dockerscout-results-5-zero-summary: ## View Docker scout summary results for 5-zero
+	@echo "Docker Scout results summary 5-zero (image)"
+	@cat $(RESULTS_DIR)/docker-scout-5-zero.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime"
+
+.PHONY: results-5-zero-summary
+results-5-zero-summary: trivy-results-5-zero-summary grype-results-5-zero-summary dockerscan-results-5-zero-summary dockerscout-results-5-zero-summary ## View all results, summarized
