@@ -512,3 +512,7 @@ dockerscout-results-5-zero-summary: ## View Docker scout summary results for 5-z
 
 .PHONY: results-5-zero-summary
 results-5-zero-summary: trivy-results-5-zero-summary grype-results-5-zero-summary dockerscan-results-5-zero-summary dockerscout-results-5-zero-summary ## View all results, summarized
+
+
+.PHONY: results-summaries
+results-summaries: results-0-base-summary results-1-os-summary results-2-pkg-summary results-3-lang-summary results-4-bin-summary results-5-zero-summary
