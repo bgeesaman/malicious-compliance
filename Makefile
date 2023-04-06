@@ -120,6 +120,11 @@ dockerscout-results-0-base-summary: ## View Docker scout summary results for 0-b
 .PHONY: results-0-base-summary
 results-0-base-summary: trivy-results-0-base-summary grype-results-0-base-summary dockerscan-results-0-base-summary dockerscout-results-0-base-summary ## View all results, summarized
 
+.PHONY: results-0-base-table
+results-0-base-table:  ## View all results in a table
+	@echo ""
+	@cat $(RESULTS_DIR)/0-base.nljson | jtbl
+
 #######
 ## 1-os
 #######
@@ -198,6 +203,11 @@ dockerscout-results-1-os-summary: ## View Docker scout summary results for 1-os
 .PHONY: results-1-os-summary
 results-1-os-summary: trivy-results-1-os-summary grype-results-1-os-summary dockerscan-results-1-os-summary dockerscout-results-1-os-summary ## View all results, summarized
 
+.PHONY: results-1-os-table
+results-1-os-table:  ## View all results in a table
+	@echo ""
+	@cat $(RESULTS_DIR)/1-os.nljson | jtbl
+
 #######
 ## 2-pkg
 #######
@@ -275,6 +285,11 @@ dockerscout-results-2-pkg-summary: ## View Docker scout summary results for 2-pk
 
 .PHONY: results-2-pkg-summary
 results-2-pkg-summary: trivy-results-2-pkg-summary grype-results-2-pkg-summary dockerscan-results-2-pkg-summary dockerscout-results-2-pkg-summary ## View all results, summarized
+
+.PHONY: results-2-pkg-table
+results-2-pkg-table:  ## View all results in a table
+	@echo ""
+	@cat $(RESULTS_DIR)/2-pkg.nljson | jtbl
 
 
 #######
@@ -355,6 +370,11 @@ dockerscout-results-3-lang-summary: ## View Docker scout summary results for 3-l
 .PHONY: results-3-lang-summary
 results-3-lang-summary: trivy-results-3-lang-summary grype-results-3-lang-summary dockerscan-results-3-lang-summary dockerscout-results-3-lang-summary ## View all results, summarized
 
+.PHONY: results-3-lang-table
+results-3-lang-table:  ## View all results in a table
+	@echo ""
+	@cat $(RESULTS_DIR)/3-lang.nljson | jtbl
+
 
 #######
 ## 4-bin
@@ -434,6 +454,11 @@ dockerscout-results-4-bin-summary: ## View Docker scout summary results for 3-la
 .PHONY: results-4-bin-summary
 results-4-bin-summary: trivy-results-4-bin-summary grype-results-4-bin-summary dockerscan-results-4-bin-summary dockerscout-results-4-bin-summary ## View all results, summarized
 
+.PHONY: results-4-bin-table
+results-4-bin-table:  ## View all results in a table
+	@echo ""
+	@cat $(RESULTS_DIR)/4-bin.nljson | jtbl
+
 
 #######
 ## 5-zero
@@ -512,6 +537,11 @@ dockerscout-results-5-zero-summary: ## View Docker scout summary results for 5-z
 
 .PHONY: results-5-zero-summary
 results-5-zero-summary: trivy-results-5-zero-summary grype-results-5-zero-summary dockerscan-results-5-zero-summary dockerscout-results-5-zero-summary ## View all results, summarized
+
+.PHONY: results-5-zero-table
+results-5-zero-table:  ## View all results in a table
+	@echo ""
+	@cat $(RESULTS_DIR)/5-zero.nljson | jtbl
 
 
 .PHONY: results-summaries

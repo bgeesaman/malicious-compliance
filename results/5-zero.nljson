@@ -1,0 +1,8 @@
+{ "Scanner": "Trivy",            "Step": "5-zero", "OS/PKG": ".", "LANG/RUNTIME": ".", "BINARY": "." }
+{ "Scanner": "",                 "Step": "",       "OS/PKG":  "", "LANG/RUNTIME":  "", "BINARY":  "" }
+{ "Scanner": "Grype",            "Step": "5-zero", "OS/PKG": ".", "LANG/RUNTIME": ".", "BINARY": "." }
+{ "Scanner": "",                 "Step": "",       "OS/PKG":  "", "LANG/RUNTIME":  "", "BINARY":  "" }
+{ "Scanner": "Docker Scan/Snyk", "Step": "5-zero", "OS/PKG": ".", "LANG/RUNTIME": ".", "BINARY": "." }
+{ "Scanner": "",                 "Step": "",       "OS/PKG":  "", "LANG/RUNTIME":  "", "BINARY":  "" }
+{ "Scanner": "Docker Scout",     "Step": "5-zero", "OS/PKG": ".", "LANG/RUNTIME": ".", "BINARY": "." }
+{ "Scanner": "",                 "Step": "",       "OS/PKG":  "", "LANG/RUNTIME":  "", "BINARY":  "" }
