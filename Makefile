@@ -574,3 +574,41 @@ results-5-zero-table:  ## View all results in a table
 
 .PHONY: results-summaries
 results-summaries: results-0-base-summary results-1-os-summary results-2-pkg-summary results-3-lang-summary results-4-bin-summary results-5-zero-summary
+
+
+.PHONY: trivy-0-base-sbom
+trivy-0-base-sbom: ## Generate SBOM with Trivy on 0-base
+	@echo "Trivy 0-base generate sbom"
+	@trivy image $(IMAGEREPO):0-base --format spdx-json 2> /dev/null 1> $(RESULTS_DIR)/sbom-trivy-scan-0-base.json
+
+.PHONY: trivy-0-base-sbom-results
+trivy-0-base-sbom-results: ## View trivy sbom results for 0-base
+	@echo "Trivy results from scanning 0-base (sbom)"
+	@trivy sbom --format json $(RESULTS_DIR)/sbom-trivy-scan-0-base.json 2> /dev/null | jq -rc 'select(.Results != null) | .Results[] | .Target as $$Target | .Type as $$Type | select(.Vulnerabilities != null) | . | .Vulnerabilities[] | ["trivy", $$Target, $$Type, .PkgName, (.Severity| ascii_downcase), .PkgName, .VulnerabilityID]'
+
+.PHONY: trivy-0-base-sbom-summary
+trivy-0-base-sbom-summary: ## View trivy summary results for 0-base
+	@echo "Trivy results summary 0-base (sbom)"
+	@trivy sbom --format json $(RESULTS_DIR)/sbom-trivy-scan-0-base.json 2> /dev/null | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime\/language dependency file/g' | sed -e 's/cargo/runtime\/language dependency file/g' | sed -e 's/gobinary/binary/g' | uniq -c
+
+.PHONY: trivy-5-zero-sbom
+trivy-5-zero-sbom: ## Generate SBOM with Trivy on 5-zero
+	@echo "Trivy 5-zero generate sbom"
+	@trivy image $(IMAGEREPO):5-zero --format spdx-json 2> /dev/null 1> $(RESULTS_DIR)/sbom-trivy-scan-5-zero.json
+
+.PHONY: trivy-5-zero-sbom-results
+trivy-5-zero-sbom-results: ## View trivy sbom results for 5-zero
+	@echo "Trivy results from scanning 5-zero (sbom)"
+	@trivy sbom --format json $(RESULTS_DIR)/sbom-trivy-scan-5-zero.json 2> /dev/null | jq -rc 'select(.Results != null) | .Results[] | .Target as $$Target | .Type as $$Type | select(.Vulnerabilities != null) | . | .Vulnerabilities[] | ["trivy", $$Target, $$Type, .PkgName, (.Severity| ascii_downcase), .PkgName, .VulnerabilityID]'
+
+.PHONY: trivy-5-zero-sbom-summary
+trivy-5-zero-sbom-summary: ## View trivy sbom summary results for 5-zero
+	@echo "Trivy results summary 5-zero (sbom)"
+	@trivy sbom --format json $(RESULTS_DIR)/sbom-trivy-scan-5-zero.json 2> /dev/null | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime\/language dependency file/g' | sed -e 's/cargo/runtime\/language dependency file/g' | sed -e 's/gobinary/binary/g' | uniq -c
+.PHONY: syft-0-base-sbom
+syft-0-base-sbom:
+	@echo "Syft 0-base generate sbom"
+
+.PHONY: syft-grype-0-base-sbom-results
+syft-grype-0-base-sbom-results:
+	@echo "Syft/Grype 0-base sbom results"
