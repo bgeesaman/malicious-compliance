@@ -9,11 +9,39 @@ RESULTS_DIR=results
 help: ## Print help
 	@awk 'BEGIN {FS = ": .*##"; printf "\nUsage:  make <command>\nCommands:\n\033[36m\033[0m\n"} /^[$$()% 0-9a-zA-Z_-]+(\\:[$$()% 0-9a-zA-Z_-]+)*:.*?##/ { gsub(/\\:/,":", $$1); printf "  \033[36m%-25s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
 
+.PHONY: demo0
+demo0:
+	@./demo/0.sh
+
+.PHONY: demo1
+demo1:
+	@./demo/1.sh
+
+.PHONY: demo2
+demo2:
+	@./demo/2.sh
+
+.PHONY: demo3
+demo3:
+	@./demo/3.sh
+
+.PHONY: demo4
+demo4:
+	@./demo/4.sh
+
+.PHONY: demo5
+demo5:
+	@./demo/5.sh
+
+.PHONY: demosbom
+demosbom:
+	@./demo/sbom.sh
+
 build-all: build-0-base build-1-os build-2-pkg build-3-lang build-4-bin build-5-zero ## Build all base images
 
 .PHONY: build-0-base
 build-0-base: ## Build the base image
-	@echo "Building 0-base"
+	@echo "Building 0-base: docker build -t $(IMAGEREPO):0-base -f Dockerfile-0-base"
 	@docker build -t $(IMAGEREPO):0-base -f docker/Dockerfile-0-base docker/
 
 .PHONY: build-1-os
