@@ -605,10 +605,33 @@ trivy-5-zero-sbom-results: ## View trivy sbom results for 5-zero
 trivy-5-zero-sbom-summary: ## View trivy sbom summary results for 5-zero
 	@echo "Trivy results summary 5-zero (sbom)"
 	@trivy sbom --format json $(RESULTS_DIR)/sbom-trivy-scan-5-zero.json 2> /dev/null | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime\/language dependency file/g' | sed -e 's/cargo/runtime\/language dependency file/g' | sed -e 's/gobinary/binary/g' | uniq -c
+
 .PHONY: syft-0-base-sbom
 syft-0-base-sbom:
 	@echo "Syft 0-base generate sbom"
+	@syft packages $(IMAGEREPO):0-base -o spdx-json 2> /dev/null 1> $(RESULTS_DIR)/sbom-syft-0-base.json
 
-.PHONY: syft-grype-0-base-sbom-results
-syft-grype-0-base-sbom-results:
-	@echo "Syft/Grype 0-base sbom results"
+.PHONY: grype-0-base-sbom-results
+grype-0-base-sbom-results:
+	@echo "Grype 0-base sbom results"
+	@grype sbom:$(RESULTS_DIR)/sbom-syft-0-base.json -o json 2> /dev/null | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+.PHONY: grype-0-base-sbom-summary
+grype-0-base-sbom-summary: ## View grype sbom summary results for 0-base
+	@echo "Grype results summary 0-base (syft sbom)"
+	@grype sbom:$(RESULTS_DIR)/sbom-syft-0-base.json -o json 2> /dev/null | jq -rc '.matches[] | .artifact | .type' | sed -e 's/^$$/os-pkg/g' | sed -e 's/apk/os-pkg/g' | sed -e 's/UnknownPackage/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | sort | uniq -c
+
+.PHONY: syft-5-zero-sbom
+syft-5-zero-sbom:
+	@echo "Syft 5-zero generate sbom"
+	@syft packages $(IMAGEREPO):5-zero -o spdx-json 2> /dev/null 1> $(RESULTS_DIR)/sbom-syft-5-zero.json
+
+.PHONY: grype-5-zero-sbom-results
+grype-5-zero-sbom-results:
+	@echo "Grype 5-zero sbom results"
+	@grype sbom:$(RESULTS_DIR)/sbom-syft-5-zero.json -o json 2> /dev/null | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
+
+.PHONY: grype-5-zero-sbom-summary
+grype-5-zero-sbom-summary: ## View grype sbom summary results for 5-zero
+	@echo "Grype results summary 5-zero (syft sbom)"
+	@grype sbom:$(RESULTS_DIR)/sbom-syft-5-zero.json -o json 2> /dev/null | jq -rc '.matches[] | .artifact | .type' | sed -e 's/^$$/os-pkg/g' | sed -e 's/apk/os-pkg/g' | sed -e 's/UnknownPackage/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | sort | uniq -c

@@ -1,0 +1,22 @@
+{
+ "spdxVersion": "SPDX-2.3",
+ "dataLicense": "CC0-1.0",
+ "SPDXID": "SPDXRef-DOCUMENT",
+ "name": "sig-honk/malicious-compliance:5-zero",
+ "documentNamespace": "https://anchore.com/syft/image/sig-honk/malicious-compliance-5-zero-925b8522-a2fc-4cbe-a573-002bacc3903b",
+ "creationInfo": {
+  "licenseListVersion": "3.20",
+  "creators": [
+   "Organization: Anchore, Inc",
+   "Tool: syft-0.73.0"
+  ],
+  "created": "2023-04-06T17:31:11Z"
+ },
+ "relationships": [
+  {
+   "spdxElementId": "SPDXRef-DOCUMENT",
+   "relatedSpdxElement": "SPDXRef-DOCUMENT",
+   "relationshipType": "DESCRIBES"
+  }
+ ]
+}
