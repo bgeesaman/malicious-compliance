@@ -3,14 +3,14 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "sig-honk/malicious-compliance:0-base",
- "documentNamespace": "https://anchore.com/syft/image/sig-honk/malicious-compliance-0-base-07a2d6a8-e40f-4e34-8839-0cb428829a66",
+ "documentNamespace": "https://anchore.com/syft/image/sig-honk/malicious-compliance-0-base-cefd8c7e-ace6-4463-9a37-368d97ee7423",
  "creationInfo": {
   "licenseListVersion": "3.20",
   "creators": [
    "Organization: Anchore, Inc",
    "Tool: syft-0.73.0"
   ],
-  "created": "2023-04-06T17:16:22Z"
+  "created": "2023-04-06T17:57:34Z"
  },
  "packages": [
   {
@@ -73599,29 +73599,9 @@
  ],
  "hasExtractedLicensingInfos": [
   {
-   "licenseId": "LicenseRef-ASL",
+   "licenseId": "LicenseRef-Public",
    "extractedText": "NONE",
-   "name": "ASL"
-  },
-  {
-   "licenseId": "LicenseRef-MPL",
-   "extractedText": "NONE",
-   "name": "MPL"
-  },
-  {
-   "licenseId": "LicenseRef-custom",
-   "extractedText": "NONE",
-   "name": "custom"
-  },
-  {
-   "licenseId": "LicenseRef-LGPL2+",
-   "extractedText": "NONE",
-   "name": "LGPL2+"
-  },
-  {
-   "licenseId": "LicenseRef-Domain",
-   "extractedText": "NONE",
-   "name": "Domain"
+   "name": "Public"
   },
   {
    "licenseId": "LicenseRef-GNU GPLv2 or any later version",
@@ -73629,14 +73609,24 @@
    "name": "GNU GPLv2 or any later version"
   },
   {
+   "licenseId": "LicenseRef-as-is",
+   "extractedText": "NONE",
+   "name": "as-is"
+  },
+  {
    "licenseId": "LicenseRef-apache",
    "extractedText": "NONE",
    "name": "apache"
   },
   {
-   "licenseId": "LicenseRef-bsd",
+   "licenseId": "LicenseRef-custom",
    "extractedText": "NONE",
-   "name": "bsd"
+   "name": "custom"
+  },
+  {
+   "licenseId": "LicenseRef-GPL",
+   "extractedText": "NONE",
+   "name": "GPL"
   },
   {
    "licenseId": "LicenseRef-GPL2",
@@ -73644,9 +73634,19 @@
    "name": "GPL2"
   },
   {
-   "licenseId": "LicenseRef-2.0",
+   "licenseId": "LicenseRef-Domain",
    "extractedText": "NONE",
-   "name": "2.0"
+   "name": "Domain"
+  },
+  {
+   "licenseId": "LicenseRef-GPL3+",
+   "extractedText": "NONE",
+   "name": "GPL3+"
+  },
+  {
+   "licenseId": "LicenseRef-MPL",
+   "extractedText": "NONE",
+   "name": "MPL"
   },
   {
    "licenseId": "LicenseRef-GPL2+",
@@ -73659,24 +73659,24 @@
    "name": "BSD"
   },
   {
-   "licenseId": "LicenseRef-as-is",
+   "licenseId": "LicenseRef-LGPL2+",
    "extractedText": "NONE",
-   "name": "as-is"
+   "name": "LGPL2+"
   },
   {
-   "licenseId": "LicenseRef-GPL3+",
+   "licenseId": "LicenseRef-bsd",
    "extractedText": "NONE",
-   "name": "GPL3+"
+   "name": "bsd"
   },
   {
-   "licenseId": "LicenseRef-GPL",
+   "licenseId": "LicenseRef-ASL",
    "extractedText": "NONE",
-   "name": "GPL"
+   "name": "ASL"
   },
   {
-   "licenseId": "LicenseRef-Public",
+   "licenseId": "LicenseRef-2.0",
    "extractedText": "NONE",
-   "name": "Public"
+   "name": "2.0"
   },
   {
    "licenseId": "LicenseRef-PSF or ZPL",

@@ -4,7 +4,7 @@
 # include the magic
 ########################
 . ./lib/demo-magic.sh
-TYPE_SPEED=23
+TYPE_SPEED=18
 clear
 
 echo ""
