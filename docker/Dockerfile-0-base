@@ -1,8 +1,8 @@
 FROM composer:1.7.2
 
+RUN apk add --no-cache nodejs
+
 COPY TestLibrary.deps.json /dotnet/TestLibrary.deps.json
-COPY example-java-app-maven-0.1.0.jar /java/example-java-app-maven-0.1.0.jar
-COPY spring-boot-application.jar /log4shell/spring-boot-application.jar
 COPY composer_laravel.lock /php-app/composer.lock
 COPY Gemfile_rails.lock /ruby-app/Gemfile.lock
 COPY package-lock_react.json /node-app/package-lock.json

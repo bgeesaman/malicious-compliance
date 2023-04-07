@@ -78,7 +78,7 @@ build-5-zero: ## Build the image without any detection
 run-0-base: ## Run shell in 0-base
 	@docker run --rm -it $(IMAGEREPO):0-base /bin/bash
 
-scan-0-base: trivy-scan-0-base grype-scan-0-base ## Scan 0-base with all scanners
+scan-0-base: trivy-scan-0-base grype-scan-0-base dockerscout-scan-0-base ## Scan 0-base with all scanners
 results-0-base: trivy-results-0-base grype-results-0-base dockerscan-results-0-base dockerscout-results-0-base ## Show 0-base results for all scanners
 
 .PHONY: trivy-scan-0-base
@@ -123,7 +123,7 @@ grype-results-0-base: ## View grype results for 0-base in JSON
 .PHONY: grype-results-0-base-summary
 grype-results-0-base-summary: ## View grype summary results for 0-base
 	@echo "Grype results summary 0-base"
-	@cat $(RESULTS_DIR)/grype-scan-0-base.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/binary/g' | uniq -c && echo "   0 runtime/language dependency file"
+	@cat $(RESULTS_DIR)/grype-scan-0-base.json | jq -rc '.matches[] | .artifact | .type' | sed -e 's/apk/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | sed -e 's/npm/runtime\/language dependency file/g' | sort | uniq -c
 
 .PHONY: dockerscan-results-0-base
 dockerscan-results-0-base: ## View Docker scan results for 0-base in JSON
@@ -143,7 +143,7 @@ dockerscout-results-0-base: ## View Docker scout results for 0-base in JSON
 .PHONY: dockerscout-results-0-base-summary
 dockerscout-results-0-base-summary: ## View Docker scout summary results for 0-base 
 	@echo "Docker Scout results summary 0-base"
-	@cat $(RESULTS_DIR)/docker-scout-0-base.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | uniq -c && echo "   0 runtime/language dependency file"
+	@cat $(RESULTS_DIR)/docker-scout-0-base.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sed -e 's/npm/runtime\/language dependency file/g' | sed -e 's/alpine/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | sort | uniq -c
 
 .PHONY: results-0-base-summary
 results-0-base-summary: trivy-results-0-base-summary grype-results-0-base-summary dockerscan-results-0-base-summary dockerscout-results-0-base-summary ## View all results, summarized
@@ -161,7 +161,7 @@ results-0-base-table:  ## View all results in a table
 run-1-os: ## Run shell in 1-os
 	@docker run --rm -it $(IMAGEREPO):1-os /bin/bash
 
-scan-1-os: trivy-scan-1-os grype-scan-1-os ## Scan 1-os with all scanners
+scan-1-os: trivy-scan-1-os grype-scan-1-os dockerscout-scan-1-os ## Scan 1-os with all scanners
 results-1-os: trivy-results-1-os grype-results-1-os dockerscan-results-1-os dockerscout-results-1-os ## Show 1-os results for all scanners
 
 .PHONY: trivy-scan-1-os
@@ -206,7 +206,7 @@ grype-results-1-os: ## View grype results for 1-os in JSON
 .PHONY: grype-results-1-os-summary
 grype-results-1-os-summary: ## View grype summary results for 1-os
 	@echo "Grype results summary 1-os"
-	@cat $(RESULTS_DIR)/grype-scan-1-os.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | uniq -c && echo "   0 runtime/language dependency file"
+	@cat $(RESULTS_DIR)/grype-scan-1-os.json | jq -rc '.matches[] | .artifact | .type' | sed -e 's/npm/runtime\/language dependency file/g' | sed -e 's/apk/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | sort | uniq -c
 
 .PHONY: dockerscan-results-1-os
 dockerscan-results-1-os: ## View Docker scan results for 1-os in JSON
@@ -226,7 +226,7 @@ dockerscout-results-1-os: ## View Docker scout results for 1-os in JSON
 .PHONY: dockerscout-results-1-os-summary
 dockerscout-results-1-os-summary: ## View Docker scout summary results for 1-os
 	@echo "Docker Scout results summary 1-os"
-	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/docker-scout-1-os.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | uniq -c && echo "   0 runtime/language dependency file"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/docker-scout-1-os.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sed -e 's/npm/runtime\/language dependency file/g' | sed -e 's/alpine/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | sort | uniq -c
 
 .PHONY: results-1-os-summary
 results-1-os-summary: trivy-results-1-os-summary grype-results-1-os-summary dockerscan-results-1-os-summary dockerscout-results-1-os-summary ## View all results, summarized
@@ -244,7 +244,7 @@ results-1-os-table:  ## View all results in a table
 run-2-pkg: ## Run shell in 2-pkg
 	@docker run --rm -it $(IMAGEREPO):2-pkg /bin/bash
 
-scan-2-pkg: trivy-scan-2-pkg grype-scan-2-pkg ## Scan 2-pkg with all scanners
+scan-2-pkg: trivy-scan-2-pkg grype-scan-2-pkg dockerscout-scan-2-pkg ## Scan 2-pkg with all scanners
 results-2-pkg: trivy-results-2-pkg grype-results-2-pkg dockerscan-results-2-pkg dockerscout-results-2-pkg ## Show 2-pkg results for all scanners
 
 .PHONY: trivy-scan-2-pkg
@@ -279,7 +279,7 @@ trivy-results-2-pkg: ## View trivy results for 2-pkg in JSON
 .PHONY: trivy-results-2-pkg-summary
 trivy-results-2-pkg-summary: ## View trivy summary results for 2-pkg
 	@echo "Trivy results summary 2-pkg"
-	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/trivy-scan-2-pkg.json | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime\/language dependency file/g' | sed -e 's/cargo/runtime\/language dependency file/g' | sed -e 's/gobinary/binary/g' | uniq -c
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/trivy-scan-2-pkg.json | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime\/language dependency file/g' | sed -e 's/cargo/runtime\/language dependency file/g' | sed -e 's/gobinary/binary/g' | sort | uniq -c
 
 .PHONY: grype-results-2-pkg
 grype-results-2-pkg: ## View grype results for 2-pkg in JSON
@@ -289,7 +289,7 @@ grype-results-2-pkg: ## View grype results for 2-pkg in JSON
 .PHONY: grype-results-2-pkg-summary
 grype-results-2-pkg-summary: ## View grype summary results for 2-pkg
 	@echo "Grype results summary 2-pkg"
-	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/grype-scan-2-pkg.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | uniq -c && echo "   0 runtime/language dependency file"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/grype-scan-2-pkg.json | jq -rc '.matches[] | .artifact | .type' | sed -e 's/npm/runtime\/language dependency file/g' | sed -e 's/apk/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | sort | uniq -c
 
 .PHONY: dockerscan-results-2-pkg
 dockerscan-results-2-pkg: ## View Docker scan results for 2-pkg in JSON
@@ -309,7 +309,7 @@ dockerscout-results-2-pkg: ## View Docker scout results for 2-pkg in JSON
 .PHONY: dockerscout-results-2-pkg-summary
 dockerscout-results-2-pkg-summary: ## View Docker scout summary results for 2-pkg
 	@echo "Docker Scout results summary 2-pkg"
-	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/docker-scout-2-pkg.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | uniq -c && echo "   0 runtime/language dependency file"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/docker-scout-2-pkg.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sed -e 's/npm/runtime\/language dependency file/g' | sed -e 's/alpine/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | sort | uniq -c
 
 .PHONY: results-2-pkg-summary
 results-2-pkg-summary: trivy-results-2-pkg-summary grype-results-2-pkg-summary dockerscan-results-2-pkg-summary dockerscout-results-2-pkg-summary ## View all results, summarized
@@ -328,7 +328,7 @@ results-2-pkg-table:  ## View all results in a table
 run-3-lang: ## Run shell in 3-lang
 	@docker run --rm -it $(IMAGEREPO):3-lang /bin/bash
 
-scan-3-lang: trivy-scan-3-lang grype-scan-3-lang ## Scan 3-lang with all scanners
+scan-3-lang: trivy-scan-3-lang grype-scan-3-lang dockerscout-scan-3-lang ## Scan 3-lang with all scanners
 results-3-lang: trivy-results-3-lang grype-results-3-lang dockerscan-results-3-lang dockerscout-results-3-lang ## Show 3-lang results for all scanners
 
 .PHONY: trivy-scan-3-lang
@@ -363,7 +363,7 @@ trivy-results-3-lang: ## View trivy results for 3-lang in JSON
 .PHONY: trivy-results-3-lang-summary
 trivy-results-3-lang-summary: ## View trivy summary results for 3-lang
 	@echo "Trivy results summary 3-lang"
-	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/trivy-scan-3-lang.json | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime\/language dependency file/g' | sed -e 's/cargo/runtime\/language dependency file/g' | sed -e 's/gobinary/binary/g' | uniq -c && echo "   0 runtime/language dependency file"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/trivy-scan-3-lang.json | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime\/language dependency file/g' | sed -e 's/cargo/runtime\/language dependency file/g' | sed -e 's/gobinary/binary/g' | sort | uniq -c && echo "   0 runtime/language dependency file"
 
 .PHONY: grype-results-3-lang
 grype-results-3-lang: ## View grype results for 3-lang in JSON
@@ -373,7 +373,7 @@ grype-results-3-lang: ## View grype results for 3-lang in JSON
 .PHONY: grype-results-3-lang-summary
 grype-results-3-lang-summary: ## View grype summary results for 3-lang
 	@echo "Grype results summary 3-lang"
-	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/grype-scan-3-lang.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | uniq -c && echo "   0 runtime/language dependency file"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/grype-scan-3-lang.json | jq -rc '.matches[] | .artifact | .type' | sed -e 's/npm/runtime\/language dependency file/g'  | sed -e 's/apk/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | sort | uniq -c && echo "   0 runtime/language dependency file"
 
 .PHONY: dockerscan-results-3-lang
 dockerscan-results-3-lang: ## View Docker scan results for 3-lang in JSON
@@ -393,7 +393,7 @@ dockerscout-results-3-lang: ## View Docker scout results for 3-lang in JSON
 .PHONY: dockerscout-results-3-lang-summary
 dockerscout-results-3-lang-summary: ## View Docker scout summary results for 3-lang
 	@echo "Docker Scout results summary 3-lang"
-	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/docker-scout-3-lang.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | uniq -c && echo "   0 runtime/language dependency file"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/docker-scout-3-lang.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sed -e 's/npm/runtime\/language dependency/g' | sed -e 's/alpine/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | sort | uniq -c && echo "   0 runtime/language dependency file"
 
 .PHONY: results-3-lang-summary
 results-3-lang-summary: trivy-results-3-lang-summary grype-results-3-lang-summary dockerscan-results-3-lang-summary dockerscout-results-3-lang-summary ## View all results, summarized
@@ -412,7 +412,7 @@ results-3-lang-table:  ## View all results in a table
 run-4-bin: ## Run shell in 4-bin
 	@docker run --rm -it $(IMAGEREPO):4-bin /bin/bash
 
-scan-4-bin: trivy-scan-4-bin grype-scan-4-bin ## Scan 4-bin with all scanners
+scan-4-bin: trivy-scan-4-bin grype-scan-4-bin dockerscout-scan-4-bin ## Scan 4-bin with all scanners
 results-4-bin: trivy-results-4-bin grype-results-4-bin dockerscan-results-4-bin dockerscout-results-4-bin ## Show 4-bin results for all scanners
 
 .PHONY: trivy-scan-4-bin
@@ -447,7 +447,7 @@ trivy-results-4-bin: ## View trivy results for 4-bin in JSON
 .PHONY: trivy-results-4-bin-summary
 trivy-results-4-bin-summary: ## View trivy summary results for 4-bin
 	@echo "Trivy results summary 4-bin"
-	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/trivy-scan-4-bin.json | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime\/language dependency file/g' | sed -e 's/cargo/runtime\/language dependency file/g' | sed -e 's/gobinary/binary/g' | uniq -c && echo "   0 runtime/language dependency file"
+	@echo "   0 os-pkg" && cat $(RESULTS_DIR)/trivy-scan-4-bin.json | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime\/language dependency file/g' | sed -e 's/cargo/runtime\/language dependency file/g' | sed -e 's/gobinary/binary/g' | sort | uniq -c && echo "   0 runtime/language dependency file"
 
 .PHONY: grype-results-4-bin
 grype-results-4-bin: ## View grype results for 4-bin in JSON
@@ -457,7 +457,7 @@ grype-results-4-bin: ## View grype results for 4-bin in JSON
 .PHONY: grype-results-4-bin-summary
 grype-results-4-bin-summary: ## View grype summary results for 4-bin
 	@echo "Grype results summary 4-bin"
-	@cat $(RESULTS_DIR)/grype-scan-4-bin.json | jq -rc '.matches[] | .artifact | .type' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime/language dependency file"
+	@cat $(RESULTS_DIR)/grype-scan-4-bin.json | jq -rc '.matches[] | .artifact | .type' | sed -e 's/npm/runtime\/language dependency file/g' | sed -e 's/apk/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | sort | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime/language dependency file"
 
 .PHONY: dockerscan-results-4-bin
 dockerscan-results-4-bin: ## View Docker scan results for 4-bin in JSON
@@ -477,7 +477,7 @@ dockerscout-results-4-bin: ## View Docker scout results for 4-bin in JSON
 .PHONY: dockerscout-results-4-bin-summary
 dockerscout-results-4-bin-summary: ## View Docker scout summary results for 3-lang
 	@echo "Docker Scout results summary 4-bin"
-	@cat $(RESULTS_DIR)/docker-scout-4-bin.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime/language dependency file"
+	@cat $(RESULTS_DIR)/docker-scout-4-bin.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sed -e 's/npm/runtime\/language dependency file/g' | sed -e 's/apk/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | sort | uniq -c && echo "   0 os-pkg" && echo "   0 runtime/language dependency file"
 
 .PHONY: results-4-bin-summary
 results-4-bin-summary: trivy-results-4-bin-summary grype-results-4-bin-summary dockerscan-results-4-bin-summary dockerscout-results-4-bin-summary ## View all results, summarized
@@ -496,7 +496,7 @@ results-4-bin-table:  ## View all results in a table
 run-5-zero: ## Run shell in 5-zero
 	@docker run --rm -it $(IMAGEREPO):5-zero /bin/bash
 
-scan-5-zero: trivy-scan-5-zero grype-scan-5-zero ## Scan 5-zero with all scanners
+scan-5-zero: trivy-scan-5-zero grype-scan-5-zero dockerscout-scan-5-zero ## Scan 5-zero with all scanners
 results-5-zero: trivy-results-5-zero grype-results-5-zero dockerscan-results-5-zero dockerscout-results-5-zero ## Show 5-zero results for all scanners
 
 .PHONY: trivy-scan-5-zero
@@ -561,7 +561,7 @@ dockerscout-results-5-zero: ## View Docker scout results for 5-zero in JSON
 .PHONY: dockerscout-results-5-zero-summary
 dockerscout-results-5-zero-summary: ## View Docker scout summary results for 5-zero
 	@echo "Docker Scout results summary 5-zero"
-	@cat $(RESULTS_DIR)/docker-scout-5-zero.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sort | sed -e 's/apk/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime/language dependency file"
+	@cat $(RESULTS_DIR)/docker-scout-5-zero.json | jq -rc '.runs[].results[] | .locations[].logicalLocations[0].kind' | sort | sed -e 's/alpine/os-pkg/g' | sed -e 's/golang/binary/g' | sed -e 's/pypi/binary/g' | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime/language dependency file"
 
 .PHONY: results-5-zero-summary
 results-5-zero-summary: trivy-results-5-zero-summary grype-results-5-zero-summary dockerscan-results-5-zero-summary dockerscout-results-5-zero-summary ## View all results, summarized

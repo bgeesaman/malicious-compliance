@@ -8,7 +8,7 @@
       "Name": "3.7.1",
       "EOSL": true
     },
-    "ImageID": "sha256:1f9ca1100560c2d47eb388855795fb949e7d0f91119cd4af2a7ea6437c9baef6",
+    "ImageID": "sha256:dbf8f0188651f835ec9bdfab1914da9bebd2e08935f5d480bc370bda4836bfd0",
     "DiffIDs": [
       "sha256:ebf12965380b39889c99a9c02e82ba465f887b45975b6e389d42e9e6a3857888",
       "sha256:0ea33a93585cf1917ba522b2304634c3073654062d5282c1346322967790ef33",
@@ -25,28 +25,41 @@
       "sha256:6ca56f561e677ae06c3bc87a70792642d671a4416becb9a101577c1a6e090e36",
       "sha256:154ad0735c360b212b167f424d33a62305770a1fcfb6363882f5c436cfbd9812",
       "sha256:b2a1a2d80bf0c747a4f6b0ca6af5eef23f043fcdb1ed4f3a3e750aef2dc68079",
-      "sha256:1d29b8c8a8e4b3952cddc7522daf9df82b924e008c01ba5acf97937deacd82b6",
-      "sha256:c6d03dd80435ddc74bc95650110ba6790e54473c6007db0de41cdc6955a9fab7",
-      "sha256:f7f1beca31f9cf9a98ca2d7f1108324c01f8d7d6a98fb9210569eba04505f09c",
-      "sha256:3fae3bac744bee502edf0591da4def0000573cd1a0294e1b0ca32d0b9401f458",
-      "sha256:b1d3ae02f97326393b72247742f076f44ae0f53392009fb7e8ff67212da64aba",
-      "sha256:ddb4015f16b5df83b495696ece81c171b45d734a19f0d000693bec482ed30dcb",
-      "sha256:773d290cdb6814ae3830540df5e9ec778bf40b81502093d51569bffbc8751a74",
-      "sha256:568467b429676ef288c9ab74a348a7fb99d2f692d4378e43699d8e9fb072a31f",
-      "sha256:22c3be5ac4c4ca1d80b7826252321831b6e0a1c1c7dc98691343f66ce0cb83f9",
-      "sha256:97cec6dba0e33d25fcf16a349c151b736d450454475ab9da197d7c6e8f0f4bb1",
-      "sha256:0e02f6d4f20c9ccb3324677292d0044a562ff729f025c9bb75da004a38a2a417",
-      "sha256:393e51d3638b8f04f1e383217854b382cfcb11ea2393e5a2c1cd743c65d753f5",
-      "sha256:d9f913917cc730ba9ee9499e5350e61c8bf36627efcb9981f4993ebd15d25aeb",
-      "sha256:7c86c98beb8eade391653d9f7b6f608a6507b2715702f6b7f8060b55171b325c",
-      "sha256:fec6baf1ff1b31538a10bd28bddfae52d47f9eb108613d0255ab9b08df30a555"
+      "sha256:3e92c04ecf901a992676ed74cb8163d3c5ec3e0410e8b2d6a9462be32dabb1f8",
+      "sha256:0920f3423fa9472e64c9f8398841b844d99a5594de995db0c12fdeaa7d62d355",
+      "sha256:93ccce1df717db574b35910156a384a40dc7e79d4c7c9e83be887848adf7e56d",
+      "sha256:085b28d8bccebf25f384afc5040f55156916dfb79c5643cb4d5a79b5cbc0fd84",
+      "sha256:19bfe926f08e0039f7c4fd99057731fbacd93f54439cedaceb3caf603efa6688",
+      "sha256:7da2a70927f776ce1309eb27f7c686bdaffe3bb8012c37a8c1518b8b1e5560ad",
+      "sha256:7b0545cd206ea88be7330aa1ea1867d057360ef180b3da9e1af072cb3c88c57a",
+      "sha256:b2d4fddbd5c3eb2ac9d049d629fe7d3cb38855c2f4302a2538430cb991daae1c",
+      "sha256:9ff2cac265078412f4e7fb8d969ec201f7a3dbb678a9cf0b69e358abb77cfc5b",
+      "sha256:fcc5726f546e1c4f3b0367f1b21a7a9efefa6abfef5b84a09e1f165667a20cde",
+      "sha256:810b0c064108ce36f652eeddc3e3c772d5a9da353b7274e8244480e6035cede0",
+      "sha256:06a6e6d7831e6caeddaa6c4404ed00c6696fa190fb8236cfb26076fd17f86392",
+      "sha256:45691d3922dfff19406f07db81fe89f58d26210463afc1cf5f72bad8bcbd6b50",
+      "sha256:d12d0ef76cd791f70f3639856abc26875acc6b9d89b6c008553f3146a69ea103",
+      "sha256:5e1e16e01e72f7c9e129aafdbffd1e38ebcb7e220defadd5f5ff89dd2358df9f",
+      "sha256:35e20a8051e64c9deb15cbe91b84cb1c1acc94d6c25d929b3a6122f7cbdcbfd4",
+      "sha256:a2a29c2000cf2556cadc7ed2055c861fa8d4de21d43152bf703ccc232c6b65a1",
+      "sha256:33a05194823bf1c481a0e90ca727177d690ef04b4d6b98be17340dc6c5dc4e6c",
+      "sha256:6b604b1c0ad6fa9bd5023df4a4f1dabb7600130cdea1829494a26f73436131c6",
+      "sha256:78902d72bd2cd088800bbf0e3eb231dee08c3b6991d1b37d4a14d506e71fe31b",
+      "sha256:1c9d69c9bd901726b037dc08124cbfe4916344371d9613d8d115d24118379f38",
+      "sha256:32c4866a9b073f3a5521548931fe4ab09a98e3ffa553b334c82648df80d53a33",
+      "sha256:9c488e1d43f22041181cd178247fabb4fea8857dd951f6053f3f7bb532894d67",
+      "sha256:7aa1c7dd009f80c8f8533441dd054cd6c2b336ec4777eb4fcf542652986b38b0",
+      "sha256:212248cd4451df8e6fc0192ab81db03185adab3c8bb5dd67eb0fe8ee1e2229f2",
+      "sha256:bdc8cb7a7a6ac74ccc5d9f1a57a27bf833abab26dde1b9897d6231314cbf1453",
+      "sha256:de74801784a1adeefc0dd76dc31206ba43ec775395dd3fc343093163cd7773d3",
+      "sha256:f249aff1fb124261e63114ffb181c0345c4d60bbd3c18e28f6ccacd616dd7a08"
     ],
     "RepoTags": [
       "sig-honk/malicious-compliance:3-lang"
     ],
     "ImageConfig": {
       "architecture": "amd64",
-      "created": "2023-03-29T05:04:12.31457899Z",
+      "created": "2023-04-07T22:15:17.322289922Z",
       "history": [
         {
           "created": "2018-09-11T22:19:38.88529994Z",
@@ -194,77 +207,142 @@
           "empty_layer": true
         },
         {
-          "created": "2023-02-12T20:17:38.640452301Z",
+          "created": "2023-04-07T22:05:52.001631657Z",
+          "created_by": "RUN /bin/sh -c apk add --no-cache nodejs # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:57.769552505Z",
+          "created_by": "COPY TestLibrary.deps.json /dotnet/TestLibrary.deps.json-orig # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:57.832198942Z",
           "created_by": "COPY composer_laravel.lock /php-app/composer.lock-orig # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-02-12T20:17:38.66028208Z",
+          "created": "2023-04-07T22:05:57.893769419Z",
           "created_by": "COPY Gemfile_rails.lock /ruby-app/Gemfile.lock-orig # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-02-12T20:17:38.679816946Z",
+          "created": "2023-04-07T22:05:57.951180073Z",
           "created_by": "COPY package-lock_react.json /node-app/package-lock.json-orig # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-02-12T20:17:38.700699685Z",
+          "created": "2023-04-07T22:05:58.005790875Z",
+          "created_by": "COPY package.json /node-app2/package.json-orig # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:58.067505146Z",
+          "created_by": "COPY yarn.lock /yarn/yarn.lock-orig # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:58.128630415Z",
           "created_by": "COPY Pipfile.lock /python-app/Pipfile.lock-orig # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-02-12T20:17:38.721281012Z",
+          "created": "2023-04-07T22:05:58.191293397Z",
+          "created_by": "COPY requirements.txt /python-app2/requirements.txt-orig # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:58.255912619Z",
+          "created_by": "COPY poetry.lock /python-app3/poetry.lock-orig # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:58.321670999Z",
           "created_by": "COPY Cargo.lock /rust-app/Cargo.lock-orig # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T05:04:09.947833449Z",
+          "created": "2023-04-07T22:05:58.537410079Z",
           "created_by": "COPY kubectl /bin/kubectl # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T05:04:10.13822949Z",
+          "created": "2023-04-07T22:05:59.034785113Z",
+          "created_by": "RUN /bin/sh -c ln -s /dotnet/TestLibrary.deps.json-orig /dotnet/TestLibrary.deps.json # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:59.548762384Z",
           "created_by": "RUN /bin/sh -c ln -s /php-app/composer.lock-orig /php-app/composer.lock # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T05:04:10.341959983Z",
+          "created": "2023-04-07T22:05:59.956252132Z",
           "created_by": "RUN /bin/sh -c ln -s /ruby-app/Gemfile.lock-orig /ruby-app/Gemfile.lock # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T05:04:10.727092883Z",
+          "created": "2023-04-07T22:06:00.464548889Z",
           "created_by": "RUN /bin/sh -c ln -s /node-app/package-lock.json-orig /node-app/package-lock.json # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T05:04:11.012345236Z",
+          "created": "2023-04-07T22:06:01.381883933Z",
+          "created_by": "RUN /bin/sh -c ln -s /node-app2/package.json-orig /node-app2/package.json # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:06:01.914208769Z",
+          "created_by": "RUN /bin/sh -c ln -s /yarn/yarn.lock-orig /yarn/yarn.lock # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:06:02.325795195Z",
           "created_by": "RUN /bin/sh -c ln -s /python-app/Pipfile.lock-orig /python-app/Pipfile.lock # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T05:04:11.387144756Z",
+          "created": "2023-04-07T22:06:02.643359967Z",
+          "created_by": "RUN /bin/sh -c ln -s /python-app2/requirements.txt-orig /python-app2/requirements.txt # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:06:03.09589985Z",
+          "created_by": "RUN /bin/sh -c ln -s /python-app3/poetry.lock-orig /python-app3/poetry.lock # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:06:03.646694456Z",
           "created_by": "RUN /bin/sh -c ln -s /rust-app/Cargo.lock-orig /rust-app/Cargo.lock # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T05:04:11.604059139Z",
+          "created": "2023-04-07T22:15:15.909319912Z",
+          "created_by": "RUN /bin/sh -c find /usr/lib/node_modules -name package.json -type f -delete # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:15:16.120817706Z",
           "created_by": "RUN /bin/sh -c echo -e 'PRETTY_NAME=\"Linux\"\\nNAME=\"Linux\"\\nVERSION_ID=\"99\"\\nVERSION=\"99 (honk)\"\\nID=Linux' \u003e /etc/os-release # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T05:04:11.894064035Z",
+          "created": "2023-04-07T22:15:16.49288616Z",
           "created_by": "RUN /bin/sh -c rm -f /etc/lsb-release # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T05:04:12.102443601Z",
+          "created": "2023-04-07T22:15:16.811629366Z",
+          "created_by": "RUN /bin/sh -c rm -f /etc/alpine-release # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:15:17.036274867Z",
           "created_by": "RUN /bin/sh -c rm -rf /etc/apk # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T05:04:12.31457899Z",
+          "created": "2023-04-07T22:15:17.322289922Z",
           "created_by": "RUN /bin/sh -c rm -rf /lib/apk # buildkit",
           "comment": "buildkit.dockerfile.v0"
         }
@@ -288,21 +366,34 @@
           "sha256:6ca56f561e677ae06c3bc87a70792642d671a4416becb9a101577c1a6e090e36",
           "sha256:154ad0735c360b212b167f424d33a62305770a1fcfb6363882f5c436cfbd9812",
           "sha256:b2a1a2d80bf0c747a4f6b0ca6af5eef23f043fcdb1ed4f3a3e750aef2dc68079",
-          "sha256:1d29b8c8a8e4b3952cddc7522daf9df82b924e008c01ba5acf97937deacd82b6",
-          "sha256:c6d03dd80435ddc74bc95650110ba6790e54473c6007db0de41cdc6955a9fab7",
-          "sha256:f7f1beca31f9cf9a98ca2d7f1108324c01f8d7d6a98fb9210569eba04505f09c",
-          "sha256:3fae3bac744bee502edf0591da4def0000573cd1a0294e1b0ca32d0b9401f458",
-          "sha256:b1d3ae02f97326393b72247742f076f44ae0f53392009fb7e8ff67212da64aba",
-          "sha256:ddb4015f16b5df83b495696ece81c171b45d734a19f0d000693bec482ed30dcb",
-          "sha256:773d290cdb6814ae3830540df5e9ec778bf40b81502093d51569bffbc8751a74",
-          "sha256:568467b429676ef288c9ab74a348a7fb99d2f692d4378e43699d8e9fb072a31f",
-          "sha256:22c3be5ac4c4ca1d80b7826252321831b6e0a1c1c7dc98691343f66ce0cb83f9",
-          "sha256:97cec6dba0e33d25fcf16a349c151b736d450454475ab9da197d7c6e8f0f4bb1",
-          "sha256:0e02f6d4f20c9ccb3324677292d0044a562ff729f025c9bb75da004a38a2a417",
-          "sha256:393e51d3638b8f04f1e383217854b382cfcb11ea2393e5a2c1cd743c65d753f5",
-          "sha256:d9f913917cc730ba9ee9499e5350e61c8bf36627efcb9981f4993ebd15d25aeb",
-          "sha256:7c86c98beb8eade391653d9f7b6f608a6507b2715702f6b7f8060b55171b325c",
-          "sha256:fec6baf1ff1b31538a10bd28bddfae52d47f9eb108613d0255ab9b08df30a555"
+          "sha256:3e92c04ecf901a992676ed74cb8163d3c5ec3e0410e8b2d6a9462be32dabb1f8",
+          "sha256:0920f3423fa9472e64c9f8398841b844d99a5594de995db0c12fdeaa7d62d355",
+          "sha256:93ccce1df717db574b35910156a384a40dc7e79d4c7c9e83be887848adf7e56d",
+          "sha256:085b28d8bccebf25f384afc5040f55156916dfb79c5643cb4d5a79b5cbc0fd84",
+          "sha256:19bfe926f08e0039f7c4fd99057731fbacd93f54439cedaceb3caf603efa6688",
+          "sha256:7da2a70927f776ce1309eb27f7c686bdaffe3bb8012c37a8c1518b8b1e5560ad",
+          "sha256:7b0545cd206ea88be7330aa1ea1867d057360ef180b3da9e1af072cb3c88c57a",
+          "sha256:b2d4fddbd5c3eb2ac9d049d629fe7d3cb38855c2f4302a2538430cb991daae1c",
+          "sha256:9ff2cac265078412f4e7fb8d969ec201f7a3dbb678a9cf0b69e358abb77cfc5b",
+          "sha256:fcc5726f546e1c4f3b0367f1b21a7a9efefa6abfef5b84a09e1f165667a20cde",
+          "sha256:810b0c064108ce36f652eeddc3e3c772d5a9da353b7274e8244480e6035cede0",
+          "sha256:06a6e6d7831e6caeddaa6c4404ed00c6696fa190fb8236cfb26076fd17f86392",
+          "sha256:45691d3922dfff19406f07db81fe89f58d26210463afc1cf5f72bad8bcbd6b50",
+          "sha256:d12d0ef76cd791f70f3639856abc26875acc6b9d89b6c008553f3146a69ea103",
+          "sha256:5e1e16e01e72f7c9e129aafdbffd1e38ebcb7e220defadd5f5ff89dd2358df9f",
+          "sha256:35e20a8051e64c9deb15cbe91b84cb1c1acc94d6c25d929b3a6122f7cbdcbfd4",
+          "sha256:a2a29c2000cf2556cadc7ed2055c861fa8d4de21d43152bf703ccc232c6b65a1",
+          "sha256:33a05194823bf1c481a0e90ca727177d690ef04b4d6b98be17340dc6c5dc4e6c",
+          "sha256:6b604b1c0ad6fa9bd5023df4a4f1dabb7600130cdea1829494a26f73436131c6",
+          "sha256:78902d72bd2cd088800bbf0e3eb231dee08c3b6991d1b37d4a14d506e71fe31b",
+          "sha256:1c9d69c9bd901726b037dc08124cbfe4916344371d9613d8d115d24118379f38",
+          "sha256:32c4866a9b073f3a5521548931fe4ab09a98e3ffa553b334c82648df80d53a33",
+          "sha256:9c488e1d43f22041181cd178247fabb4fea8857dd951f6053f3f7bb532894d67",
+          "sha256:7aa1c7dd009f80c8f8533441dd054cd6c2b336ec4777eb4fcf542652986b38b0",
+          "sha256:212248cd4451df8e6fc0192ab81db03185adab3c8bb5dd67eb0fe8ee1e2229f2",
+          "sha256:bdc8cb7a7a6ac74ccc5d9f1a57a27bf833abab26dde1b9897d6231314cbf1453",
+          "sha256:de74801784a1adeefc0dd76dc31206ba43ec775395dd3fc343093163cd7773d3",
+          "sha256:f249aff1fb124261e63114ffb181c0345c4d60bbd3c18e28f6ccacd616dd7a08"
         ]
       },
       "config": {
@@ -352,7 +443,7 @@
           "InstalledVersion": "v0.3.1-0.20221206200815-1e63c2f08a10",
           "FixedVersion": "0.7.0",
           "Layer": {
-            "DiffID": "sha256:ddb4015f16b5df83b495696ece81c171b45d734a19f0d000693bec482ed30dcb"
+            "DiffID": "sha256:06a6e6d7831e6caeddaa6c4404ed00c6696fa190fb8236cfb26076fd17f86392"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-41723",
@@ -390,7 +481,8 @@
             "https://groups.google.com/g/golang-announce/c/V0aBFqaFs_E",
             "https://nvd.nist.gov/vuln/detail/CVE-2022-41723",
             "https://pkg.go.dev/vuln/GO-2023-1571",
-            "https://vuln.go.dev/ID/GO-2023-1571.json"
+            "https://vuln.go.dev/ID/GO-2023-1571.json",
+            "https://www.cve.org/CVERecord?id=CVE-2022-41723"
           ],
           "PublishedDate": "2023-02-28T18:15:00Z",
           "LastModifiedDate": "2023-03-09T16:36:00Z"
@@ -401,7 +493,7 @@
           "InstalledVersion": "v0.3.1-0.20221206200815-1e63c2f08a10",
           "FixedVersion": "0.4.0",
           "Layer": {
-            "DiffID": "sha256:ddb4015f16b5df83b495696ece81c171b45d734a19f0d000693bec482ed30dcb"
+            "DiffID": "sha256:06a6e6d7831e6caeddaa6c4404ed00c6696fa190fb8236cfb26076fd17f86392"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-41717",
@@ -444,7 +536,8 @@
             "https://linux.oracle.com/cve/CVE-2022-41717.html",
             "https://linux.oracle.com/errata/ELSA-2023-18908.html",
             "https://nvd.nist.gov/vuln/detail/CVE-2022-41717",
-            "https://pkg.go.dev/vuln/GO-2022-1144"
+            "https://pkg.go.dev/vuln/GO-2022-1144",
+            "https://www.cve.org/CVERecord?id=CVE-2022-41717"
           ],
           "PublishedDate": "2022-12-08T20:15:00Z",
           "LastModifiedDate": "2022-12-12T17:50:00Z"
@@ -455,7 +548,7 @@
           "InstalledVersion": "v0.3.1-0.20221206200815-1e63c2f08a10",
           "FixedVersion": "0.7.0",
           "Layer": {
-            "DiffID": "sha256:ddb4015f16b5df83b495696ece81c171b45d734a19f0d000693bec482ed30dcb"
+            "DiffID": "sha256:06a6e6d7831e6caeddaa6c4404ed00c6696fa190fb8236cfb26076fd17f86392"
           },
           "PrimaryURL": "https://github.com/advisories/GHSA-vvpx-j8f3-3w6h",
           "DataSource": {

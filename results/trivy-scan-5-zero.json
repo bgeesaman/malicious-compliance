@@ -3,19 +3,19 @@
   "ArtifactName": "sig-honk/malicious-compliance:5-zero",
   "ArtifactType": "container_image",
   "Metadata": {
-    "ImageID": "sha256:6412e24cda8c3dd93cb580dd6f3a263b82c6a7ad66a85624275dc5290627c2b2",
+    "ImageID": "sha256:a54cac3dd045611015e02effbe678dddc533bce9317afa50b993561b5398b7c8",
     "DiffIDs": [
-      "sha256:4f875b932e8d4eef0aa90b1b4ddc4234fec7891dc859a83893e6e897e2593cbd"
+      "sha256:b84c8d77608f778f564cb847c80cf25d0e324ffb7f2342a56ea094e094888aa8"
     ],
     "RepoTags": [
       "sig-honk/malicious-compliance:5-zero"
     ],
     "ImageConfig": {
       "architecture": "amd64",
-      "created": "2023-03-29T05:16:22.632971053Z",
+      "created": "2023-04-07T21:46:26.181413885Z",
       "history": [
         {
-          "created": "2023-03-29T05:16:22Z",
+          "created": "2023-04-07T21:46:26Z",
           "created_by": "COPY / . # buildkit",
           "comment": "buildkit.dockerfile.v0"
         }
@@ -24,7 +24,7 @@
       "rootfs": {
         "type": "layers",
         "diff_ids": [
-          "sha256:4f875b932e8d4eef0aa90b1b4ddc4234fec7891dc859a83893e6e897e2593cbd"
+          "sha256:b84c8d77608f778f564cb847c80cf25d0e324ffb7f2342a56ea094e094888aa8"
         ]
       },
       "config": {

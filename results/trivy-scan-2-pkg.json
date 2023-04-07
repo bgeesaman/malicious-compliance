@@ -8,7 +8,7 @@
       "Name": "3.7.1",
       "EOSL": true
     },
-    "ImageID": "sha256:003e5cec666ce3fd2f3a97ee587779d892e3e895a9a8d83ba8df357d6247f76b",
+    "ImageID": "sha256:e9ed7f25629225d1411c1d6fb56a52edfeb81059c2da7c5133ec97603efa3e3e",
     "DiffIDs": [
       "sha256:ebf12965380b39889c99a9c02e82ba465f887b45975b6e389d42e9e6a3857888",
       "sha256:0ea33a93585cf1917ba522b2304634c3073654062d5282c1346322967790ef33",
@@ -25,23 +25,30 @@
       "sha256:6ca56f561e677ae06c3bc87a70792642d671a4416becb9a101577c1a6e090e36",
       "sha256:154ad0735c360b212b167f424d33a62305770a1fcfb6363882f5c436cfbd9812",
       "sha256:b2a1a2d80bf0c747a4f6b0ca6af5eef23f043fcdb1ed4f3a3e750aef2dc68079",
-      "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866",
-      "sha256:817ffc33f0430568d230051ad4a10e4090af310ecd7e181c2ffc3cace0f88b34",
-      "sha256:20299ccfb95cdbed09f2256093831f11072b48399faff5b8e85d94c70ccce18e",
-      "sha256:6349076fa74ef68785a2e66499cf7a97c53038e738693b91c9fcc252979cbf8a",
-      "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29",
-      "sha256:ee78847a743dca42b0cc87e21441089280f33d664b5c007c091f04515846b071",
-      "sha256:2ba30cc13d99db0cd38836429e491cfde5924ddfbc610e0ea926138c543bcf06",
-      "sha256:5bd7fe27cdf433350c8d5eaed9a5f25df1997320079cf09a2db2ce18e51dd156",
-      "sha256:6afd4cbb2919ee96b2bb484eedc8b3609a25caf3f0e2330453b37d0d768223f6",
-      "sha256:a520af28a72db7579e824d2f32319a61b8856053f46a9e30db70880f58e4ca19"
+      "sha256:3e92c04ecf901a992676ed74cb8163d3c5ec3e0410e8b2d6a9462be32dabb1f8",
+      "sha256:24c8427bb98527b8aeac2bc6687b32e1b59f1ba081e023011071cd10f84b11bb",
+      "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8",
+      "sha256:343341c971c7cf5d49f599043931bda19c3494626cf8e39c672dc4c2c62cbc02",
+      "sha256:b153b43322ce22815311725f0bca351327f107ac6d25c8021e8fa4a568143f42",
+      "sha256:bdd9c661a69c3a2842bbef6db67cfede94d874f233b92d16c3ba944ee604b939",
+      "sha256:2ca284efdab5e61b593ba546059ade6500569f54682c7c010ebf4488115c4287",
+      "sha256:f891c2d3888c740b2c8891b4a39aa766626784dd30463a3a46ed35752e84b4d9",
+      "sha256:1b7678f4254bc8b4672154081471d8320eb89f3a28f6ba4f639cbf13a8a87129",
+      "sha256:fa1ae20e6c6b3ffc027098c644597ca5698fc10da2ef0b8b1f3a798af7e4422f",
+      "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c",
+      "sha256:f48f1c630e6c05ac75f4f7f3d809fdcad6b3350329b53ff7f5214dd4ff470769",
+      "sha256:96715744b5306f95473f48fac18aaa48ef3ff443f5a7d20da1a8be54ac53c435",
+      "sha256:7f68f6f6a9e7bec9738ffd38cbd781f53508014d8bd7d7038316163679d2e100",
+      "sha256:f6471b7f08dec5088cc5cf1d0952ce7c36488d16248d9cb8e11befdddd7dda05",
+      "sha256:e6a2224b548bc13c2f8e69a230ed30e5c9ca8253bd183a7e490985891dbaa742",
+      "sha256:95bf971f9b66d04ffedc1c0ecba36ca9fc23adfe6703b25e97b2bf3f6e7164ab"
     ],
     "RepoTags": [
       "sig-honk/malicious-compliance:2-pkg"
     ],
     "ImageConfig": {
       "architecture": "amd64",
-      "created": "2023-03-29T05:01:53.88860823Z",
+      "created": "2023-04-07T22:05:56.444116018Z",
       "history": [
         {
           "created": "2018-09-11T22:19:38.88529994Z",
@@ -189,52 +196,87 @@
           "empty_layer": true
         },
         {
-          "created": "2023-02-12T20:17:01.961291482Z",
+          "created": "2023-04-07T22:05:52.001631657Z",
+          "created_by": "RUN /bin/sh -c apk add --no-cache nodejs # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:52.02208822Z",
+          "created_by": "COPY TestLibrary.deps.json /dotnet/TestLibrary.deps.json # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:52.044705984Z",
           "created_by": "COPY composer_laravel.lock /php-app/composer.lock # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-02-12T20:17:01.987254613Z",
+          "created": "2023-04-07T22:05:52.064388765Z",
           "created_by": "COPY Gemfile_rails.lock /ruby-app/Gemfile.lock # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-02-12T20:17:02.010091262Z",
+          "created": "2023-04-07T22:05:52.088008172Z",
           "created_by": "COPY package-lock_react.json /node-app/package-lock.json # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-02-12T20:17:02.034392847Z",
+          "created": "2023-04-07T22:05:52.10994664Z",
+          "created_by": "COPY package.json /node-app2/package.json # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:52.13249341Z",
+          "created_by": "COPY yarn.lock /yarn/yarn.lock # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:52.156666611Z",
           "created_by": "COPY Pipfile.lock /python-app/Pipfile.lock # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-02-12T20:17:02.056077192Z",
+          "created": "2023-04-07T22:05:52.180381401Z",
+          "created_by": "COPY requirements.txt /python-app2/requirements.txt # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:52.204133758Z",
+          "created_by": "COPY poetry.lock /python-app3/poetry.lock # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:52.226576453Z",
           "created_by": "COPY Cargo.lock /rust-app/Cargo.lock # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T04:59:22.013179569Z",
+          "created": "2023-04-07T22:05:52.322124923Z",
           "created_by": "COPY kubectl /bin/kubectl # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T05:01:53.076695351Z",
+          "created": "2023-04-07T22:05:53.984533724Z",
           "created_by": "RUN /bin/sh -c echo -e 'PRETTY_NAME=\"Linux\"\\nNAME=\"Linux\"\\nVERSION_ID=\"99\"\\nVERSION=\"99 (honk)\"\\nID=Linux' \u003e /etc/os-release # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T05:01:53.289810584Z",
+          "created": "2023-04-07T22:05:54.300315647Z",
           "created_by": "RUN /bin/sh -c rm -f /etc/lsb-release # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T05:01:53.592734075Z",
+          "created": "2023-04-07T22:05:54.666025139Z",
+          "created_by": "RUN /bin/sh -c rm -f /etc/alpine-release # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:55.971563909Z",
           "created_by": "RUN /bin/sh -c rm -rf /etc/apk # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T05:01:53.88860823Z",
+          "created": "2023-04-07T22:05:56.444116018Z",
           "created_by": "RUN /bin/sh -c rm -rf /lib/apk # buildkit",
           "comment": "buildkit.dockerfile.v0"
         }
@@ -258,16 +300,23 @@
           "sha256:6ca56f561e677ae06c3bc87a70792642d671a4416becb9a101577c1a6e090e36",
           "sha256:154ad0735c360b212b167f424d33a62305770a1fcfb6363882f5c436cfbd9812",
           "sha256:b2a1a2d80bf0c747a4f6b0ca6af5eef23f043fcdb1ed4f3a3e750aef2dc68079",
-          "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866",
-          "sha256:817ffc33f0430568d230051ad4a10e4090af310ecd7e181c2ffc3cace0f88b34",
-          "sha256:20299ccfb95cdbed09f2256093831f11072b48399faff5b8e85d94c70ccce18e",
-          "sha256:6349076fa74ef68785a2e66499cf7a97c53038e738693b91c9fcc252979cbf8a",
-          "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29",
-          "sha256:ee78847a743dca42b0cc87e21441089280f33d664b5c007c091f04515846b071",
-          "sha256:2ba30cc13d99db0cd38836429e491cfde5924ddfbc610e0ea926138c543bcf06",
-          "sha256:5bd7fe27cdf433350c8d5eaed9a5f25df1997320079cf09a2db2ce18e51dd156",
-          "sha256:6afd4cbb2919ee96b2bb484eedc8b3609a25caf3f0e2330453b37d0d768223f6",
-          "sha256:a520af28a72db7579e824d2f32319a61b8856053f46a9e30db70880f58e4ca19"
+          "sha256:3e92c04ecf901a992676ed74cb8163d3c5ec3e0410e8b2d6a9462be32dabb1f8",
+          "sha256:24c8427bb98527b8aeac2bc6687b32e1b59f1ba081e023011071cd10f84b11bb",
+          "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8",
+          "sha256:343341c971c7cf5d49f599043931bda19c3494626cf8e39c672dc4c2c62cbc02",
+          "sha256:b153b43322ce22815311725f0bca351327f107ac6d25c8021e8fa4a568143f42",
+          "sha256:bdd9c661a69c3a2842bbef6db67cfede94d874f233b92d16c3ba944ee604b939",
+          "sha256:2ca284efdab5e61b593ba546059ade6500569f54682c7c010ebf4488115c4287",
+          "sha256:f891c2d3888c740b2c8891b4a39aa766626784dd30463a3a46ed35752e84b4d9",
+          "sha256:1b7678f4254bc8b4672154081471d8320eb89f3a28f6ba4f639cbf13a8a87129",
+          "sha256:fa1ae20e6c6b3ffc027098c644597ca5698fc10da2ef0b8b1f3a798af7e4422f",
+          "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c",
+          "sha256:f48f1c630e6c05ac75f4f7f3d809fdcad6b3350329b53ff7f5214dd4ff470769",
+          "sha256:96715744b5306f95473f48fac18aaa48ef3ff443f5a7d20da1a8be54ac53c435",
+          "sha256:7f68f6f6a9e7bec9738ffd38cbd781f53508014d8bd7d7038316163679d2e100",
+          "sha256:f6471b7f08dec5088cc5cf1d0952ce7c36488d16248d9cb8e11befdddd7dda05",
+          "sha256:e6a2224b548bc13c2f8e69a230ed30e5c9ca8253bd183a7e490985891dbaa742",
+          "sha256:95bf971f9b66d04ffedc1c0ecba36ca9fc23adfe6703b25e97b2bf3f6e7164ab"
         ]
       },
       "config": {
@@ -317,7 +366,7 @@
           "InstalledVersion": "v0.3.1-0.20221206200815-1e63c2f08a10",
           "FixedVersion": "0.7.0",
           "Layer": {
-            "DiffID": "sha256:ee78847a743dca42b0cc87e21441089280f33d664b5c007c091f04515846b071"
+            "DiffID": "sha256:f48f1c630e6c05ac75f4f7f3d809fdcad6b3350329b53ff7f5214dd4ff470769"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-41723",
@@ -355,7 +404,8 @@
             "https://groups.google.com/g/golang-announce/c/V0aBFqaFs_E",
             "https://nvd.nist.gov/vuln/detail/CVE-2022-41723",
             "https://pkg.go.dev/vuln/GO-2023-1571",
-            "https://vuln.go.dev/ID/GO-2023-1571.json"
+            "https://vuln.go.dev/ID/GO-2023-1571.json",
+            "https://www.cve.org/CVERecord?id=CVE-2022-41723"
           ],
           "PublishedDate": "2023-02-28T18:15:00Z",
           "LastModifiedDate": "2023-03-09T16:36:00Z"
@@ -366,7 +416,7 @@
           "InstalledVersion": "v0.3.1-0.20221206200815-1e63c2f08a10",
           "FixedVersion": "0.4.0",
           "Layer": {
-            "DiffID": "sha256:ee78847a743dca42b0cc87e21441089280f33d664b5c007c091f04515846b071"
+            "DiffID": "sha256:f48f1c630e6c05ac75f4f7f3d809fdcad6b3350329b53ff7f5214dd4ff470769"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-41717",
@@ -409,7 +459,8 @@
             "https://linux.oracle.com/cve/CVE-2022-41717.html",
             "https://linux.oracle.com/errata/ELSA-2023-18908.html",
             "https://nvd.nist.gov/vuln/detail/CVE-2022-41717",
-            "https://pkg.go.dev/vuln/GO-2022-1144"
+            "https://pkg.go.dev/vuln/GO-2022-1144",
+            "https://www.cve.org/CVERecord?id=CVE-2022-41717"
           ],
           "PublishedDate": "2022-12-08T20:15:00Z",
           "LastModifiedDate": "2022-12-12T17:50:00Z"
@@ -420,7 +471,7 @@
           "InstalledVersion": "v0.3.1-0.20221206200815-1e63c2f08a10",
           "FixedVersion": "0.7.0",
           "Layer": {
-            "DiffID": "sha256:ee78847a743dca42b0cc87e21441089280f33d664b5c007c091f04515846b071"
+            "DiffID": "sha256:f48f1c630e6c05ac75f4f7f3d809fdcad6b3350329b53ff7f5214dd4ff470769"
           },
           "PrimaryURL": "https://github.com/advisories/GHSA-vvpx-j8f3-3w6h",
           "DataSource": {
@@ -453,7 +504,7 @@
           "InstalledVersion": "6.2.0",
           "FixedVersion": "6.2.1, 4.2.4, 5.3.1",
           "Layer": {
-            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+            "DiffID": "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8"
           },
           "SeveritySource": "nvd",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2016-5385",
@@ -524,6 +575,7 @@
             "https://security.gentoo.org/glsa/201611-22",
             "https://typo3.org/security/advisory/typo3-core-sa-2016-019",
             "https://ubuntu.com/security/notices/USN-3045-1",
+            "https://www.cve.org/CVERecord?id=CVE-2016-5385",
             "https://www.drupal.org/SA-CORE-2016-003"
           ],
           "PublishedDate": "2016-07-19T02:00:00Z",
@@ -533,9 +585,9 @@
           "VulnerabilityID": "CVE-2022-29248",
           "PkgName": "guzzlehttp/guzzle",
           "InstalledVersion": "6.2.0",
-          "FixedVersion": "6.5.6, 7.4.3",
+          "FixedVersion": "7.4.3, 6.5.6",
           "Layer": {
-            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+            "DiffID": "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8"
           },
           "SeveritySource": "nvd",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-29248",
@@ -580,7 +632,7 @@
           "InstalledVersion": "6.2.0",
           "FixedVersion": "7.4.4, 6.5.7",
           "Layer": {
-            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+            "DiffID": "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8"
           },
           "SeveritySource": "nvd",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-31042",
@@ -626,7 +678,7 @@
           "InstalledVersion": "6.2.0",
           "FixedVersion": "7.4.4, 6.5.7",
           "Layer": {
-            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+            "DiffID": "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8"
           },
           "SeveritySource": "nvd",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-31043",
@@ -672,7 +724,7 @@
           "InstalledVersion": "6.2.0",
           "FixedVersion": "7.4.5, 6.5.8",
           "Layer": {
-            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+            "DiffID": "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8"
           },
           "SeveritySource": "nvd",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-31090",
@@ -716,9 +768,9 @@
           "VulnerabilityID": "CVE-2022-31091",
           "PkgName": "guzzlehttp/guzzle",
           "InstalledVersion": "6.2.0",
-          "FixedVersion": "7.4.5, 6.5.8",
+          "FixedVersion": "6.5.8, 7.4.5",
           "Layer": {
-            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+            "DiffID": "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8"
           },
           "SeveritySource": "nvd",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-31091",
@@ -759,7 +811,7 @@
           "InstalledVersion": "1.5.2",
           "FixedVersion": "2.1.1, 1.8.4",
           "Layer": {
-            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+            "DiffID": "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8"
           },
           "SeveritySource": "nvd",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-24775",
@@ -811,7 +863,7 @@
           "InstalledVersion": "1.9.0",
           "FixedVersion": "2.1.0",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-15542",
@@ -854,7 +906,7 @@
           "InstalledVersion": "1.9.0",
           "FixedVersion": "2.1.3, 3.1.0",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-38193",
@@ -898,7 +950,7 @@
           "InstalledVersion": "0.8.3",
           "FixedVersion": "0.10.9",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-20997",
@@ -941,7 +993,7 @@
           "InstalledVersion": "0.8.3",
           "FixedVersion": "0.9.0",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2016-10931",
@@ -984,7 +1036,7 @@
           "InstalledVersion": "0.4.0",
           "FixedVersion": "0.3.1, 0.4.2",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-25576",
@@ -1027,7 +1079,7 @@
           "InstalledVersion": "0.5.1",
           "FixedVersion": "0.8.0",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://github.com/advisories/GHSA-mc8h-8q98-g5hr",
@@ -1053,7 +1105,7 @@
           "InstalledVersion": "0.6.9",
           "FixedVersion": "0.6.10",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-15551",
@@ -1096,7 +1148,7 @@
           "InstalledVersion": "0.6.9",
           "FixedVersion": "0.6.10",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-15554",
@@ -1139,7 +1191,7 @@
           "InstalledVersion": "0.6.9",
           "FixedVersion": "1.6.1, 0.6.14",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-25900",
@@ -1183,7 +1235,7 @@
           "InstalledVersion": "0.6.9",
           "FixedVersion": "0.6.13",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-25023",
@@ -1226,7 +1278,7 @@
           "InstalledVersion": "0.6.9",
           "FixedVersion": "0.6.13",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://github.com/advisories/GHSA-66p5-j55p-32r9",

@@ -8,7 +8,7 @@
       "Name": "3.7.1",
       "EOSL": true
     },
-    "ImageID": "sha256:b43e1572d48873f3c7b1b87b7f091a28208ecd12f451d4768136b55620d98722",
+    "ImageID": "sha256:cd928d2953344521058e187b8467887197be923f58588f6828a116d1c12bc514",
     "DiffIDs": [
       "sha256:ebf12965380b39889c99a9c02e82ba465f887b45975b6e389d42e9e6a3857888",
       "sha256:0ea33a93585cf1917ba522b2304634c3073654062d5282c1346322967790ef33",
@@ -25,22 +25,28 @@
       "sha256:6ca56f561e677ae06c3bc87a70792642d671a4416becb9a101577c1a6e090e36",
       "sha256:154ad0735c360b212b167f424d33a62305770a1fcfb6363882f5c436cfbd9812",
       "sha256:b2a1a2d80bf0c747a4f6b0ca6af5eef23f043fcdb1ed4f3a3e750aef2dc68079",
-      "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866",
-      "sha256:817ffc33f0430568d230051ad4a10e4090af310ecd7e181c2ffc3cace0f88b34",
-      "sha256:20299ccfb95cdbed09f2256093831f11072b48399faff5b8e85d94c70ccce18e",
-      "sha256:6349076fa74ef68785a2e66499cf7a97c53038e738693b91c9fcc252979cbf8a",
-      "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29",
-      "sha256:ee78847a743dca42b0cc87e21441089280f33d664b5c007c091f04515846b071",
-      "sha256:2ba30cc13d99db0cd38836429e491cfde5924ddfbc610e0ea926138c543bcf06",
-      "sha256:5bd7fe27cdf433350c8d5eaed9a5f25df1997320079cf09a2db2ce18e51dd156",
-      "sha256:904fe4393bc5888fb4785cc88834145e682fdfaa98840d445a735e6040aeb398"
+      "sha256:3e92c04ecf901a992676ed74cb8163d3c5ec3e0410e8b2d6a9462be32dabb1f8",
+      "sha256:24c8427bb98527b8aeac2bc6687b32e1b59f1ba081e023011071cd10f84b11bb",
+      "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8",
+      "sha256:343341c971c7cf5d49f599043931bda19c3494626cf8e39c672dc4c2c62cbc02",
+      "sha256:b153b43322ce22815311725f0bca351327f107ac6d25c8021e8fa4a568143f42",
+      "sha256:bdd9c661a69c3a2842bbef6db67cfede94d874f233b92d16c3ba944ee604b939",
+      "sha256:2ca284efdab5e61b593ba546059ade6500569f54682c7c010ebf4488115c4287",
+      "sha256:f891c2d3888c740b2c8891b4a39aa766626784dd30463a3a46ed35752e84b4d9",
+      "sha256:1b7678f4254bc8b4672154081471d8320eb89f3a28f6ba4f639cbf13a8a87129",
+      "sha256:fa1ae20e6c6b3ffc027098c644597ca5698fc10da2ef0b8b1f3a798af7e4422f",
+      "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c",
+      "sha256:f48f1c630e6c05ac75f4f7f3d809fdcad6b3350329b53ff7f5214dd4ff470769",
+      "sha256:96715744b5306f95473f48fac18aaa48ef3ff443f5a7d20da1a8be54ac53c435",
+      "sha256:7f68f6f6a9e7bec9738ffd38cbd781f53508014d8bd7d7038316163679d2e100",
+      "sha256:f6471b7f08dec5088cc5cf1d0952ce7c36488d16248d9cb8e11befdddd7dda05"
     ],
     "RepoTags": [
       "sig-honk/malicious-compliance:1-os"
     ],
     "ImageConfig": {
       "architecture": "amd64",
-      "created": "2023-03-29T05:14:33.078769728Z",
+      "created": "2023-04-07T22:05:54.666025139Z",
       "history": [
         {
           "created": "2018-09-11T22:19:38.88529994Z",
@@ -188,47 +194,77 @@
           "empty_layer": true
         },
         {
-          "created": "2023-02-12T20:17:01.961291482Z",
+          "created": "2023-04-07T22:05:52.001631657Z",
+          "created_by": "RUN /bin/sh -c apk add --no-cache nodejs # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:52.02208822Z",
+          "created_by": "COPY TestLibrary.deps.json /dotnet/TestLibrary.deps.json # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:52.044705984Z",
           "created_by": "COPY composer_laravel.lock /php-app/composer.lock # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-02-12T20:17:01.987254613Z",
+          "created": "2023-04-07T22:05:52.064388765Z",
           "created_by": "COPY Gemfile_rails.lock /ruby-app/Gemfile.lock # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-02-12T20:17:02.010091262Z",
+          "created": "2023-04-07T22:05:52.088008172Z",
           "created_by": "COPY package-lock_react.json /node-app/package-lock.json # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-02-12T20:17:02.034392847Z",
+          "created": "2023-04-07T22:05:52.10994664Z",
+          "created_by": "COPY package.json /node-app2/package.json # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:52.13249341Z",
+          "created_by": "COPY yarn.lock /yarn/yarn.lock # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:52.156666611Z",
           "created_by": "COPY Pipfile.lock /python-app/Pipfile.lock # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-02-12T20:17:02.056077192Z",
+          "created": "2023-04-07T22:05:52.180381401Z",
+          "created_by": "COPY requirements.txt /python-app2/requirements.txt # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:52.204133758Z",
+          "created_by": "COPY poetry.lock /python-app3/poetry.lock # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:52.226576453Z",
           "created_by": "COPY Cargo.lock /rust-app/Cargo.lock # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T04:59:22.013179569Z",
+          "created": "2023-04-07T22:05:52.322124923Z",
           "created_by": "COPY kubectl /bin/kubectl # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T05:01:53.076695351Z",
+          "created": "2023-04-07T22:05:53.984533724Z",
           "created_by": "RUN /bin/sh -c echo -e 'PRETTY_NAME=\"Linux\"\\nNAME=\"Linux\"\\nVERSION_ID=\"99\"\\nVERSION=\"99 (honk)\"\\nID=Linux' \u003e /etc/os-release # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T05:01:53.289810584Z",
+          "created": "2023-04-07T22:05:54.300315647Z",
           "created_by": "RUN /bin/sh -c rm -f /etc/lsb-release # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2023-03-29T05:14:33.078769728Z",
+          "created": "2023-04-07T22:05:54.666025139Z",
           "created_by": "RUN /bin/sh -c rm -f /etc/alpine-release # buildkit",
           "comment": "buildkit.dockerfile.v0"
         }
@@ -252,15 +288,21 @@
           "sha256:6ca56f561e677ae06c3bc87a70792642d671a4416becb9a101577c1a6e090e36",
           "sha256:154ad0735c360b212b167f424d33a62305770a1fcfb6363882f5c436cfbd9812",
           "sha256:b2a1a2d80bf0c747a4f6b0ca6af5eef23f043fcdb1ed4f3a3e750aef2dc68079",
-          "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866",
-          "sha256:817ffc33f0430568d230051ad4a10e4090af310ecd7e181c2ffc3cace0f88b34",
-          "sha256:20299ccfb95cdbed09f2256093831f11072b48399faff5b8e85d94c70ccce18e",
-          "sha256:6349076fa74ef68785a2e66499cf7a97c53038e738693b91c9fcc252979cbf8a",
-          "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29",
-          "sha256:ee78847a743dca42b0cc87e21441089280f33d664b5c007c091f04515846b071",
-          "sha256:2ba30cc13d99db0cd38836429e491cfde5924ddfbc610e0ea926138c543bcf06",
-          "sha256:5bd7fe27cdf433350c8d5eaed9a5f25df1997320079cf09a2db2ce18e51dd156",
-          "sha256:904fe4393bc5888fb4785cc88834145e682fdfaa98840d445a735e6040aeb398"
+          "sha256:3e92c04ecf901a992676ed74cb8163d3c5ec3e0410e8b2d6a9462be32dabb1f8",
+          "sha256:24c8427bb98527b8aeac2bc6687b32e1b59f1ba081e023011071cd10f84b11bb",
+          "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8",
+          "sha256:343341c971c7cf5d49f599043931bda19c3494626cf8e39c672dc4c2c62cbc02",
+          "sha256:b153b43322ce22815311725f0bca351327f107ac6d25c8021e8fa4a568143f42",
+          "sha256:bdd9c661a69c3a2842bbef6db67cfede94d874f233b92d16c3ba944ee604b939",
+          "sha256:2ca284efdab5e61b593ba546059ade6500569f54682c7c010ebf4488115c4287",
+          "sha256:f891c2d3888c740b2c8891b4a39aa766626784dd30463a3a46ed35752e84b4d9",
+          "sha256:1b7678f4254bc8b4672154081471d8320eb89f3a28f6ba4f639cbf13a8a87129",
+          "sha256:fa1ae20e6c6b3ffc027098c644597ca5698fc10da2ef0b8b1f3a798af7e4422f",
+          "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c",
+          "sha256:f48f1c630e6c05ac75f4f7f3d809fdcad6b3350329b53ff7f5214dd4ff470769",
+          "sha256:96715744b5306f95473f48fac18aaa48ef3ff443f5a7d20da1a8be54ac53c435",
+          "sha256:7f68f6f6a9e7bec9738ffd38cbd781f53508014d8bd7d7038316163679d2e100",
+          "sha256:f6471b7f08dec5088cc5cf1d0952ce7c36488d16248d9cb8e11befdddd7dda05"
         ]
       },
       "config": {
@@ -345,12 +387,14 @@
             "https://github.com/curl/curl/issues/2756",
             "https://linux.oracle.com/cve/CVE-2018-14618.html",
             "https://linux.oracle.com/errata/ELSA-2019-1880.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-14618",
             "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2018-0014",
             "https://security.gentoo.org/glsa/201903-03",
             "https://ubuntu.com/security/notices/USN-3765-1",
             "https://ubuntu.com/security/notices/USN-3765-2",
             "https://usn.ubuntu.com/3765-1/",
             "https://usn.ubuntu.com/3765-2/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-14618",
             "https://www.debian.org/security/2018/dsa-4286"
           ],
           "PublishedDate": "2018-09-05T19:29:00Z",
@@ -399,9 +443,11 @@
             "https://github.com/curl/curl/commit/f3a24d7916b9173c69a3e0ee790102993833d6c5",
             "https://lists.apache.org/thread.html/8338a0f605bdbb3a6098bb76f666a95fc2b2f53f37fa1ecc89f1146f@%3Cdevnull.infra.apache.org%3E",
             "https://lists.debian.org/debian-lts-announce/2018/11/msg00005.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-16839",
             "https://security.gentoo.org/glsa/201903-03",
             "https://ubuntu.com/security/notices/USN-3805-1",
             "https://usn.ubuntu.com/3805-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-16839",
             "https://www.debian.org/security/2018/dsa-4331"
           ],
           "PublishedDate": "2018-10-31T18:29:00Z",
@@ -448,9 +494,11 @@
             "https://curl.haxx.se/docs/CVE-2018-16840.html",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16840",
             "https://github.com/curl/curl/commit/81d135d67155c5295b1033679c606165d4e28f3f",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-16840",
             "https://security.gentoo.org/glsa/201903-03",
             "https://ubuntu.com/security/notices/USN-3805-1",
-            "https://usn.ubuntu.com/3805-1/"
+            "https://usn.ubuntu.com/3805-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-16840"
           ],
           "PublishedDate": "2018-10-31T18:29:00Z",
           "LastModifiedDate": "2019-10-09T23:36:00Z"
@@ -500,11 +548,13 @@
             "https://linux.oracle.com/cve/CVE-2018-16842.html",
             "https://linux.oracle.com/errata/ELSA-2019-2181.html",
             "https://lists.debian.org/debian-lts-announce/2018/11/msg00005.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-16842",
             "https://security.gentoo.org/glsa/201903-03",
             "https://ubuntu.com/security/notices/USN-3805-1",
             "https://ubuntu.com/security/notices/USN-3805-2",
             "https://usn.ubuntu.com/3805-1/",
             "https://usn.ubuntu.com/3805-2/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-16842",
             "https://www.debian.org/security/2018/dsa-4331",
             "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html"
           ],
@@ -556,6 +606,7 @@
             "https://linux.oracle.com/cve/CVE-2019-3822.html",
             "https://linux.oracle.com/errata/ELSA-2019-3701.html",
             "https://lists.apache.org/thread.html/8338a0f605bdbb3a6098bb76f666a95fc2b2f53f37fa1ecc89f1146f@%3Cdevnull.infra.apache.org%3E",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-3822",
             "https://security.gentoo.org/glsa/201903-03",
             "https://security.netapp.com/advisory/ntap-20190315-0001/",
             "https://security.netapp.com/advisory/ntap-20190719-0004/",
@@ -563,6 +614,7 @@
             "https://support.f5.com/csp/article/K84141449?utm_source=f5support\u0026amp;utm_medium=RSS",
             "https://ubuntu.com/security/notices/USN-3882-1",
             "https://usn.ubuntu.com/3882-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-3822",
             "https://www.debian.org/security/2019/dsa-4386",
             "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
             "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html"
@@ -615,17 +667,19 @@
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CI4QQ2RSZX4VCFM76SIWGKY6BY7UWIC/",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RGDVKSLY5JUNJRLYRUA6CXGQ2LM63XC3/",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UA7KDM2WPM5CJDDGOEGFV6SSGD2J7RNT/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-5481",
             "https://seclists.org/bugtraq/2020/Feb/36",
             "https://security.gentoo.org/glsa/202003-29",
             "https://security.netapp.com/advisory/ntap-20191004-0003/",
             "https://ubuntu.com/security/notices/USN-4129-1",
+            "https://www.cve.org/CVERecord?id=CVE-2019-5481",
             "https://www.debian.org/security/2020/dsa-4633",
             "https://www.oracle.com/security-alerts/cpuapr2020.html",
             "https://www.oracle.com/security-alerts/cpujan2020.html",
             "https://www.oracle.com/security-alerts/cpuoct2020.html"
           ],
           "PublishedDate": "2019-09-16T19:15:00Z",
-          "LastModifiedDate": "2020-10-20T22:15:00Z"
+          "LastModifiedDate": "2023-03-29T18:41:00Z"
         },
         {
           "VulnerabilityID": "CVE-2019-5482",
@@ -672,12 +726,14 @@
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CI4QQ2RSZX4VCFM76SIWGKY6BY7UWIC/",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RGDVKSLY5JUNJRLYRUA6CXGQ2LM63XC3/",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UA7KDM2WPM5CJDDGOEGFV6SSGD2J7RNT/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-5482",
             "https://seclists.org/bugtraq/2020/Feb/36",
             "https://security.gentoo.org/glsa/202003-29",
             "https://security.netapp.com/advisory/ntap-20191004-0003/",
             "https://security.netapp.com/advisory/ntap-20200416-0003/",
             "https://ubuntu.com/security/notices/USN-4129-1",
             "https://ubuntu.com/security/notices/USN-4129-2",
+            "https://www.cve.org/CVERecord?id=CVE-2019-5482",
             "https://www.debian.org/security/2020/dsa-4633",
             "https://www.oracle.com/security-alerts/cpuapr2020.html",
             "https://www.oracle.com/security-alerts/cpujan2020.html",
@@ -732,10 +788,12 @@
             "https://linux.oracle.com/cve/CVE-2018-16890.html",
             "https://linux.oracle.com/errata/ELSA-2019-3701.html",
             "https://lists.apache.org/thread.html/8338a0f605bdbb3a6098bb76f666a95fc2b2f53f37fa1ecc89f1146f@%3Cdevnull.infra.apache.org%3E",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-16890",
             "https://security.netapp.com/advisory/ntap-20190315-0001/",
             "https://support.f5.com/csp/article/K03314397?utm_source=f5support\u0026amp;utm_medium=RSS",
             "https://ubuntu.com/security/notices/USN-3882-1",
             "https://usn.ubuntu.com/3882-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-16890",
             "https://www.debian.org/security/2019/dsa-4386",
             "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
             "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html"
@@ -788,10 +846,12 @@
             "https://linux.oracle.com/cve/CVE-2019-3823.html",
             "https://linux.oracle.com/errata/ELSA-2019-3701.html",
             "https://lists.apache.org/thread.html/8338a0f605bdbb3a6098bb76f666a95fc2b2f53f37fa1ecc89f1146f@%3Cdevnull.infra.apache.org%3E",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-3823",
             "https://security.gentoo.org/glsa/201903-03",
             "https://security.netapp.com/advisory/ntap-20190315-0001/",
             "https://ubuntu.com/security/notices/USN-3882-1",
             "https://usn.ubuntu.com/3882-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-3823",
             "https://www.debian.org/security/2019/dsa-4386",
             "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
             "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html"
@@ -859,6 +919,7 @@
             "https://ubuntu.com/security/notices/USN-5455-1",
             "https://usn.ubuntu.com/4040-1/",
             "https://usn.ubuntu.com/4040-2/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-20843",
             "https://www.debian.org/security/2019/dsa-4472",
             "https://www.oracle.com/security-alerts/cpuApr2021.html",
             "https://www.oracle.com/security-alerts/cpuapr2020.html",
@@ -970,6 +1031,7 @@
             "https://usn.ubuntu.com/4165-1/",
             "https://usn.ubuntu.com/4202-1/",
             "https://usn.ubuntu.com/4335-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-15903",
             "https://www.debian.org/security/2019/dsa-4530",
             "https://www.debian.org/security/2019/dsa-4549",
             "https://www.debian.org/security/2019/dsa-4571",
@@ -1032,10 +1094,12 @@
             "https://linux.oracle.com/cve/CVE-2018-17456.html",
             "https://linux.oracle.com/errata/ELSA-2020-0316.html",
             "https://marc.info/?l=git\u0026m=153875888916397\u0026w=2",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-17456",
             "https://public-inbox.org/git/xmqqy3bcuy3l.fsf@gitster-ct.c.googlers.com/",
             "https://seclists.org/bugtraq/2019/Mar/30",
             "https://ubuntu.com/security/notices/USN-3791-1",
             "https://usn.ubuntu.com/3791-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-17456",
             "https://www.debian.org/security/2018/dsa-4311",
             "https://www.exploit-db.com/exploits/45548/",
             "https://www.exploit-db.com/exploits/45631/",
@@ -1083,9 +1147,11 @@
             "https://github.com/git/git/security/advisories/GHSA-589j-mmg9-733v",
             "https://groups.google.com/forum/?fromgroups#!topic/git-packagers/AWRBO_5gqa4",
             "https://lore.kernel.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/T/#u",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-1353",
             "https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/",
             "https://security.gentoo.org/glsa/202003-30",
-            "https://ubuntu.com/security/notices/USN-4220-1"
+            "https://ubuntu.com/security/notices/USN-4220-1",
+            "https://www.cve.org/CVERecord?id=CVE-2019-1353"
           ],
           "PublishedDate": "2020-01-24T22:15:00Z",
           "LastModifiedDate": "2020-03-15T19:15:00Z"
@@ -1134,10 +1200,12 @@
             "https://groups.google.com/forum/?fromgroups#!topic/git-packagers/AWRBO_5gqa4",
             "https://linux.oracle.com/cve/CVE-2019-1349.html",
             "https://linux.oracle.com/errata/ELSA-2019-4356.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-1349",
             "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1349",
             "https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/",
             "https://security.gentoo.org/glsa/202003-30",
-            "https://ubuntu.com/security/notices/USN-4220-1"
+            "https://ubuntu.com/security/notices/USN-4220-1",
+            "https://www.cve.org/CVERecord?id=CVE-2019-1349"
           ],
           "PublishedDate": "2020-01-24T21:15:00Z",
           "LastModifiedDate": "2020-01-28T01:15:00Z"
@@ -1179,11 +1247,13 @@
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1350",
             "https://github.com/git/git/security/advisories/GHSA-44fr-r2hj-3f4x",
             "https://groups.google.com/forum/?fromgroups#!topic/git-packagers/AWRBO_5gqa4",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-1350",
             "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1350",
             "https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/",
             "https://security.gentoo.org/glsa/202003-30",
             "https://security.gentoo.org/glsa/202003-42",
-            "https://ubuntu.com/security/notices/USN-4220-1"
+            "https://ubuntu.com/security/notices/USN-4220-1",
+            "https://www.cve.org/CVERecord?id=CVE-2019-1350"
           ],
           "PublishedDate": "2020-01-24T21:15:00Z",
           "LastModifiedDate": "2020-01-28T01:15:00Z"
@@ -1225,10 +1295,12 @@
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1351",
             "https://github.com/git/git/security/advisories/GHSA-39hj-fvvf-mq4f",
             "https://groups.google.com/forum/?fromgroups#!topic/git-packagers/AWRBO_5gqa4",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-1351",
             "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1351",
             "https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/",
             "https://security.gentoo.org/glsa/202003-30",
-            "https://ubuntu.com/security/notices/USN-4220-1"
+            "https://ubuntu.com/security/notices/USN-4220-1",
+            "https://www.cve.org/CVERecord?id=CVE-2019-1351"
           ],
           "PublishedDate": "2020-01-24T21:15:00Z",
           "LastModifiedDate": "2020-08-24T17:37:00Z"
@@ -1277,10 +1349,12 @@
             "https://groups.google.com/forum/?fromgroups#!topic/git-packagers/AWRBO_5gqa4",
             "https://linux.oracle.com/cve/CVE-2019-1352.html",
             "https://linux.oracle.com/errata/ELSA-2019-4356.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-1352",
             "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1352",
             "https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/",
             "https://security.gentoo.org/glsa/202003-30",
-            "https://ubuntu.com/security/notices/USN-4220-1"
+            "https://ubuntu.com/security/notices/USN-4220-1",
+            "https://www.cve.org/CVERecord?id=CVE-2019-1352"
           ],
           "PublishedDate": "2020-01-24T21:15:00Z",
           "LastModifiedDate": "2020-01-28T01:15:00Z"
@@ -1322,10 +1396,12 @@
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1354",
             "https://github.com/git/git/security/advisories/GHSA-xjx4-8694-q2fq",
             "https://groups.google.com/forum/?fromgroups#!topic/git-packagers/AWRBO_5gqa4",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-1354",
             "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1354",
             "https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/",
             "https://security.gentoo.org/glsa/202003-30",
-            "https://ubuntu.com/security/notices/USN-4220-1"
+            "https://ubuntu.com/security/notices/USN-4220-1",
+            "https://www.cve.org/CVERecord?id=CVE-2019-1354"
           ],
           "PublishedDate": "2020-01-24T21:15:00Z",
           "LastModifiedDate": "2020-01-28T01:15:00Z"
@@ -1377,10 +1453,12 @@
             "https://lists.debian.org/debian-lts-announce/2020/01/msg00019.html",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/N6UGTEOXWIYSM5KDZL74QD2GK6YQNQCP/",
             "https://lore.kernel.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/T/#u",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-1387",
             "https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/",
             "https://security.gentoo.org/glsa/202003-30",
             "https://security.gentoo.org/glsa/202003-42",
-            "https://ubuntu.com/security/notices/USN-4220-1"
+            "https://ubuntu.com/security/notices/USN-4220-1",
+            "https://www.cve.org/CVERecord?id=CVE-2019-1387"
           ],
           "PublishedDate": "2019-12-18T21:15:00Z",
           "LastModifiedDate": "2020-08-24T17:37:00Z"
@@ -1427,11 +1505,13 @@
             "https://linux.oracle.com/cve/CVE-2019-1348.html",
             "https://linux.oracle.com/errata/ELSA-2019-4356.html",
             "https://lore.kernel.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/T/#u",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-1348",
             "https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/",
             "https://security.gentoo.org/glsa/202003-30",
             "https://security.gentoo.org/glsa/202003-42",
             "https://support.apple.com/kb/HT210729",
-            "https://ubuntu.com/security/notices/USN-4220-1"
+            "https://ubuntu.com/security/notices/USN-4220-1",
+            "https://www.cve.org/CVERecord?id=CVE-2019-1348"
           ],
           "PublishedDate": "2020-01-24T22:15:00Z",
           "LastModifiedDate": "2020-08-24T17:37:00Z"
@@ -1503,6 +1583,7 @@
             "https://usn.ubuntu.com/4038-2/",
             "https://usn.ubuntu.com/4146-1/",
             "https://usn.ubuntu.com/4146-2/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-12900",
             "https://www.oracle.com/security-alerts/cpuoct2020.html"
           ],
           "PublishedDate": "2019-06-19T23:15:00Z",
@@ -1551,9 +1632,11 @@
             "https://github.com/curl/curl/commit/f3a24d7916b9173c69a3e0ee790102993833d6c5",
             "https://lists.apache.org/thread.html/8338a0f605bdbb3a6098bb76f666a95fc2b2f53f37fa1ecc89f1146f@%3Cdevnull.infra.apache.org%3E",
             "https://lists.debian.org/debian-lts-announce/2018/11/msg00005.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-16839",
             "https://security.gentoo.org/glsa/201903-03",
             "https://ubuntu.com/security/notices/USN-3805-1",
             "https://usn.ubuntu.com/3805-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-16839",
             "https://www.debian.org/security/2018/dsa-4331"
           ],
           "PublishedDate": "2018-10-31T18:29:00Z",
@@ -1600,9 +1683,11 @@
             "https://curl.haxx.se/docs/CVE-2018-16840.html",
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16840",
             "https://github.com/curl/curl/commit/81d135d67155c5295b1033679c606165d4e28f3f",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-16840",
             "https://security.gentoo.org/glsa/201903-03",
             "https://ubuntu.com/security/notices/USN-3805-1",
-            "https://usn.ubuntu.com/3805-1/"
+            "https://usn.ubuntu.com/3805-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-16840"
           ],
           "PublishedDate": "2018-10-31T18:29:00Z",
           "LastModifiedDate": "2019-10-09T23:36:00Z"
@@ -1652,11 +1737,13 @@
             "https://linux.oracle.com/cve/CVE-2018-16842.html",
             "https://linux.oracle.com/errata/ELSA-2019-2181.html",
             "https://lists.debian.org/debian-lts-announce/2018/11/msg00005.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-16842",
             "https://security.gentoo.org/glsa/201903-03",
             "https://ubuntu.com/security/notices/USN-3805-1",
             "https://ubuntu.com/security/notices/USN-3805-2",
             "https://usn.ubuntu.com/3805-1/",
             "https://usn.ubuntu.com/3805-2/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-16842",
             "https://www.debian.org/security/2018/dsa-4331",
             "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html"
           ],
@@ -1708,6 +1795,7 @@
             "https://linux.oracle.com/cve/CVE-2019-3822.html",
             "https://linux.oracle.com/errata/ELSA-2019-3701.html",
             "https://lists.apache.org/thread.html/8338a0f605bdbb3a6098bb76f666a95fc2b2f53f37fa1ecc89f1146f@%3Cdevnull.infra.apache.org%3E",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-3822",
             "https://security.gentoo.org/glsa/201903-03",
             "https://security.netapp.com/advisory/ntap-20190315-0001/",
             "https://security.netapp.com/advisory/ntap-20190719-0004/",
@@ -1715,6 +1803,7 @@
             "https://support.f5.com/csp/article/K84141449?utm_source=f5support\u0026amp;utm_medium=RSS",
             "https://ubuntu.com/security/notices/USN-3882-1",
             "https://usn.ubuntu.com/3882-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-3822",
             "https://www.debian.org/security/2019/dsa-4386",
             "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
             "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html"
@@ -1767,17 +1856,19 @@
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CI4QQ2RSZX4VCFM76SIWGKY6BY7UWIC/",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RGDVKSLY5JUNJRLYRUA6CXGQ2LM63XC3/",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UA7KDM2WPM5CJDDGOEGFV6SSGD2J7RNT/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-5481",
             "https://seclists.org/bugtraq/2020/Feb/36",
             "https://security.gentoo.org/glsa/202003-29",
             "https://security.netapp.com/advisory/ntap-20191004-0003/",
             "https://ubuntu.com/security/notices/USN-4129-1",
+            "https://www.cve.org/CVERecord?id=CVE-2019-5481",
             "https://www.debian.org/security/2020/dsa-4633",
             "https://www.oracle.com/security-alerts/cpuapr2020.html",
             "https://www.oracle.com/security-alerts/cpujan2020.html",
             "https://www.oracle.com/security-alerts/cpuoct2020.html"
           ],
           "PublishedDate": "2019-09-16T19:15:00Z",
-          "LastModifiedDate": "2020-10-20T22:15:00Z"
+          "LastModifiedDate": "2023-03-29T18:41:00Z"
         },
         {
           "VulnerabilityID": "CVE-2019-5482",
@@ -1824,12 +1915,14 @@
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6CI4QQ2RSZX4VCFM76SIWGKY6BY7UWIC/",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RGDVKSLY5JUNJRLYRUA6CXGQ2LM63XC3/",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UA7KDM2WPM5CJDDGOEGFV6SSGD2J7RNT/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-5482",
             "https://seclists.org/bugtraq/2020/Feb/36",
             "https://security.gentoo.org/glsa/202003-29",
             "https://security.netapp.com/advisory/ntap-20191004-0003/",
             "https://security.netapp.com/advisory/ntap-20200416-0003/",
             "https://ubuntu.com/security/notices/USN-4129-1",
             "https://ubuntu.com/security/notices/USN-4129-2",
+            "https://www.cve.org/CVERecord?id=CVE-2019-5482",
             "https://www.debian.org/security/2020/dsa-4633",
             "https://www.oracle.com/security-alerts/cpuapr2020.html",
             "https://www.oracle.com/security-alerts/cpujan2020.html",
@@ -1884,10 +1977,12 @@
             "https://linux.oracle.com/cve/CVE-2018-16890.html",
             "https://linux.oracle.com/errata/ELSA-2019-3701.html",
             "https://lists.apache.org/thread.html/8338a0f605bdbb3a6098bb76f666a95fc2b2f53f37fa1ecc89f1146f@%3Cdevnull.infra.apache.org%3E",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-16890",
             "https://security.netapp.com/advisory/ntap-20190315-0001/",
             "https://support.f5.com/csp/article/K03314397?utm_source=f5support\u0026amp;utm_medium=RSS",
             "https://ubuntu.com/security/notices/USN-3882-1",
             "https://usn.ubuntu.com/3882-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-16890",
             "https://www.debian.org/security/2019/dsa-4386",
             "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
             "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html"
@@ -1940,10 +2035,12 @@
             "https://linux.oracle.com/cve/CVE-2019-3823.html",
             "https://linux.oracle.com/errata/ELSA-2019-3701.html",
             "https://lists.apache.org/thread.html/8338a0f605bdbb3a6098bb76f666a95fc2b2f53f37fa1ecc89f1146f@%3Cdevnull.infra.apache.org%3E",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-3823",
             "https://security.gentoo.org/glsa/201903-03",
             "https://security.netapp.com/advisory/ntap-20190315-0001/",
             "https://ubuntu.com/security/notices/USN-3882-1",
             "https://usn.ubuntu.com/3882-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-3823",
             "https://www.debian.org/security/2019/dsa-4386",
             "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
             "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html"
@@ -2010,7 +2107,8 @@
             "https://ubuntu.com/security/notices/USN-3739-1",
             "https://ubuntu.com/security/notices/USN-3739-2",
             "https://usn.ubuntu.com/3739-1/",
-            "https://usn.ubuntu.com/3739-2/"
+            "https://usn.ubuntu.com/3739-2/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-14404"
           ],
           "PublishedDate": "2018-07-19T13:29:00Z",
           "LastModifiedDate": "2020-09-10T01:15:00Z"
@@ -2058,8 +2156,10 @@
             "https://linux.oracle.com/errata/ELSA-2020-1190.html",
             "https://lists.debian.org/debian-lts-announce/2018/09/msg00035.html",
             "https://lists.debian.org/debian-lts-announce/2020/09/msg00009.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-14567",
             "https://ubuntu.com/security/notices/USN-3739-1",
-            "https://usn.ubuntu.com/3739-1/"
+            "https://usn.ubuntu.com/3739-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-14567"
           ],
           "PublishedDate": "2018-08-16T20:29:00Z",
           "LastModifiedDate": "2020-09-10T01:15:00Z"
@@ -2103,7 +2203,9 @@
             "https://bugzilla.gnome.org/show_bug.cgi?id=794914",
             "https://linux.oracle.com/cve/CVE-2018-9251.html",
             "https://linux.oracle.com/errata/ELSA-2020-1827.html",
-            "https://lists.debian.org/debian-lts-announce/2018/09/msg00035.html"
+            "https://lists.debian.org/debian-lts-announce/2018/09/msg00035.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-9251",
+            "https://www.cve.org/CVERecord?id=CVE-2018-9251"
           ],
           "PublishedDate": "2018-04-04T02:29:00Z",
           "LastModifiedDate": "2019-10-03T00:03:00Z"
@@ -2148,9 +2250,11 @@
             "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3902",
             "https://lists.debian.org/debian-lts-announce/2019/04/msg00024.html",
             "https://lists.debian.org/debian-lts-announce/2020/07/msg00032.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-3902",
             "https://ubuntu.com/security/notices/USN-4086-1",
             "https://ubuntu.com/security/notices/USN-5102-1",
             "https://usn.ubuntu.com/4086-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-3902",
             "https://www.mercurial-scm.org/wiki/WhatsNew#Mercurial_4.9_.282019-02-01.29"
           ],
           "PublishedDate": "2019-04-22T16:29:00Z",
@@ -2188,8 +2292,13 @@
           },
           "References": [
             "http://www.openwall.com/lists/oss-security/2019/08/06/4",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14697",
+            "https://git.musl-libc.org/cgit/musl/patch/?id=6818c31c9bc4bbad5357f1de14bedf781e5b349e",
+            "https://git.musl-libc.org/cgit/musl/patch/?id=f3ed8bfe8a82af1870ddc8696ed4cc1d5aa6b441",
             "https://security.gentoo.org/glsa/202003-13",
-            "https://www.openwall.com/lists/musl/2019/08/06/1"
+            "https://ubuntu.com/security/notices/USN-5990-1",
+            "https://www.openwall.com/lists/musl/2019/08/06/1",
+            "https://www.openwall.com/lists/oss-security/2019/08/06/1"
           ],
           "PublishedDate": "2019-08-06T16:15:00Z",
           "LastModifiedDate": "2023-03-03T17:43:00Z"
@@ -2226,8 +2335,13 @@
           },
           "References": [
             "http://www.openwall.com/lists/oss-security/2019/08/06/4",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14697",
+            "https://git.musl-libc.org/cgit/musl/patch/?id=6818c31c9bc4bbad5357f1de14bedf781e5b349e",
+            "https://git.musl-libc.org/cgit/musl/patch/?id=f3ed8bfe8a82af1870ddc8696ed4cc1d5aa6b441",
             "https://security.gentoo.org/glsa/202003-13",
-            "https://www.openwall.com/lists/musl/2019/08/06/1"
+            "https://ubuntu.com/security/notices/USN-5990-1",
+            "https://www.openwall.com/lists/musl/2019/08/06/1",
+            "https://www.openwall.com/lists/oss-security/2019/08/06/1"
           ],
           "PublishedDate": "2019-08-06T16:15:00Z",
           "LastModifiedDate": "2023-03-03T17:43:00Z"
@@ -2278,12 +2392,14 @@
             "https://linux.oracle.com/errata/ELSA-2019-3702.html",
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-20685",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.gentoo.org/glsa/202007-53",
             "https://security.netapp.com/advisory/ntap-20190215-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
             "https://ubuntu.com/security/notices/USN-3885-1",
             "https://usn.ubuntu.com/3885-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-20685",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
             "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html"
@@ -2338,11 +2454,13 @@
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W3YVQ2BPTOVDCFDVNC2GGF5P5ISFG37G/",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-6109",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.netapp.com/advisory/ntap-20190213-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
             "https://ubuntu.com/security/notices/USN-3885-1",
             "https://usn.ubuntu.com/3885-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-6109",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html"
           ],
@@ -2403,6 +2521,7 @@
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W3YVQ2BPTOVDCFDVNC2GGF5P5ISFG37G/",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-6111",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.netapp.com/advisory/ntap-20190213-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
@@ -2410,6 +2529,7 @@
             "https://ubuntu.com/security/notices/USN-3885-2",
             "https://usn.ubuntu.com/3885-1/",
             "https://usn.ubuntu.com/3885-2/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-6111",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.exploit-db.com/exploits/46193/",
             "https://www.freebsd.org/security/advisories/FreeBSD-EN-19:10.scp.asc",
@@ -2464,12 +2584,14 @@
             "https://linux.oracle.com/errata/ELSA-2019-3702.html",
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-20685",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.gentoo.org/glsa/202007-53",
             "https://security.netapp.com/advisory/ntap-20190215-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
             "https://ubuntu.com/security/notices/USN-3885-1",
             "https://usn.ubuntu.com/3885-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-20685",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
             "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html"
@@ -2524,11 +2646,13 @@
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W3YVQ2BPTOVDCFDVNC2GGF5P5ISFG37G/",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-6109",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.netapp.com/advisory/ntap-20190213-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
             "https://ubuntu.com/security/notices/USN-3885-1",
             "https://usn.ubuntu.com/3885-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-6109",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html"
           ],
@@ -2589,6 +2713,7 @@
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W3YVQ2BPTOVDCFDVNC2GGF5P5ISFG37G/",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-6111",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.netapp.com/advisory/ntap-20190213-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
@@ -2596,6 +2721,7 @@
             "https://ubuntu.com/security/notices/USN-3885-2",
             "https://usn.ubuntu.com/3885-1/",
             "https://usn.ubuntu.com/3885-2/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-6111",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.exploit-db.com/exploits/46193/",
             "https://www.freebsd.org/security/advisories/FreeBSD-EN-19:10.scp.asc",
@@ -2650,12 +2776,14 @@
             "https://linux.oracle.com/errata/ELSA-2019-3702.html",
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-20685",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.gentoo.org/glsa/202007-53",
             "https://security.netapp.com/advisory/ntap-20190215-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
             "https://ubuntu.com/security/notices/USN-3885-1",
             "https://usn.ubuntu.com/3885-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-20685",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
             "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html"
@@ -2710,11 +2838,13 @@
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W3YVQ2BPTOVDCFDVNC2GGF5P5ISFG37G/",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-6109",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.netapp.com/advisory/ntap-20190213-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
             "https://ubuntu.com/security/notices/USN-3885-1",
             "https://usn.ubuntu.com/3885-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-6109",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html"
           ],
@@ -2775,6 +2905,7 @@
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W3YVQ2BPTOVDCFDVNC2GGF5P5ISFG37G/",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-6111",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.netapp.com/advisory/ntap-20190213-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
@@ -2782,6 +2913,7 @@
             "https://ubuntu.com/security/notices/USN-3885-2",
             "https://usn.ubuntu.com/3885-1/",
             "https://usn.ubuntu.com/3885-2/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-6111",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.exploit-db.com/exploits/46193/",
             "https://www.freebsd.org/security/advisories/FreeBSD-EN-19:10.scp.asc",
@@ -2836,12 +2968,14 @@
             "https://linux.oracle.com/errata/ELSA-2019-3702.html",
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-20685",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.gentoo.org/glsa/202007-53",
             "https://security.netapp.com/advisory/ntap-20190215-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
             "https://ubuntu.com/security/notices/USN-3885-1",
             "https://usn.ubuntu.com/3885-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-20685",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
             "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html"
@@ -2896,11 +3030,13 @@
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W3YVQ2BPTOVDCFDVNC2GGF5P5ISFG37G/",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-6109",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.netapp.com/advisory/ntap-20190213-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
             "https://ubuntu.com/security/notices/USN-3885-1",
             "https://usn.ubuntu.com/3885-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-6109",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html"
           ],
@@ -2961,6 +3097,7 @@
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W3YVQ2BPTOVDCFDVNC2GGF5P5ISFG37G/",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-6111",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.netapp.com/advisory/ntap-20190213-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
@@ -2968,6 +3105,7 @@
             "https://ubuntu.com/security/notices/USN-3885-2",
             "https://usn.ubuntu.com/3885-1/",
             "https://usn.ubuntu.com/3885-2/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-6111",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.exploit-db.com/exploits/46193/",
             "https://www.freebsd.org/security/advisories/FreeBSD-EN-19:10.scp.asc",
@@ -3022,12 +3160,14 @@
             "https://linux.oracle.com/errata/ELSA-2019-3702.html",
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-20685",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.gentoo.org/glsa/202007-53",
             "https://security.netapp.com/advisory/ntap-20190215-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
             "https://ubuntu.com/security/notices/USN-3885-1",
             "https://usn.ubuntu.com/3885-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-20685",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
             "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html"
@@ -3082,11 +3222,13 @@
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W3YVQ2BPTOVDCFDVNC2GGF5P5ISFG37G/",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-6109",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.netapp.com/advisory/ntap-20190213-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
             "https://ubuntu.com/security/notices/USN-3885-1",
             "https://usn.ubuntu.com/3885-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-6109",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html"
           ],
@@ -3147,6 +3289,7 @@
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W3YVQ2BPTOVDCFDVNC2GGF5P5ISFG37G/",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-6111",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.netapp.com/advisory/ntap-20190213-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
@@ -3154,6 +3297,7 @@
             "https://ubuntu.com/security/notices/USN-3885-2",
             "https://usn.ubuntu.com/3885-1/",
             "https://usn.ubuntu.com/3885-2/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-6111",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.exploit-db.com/exploits/46193/",
             "https://www.freebsd.org/security/advisories/FreeBSD-EN-19:10.scp.asc",
@@ -3208,12 +3352,14 @@
             "https://linux.oracle.com/errata/ELSA-2019-3702.html",
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-20685",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.gentoo.org/glsa/202007-53",
             "https://security.netapp.com/advisory/ntap-20190215-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
             "https://ubuntu.com/security/notices/USN-3885-1",
             "https://usn.ubuntu.com/3885-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-20685",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html",
             "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html"
@@ -3268,11 +3414,13 @@
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W3YVQ2BPTOVDCFDVNC2GGF5P5ISFG37G/",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-6109",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.netapp.com/advisory/ntap-20190213-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
             "https://ubuntu.com/security/notices/USN-3885-1",
             "https://usn.ubuntu.com/3885-1/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-6109",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html"
           ],
@@ -3333,6 +3481,7 @@
             "https://lists.debian.org/debian-lts-announce/2019/03/msg00030.html",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W3YVQ2BPTOVDCFDVNC2GGF5P5ISFG37G/",
             "https://lists.mindrot.org/pipermail/openssh-unix-dev/2019-January/037459.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-6111",
             "https://security.gentoo.org/glsa/201903-16",
             "https://security.netapp.com/advisory/ntap-20190213-0001/",
             "https://sintonen.fi/advisories/scp-client-multiple-vulnerabilities.txt",
@@ -3340,6 +3489,7 @@
             "https://ubuntu.com/security/notices/USN-3885-2",
             "https://usn.ubuntu.com/3885-1/",
             "https://usn.ubuntu.com/3885-2/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-6111",
             "https://www.debian.org/security/2019/dsa-4387",
             "https://www.exploit-db.com/exploits/46193/",
             "https://www.freebsd.org/security/advisories/FreeBSD-EN-19:10.scp.asc",
@@ -3410,7 +3560,8 @@
             "https://ubuntu.com/security/notices/USN-3624-1",
             "https://ubuntu.com/security/notices/USN-3624-2",
             "https://usn.ubuntu.com/3624-1/",
-            "https://usn.ubuntu.com/3624-2/"
+            "https://usn.ubuntu.com/3624-2/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-1000156"
           ],
           "PublishedDate": "2018-04-06T13:29:00Z",
           "LastModifiedDate": "2019-07-30T10:15:00Z"
@@ -3458,7 +3609,8 @@
             "https://linux.oracle.com/errata/ELSA-2019-2033.html",
             "https://nvd.nist.gov/vuln/detail/CVE-2018-6952",
             "https://savannah.gnu.org/bugs/index.php?53133",
-            "https://security.gentoo.org/glsa/201904-17"
+            "https://security.gentoo.org/glsa/201904-17",
+            "https://www.cve.org/CVERecord?id=CVE-2018-6952"
           ],
           "PublishedDate": "2018-02-13T19:29:00Z",
           "LastModifiedDate": "2019-04-17T20:29:00Z"
@@ -3519,6 +3671,7 @@
             "https://security.netapp.com/advisory/ntap-20190828-0001/",
             "https://ubuntu.com/security/notices/USN-4071-1",
             "https://ubuntu.com/security/notices/USN-4071-2",
+            "https://www.cve.org/CVERecord?id=CVE-2019-13638",
             "https://www.debian.org/security/2019/dsa-4489"
           ],
           "PublishedDate": "2019-07-26T13:15:00Z",
@@ -3580,6 +3733,7 @@
             "https://ubuntu.com/security/notices/USN-4071-2",
             "https://usn.ubuntu.com/4071-1/",
             "https://usn.ubuntu.com/4071-2/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-13636",
             "https://www.debian.org/security/2019/dsa-4489"
           ],
           "PublishedDate": "2019-07-17T21:15:00Z",
@@ -3628,6 +3782,7 @@
             "https://linux.oracle.com/errata/ELSA-2020-1810.html",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OPKYSWCOM3CL66RI76TYVIG6TJ263RXH/",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SJPFGA45DI4F5MCF2OAACGH3HQOF4G3M/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-8457",
             "https://security.netapp.com/advisory/ntap-20190606-0002/",
             "https://ubuntu.com/security/notices/USN-4004-1",
             "https://ubuntu.com/security/notices/USN-4004-2",
@@ -3637,6 +3792,7 @@
             "https://usn.ubuntu.com/4004-2/",
             "https://usn.ubuntu.com/4019-1/",
             "https://usn.ubuntu.com/4019-2/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-8457",
             "https://www.oracle.com/security-alerts/cpuapr2020.html",
             "https://www.oracle.com/security-alerts/cpujan2020.html",
             "https://www.oracle.com/security-alerts/cpujul2020.html",
@@ -3700,6 +3856,7 @@
             "https://lists.debian.org/debian-lts-announce/2020/08/msg00037.html",
             "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PU4NZ6DDU4BEM3ACM3FM6GLEPX56ZQXK/",
             "https://news.ycombinator.com/item?id=18685296",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-20346",
             "https://security.gentoo.org/glsa/201904-21",
             "https://sqlite.org/src/info/940f2adc8541a838",
             "https://sqlite.org/src/info/d44318f59044162e",
@@ -3714,6 +3871,7 @@
             "https://usn.ubuntu.com/4019-1/",
             "https://usn.ubuntu.com/4019-2/",
             "https://worthdoingbadly.com/sqlitebug/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-20346",
             "https://www.freebsd.org/security/advisories/FreeBSD-EN-19:03.sqlite.asc",
             "https://www.mail-archive.com/sqlite-users@mailinglists.sqlite.org/msg113218.html",
             "https://www.oracle.com/security-alerts/cpuapr2020.html",
@@ -3764,10 +3922,12 @@
             "https://errata.almalinux.org/8/ALSA-2019-2512.html",
             "https://linux.oracle.com/cve/CVE-2019-0203.html",
             "https://linux.oracle.com/errata/ELSA-2019-2512.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-0203",
             "https://subversion.apache.org/security/CVE-2019-0203-advisory.txt",
             "https://ubuntu.com/security/notices/USN-4082-1",
             "https://ubuntu.com/security/notices/USN-4082-2",
-            "https://ubuntu.com/security/notices/USN-5445-1"
+            "https://ubuntu.com/security/notices/USN-5445-1",
+            "https://www.cve.org/CVERecord?id=CVE-2019-0203"
           ],
           "PublishedDate": "2019-09-26T16:15:00Z",
           "LastModifiedDate": "2021-07-21T11:39:00Z"
@@ -3813,10 +3973,12 @@
             "https://errata.almalinux.org/8/ALSA-2020-4712.html",
             "https://linux.oracle.com/cve/CVE-2018-11782.html",
             "https://linux.oracle.com/errata/ELSA-2020-4712.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-11782",
             "https://subversion.apache.org/security/CVE-2018-11782-advisory.txt",
             "https://ubuntu.com/security/notices/USN-4082-1",
             "https://ubuntu.com/security/notices/USN-4082-2",
-            "https://ubuntu.com/security/notices/USN-5445-1"
+            "https://ubuntu.com/security/notices/USN-5445-1",
+            "https://www.cve.org/CVERecord?id=CVE-2018-11782"
           ],
           "PublishedDate": "2019-09-26T16:15:00Z",
           "LastModifiedDate": "2019-09-27T15:33:00Z"
@@ -3862,10 +4024,12 @@
             "https://errata.almalinux.org/8/ALSA-2019-2512.html",
             "https://linux.oracle.com/cve/CVE-2019-0203.html",
             "https://linux.oracle.com/errata/ELSA-2019-2512.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-0203",
             "https://subversion.apache.org/security/CVE-2019-0203-advisory.txt",
             "https://ubuntu.com/security/notices/USN-4082-1",
             "https://ubuntu.com/security/notices/USN-4082-2",
-            "https://ubuntu.com/security/notices/USN-5445-1"
+            "https://ubuntu.com/security/notices/USN-5445-1",
+            "https://www.cve.org/CVERecord?id=CVE-2019-0203"
           ],
           "PublishedDate": "2019-09-26T16:15:00Z",
           "LastModifiedDate": "2021-07-21T11:39:00Z"
@@ -3911,10 +4075,12 @@
             "https://errata.almalinux.org/8/ALSA-2020-4712.html",
             "https://linux.oracle.com/cve/CVE-2018-11782.html",
             "https://linux.oracle.com/errata/ELSA-2020-4712.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-11782",
             "https://subversion.apache.org/security/CVE-2018-11782-advisory.txt",
             "https://ubuntu.com/security/notices/USN-4082-1",
             "https://ubuntu.com/security/notices/USN-4082-2",
-            "https://ubuntu.com/security/notices/USN-5445-1"
+            "https://ubuntu.com/security/notices/USN-5445-1",
+            "https://www.cve.org/CVERecord?id=CVE-2018-11782"
           ],
           "PublishedDate": "2019-09-26T16:15:00Z",
           "LastModifiedDate": "2019-09-27T15:33:00Z"
@@ -3963,10 +4129,12 @@
             "https://lists.debian.org/debian-lts-announce/2018/12/msg00023.html",
             "https://lists.debian.org/debian-lts-announce/2021/11/msg00025.html",
             "https://news.ycombinator.com/item?id=18745431",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-20482",
             "https://security.gentoo.org/glsa/201903-05",
             "https://twitter.com/thatcks/status/1076166645708668928",
             "https://ubuntu.com/security/notices/USN-4692-1",
-            "https://utcc.utoronto.ca/~cks/space/blog/sysadmin/TarFindingTruncateBug"
+            "https://utcc.utoronto.ca/~cks/space/blog/sysadmin/TarFindingTruncateBug",
+            "https://www.cve.org/CVERecord?id=CVE-2018-20482"
           ],
           "PublishedDate": "2018-12-26T18:29:00Z",
           "LastModifiedDate": "2021-11-30T19:52:00Z"
@@ -3984,7 +4152,7 @@
           "InstalledVersion": "v0.3.1-0.20221206200815-1e63c2f08a10",
           "FixedVersion": "0.7.0",
           "Layer": {
-            "DiffID": "sha256:ee78847a743dca42b0cc87e21441089280f33d664b5c007c091f04515846b071"
+            "DiffID": "sha256:f48f1c630e6c05ac75f4f7f3d809fdcad6b3350329b53ff7f5214dd4ff470769"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-41723",
@@ -4022,7 +4190,8 @@
             "https://groups.google.com/g/golang-announce/c/V0aBFqaFs_E",
             "https://nvd.nist.gov/vuln/detail/CVE-2022-41723",
             "https://pkg.go.dev/vuln/GO-2023-1571",
-            "https://vuln.go.dev/ID/GO-2023-1571.json"
+            "https://vuln.go.dev/ID/GO-2023-1571.json",
+            "https://www.cve.org/CVERecord?id=CVE-2022-41723"
           ],
           "PublishedDate": "2023-02-28T18:15:00Z",
           "LastModifiedDate": "2023-03-09T16:36:00Z"
@@ -4033,7 +4202,7 @@
           "InstalledVersion": "v0.3.1-0.20221206200815-1e63c2f08a10",
           "FixedVersion": "0.4.0",
           "Layer": {
-            "DiffID": "sha256:ee78847a743dca42b0cc87e21441089280f33d664b5c007c091f04515846b071"
+            "DiffID": "sha256:f48f1c630e6c05ac75f4f7f3d809fdcad6b3350329b53ff7f5214dd4ff470769"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-41717",
@@ -4076,7 +4245,8 @@
             "https://linux.oracle.com/cve/CVE-2022-41717.html",
             "https://linux.oracle.com/errata/ELSA-2023-18908.html",
             "https://nvd.nist.gov/vuln/detail/CVE-2022-41717",
-            "https://pkg.go.dev/vuln/GO-2022-1144"
+            "https://pkg.go.dev/vuln/GO-2022-1144",
+            "https://www.cve.org/CVERecord?id=CVE-2022-41717"
           ],
           "PublishedDate": "2022-12-08T20:15:00Z",
           "LastModifiedDate": "2022-12-12T17:50:00Z"
@@ -4087,7 +4257,7 @@
           "InstalledVersion": "v0.3.1-0.20221206200815-1e63c2f08a10",
           "FixedVersion": "0.7.0",
           "Layer": {
-            "DiffID": "sha256:ee78847a743dca42b0cc87e21441089280f33d664b5c007c091f04515846b071"
+            "DiffID": "sha256:f48f1c630e6c05ac75f4f7f3d809fdcad6b3350329b53ff7f5214dd4ff470769"
           },
           "PrimaryURL": "https://github.com/advisories/GHSA-vvpx-j8f3-3w6h",
           "DataSource": {
@@ -4120,7 +4290,7 @@
           "InstalledVersion": "6.2.0",
           "FixedVersion": "6.2.1, 4.2.4, 5.3.1",
           "Layer": {
-            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+            "DiffID": "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8"
           },
           "SeveritySource": "nvd",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2016-5385",
@@ -4191,6 +4361,7 @@
             "https://security.gentoo.org/glsa/201611-22",
             "https://typo3.org/security/advisory/typo3-core-sa-2016-019",
             "https://ubuntu.com/security/notices/USN-3045-1",
+            "https://www.cve.org/CVERecord?id=CVE-2016-5385",
             "https://www.drupal.org/SA-CORE-2016-003"
           ],
           "PublishedDate": "2016-07-19T02:00:00Z",
@@ -4200,9 +4371,9 @@
           "VulnerabilityID": "CVE-2022-29248",
           "PkgName": "guzzlehttp/guzzle",
           "InstalledVersion": "6.2.0",
-          "FixedVersion": "6.5.6, 7.4.3",
+          "FixedVersion": "7.4.3, 6.5.6",
           "Layer": {
-            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+            "DiffID": "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8"
           },
           "SeveritySource": "nvd",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-29248",
@@ -4247,7 +4418,7 @@
           "InstalledVersion": "6.2.0",
           "FixedVersion": "7.4.4, 6.5.7",
           "Layer": {
-            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+            "DiffID": "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8"
           },
           "SeveritySource": "nvd",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-31042",
@@ -4293,7 +4464,7 @@
           "InstalledVersion": "6.2.0",
           "FixedVersion": "7.4.4, 6.5.7",
           "Layer": {
-            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+            "DiffID": "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8"
           },
           "SeveritySource": "nvd",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-31043",
@@ -4339,7 +4510,7 @@
           "InstalledVersion": "6.2.0",
           "FixedVersion": "7.4.5, 6.5.8",
           "Layer": {
-            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+            "DiffID": "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8"
           },
           "SeveritySource": "nvd",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-31090",
@@ -4383,9 +4554,9 @@
           "VulnerabilityID": "CVE-2022-31091",
           "PkgName": "guzzlehttp/guzzle",
           "InstalledVersion": "6.2.0",
-          "FixedVersion": "7.4.5, 6.5.8",
+          "FixedVersion": "6.5.8, 7.4.5",
           "Layer": {
-            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+            "DiffID": "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8"
           },
           "SeveritySource": "nvd",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-31091",
@@ -4426,7 +4597,7 @@
           "InstalledVersion": "1.5.2",
           "FixedVersion": "2.1.1, 1.8.4",
           "Layer": {
-            "DiffID": "sha256:0c59917d5db54d8618539cd352f079a4568cffb94347067aebc87ccd6c407866"
+            "DiffID": "sha256:05ccf8b5cce271f23d994f50334c8877441c107409c1c1664426638054812aa8"
           },
           "SeveritySource": "nvd",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-24775",
@@ -4478,7 +4649,7 @@
           "InstalledVersion": "1.9.0",
           "FixedVersion": "2.1.0",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-15542",
@@ -4521,7 +4692,7 @@
           "InstalledVersion": "1.9.0",
           "FixedVersion": "2.1.3, 3.1.0",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-38193",
@@ -4565,7 +4736,7 @@
           "InstalledVersion": "0.8.3",
           "FixedVersion": "0.10.9",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-20997",
@@ -4608,7 +4779,7 @@
           "InstalledVersion": "0.8.3",
           "FixedVersion": "0.9.0",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2016-10931",
@@ -4651,7 +4822,7 @@
           "InstalledVersion": "0.4.0",
           "FixedVersion": "0.3.1, 0.4.2",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-25576",
@@ -4694,7 +4865,7 @@
           "InstalledVersion": "0.5.1",
           "FixedVersion": "0.8.0",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://github.com/advisories/GHSA-mc8h-8q98-g5hr",
@@ -4720,7 +4891,7 @@
           "InstalledVersion": "0.6.9",
           "FixedVersion": "0.6.10",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-15551",
@@ -4763,7 +4934,7 @@
           "InstalledVersion": "0.6.9",
           "FixedVersion": "0.6.10",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-15554",
@@ -4806,7 +4977,7 @@
           "InstalledVersion": "0.6.9",
           "FixedVersion": "1.6.1, 0.6.14",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-25900",
@@ -4850,7 +5021,7 @@
           "InstalledVersion": "0.6.9",
           "FixedVersion": "0.6.13",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-25023",
@@ -4893,7 +5064,7 @@
           "InstalledVersion": "0.6.9",
           "FixedVersion": "0.6.13",
           "Layer": {
-            "DiffID": "sha256:42ee3b8ed305b20ca3b8575aef16da3394db71aef5d4f408be752c33adc65d29"
+            "DiffID": "sha256:6eae7cb391c7d9d014426fd669ad493541dcc3526202045d0ff387e93cb8755c"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://github.com/advisories/GHSA-66p5-j55p-32r9",

@@ -1,20 +1,31 @@
 FROM composer:1.7.2 as builder
 
-RUN apk add --no-cache upx binutils
+RUN apk add --no-cache upx binutils nodejs
 
 # Hide runtime language files behind symlinks
+COPY TestLibrary.deps.json /dotnet/TestLibrary.deps.json-orig
 COPY composer_laravel.lock /php-app/composer.lock-orig
 COPY Gemfile_rails.lock /ruby-app/Gemfile.lock-orig
 COPY package-lock_react.json /node-app/package-lock.json-orig
+COPY package.json /node-app2/package.json-orig
+COPY yarn.lock /yarn/yarn.lock-orig
 COPY Pipfile.lock /python-app/Pipfile.lock-orig
+COPY requirements.txt /python-app2/requirements.txt-orig
+COPY poetry.lock /python-app3/poetry.lock-orig
 COPY Cargo.lock /rust-app/Cargo.lock-orig
 COPY kubectl /bin/kubectl
 
+RUN ln -s /dotnet/TestLibrary.deps.json-orig /dotnet/TestLibrary.deps.json
 RUN ln -s /php-app/composer.lock-orig /php-app/composer.lock
 RUN ln -s /ruby-app/Gemfile.lock-orig /ruby-app/Gemfile.lock
 RUN ln -s /node-app/package-lock.json-orig /node-app/package-lock.json
+RUN ln -s /node-app2/package.json-orig /node-app2/package.json
+RUN ln -s /yarn/yarn.lock-orig /yarn/yarn.lock
 RUN ln -s /python-app/Pipfile.lock-orig /python-app/Pipfile.lock
+RUN ln -s /python-app2/requirements.txt-orig /python-app2/requirements.txt
+RUN ln -s /python-app3/poetry.lock-orig /python-app3/poetry.lock
 RUN ln -s /rust-app/Cargo.lock-orig /rust-app/Cargo.lock
+RUN find /usr/lib/node_modules -name package.json -type f -delete
 
 # Attempt to avoid OS detection
 RUN echo -e 'PRETTY_NAME="Linux"\nNAME="Linux"\nVERSION_ID="99"\nVERSION="99 (honk)"\nID=Linux' > /etc/os-release

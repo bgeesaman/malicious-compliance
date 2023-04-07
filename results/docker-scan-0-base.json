@@ -181,7 +181,8 @@
         "isPatchable": false,
         "name": "bzip2/libbz2",
         "version": "1.0.6-r6",
-        "nearestFixedInVersion": "1.0.6-r7"
+        "nearestFixedInVersion": "1.0.6-r7",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-BZIP2-452717",
@@ -364,7 +365,8 @@
         "isPatchable": false,
         "name": "bzip2/libbz2",
         "version": "1.0.6-r6",
-        "nearestFixedInVersion": "1.0.6-r7"
+        "nearestFixedInVersion": "1.0.6-r7",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343582",
@@ -502,7 +504,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343592",
@@ -641,7 +644,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343907",
@@ -791,7 +795,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358498",
@@ -919,7 +924,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358563",
@@ -1055,7 +1061,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r0"
+        "nearestFixedInVersion": "7.61.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358776",
@@ -1189,7 +1196,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358921",
@@ -1303,7 +1311,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-484608",
@@ -1445,7 +1454,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r3"
+        "nearestFixedInVersion": "7.61.1-r3",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-504637",
@@ -1592,7 +1602,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r3"
+        "nearestFixedInVersion": "7.61.1-r3",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343582",
@@ -1731,7 +1742,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343592",
@@ -1871,7 +1883,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343907",
@@ -2022,7 +2035,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358498",
@@ -2151,7 +2165,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358563",
@@ -2288,7 +2303,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r0"
+        "nearestFixedInVersion": "7.61.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358776",
@@ -2423,7 +2439,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358921",
@@ -2538,7 +2555,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-484608",
@@ -2681,7 +2699,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r3"
+        "nearestFixedInVersion": "7.61.1-r3",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-504637",
@@ -2829,7 +2848,8 @@
         "isPatchable": false,
         "name": "curl/curl",
         "version": "7.61.0-r0",
-        "nearestFixedInVersion": "7.61.1-r3"
+        "nearestFixedInVersion": "7.61.1-r3",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343582",
@@ -2967,7 +2987,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343592",
@@ -3106,7 +3127,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343907",
@@ -3256,7 +3278,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358498",
@@ -3384,7 +3407,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358776",
@@ -3518,7 +3542,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358921",
@@ -3632,7 +3657,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-484608",
@@ -3774,7 +3800,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r3"
+        "nearestFixedInVersion": "7.61.1-r3",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-504637",
@@ -3921,7 +3948,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r3"
+        "nearestFixedInVersion": "7.61.1-r3",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343582",
@@ -4060,7 +4088,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343592",
@@ -4200,7 +4229,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343907",
@@ -4351,7 +4381,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358498",
@@ -4480,7 +4511,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358776",
@@ -4615,7 +4647,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358921",
@@ -4730,7 +4763,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-484608",
@@ -4873,7 +4907,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r3"
+        "nearestFixedInVersion": "7.61.1-r3",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-504637",
@@ -5021,7 +5056,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r3"
+        "nearestFixedInVersion": "7.61.1-r3",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343582",
@@ -5160,7 +5196,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343592",
@@ -5300,7 +5337,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343907",
@@ -5451,7 +5489,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358498",
@@ -5580,7 +5619,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358776",
@@ -5715,7 +5755,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358921",
@@ -5830,7 +5871,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-484608",
@@ -5973,7 +6015,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r3"
+        "nearestFixedInVersion": "7.61.1-r3",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-504637",
@@ -6121,7 +6164,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r3"
+        "nearestFixedInVersion": "7.61.1-r3",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343582",
@@ -6260,7 +6304,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343592",
@@ -6400,7 +6445,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-343907",
@@ -6551,7 +6597,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r2"
+        "nearestFixedInVersion": "7.61.1-r2",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358498",
@@ -6680,7 +6727,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358776",
@@ -6815,7 +6863,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-358921",
@@ -6930,7 +6979,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r1"
+        "nearestFixedInVersion": "7.61.1-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-484608",
@@ -7073,7 +7123,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r3"
+        "nearestFixedInVersion": "7.61.1-r3",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-CURL-504637",
@@ -7221,7 +7272,8 @@
         "isPatchable": false,
         "name": "curl/libcurl",
         "version": "7.61.1-r0",
-        "nearestFixedInVersion": "7.61.1-r3"
+        "nearestFixedInVersion": "7.61.1-r3",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-EXPAT-453374",
@@ -7395,7 +7447,8 @@
         "isPatchable": false,
         "name": "expat/expat",
         "version": "2.2.5-r0",
-        "nearestFixedInVersion": "2.2.7-r0"
+        "nearestFixedInVersion": "2.2.7-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-EXPAT-489399",
@@ -7722,7 +7775,8 @@
         "isPatchable": false,
         "name": "expat/expat",
         "version": "2.2.5-r0",
-        "nearestFixedInVersion": "2.2.7-r1"
+        "nearestFixedInVersion": "2.2.7-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-EXPAT-453374",
@@ -7897,7 +7951,8 @@
         "isPatchable": false,
         "name": "expat/expat",
         "version": "2.2.5-r0",
-        "nearestFixedInVersion": "2.2.7-r0"
+        "nearestFixedInVersion": "2.2.7-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-EXPAT-489399",
@@ -8225,7 +8280,8 @@
         "isPatchable": false,
         "name": "expat/expat",
         "version": "2.2.5-r0",
-        "nearestFixedInVersion": "2.2.7-r1"
+        "nearestFixedInVersion": "2.2.7-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-EXPAT-453374",
@@ -8400,7 +8456,8 @@
         "isPatchable": false,
         "name": "expat/expat",
         "version": "2.2.5-r0",
-        "nearestFixedInVersion": "2.2.7-r0"
+        "nearestFixedInVersion": "2.2.7-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-EXPAT-489399",
@@ -8728,7 +8785,8 @@
         "isPatchable": false,
         "name": "expat/expat",
         "version": "2.2.5-r0",
-        "nearestFixedInVersion": "2.2.7-r1"
+        "nearestFixedInVersion": "2.2.7-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-EXPAT-453374",
@@ -8903,7 +8961,8 @@
         "isPatchable": false,
         "name": "expat/expat",
         "version": "2.2.5-r0",
-        "nearestFixedInVersion": "2.2.7-r0"
+        "nearestFixedInVersion": "2.2.7-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-EXPAT-489399",
@@ -9231,7 +9290,8 @@
         "isPatchable": false,
         "name": "expat/expat",
         "version": "2.2.5-r0",
-        "nearestFixedInVersion": "2.2.7-r1"
+        "nearestFixedInVersion": "2.2.7-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-EXPAT-453374",
@@ -9406,7 +9466,8 @@
         "isPatchable": false,
         "name": "expat/expat",
         "version": "2.2.5-r0",
-        "nearestFixedInVersion": "2.2.7-r0"
+        "nearestFixedInVersion": "2.2.7-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-EXPAT-489399",
@@ -9734,7 +9795,8 @@
         "isPatchable": false,
         "name": "expat/expat",
         "version": "2.2.5-r0",
-        "nearestFixedInVersion": "2.2.7-r1"
+        "nearestFixedInVersion": "2.2.7-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-GIT-1015576",
@@ -9854,7 +9916,8 @@
         "isPatchable": false,
         "name": "git/git",
         "version": "2.15.2-r0",
-        "nearestFixedInVersion": "2.15.4-r0"
+        "nearestFixedInVersion": "2.15.4-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-GIT-1015577",
@@ -9961,7 +10024,8 @@
         "isPatchable": false,
         "name": "git/git",
         "version": "2.15.2-r0",
-        "nearestFixedInVersion": "2.15.4-r0"
+        "nearestFixedInVersion": "2.15.4-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-GIT-1015578",
@@ -10075,7 +10139,8 @@
         "isPatchable": false,
         "name": "git/git",
         "version": "2.15.2-r0",
-        "nearestFixedInVersion": "2.15.4-r0"
+        "nearestFixedInVersion": "2.15.4-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-GIT-1015579",
@@ -10178,7 +10243,8 @@
         "isPatchable": false,
         "name": "git/git",
         "version": "2.15.2-r0",
-        "nearestFixedInVersion": "2.15.4-r0"
+        "nearestFixedInVersion": "2.15.4-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-GIT-1015580",
@@ -10292,7 +10358,8 @@
         "isPatchable": false,
         "name": "git/git",
         "version": "2.15.2-r0",
-        "nearestFixedInVersion": "2.15.4-r0"
+        "nearestFixedInVersion": "2.15.4-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-GIT-1015581",
@@ -10400,7 +10467,8 @@
         "isPatchable": false,
         "name": "git/git",
         "version": "2.15.2-r0",
-        "nearestFixedInVersion": "2.15.4-r0"
+        "nearestFixedInVersion": "2.15.4-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-GIT-1015582",
@@ -10503,7 +10571,8 @@
         "isPatchable": false,
         "name": "git/git",
         "version": "2.15.2-r0",
-        "nearestFixedInVersion": "2.15.4-r0"
+        "nearestFixedInVersion": "2.15.4-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-GIT-1015583",
@@ -10639,7 +10708,8 @@
         "isPatchable": false,
         "name": "git/git",
         "version": "2.15.2-r0",
-        "nearestFixedInVersion": "2.15.4-r0"
+        "nearestFixedInVersion": "2.15.4-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-GIT-340825",
@@ -10805,7 +10875,8 @@
         "isPatchable": false,
         "name": "git/git",
         "version": "2.15.2-r0",
-        "nearestFixedInVersion": "2.15.3-r0"
+        "nearestFixedInVersion": "2.15.3-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467481",
@@ -10931,7 +11002,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467482",
@@ -11077,7 +11149,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467483",
@@ -11228,7 +11301,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467484",
@@ -11371,7 +11445,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467485",
@@ -11558,7 +11633,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467486",
@@ -11701,7 +11777,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467487",
@@ -11844,7 +11921,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467488",
@@ -12002,7 +12080,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467489",
@@ -12124,7 +12203,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-474566",
@@ -12246,7 +12326,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.9.0-r1"
+        "nearestFixedInVersion": "1.9.0-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467481",
@@ -12374,7 +12455,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467482",
@@ -12522,7 +12604,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467483",
@@ -12675,7 +12758,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467484",
@@ -12820,7 +12904,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467485",
@@ -13009,7 +13094,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467486",
@@ -13154,7 +13240,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467487",
@@ -13299,7 +13386,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467488",
@@ -13459,7 +13547,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-467489",
@@ -13583,7 +13672,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.8.1-r0"
+        "nearestFixedInVersion": "1.8.1-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBSSH2-474566",
@@ -13707,7 +13797,8 @@
         "isPatchable": false,
         "name": "libssh2/libssh2",
         "version": "1.8.0-r2",
-        "nearestFixedInVersion": "1.9.0-r1"
+        "nearestFixedInVersion": "1.9.0-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBXML2-429396",
@@ -13817,7 +13908,8 @@
         "isPatchable": false,
         "name": "libxml2/libxml2",
         "version": "2.9.7-r0",
-        "nearestFixedInVersion": "2.9.8-r1"
+        "nearestFixedInVersion": "2.9.8-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBXML2-429568",
@@ -13943,7 +14035,8 @@
         "isPatchable": false,
         "name": "libxml2/libxml2",
         "version": "2.9.7-r0",
-        "nearestFixedInVersion": "2.9.8-r1"
+        "nearestFixedInVersion": "2.9.8-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBXML2-429768",
@@ -14033,7 +14126,8 @@
         "isPatchable": false,
         "name": "libxml2/libxml2",
         "version": "2.9.7-r0",
-        "nearestFixedInVersion": "2.9.8-r1"
+        "nearestFixedInVersion": "2.9.8-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBXML2-429396",
@@ -14144,7 +14238,8 @@
         "isPatchable": false,
         "name": "libxml2/libxml2",
         "version": "2.9.7-r0",
-        "nearestFixedInVersion": "2.9.8-r1"
+        "nearestFixedInVersion": "2.9.8-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBXML2-429568",
@@ -14271,7 +14366,8 @@
         "isPatchable": false,
         "name": "libxml2/libxml2",
         "version": "2.9.7-r0",
-        "nearestFixedInVersion": "2.9.8-r1"
+        "nearestFixedInVersion": "2.9.8-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-LIBXML2-429768",
@@ -14362,7 +14458,8 @@
         "isPatchable": false,
         "name": "libxml2/libxml2",
         "version": "2.9.7-r0",
-        "nearestFixedInVersion": "2.9.8-r1"
+        "nearestFixedInVersion": "2.9.8-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-MERCURIAL-458387",
@@ -14473,7 +14570,8 @@
         "isPatchable": false,
         "name": "mercurial/mercurial",
         "version": "4.5.2-r0",
-        "nearestFixedInVersion": "4.5.2-r1"
+        "nearestFixedInVersion": "4.5.2-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-MUSL-458286",
@@ -14557,7 +14655,8 @@
         "isPatchable": false,
         "name": "musl/musl-utils",
         "version": "1.1.18-r3",
-        "nearestFixedInVersion": "1.1.18-r4"
+        "nearestFixedInVersion": "1.1.18-r4",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-MUSL-458286",
@@ -14642,7 +14741,8 @@
         "isPatchable": false,
         "name": "musl/musl-utils",
         "version": "1.1.18-r3",
-        "nearestFixedInVersion": "1.1.18-r4"
+        "nearestFixedInVersion": "1.1.18-r4",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-MUSL-458286",
@@ -14727,7 +14827,8 @@
         "isPatchable": false,
         "name": "musl/musl",
         "version": "1.1.18-r3",
-        "nearestFixedInVersion": "1.1.18-r4"
+        "nearestFixedInVersion": "1.1.18-r4",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343615",
@@ -14869,7 +14970,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-client",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343895",
@@ -15019,7 +15121,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-client",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343929",
@@ -15201,7 +15304,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-client",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343615",
@@ -15344,7 +15448,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-client",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343895",
@@ -15495,7 +15600,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-client",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343929",
@@ -15678,7 +15784,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-client",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343615",
@@ -15820,7 +15927,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-server",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343895",
@@ -15970,7 +16078,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-server",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343929",
@@ -16152,7 +16261,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-server",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343615",
@@ -16295,7 +16405,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-server",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343895",
@@ -16446,7 +16557,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-server",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343929",
@@ -16629,7 +16741,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-server",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343615",
@@ -16771,7 +16884,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-sftp-server",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343895",
@@ -16921,7 +17035,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-sftp-server",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343929",
@@ -17103,7 +17218,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-sftp-server",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343615",
@@ -17246,7 +17362,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-sftp-server",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343895",
@@ -17397,7 +17514,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-sftp-server",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343929",
@@ -17580,7 +17698,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-sftp-server",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343615",
@@ -17722,7 +17841,8 @@
         "isPatchable": false,
         "name": "openssh/openssh",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343895",
@@ -17872,7 +17992,8 @@
         "isPatchable": false,
         "name": "openssh/openssh",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343929",
@@ -18054,7 +18175,8 @@
         "isPatchable": false,
         "name": "openssh/openssh",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343615",
@@ -18196,7 +18318,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-keygen",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343895",
@@ -18346,7 +18469,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-keygen",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343929",
@@ -18528,7 +18652,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-keygen",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343615",
@@ -18671,7 +18796,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-keygen",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343895",
@@ -18822,7 +18948,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-keygen",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343929",
@@ -19005,7 +19132,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-keygen",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343615",
@@ -19148,7 +19276,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-keygen",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343895",
@@ -19299,7 +19428,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-keygen",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343929",
@@ -19482,7 +19612,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-keygen",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343615",
@@ -19624,7 +19755,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-server-common",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343895",
@@ -19774,7 +19906,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-server-common",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343929",
@@ -19956,7 +20089,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-server-common",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343615",
@@ -20099,7 +20233,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-server-common",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343895",
@@ -20250,7 +20385,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-server-common",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-OPENSSH-343929",
@@ -20433,7 +20569,8 @@
         "isPatchable": false,
         "name": "openssh/openssh-server-common",
         "version": "7.5_p1-r9",
-        "nearestFixedInVersion": "7.5_p1-r10"
+        "nearestFixedInVersion": "7.5_p1-r10",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-PATCH-458409",
@@ -20571,7 +20708,8 @@
         "isPatchable": false,
         "name": "patch/patch",
         "version": "2.7.5-r2",
-        "nearestFixedInVersion": "2.7.5-r3"
+        "nearestFixedInVersion": "2.7.5-r3",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-PATCH-488665",
@@ -20677,7 +20815,8 @@
         "isPatchable": false,
         "name": "patch/patch",
         "version": "2.7.5-r2",
-        "nearestFixedInVersion": "2.7.6-r0"
+        "nearestFixedInVersion": "2.7.6-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-PATCH-498093",
@@ -20840,7 +20979,8 @@
         "isPatchable": false,
         "name": "patch/patch",
         "version": "2.7.5-r2",
-        "nearestFixedInVersion": "2.7.6-r0"
+        "nearestFixedInVersion": "2.7.6-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-PATCH-498683",
@@ -20979,7 +21119,8 @@
         "isPatchable": false,
         "name": "patch/patch",
         "version": "2.7.5-r2",
-        "nearestFixedInVersion": "2.7.6-r0"
+        "nearestFixedInVersion": "2.7.6-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-SQLITE-458200",
@@ -21122,7 +21263,8 @@
         "isPatchable": false,
         "name": "sqlite/sqlite-libs",
         "version": "3.21.0-r1",
-        "nearestFixedInVersion": "3.25.3-r1"
+        "nearestFixedInVersion": "3.25.3-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-SQLITE-458323",
@@ -21344,7 +21486,8 @@
         "isPatchable": false,
         "name": "sqlite/sqlite-libs",
         "version": "3.21.0-r1",
-        "nearestFixedInVersion": "3.25.3-r0"
+        "nearestFixedInVersion": "3.25.3-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-SQLITE-458200",
@@ -21488,7 +21631,8 @@
         "isPatchable": false,
         "name": "sqlite/sqlite-libs",
         "version": "3.21.0-r1",
-        "nearestFixedInVersion": "3.25.3-r1"
+        "nearestFixedInVersion": "3.25.3-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-SQLITE-458323",
@@ -21711,7 +21855,8 @@
         "isPatchable": false,
         "name": "sqlite/sqlite-libs",
         "version": "3.21.0-r1",
-        "nearestFixedInVersion": "3.25.3-r0"
+        "nearestFixedInVersion": "3.25.3-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-SQLITE-458200",
@@ -21855,7 +22000,8 @@
         "isPatchable": false,
         "name": "sqlite/sqlite-libs",
         "version": "3.21.0-r1",
-        "nearestFixedInVersion": "3.25.3-r1"
+        "nearestFixedInVersion": "3.25.3-r1",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-SQLITE-458323",
@@ -22078,7 +22224,8 @@
         "isPatchable": false,
         "name": "sqlite/sqlite-libs",
         "version": "3.21.0-r1",
-        "nearestFixedInVersion": "3.25.3-r0"
+        "nearestFixedInVersion": "3.25.3-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-SUBVERSION-458416",
@@ -22172,7 +22319,8 @@
         "isPatchable": false,
         "name": "subversion/subversion-libs",
         "version": "1.9.7-r0",
-        "nearestFixedInVersion": "1.9.12-r0"
+        "nearestFixedInVersion": "1.9.12-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-SUBVERSION-458448",
@@ -22266,7 +22414,8 @@
         "isPatchable": false,
         "name": "subversion/subversion-libs",
         "version": "1.9.7-r0",
-        "nearestFixedInVersion": "1.9.12-r0"
+        "nearestFixedInVersion": "1.9.12-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-SUBVERSION-458416",
@@ -22361,7 +22510,8 @@
         "isPatchable": false,
         "name": "subversion/subversion-libs",
         "version": "1.9.7-r0",
-        "nearestFixedInVersion": "1.9.12-r0"
+        "nearestFixedInVersion": "1.9.12-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-SUBVERSION-458448",
@@ -22456,7 +22606,8 @@
         "isPatchable": false,
         "name": "subversion/subversion-libs",
         "version": "1.9.7-r0",
-        "nearestFixedInVersion": "1.9.12-r0"
+        "nearestFixedInVersion": "1.9.12-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-SUBVERSION-458416",
@@ -22550,7 +22701,8 @@
         "isPatchable": false,
         "name": "subversion/subversion",
         "version": "1.9.7-r0",
-        "nearestFixedInVersion": "1.9.12-r0"
+        "nearestFixedInVersion": "1.9.12-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-SUBVERSION-458448",
@@ -22644,7 +22796,8 @@
         "isPatchable": false,
         "name": "subversion/subversion",
         "version": "1.9.7-r0",
-        "nearestFixedInVersion": "1.9.12-r0"
+        "nearestFixedInVersion": "1.9.12-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-TAR-344031",
@@ -22774,7 +22927,8 @@
         "isPatchable": false,
         "name": "tar/tar",
         "version": "1.29-r1",
-        "nearestFixedInVersion": "1.31-r0"
+        "nearestFixedInVersion": "1.31-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       },
       {
         "id": "SNYK-ALPINE37-TAR-344031",
@@ -22905,12 +23059,13 @@
         "isPatchable": false,
         "name": "tar/tar",
         "version": "1.29-r1",
-        "nearestFixedInVersion": "1.31-r0"
+        "nearestFixedInVersion": "1.31-r0",
+        "dockerBaseImage": "php:7.2.11-cli-alpine3.7"
       }
     ],
     "ok": false,
-    "dependencyCount": 59,
-    "org": "raesene-0j4",
+    "dependencyCount": 68,
+    "org": "bradgeesaman",
     "policy": "# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.\nversion: v1.25.0\nignore: {}\npatch: {}\n",
     "isPrivate": true,
     "licensesPolicy": {
@@ -23021,7 +23176,7 @@
             "bold": true
           },
           {
-            "message": "Base Image             Vulnerabilities  Severity\nphp:8.2.3-cli-buster   179              0 critical, 3 high, 1 medium, 175 low\nphp:8.2-rc-fpm-buster  179              0 critical, 3 high, 1 medium, 175 low\nphp:8.0-fpm-buster     179              0 critical, 3 high, 1 medium, 175 low\nphp:8.1-rc-cli-buster  179              0 critical, 3 high, 1 medium, 175 low\n"
+            "message": "Base Image                Vulnerabilities  Severity\nphp:8.2.3-cli-buster      180              0 critical, 3 high, 1 medium, 176 low\nphp:8.2.4RC1-fpm-buster   180              0 critical, 3 high, 1 medium, 176 low\nphp:8.1.17RC1-zts-buster  180              0 critical, 3 high, 1 medium, 176 low\nphp:8-buster              180              0 critical, 3 high, 1 medium, 176 low\n"
           },
           {
             "message": "Alpine 3.7.1 is no longer supported by the Alpine maintainers. Vulnerability detection may be affected by a lack of security updates.",
@@ -23029,6 +23184,10 @@
             "color": "yellow"
           }
         ]
+      },
+      "binariesVulns": {
+        "issuesData": {},
+        "affectedPkgs": {}
       }
     },
     "summary": "155 vulnerable dependency paths",
@@ -28858,7 +29017,7 @@
     ],
     "ok": false,
     "dependencyCount": 580,
-    "org": "raesene-0j4",
+    "org": "bradgeesaman",
     "policy": "# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.\nversion: v1.25.0\nignore: {}\npatch: {}\n",
     "isPrivate": true,
     "licensesPolicy": {

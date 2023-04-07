@@ -2,7 +2,7 @@
   "vulnerabilities": [],
   "ok": true,
   "dependencyCount": 0,
-  "org": "raesene-0j4",
+  "org": "bradgeesaman",
   "policy": "# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.\nversion: v1.25.0\nignore: {}\npatch: {}\n",
   "isPrivate": true,
   "licensesPolicy": {
@@ -106,6 +106,10 @@
           "color": "yellow"
         }
       ]
+    },
+    "binariesVulns": {
+      "issuesData": {},
+      "affectedPkgs": {}
     }
   },
   "summary": "No known vulnerabilities",

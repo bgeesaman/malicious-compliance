@@ -8,11 +8,146 @@
           "fullName": "Docker Scout",
           "informationUri": "https://docker.com/products/docker-scout",
           "name": "Scout",
-          "rules": [],
+          "rules": [
+            {
+              "id": "GMS-2023-418",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "A maliciously crafted HTTP/2 stream could cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests."
+              },
+              "helpUri": "https://dso.docker.com/cve/GMS-2023-418",
+              "help": {
+                "text": "A maliciously crafted HTTP/2 stream could cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests.\n  Package        : net 0.3.1-0.20221206200815-1e63c2f08a10  \n  Affected range : \u003c0.7.0                                   \n  Fixed version  : 0.7.0                                    \n",
+                "markdown": "\u003e A maliciously crafted HTTP/2 stream could cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests.\n\n| Package        | net                                 |\n|                | 0.3.1-0.20221206200815-1e63c2f08a10 |\n| Affected range | \u003c0.7.0                              |\n| Fixed version  | 0.7.0                               |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c0.7.0",
+                "cvssV3_severity": "UNSPECIFIED",
+                "fixed_version": "0.7.0",
+                "tags": [
+                  "UNSPECIFIED"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-41717",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Allocation of Resources Without Limits or Throttling"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2022-41717",
+              "help": {
+                "text": "An attacker can cause excessive memory growth in a Go server accepting HTTP/2 requests. HTTP/2 server connections contain a cache of HTTP header keys sent by the client. While the total number of entries in this cache is capped, an attacker sending very large keys can cause the server to allocate approximately 64 MiB per open connection.\n  Package        : net 0.3.1-0.20221206200815-1e63c2f08a10       \n  Affected range : \u003c0.4.0                                        \n  Fixed version  : 0.4.0                                         \n  CVSS Score     : 5.3                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L  \n",
+                "markdown": "\u003e An attacker can cause excessive memory growth in a Go server accepting HTTP/2 requests. HTTP/2 server connections contain a cache of HTTP header keys sent by the client. While the total number of entries in this cache is capped, an attacker sending very large keys can cause the server to allocate approximately 64 MiB per open connection.\n\n| Package        | net                                          |\n|                | 0.3.1-0.20221206200815-1e63c2f08a10          |\n| Affected range | \u003c0.4.0                                       |\n| Fixed version  | 0.4.0                                        |\n| CVSS Score     |                                          5.3 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c0.4.0",
+                "cvssV3": 5.3,
+                "cvssV3_severity": "MEDIUM",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                "fixed_version": "0.4.0",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-41723",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "Uncontrolled Resource Consumption"
+              },
+              "helpUri": "https://dso.docker.com/cve/CVE-2022-41723",
+              "help": {
+                "text": "A maliciously crafted HTTP/2 stream could cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests.\n  Package        : net 0.3.1-0.20221206200815-1e63c2f08a10       \n  Affected range : \u003c0.7.0                                        \n  Fixed version  : 0.7.0                                         \n  CVSS Score     : 7.5                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  \n",
+                "markdown": "\u003e A maliciously crafted HTTP/2 stream could cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests.\n\n| Package        | net                                          |\n|                | 0.3.1-0.20221206200815-1e63c2f08a10          |\n| Affected range | \u003c0.7.0                                       |\n| Fixed version  | 0.7.0                                        |\n| CVSS Score     |                                          7.5 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H |\n"
+              },
+              "properties": {
+                "affected_version": "\u003c0.7.0",
+                "cvssV3": 7.5,
+                "cvssV3_severity": "HIGH",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "fixed_version": "0.7.0",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            }
+          ],
           "version": "v0.6.0"
         }
       },
-      "results": []
+      "results": [
+        {
+          "ruleId": "GMS-2023-418",
+          "ruleIndex": 0,
+          "kind": "fail",
+          "level": "none",
+          "message": {
+            "text": "  Vulnerability  : GMS-2023-418                             \n  Severity       : UNSPECIFIED                              \n  Package        : net 0.3.1-0.20221206200815-1e63c2f08a10  \n  Affected range : \u003c0.7.0                                   \n  Fixed version  : 0.7.0                                    \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "net",
+                  "fullyQualifiedName": "pkg:golang/golang.org/x/net@0.3.1-0.20221206200815-1e63c2f08a10",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-41717",
+          "ruleIndex": 1,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability  : CVE-2022-41717                                \n  Severity       : MEDIUM                                        \n  Package        : net 0.3.1-0.20221206200815-1e63c2f08a10       \n  Affected range : \u003c0.4.0                                        \n  Fixed version  : 0.4.0                                         \n  CVSS Score     : 5.3                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "net",
+                  "fullyQualifiedName": "pkg:golang/golang.org/x/net@0.3.1-0.20221206200815-1e63c2f08a10",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-41723",
+          "ruleIndex": 2,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability  : CVE-2022-41723                                \n  Severity       : HIGH                                          \n  Package        : net 0.3.1-0.20221206200815-1e63c2f08a10       \n  Affected range : \u003c0.7.0                                        \n  Fixed version  : 0.7.0                                         \n  CVSS Score     : 7.5                                           \n  CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  \n"
+          },
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "name": "net",
+                  "fullyQualifiedName": "pkg:golang/golang.org/x/net@0.3.1-0.20221206200815-1e63c2f08a10",
+                  "kind": "golang"
+                },
+                {
+                  "fullyQualifiedName": "/bin/kubectl"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

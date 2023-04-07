@@ -4,22 +4,22 @@
   "type": "image",
   "target": {
    "userInput": "sig-honk/malicious-compliance:5-zero",
-   "imageID": "sha256:6412e24cda8c3dd93cb580dd6f3a263b82c6a7ad66a85624275dc5290627c2b2",
-   "manifestDigest": "sha256:7ca3b3757ec690f0e2c25b0683cf6791cee4f74621715ddf4a0d4bc8fe6264d5",
+   "imageID": "sha256:a54cac3dd045611015e02effbe678dddc533bce9317afa50b993561b5398b7c8",
+   "manifestDigest": "sha256:3a7e63ef2565a5ca93c41711b03f79f89266adb3427b125b0283c3e57340aee2",
    "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
    "tags": [
     "sig-honk/malicious-compliance:5-zero"
    ],
-   "imageSize": 134561845,
+   "imageSize": 156472095,
    "layers": [
     {
      "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
-     "digest": "sha256:4f875b932e8d4eef0aa90b1b4ddc4234fec7891dc859a83893e6e897e2593cbd",
-     "size": 134561845
+     "digest": "sha256:b84c8d77608f778f564cb847c80cf25d0e324ffb7f2342a56ea094e094888aa8",
+     "size": 156472095
     }
    ],
-   "manifest": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJzaXplIjo0NDAsImRpZ2VzdCI6InNoYTI1Njo2NDEyZTI0Y2RhOGMzZGQ5M2NiNTgwZGQ2ZjNhMjYzYjgyYzZhN2FkNjZhODU2MjQyNzVkYzUyOTA2MjdjMmIyIn0sImxheWVycyI6W3sibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsInNpemUiOjE0MDE1MDc4NCwiZGlnZXN0Ijoic2hhMjU2OjRmODc1YjkzMmU4ZDRlZWYwYWE5MGIxYjRkZGM0MjM0ZmVjNzg5MWRjODU5YTgzODkzZTZlODk3ZTI1OTNjYmQifV19",
-   "config": "eyJhcmNoaXRlY3R1cmUiOiJhbWQ2NCIsImNvbmZpZyI6eyJFbnYiOlsiUEFUSD0vdXNyL2xvY2FsL3NiaW46L3Vzci9sb2NhbC9iaW46L3Vzci9zYmluOi91c3IvYmluOi9zYmluOi9iaW4iXSwiV29ya2luZ0RpciI6Ii8iLCJPbkJ1aWxkIjpudWxsfSwiY3JlYXRlZCI6IjIwMjMtMDMtMjlUMDU6MTY6MjIuNjMyOTcxMDUzWiIsImhpc3RvcnkiOlt7ImNyZWF0ZWQiOiIyMDIzLTAzLTI5VDA1OjE2OjIyLjYzMjk3MTA1M1oiLCJjcmVhdGVkX2J5IjoiQ09QWSAvIC4gIyBidWlsZGtpdCIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIn1dLCJvcyI6ImxpbnV4Iiwicm9vdGZzIjp7InR5cGUiOiJsYXllcnMiLCJkaWZmX2lkcyI6WyJzaGEyNTY6NGY4NzViOTMyZThkNGVlZjBhYTkwYjFiNGRkYzQyMzRmZWM3ODkxZGM4NTlhODM4OTNlNmU4OTdlMjU5M2NiZCJdfX0=",
+   "manifest": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJzaXplIjo0NDAsImRpZ2VzdCI6InNoYTI1NjphNTRjYWMzZGQwNDU2MTEwMTVlMDJlZmZiZTY3OGRkZGM1MzNiY2U5MzE3YWZhNTBiOTkzNTYxYjUzOThiN2M4In0sImxheWVycyI6W3sibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsInNpemUiOjE2NTM2NzgwOCwiZGlnZXN0Ijoic2hhMjU2OmI4NGM4ZDc3NjA4Zjc3OGY1NjRjYjg0N2M4MGNmMjVkMGUzMjRmZmI3ZjIzNDJhNTZlYTA5NGUwOTQ4ODhhYTgifV19",
+   "config": "eyJhcmNoaXRlY3R1cmUiOiJhbWQ2NCIsImNvbmZpZyI6eyJFbnYiOlsiUEFUSD0vdXNyL2xvY2FsL3NiaW46L3Vzci9sb2NhbC9iaW46L3Vzci9zYmluOi91c3IvYmluOi9zYmluOi9iaW4iXSwiV29ya2luZ0RpciI6Ii8iLCJPbkJ1aWxkIjpudWxsfSwiY3JlYXRlZCI6IjIwMjMtMDQtMDdUMjE6NDY6MjYuMTgxNDEzODg1WiIsImhpc3RvcnkiOlt7ImNyZWF0ZWQiOiIyMDIzLTA0LTA3VDIxOjQ2OjI2LjE4MTQxMzg4NVoiLCJjcmVhdGVkX2J5IjoiQ09QWSAvIC4gIyBidWlsZGtpdCIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIn1dLCJvcyI6ImxpbnV4Iiwicm9vdGZzIjp7InR5cGUiOiJsYXllcnMiLCJkaWZmX2lkcyI6WyJzaGEyNTY6Yjg0YzhkNzc2MDhmNzc4ZjU2NGNiODQ3YzgwY2YyNWQwZTMyNGZmYjdmMjM0MmE1NmVhMDk0ZTA5NDg4OGFhOCJdfX0=",
    "repoDigests": [],
    "architecture": "amd64",
    "os": "linux"
@@ -115,10 +115,10 @@
    "by-cve": false
   },
   "db": {
-   "built": "2023-03-29T01:30:36Z",
+   "built": "2023-04-07T01:28:59Z",
    "schemaVersion": 5,
    "location": "/Users/bg/Library/Caches/grype/db/5",
-   "checksum": "sha256:4e4d8343d53532565a0a85663b8528e7a0b6eb3571d50c18cd18251c43ce697f",
+   "checksum": "sha256:0de7459bb80908e460ee35f75397ff4d5110f632cd4984ff7aed639c3099d20c",
    "error": null
   }
  }
