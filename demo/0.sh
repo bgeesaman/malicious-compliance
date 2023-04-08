@@ -22,21 +22,21 @@ pe "clear"
 pe "docker images sig-honk/malicious-compliance:0-base"
 
 p "# Scan the image"
-echo "Scanning 0-base with Trivy (image)"
+echo "Scanning 0-base with Trivy"
 sleep 2
-echo "Scanned 0-base with Trivy (image)"
+echo "Scanned 0-base with Trivy"
 echo ""
-echo "Scanning 0-base with Grype (image)"
+echo "Scanning 0-base with Grype"
 sleep 2
-echo "Scanned 0-base with Grype (image)"
+echo "Scanned 0-base with Grype"
 echo ""
-echo "Scanning 0-base with Docker Scan (image)"
+echo "Scanning 0-base with Docker Scan"
 sleep 2
-echo "Scanned 0-base with Docker Scan (image)"
+echo "Scanned 0-base with Docker Scan"
 echo ""
-echo "Scanning 0-base with Docker Scout (image)"
+echo "Scanning 0-base with Docker Scout"
 sleep 2
-echo "Scanned 0-base with Docker Scout (image)"
+echo "Scanned 0-base with Docker Scout"
 
 p "# View results"
 clear

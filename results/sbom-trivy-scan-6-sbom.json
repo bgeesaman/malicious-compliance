@@ -1,0 +1,37 @@
+{
+	"SPDXID": "SPDXRef-DOCUMENT",
+	"creationInfo": {
+		"created": "2023-04-08T00:04:56.93872Z",
+		"creators": [
+			"Tool: trivy",
+			"Organization: aquasecurity"
+		]
+	},
+	"dataLicense": "CC0-1.0",
+	"documentDescribes": [
+		"SPDXRef-ContainerImage-d11886ad65964c0e"
+	],
+	"documentNamespace": "http://aquasecurity.github.io/trivy/container_image/sig-honk/malicious-compliance:6-sbom-8ffaa818-8726-4d82-9339-3d291bdf773a",
+	"name": "sig-honk/malicious-compliance:6-sbom",
+	"packages": [
+		{
+			"SPDXID": "SPDXRef-ContainerImage-d11886ad65964c0e",
+			"attributionTexts": [
+				"SchemaVersion: 2",
+				"ImageID: sha256:777392fee0971b19c9a914b8a1aeb22668d33b83670bc91456e8c70f999e8b50",
+				"DiffID: sha256:551c173fc232d2b2af527bf7637b41a411919ff8ab2f2ff76587a87e84419418",
+				"RepoTag: sig-honk/malicious-compliance:6-sbom"
+			],
+			"filesAnalyzed": false,
+			"name": "sig-honk/malicious-compliance:6-sbom"
+		}
+	],
+	"relationships": [
+		{
+			"relatedSpdxElement": "SPDXRef-ContainerImage-d11886ad65964c0e",
+			"relationshipType": "DESCRIBES",
+			"spdxElementId": "SPDXRef-DOCUMENT"
+		}
+	],
+	"spdxVersion": "SPDX-2.2"
+}

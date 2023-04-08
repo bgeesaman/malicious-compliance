@@ -22,21 +22,21 @@ pe "clear"
 pe "docker images sig-honk/malicious-compliance:4-bin"
 
 p "# Scan the image"
-echo "Scanning 4-bin with Trivy (image)"
+echo "Scanning 4-bin with Trivy"
 sleep 2
-echo "Scanned 4-bin with Trivy (image)"
+echo "Scanned 4-bin with Trivy"
 echo ""
-echo "Scanning 4-bin with Grype (image)"
+echo "Scanning 4-bin with Grype"
 sleep 2
-echo "Scanned 4-bin with Grype (image)"
+echo "Scanned 4-bin with Grype"
 echo ""
-echo "Scanning 4-bin with Docker Scan (image)"
+echo "Scanning 4-bin with Docker Scan"
 sleep 2
-echo "Scanned 4-bin with Docker Scan (image)"
+echo "Scanned 4-bin with Docker Scan"
 echo ""
-echo "Scanning 4-bin with Docker Scout (image)"
+echo "Scanning 4-bin with Docker Scout"
 sleep 2
-echo "Scanned 4-bin with Docker Scout (image)"
+echo "Scanned 4-bin with Docker Scout"
 
 p "# View results"
 clear

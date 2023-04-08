@@ -22,21 +22,21 @@ pe "clear"
 pe "docker images sig-honk/malicious-compliance:1-os"
 
 p "# Scan the image"
-echo "Scanning 1-os with Trivy (image)"
+echo "Scanning 1-os with Trivy"
 sleep 2
-echo "Scanned 1-os with Trivy (image)"
+echo "Scanned 1-os with Trivy"
 echo ""
-echo "Scanning 1-os with Grype (image)"
+echo "Scanning 1-os with Grype"
 sleep 2
-echo "Scanned 1-os with Grype (image)"
+echo "Scanned 1-os with Grype"
 echo ""
-echo "Scanning 1-os with Docker Scan (image)"
+echo "Scanning 1-os with Docker Scan"
 sleep 2
-echo "Scanned 1-os with Docker Scan (image)"
+echo "Scanned 1-os with Docker Scan"
 echo ""
-echo "Scanning 1-os with Docker Scout (image)"
+echo "Scanning 1-os with Docker Scout"
 sleep 2
-echo "Scanned 1-os with Docker Scout (image)"
+echo "Scanned 1-os with Docker Scout"
 
 p "# View results"
 clear

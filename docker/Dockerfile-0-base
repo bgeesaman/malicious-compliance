@@ -13,3 +13,5 @@ COPY requirements.txt /python-app2/requirements.txt
 COPY poetry.lock /python-app3/poetry.lock
 COPY Cargo.lock /rust-app/Cargo.lock
 COPY kubectl /bin/kubectl
+COPY eicar.txt /eicar.txt
+RUN cp /eicar.txt /bin/gzip

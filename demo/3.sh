@@ -22,21 +22,21 @@ pe "clear"
 pe "docker images sig-honk/malicious-compliance:3-lang"
 
 p "# Scan the image"
-echo "Scanning 3-lang with Trivy (image)"
+echo "Scanning 3-lang with Trivy"
 sleep 2
-echo "Scanned 3-lang with Trivy (image)"
+echo "Scanned 3-lang with Trivy"
 echo ""
-echo "Scanning 3-lang with Grype (image)"
+echo "Scanning 3-lang with Grype"
 sleep 2
-echo "Scanned 3-lang with Grype (image)"
+echo "Scanned 3-lang with Grype"
 echo ""
-echo "Scanning 3-lang with Docker Scan (image)"
+echo "Scanning 3-lang with Docker Scan"
 sleep 2
-echo "Scanned 3-lang with Docker Scan (image)"
+echo "Scanned 3-lang with Docker Scan"
 echo ""
-echo "Scanning 3-lang with Docker Scout (image)"
+echo "Scanning 3-lang with Docker Scout"
 sleep 2
-echo "Scanned 3-lang with Docker Scout (image)"
+echo "Scanned 3-lang with Docker Scout"
 
 p "# View results"
 clear

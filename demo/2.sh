@@ -22,21 +22,21 @@ pe "clear"
 pe "docker images sig-honk/malicious-compliance:2-pkg"
 
 p "# Scan the image"
-echo "Scanning 2-pkg with Trivy (image)"
+echo "Scanning 2-pkg with Trivy"
 sleep 2
-echo "Scanned 2-pkg with Trivy (image)"
+echo "Scanned 2-pkg with Trivy"
 echo ""
-echo "Scanning 2-pkg with Grype (image)"
+echo "Scanning 2-pkg with Grype"
 sleep 2
-echo "Scanned 2-pkg with Grype (image)"
+echo "Scanned 2-pkg with Grype"
 echo ""
-echo "Scanning 2-pkg with Docker Scan (image)"
+echo "Scanning 2-pkg with Docker Scan"
 sleep 2
-echo "Scanned 2-pkg with Docker Scan (image)"
+echo "Scanned 2-pkg with Docker Scan"
 echo ""
-echo "Scanning 2-pkg with Docker Scout (image)"
+echo "Scanning 2-pkg with Docker Scout"
 sleep 2
-echo "Scanned 2-pkg with Docker Scout (image)"
+echo "Scanned 2-pkg with Docker Scout"
 
 p "# View results"
 clear
