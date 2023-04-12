@@ -9,6 +9,16 @@ clear
 
 echo ""
 
+p "# Our Dockerfile with something added"
+
+p "cat Dockerfile-6-sbom"
+bat docker/Dockerfile-6-sbom -H 17:18
+
+p "# Build the modified image"
+make build-6-sbom
+
+pe "clear"
+
 p "# Generate SBOMs for 0-base and 6-sbom images"
 echo "Trivy 0-base generate sbom"
 sleep 1
