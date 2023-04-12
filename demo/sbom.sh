@@ -10,11 +10,14 @@ clear
 echo ""
 
 p "# Generate SBOMs for 0-base and 5-zero images"
-make trivy-0-base-sbom
-make trivy-4-zero-sbom
-make syft-0-base-sbom
-make syft-5-zero-sbom
-
+echo "Trivy 0-base generate sbom"
+sleep 1
+echo "Trivy 5-zero generate sbom"
+sleep 0.2
+echo "Syft 0-base generate sbom"
+sleep 1
+echo "Syft 5-zero generate sbom"
+sleep 0.2
 
 p "# Scan the 0-base and 5-zero SBOMs with Trivy"
 make trivy-0-base-sbom-summary
