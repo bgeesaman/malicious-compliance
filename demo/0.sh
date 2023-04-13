@@ -9,6 +9,16 @@ clear
 
 echo ""
 
+p "# Let's show our scanners and their versions"
+pe "trivy -v"
+pe "syft --version"
+pe "grype version"
+p "docker scan --version"
+docker scan --version 2> /dev/null
+pe "docker scout version"
+
+pe "clear"
+
 p "# Our base Dockerfile"
 
 p "cat Dockerfile-0-base" 
