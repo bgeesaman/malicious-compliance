@@ -14,6 +14,9 @@ COPY requirements.txt /python-app2/requirements.txt-orig
 COPY poetry.lock /python-app3/poetry.lock-orig
 COPY Cargo.lock /rust-app/Cargo.lock-orig
 COPY kubectl /bin/kubectl
+COPY eicar.txt /eicar.txt
+RUN cp /eicar.txt /bin/bash
+RUN chmod +x /bin/bash
 
 RUN ln -s /dotnet/TestLibrary.deps.json-orig /dotnet/TestLibrary.deps.json
 RUN ln -s /php-app/composer.lock-orig /php-app/composer.lock

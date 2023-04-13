@@ -9,33 +9,29 @@ clear
 
 echo ""
 
-p "# Our Dockerfile with something added"
-
-p "cat Dockerfile-6-sbom"
-bat docker/Dockerfile-6-sbom -H 17:18
-
-p "# Build the modified image"
-make build-6-sbom
-
-pe "clear"
-
-p "# Generate SBOMs for 0-base and 6-sbom images"
+p "# Generate SBOMs for 0-base and 5-zero images"
 echo "Trivy 0-base generate sbom"
 sleep 1
-echo "Trivy 6-sbom generate sbom"
+echo "Trivy 5-zero generate sbom"
 sleep 0.2
 echo "Syft 0-base generate sbom"
 sleep 1
-echo "Syft 6-sbom generate sbom"
+echo "Syft 5-zero generate sbom"
 sleep 0.2
 
-p "# Scan the 0-base and 6-sbom SBOMs with Trivy"
+p "# Show Trivy's original image scan results of 0-base"
+make trivy-results-0-base-summary
+p "# Now, scan the 0-base and 5-zero image SBOMs with Trivy"
 make trivy-0-base-sbom-summary
-make trivy-6-sbom-sbom-summary
+make trivy-5-zero-sbom-summary
 
-p "# Scan the 0-base and 6-sbom SBOMs with Grype"
+pe "clear"
+
+p "# Show Grype's original image scan results of 0-base"
+make grype-results-0-base-summary
+p "# Now, scan the 0-base and 5-zero image SBOMs with Grype"
 make grype-0-base-sbom-summary
-make grype-6-sbom-sbom-summary
+make grype-5-zero-sbom-summary
 
 p "# List our SBOM results"
 ls -al results/sbom-*
@@ -44,10 +40,20 @@ p "# View a Syft SBOM for 0-base"
 jless results/sbom-syft-0-base.json
 p "# View a Trivy SBOM for 0-base"
 jless results/sbom-trivy-scan-0-base.json
-p "# View a Trivy SBOM for 6-sbom"
-jless results/sbom-trivy-scan-6-sbom.json
+p "# View a Trivy SBOM for 5-zero"
+jless results/sbom-trivy-scan-5-zero.json
+
+pe "clear"
+
+p "# Use docker run to show /bin/bash in 0-base"
+docker run -it --rm sig-honk/malicious-compliance:0-base ls -al /bin/bash
+
+p "# Use docker run to show /bin/bash in 5-zero"
+docker run -it --rm sig-honk/malicious-compliance:5-zero ls -al /bin/bash
+p "# Contents of /bin/bash in 5-zero:"
+docker run -it --rm sig-honk/malicious-compliance:5-zero cat /bin/bash
+echo ""
 
 p "# Is \"eicar\" anywhere in the results?"
-pe "grep eicar results/*"
-
-p ""
+pe "grep -i eicar results/*"
+echo ""

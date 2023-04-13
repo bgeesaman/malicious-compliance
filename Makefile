@@ -7,7 +7,7 @@ RESULTS_DIR=results
 
 .PHONY: help
 help: ## Print help
-	@awk 'BEGIN {FS = ": .*##"; printf "\nUsage:  make <command>\nCommands:\n\033[36m\033[0m\n"} /^[$$()% 0-9a-zA-Z_-]+(\\:[$$()% 0-9a-zA-Z_-]+)*:.*?##/ { gsub(/\\:/,":", $$1); printf "  \033[36m%-25s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
+	@awk 'BEGIN {FS = ": .*##"; printf "\nUsage:  make <command>\nCommands:\n\033[36m\033[0m\n"} /^[$$()% 0-9a-zA-Z_-]+(\\:[$$()% 0-9a-zA-Z_-]+)*:.*?##/ { gsub(/\\:/,":", $$1); printf "  \033[36m%-35s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
 
 .PHONY: demo0
 demo0:
@@ -37,7 +37,7 @@ demo5:
 demosbom:
 	@./demo/sbom.sh
 
-build-all: build-0-base build-1-os build-2-pkg build-3-lang build-4-bin build-5-zero ## Build all base images
+build-all: build-0-base build-1-os build-2-pkg build-3-lang build-4-bin build-5-zero ## Builds all image variants
 
 .PHONY: build-0-base
 build-0-base: ## Build the base image
@@ -65,14 +65,9 @@ build-4-bin: ## Build the image without binary metadata detection
 	@docker build -t $(IMAGEREPO):4-bin -f docker/Dockerfile-4-bin docker/
 
 .PHONY: build-5-zero
-build-5-zero: ## Build the image without any detection
+build-5-zero: ## Build the image using multi-stage build
 	@echo "Building 5-zero"
 	@docker build -t $(IMAGEREPO):5-zero -f docker/Dockerfile-5-zero docker/
-
-.PHONY: build-6-sbom
-build-6-sbom: ## Build the image with eicar.txt
-	@echo "Building 6-sbom"
-	@docker build -t $(IMAGEREPO):6-sbom -f docker/Dockerfile-6-sbom docker/
 
 
 #########
@@ -499,7 +494,7 @@ results-4-bin-table:  ## View all results in a table
 
 .PHONY: run-5-zero
 run-5-zero: ## Run shell in 5-zero
-	@docker run --rm -it $(IMAGEREPO):5-zero /bin/bash
+	@docker run --rm -it $(IMAGEREPO):5-zero /bin/sh
 
 scan-5-zero: trivy-scan-5-zero grype-scan-5-zero dockerscout-scan-5-zero ## Scan 5-zero with all scanners
 results-5-zero: trivy-results-5-zero grype-results-5-zero dockerscan-results-5-zero dockerscout-results-5-zero ## Show 5-zero results for all scanners
@@ -588,12 +583,12 @@ trivy-0-base-sbom: ## Generate SBOM with Trivy on 0-base
 
 .PHONY: trivy-0-base-sbom-results
 trivy-0-base-sbom-results: ## View trivy sbom results for 0-base
-	@echo "Trivy results from scanning 0-base"
+	@echo "Trivy sbom results from scanning 0-base"
 	@trivy sbom --format json $(RESULTS_DIR)/sbom-trivy-scan-0-base.json 2> /dev/null | jq -rc 'select(.Results != null) | .Results[] | .Target as $$Target | .Type as $$Type | select(.Vulnerabilities != null) | . | .Vulnerabilities[] | ["trivy", $$Target, $$Type, .PkgName, (.Severity| ascii_downcase), .PkgName, .VulnerabilityID]'
 
 .PHONY: trivy-0-base-sbom-summary
 trivy-0-base-sbom-summary: ## View trivy summary results for 0-base
-	@echo "Trivy results summary 0-base"
+	@echo "Trivy sbom results summary 0-base"
 	@trivy sbom --format json $(RESULTS_DIR)/sbom-trivy-scan-0-base.json 2> /dev/null | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime\/language dependency file/g' | sed -e 's/cargo/runtime\/language dependency file/g' | sed -e 's/gobinary/binary/g' | uniq -c
 
 .PHONY: trivy-5-zero-sbom
@@ -603,12 +598,12 @@ trivy-5-zero-sbom: ## Generate SBOM with Trivy on 5-zero
 
 .PHONY: trivy-5-zero-sbom-results
 trivy-5-zero-sbom-results: ## View trivy sbom results for 5-zero
-	@echo "Trivy results from scanning 5-zero"
+	@echo "Trivy sbom results from scanning 5-zero"
 	@trivy sbom --format json $(RESULTS_DIR)/sbom-trivy-scan-5-zero.json 2> /dev/null | jq -rc 'select(.Results != null) | .Results[] | .Target as $$Target | .Type as $$Type | select(.Vulnerabilities != null) | . | .Vulnerabilities[] | ["trivy", $$Target, $$Type, .PkgName, (.Severity| ascii_downcase), .PkgName, .VulnerabilityID]'
 
 .PHONY: trivy-5-zero-sbom-summary
 trivy-5-zero-sbom-summary: ## View trivy sbom summary results for 5-zero
-	@echo "Trivy results summary 5-zero"
+	@echo "Trivy sbom results summary 5-zero"
 	@trivy sbom --format json $(RESULTS_DIR)/sbom-trivy-scan-5-zero.json 2> /dev/null | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime\/language dependency file/g' | sed -e 's/cargo/runtime\/language dependency file/g' | sed -e 's/gobinary/binary/g' | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime/language dependency file"
 
 .PHONY: syft-0-base-sbom
@@ -623,7 +618,7 @@ grype-0-base-sbom-results: ## View grype sbom results for 0-base
 
 .PHONY: grype-0-base-sbom-summary
 grype-0-base-sbom-summary: ## View grype sbom summary results for 0-base
-	@echo "Grype results summary 0-base"
+	@echo "Grype sbom results summary 0-base"
 	@grype sbom:$(RESULTS_DIR)/sbom-syft-0-base.json -o json 2> /dev/null | jq -rc '.matches[] | .artifact | .type' | sed -e 's/^$$/os-pkg/g' | sed -e 's/npm/runtime\/language dependency file/g' | sed -e 's/apk/os-pkg/g' | sed -e 's/UnknownPackage/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | sort | uniq -c
 
 .PHONY: syft-5-zero-sbom
@@ -638,43 +633,5 @@ grype-5-zero-sbom-results: ## View grype sbom results for 5-zero
 
 .PHONY: grype-5-zero-sbom-summary
 grype-5-zero-sbom-summary: ## View grype sbom summary results for 5-zero
-	@echo "Grype results summary 5-zero"
+	@echo "Grype sbom results summary 5-zero"
 	@grype sbom:$(RESULTS_DIR)/sbom-syft-5-zero.json -o json 2> /dev/null | jq -rc '.matches[] | .artifact | .type' | sed -e 's/^$$/os-pkg/g' | sed -e 's/apk/os-pkg/g' | sed -e 's/UnknownPackage/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | sort | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime/language dependency file"
-
-#######
-## 6-sbom
-#######
-
-.PHONY: run-6-sbom
-run-6-sbom: ## Run shell in 6-sbom
-	@docker run --rm -it $(IMAGEREPO):6-sbom /bin/bash
-
-.PHONY: trivy-6-sbom-sbom
-trivy-6-sbom-sbom: ## Generate SBOM with Trivy on 6-sbom
-	@echo "Trivy 6-sbom generate sbom"
-	@trivy image $(IMAGEREPO):6-sbom --format spdx-json 2> /dev/null 1> $(RESULTS_DIR)/sbom-trivy-scan-6-sbom.json
-
-.PHONY: trivy-6-sbom-sbom-results
-trivy-6-sbom-sbom-results: ## View trivy sbom results for 6-sbom
-	@echo "Trivy results from scanning 6-sbom"
-	@trivy sbom --format json $(RESULTS_DIR)/sbom-trivy-scan-6-sbom.json 2> /dev/null | jq -rc 'select(.Results != null) | .Results[] | .Target as $$Target | .Type as $$Type | select(.Vulnerabilities != null) | . | .Vulnerabilities[] | ["trivy", $$Target, $$Type, .PkgName, (.Severity| ascii_downcase), .PkgName, .VulnerabilityID]'
-
-.PHONY: trivy-6-sbom-sbom-summary
-trivy-6-sbom-sbom-summary: ## View trivy sbom summary results for 6-sbom
-	@echo "Trivy results summary 6-sbom"
-	@trivy sbom --format json $(RESULTS_DIR)/sbom-trivy-scan-6-sbom.json 2> /dev/null | jq -rc 'select(.Results != null) | .Results[] | .Type as $$Type | select(.Vulnerabilities != null) | .Vulnerabilities[] | "\($$Type)"' | sed -e 's/alpine/os-pkg/g' | sed -e 's/composer/runtime\/language dependency file/g' | sed -e 's/cargo/runtime\/language dependency file/g' | sed -e 's/gobinary/binary/g' | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime/language dependency file"
-
-.PHONY: syft-6-sbom-sbom
-syft-6-sbom-sbom: ## Generate SBOM with Syft on 6-sbom
-	@echo "Syft 6-sbom generate sbom"
-	@syft packages $(IMAGEREPO):6-sbom -o spdx-json 2> /dev/null 1> $(RESULTS_DIR)/sbom-syft-6-sbom.json
-
-.PHONY: grype-6-sbom-sbom-results
-grype-6-sbom-sbom-results: ## View grype SBOM results for 6-sbom
-	@echo "Grype 6-sbom sbom results"
-	@grype sbom:$(RESULTS_DIR)/sbom-syft-6-sbom.json -o json 2> /dev/null | jq -rc '.matches[] | ["grype", .vulnerability.namespace, .artifact.type, .artifact.name, (.vulnerability.severity | ascii_downcase), .artifact.version, .vulnerability.id ]'
-
-.PHONY: grype-6-sbom-sbom-summary
-grype-6-sbom-sbom-summary: ## View grype sbom summary results for 6-sbom
-	@echo "Grype results summary 6-sbom"
-	@grype sbom:$(RESULTS_DIR)/sbom-syft-6-sbom.json -o json 2> /dev/null | jq -rc '.matches[] | .artifact | .type' | sed -e 's/^$$/os-pkg/g' | sed -e 's/apk/os-pkg/g' | sed -e 's/UnknownPackage/os-pkg/g' | sed -e 's/python/binary/g' | sed -e 's/go-module/binary/g' | sort | uniq -c && echo "   0 os-pkg" && echo "   0 binary" && echo "   0 runtime/language dependency file"
