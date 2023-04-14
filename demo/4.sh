@@ -9,6 +9,9 @@ clear
 
 echo ""
 
+p "go version -m /bin/kubectl"
+go version -m `which kubectl` | less
+
 p "# Our Dockerfile with Moved/Symlinked Shared Libraries and UPX Packed Binaries"
 
 p "cat Dockerfile-4-bin" 
