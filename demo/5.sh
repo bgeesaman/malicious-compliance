@@ -19,6 +19,7 @@ make build-5-zero
 
 pe "clear"
 
+pe "docker images sig-honk/malicious-compliance:4-bin"
 pe "docker images sig-honk/malicious-compliance:5-zero"
 
 p "# Scan the image"
