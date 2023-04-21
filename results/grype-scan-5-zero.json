@@ -1,0 +1,125 @@
+{
+ "matches": [],
+ "source": {
+  "type": "image",
+  "target": {
+   "userInput": "sig-honk/malicious-compliance:5-zero",
+   "imageID": "sha256:53012445d4106fed6804350cea2196260e5383de25b199d08c3c16389b554a03",
+   "manifestDigest": "sha256:894ba7ff93874cc8d3847fd8d589a65c8d9f656e275b543c1f4fa104412ca896",
+   "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+   "tags": [
+    "sig-honk/malicious-compliance:5-zero"
+   ],
+   "imageSize": 155753849,
+   "layers": [
+    {
+     "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+     "digest": "sha256:a386df5737b0af2cf9e932092e9cc3ccaa6200ce3b83bb6f16288279e5c65d36",
+     "size": 155753849
+    }
+   ],
+   "manifest": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJzaXplIjo0NDAsImRpZ2VzdCI6InNoYTI1Njo1MzAxMjQ0NWQ0MTA2ZmVkNjgwNDM1MGNlYTIxOTYyNjBlNTM4M2RlMjViMTk5ZDA4YzNjMTYzODliNTU0YTAzIn0sImxheWVycyI6W3sibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsInNpemUiOjE2NDY1MTAwOCwiZGlnZXN0Ijoic2hhMjU2OmEzODZkZjU3MzdiMGFmMmNmOWU5MzIwOTJlOWNjM2NjYWE2MjAwY2UzYjgzYmI2ZjE2Mjg4Mjc5ZTVjNjVkMzYifV19",
+   "config": "eyJhcmNoaXRlY3R1cmUiOiJhbWQ2NCIsImNvbmZpZyI6eyJFbnYiOlsiUEFUSD0vdXNyL2xvY2FsL3NiaW46L3Vzci9sb2NhbC9iaW46L3Vzci9zYmluOi91c3IvYmluOi9zYmluOi9iaW4iXSwiV29ya2luZ0RpciI6Ii8iLCJPbkJ1aWxkIjpudWxsfSwiY3JlYXRlZCI6IjIwMjMtMDQtMTdUMTQ6MzE6MjQuODk2MDcxOTU4WiIsImhpc3RvcnkiOlt7ImNyZWF0ZWQiOiIyMDIzLTA0LTE3VDE0OjMxOjI0Ljg5NjA3MTk1OFoiLCJjcmVhdGVkX2J5IjoiQ09QWSAvIC4gIyBidWlsZGtpdCIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIn1dLCJvcyI6ImxpbnV4Iiwicm9vdGZzIjp7InR5cGUiOiJsYXllcnMiLCJkaWZmX2lkcyI6WyJzaGEyNTY6YTM4NmRmNTczN2IwYWYyY2Y5ZTkzMjA5MmU5Y2MzY2NhYTYyMDBjZTNiODNiYjZmMTYyODgyNzllNWM2NWQzNiJdfX0=",
+   "repoDigests": [],
+   "architecture": "amd64",
+   "os": "linux"
+  }
+ },
+ "distro": {
+  "name": "Linux",
+  "version": "99",
+  "idLike": []
+ },
+ "descriptor": {
+  "name": "grype",
+  "version": "0.56.0",
+  "configuration": {
+   "configPath": "",
+   "verbosity": 0,
+   "output": "json",
+   "file": "",
+   "distro": "",
+   "add-cpes-if-none": false,
+   "output-template-file": "",
+   "quiet": true,
+   "check-for-app-update": true,
+   "only-fixed": false,
+   "only-notfixed": false,
+   "platform": "",
+   "search": {
+    "scope": "Squashed",
+    "unindexed-archives": false,
+    "indexed-archives": true
+   },
+   "ignore": null,
+   "exclude": [],
+   "db": {
+    "cache-dir": "/Users/bg/Library/Caches/grype/db",
+    "update-url": "https://toolbox-data.anchore.io/grype/databases/listing.json",
+    "ca-cert": "",
+    "auto-update": true,
+    "validate-by-hash-on-start": false,
+    "validate-age": true,
+    "max-allowed-built-age": 432000000000000
+   },
+   "externalSources": {
+    "enable": false,
+    "maven": {
+     "searchUpstreamBySha1": true,
+     "baseUrl": "https://search.maven.org/solrsearch/select"
+    }
+   },
+   "match": {
+    "java": {
+     "using-cpes": true
+    },
+    "dotnet": {
+     "using-cpes": true
+    },
+    "golang": {
+     "using-cpes": true
+    },
+    "javascript": {
+     "using-cpes": true
+    },
+    "python": {
+     "using-cpes": true
+    },
+    "ruby": {
+     "using-cpes": true
+    },
+    "stock": {
+     "using-cpes": true
+    }
+   },
+   "dev": {
+    "profile-cpu": false,
+    "profile-mem": false
+   },
+   "fail-on-severity": "",
+   "registry": {
+    "insecure-skip-tls-verify": false,
+    "insecure-use-http": false,
+    "auth": []
+   },
+   "log": {
+    "structured": false,
+    "level": "",
+    "file": ""
+   },
+   "attestation": {
+    "public-key": "",
+    "skip-verification": false
+   },
+   "show-suppressed": false,
+   "by-cve": false
+  },
+  "db": {
+   "built": "2023-04-17T01:31:26Z",
+   "schemaVersion": 5,
+   "location": "/Users/bg/Library/Caches/grype/db/5",
+   "checksum": "sha256:0dd28a1229f1f4a14651c62a43091e21aadf80df9e40ea63cafbaf287ab1d8f7",
+   "error": null
+  }
+ }
+}

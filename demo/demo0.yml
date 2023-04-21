@@ -1,0 +1,473 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: make demo0
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /Users/bg/code/github/container-total/malicious-compliance
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 100
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 28
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 99
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 434
+    content: "\e[H\e[2J\r\n"
+  - delay: 9
+    content: "\e[?1034h$ "
+  - delay: 1378
+    content: "\e["
+  - delay: 185
+    content: 1;
+  - delay: 94
+    content: '37'
+  - delay: 90
+    content: m#
+  - delay: 94
+    content: ' Le'
+  - delay: 94
+    content: t'
+  - delay: 93
+    content: 's '
+  - delay: 93
+    content: sh
+  - delay: 92
+    content: ow
+  - delay: 92
+    content: ' ou'
+  - delay: 92
+    content: 'r '
+  - delay: 95
+    content: sc
+  - delay: 91
+    content: an
+  - delay: 188
+    content: ne
+  - delay: 90
+    content: 'rs '
+  - delay: 91
+    content: an
+  - delay: 91
+    content: 'd '
+  - delay: 91
+    content: th
+  - delay: 91
+    content: ei
+  - delay: 95
+    content: r v
+  - delay: 94
+    content: er
+  - delay: 93
+    content: si
+  - delay: 94
+    content: 'on'
+  - delay: 91
+    content: "s\e"
+  - delay: 94
+    content: '[0m'
+  - delay: 813
+    content: "\r\ntrivy -v\r\nVersion: 0.37.1\r\n\r\n"
+  - delay: 119
+    content: "syft --version\r\nsyft 0.73.0\r\n\r\n"
+  - delay: 107
+    content: "grype version\r\nApplication:          grype\r\nVersion:              0.56.0\r\n\r\n"
+  - delay: 106
+    content: "docker scan --version\r\nVersion:    v0.25.0\r\nGit commit: 284fb08\r\nProvider:   Snyk (1.1064.0)\r\n\r\n"
+  - delay: 107
+    content: "docker scout version\r\nversion: v0.6.0 (go1.19.5 - darwin/amd64)\r\ngit commit: aabe2bfd192f7ac8cbfa4afea647b4dc41d3d30d\r\n"
+  - delay: 16
+    content: "\e[?1034h$ "
+  - delay: 1636
+    content: "\e"
+  - delay: 187
+    content: '[1'
+  - delay: 94
+    content: ;3
+  - delay: 95
+    content: 7m
+  - delay: 91
+    content: c
+  - delay: 91
+    content: le
+  - delay: 91
+    content: ar
+  - delay: 91
+    content: "\e["
+  - delay: 91
+    content: 0m
+  - delay: 984
+    content: "\r\n"
+  - delay: 7
+    content: "\e[H\e[2J"
+  - delay: 14
+    content: "\e[?1034h$ "
+  - delay: 787
+    content: "\e["
+  - delay: 185
+    content: 1;
+  - delay: 93
+    content: '37'
+  - delay: 95
+    content: m#
+  - delay: 89
+    content: ' O'
+  - delay: 94
+    content: ur
+  - delay: 90
+    content: ' b'
+  - delay: 94
+    content: as
+  - delay: 92
+    content: 'e '
+  - delay: 92
+    content: Do
+  - delay: 90
+    content: ck
+  - delay: 91
+    content: er
+  - delay: 184
+    content: fi
+  - delay: 92
+    content: le
+  - delay: 92
+    content: "\e["
+  - delay: 93
+    content: 0m
+  - delay: 874
+    content: "\r\n"
+  - delay: 16
+    content: "\e[?1034h$ "
+  - delay: 606
+    content: "\e["
+  - delay: 185
+    content: 1;
+  - delay: 94
+    content: '37'
+  - delay: 91
+    content: mc
+  - delay: 91
+    content: 'at '
+  - delay: 93
+    content: Do
+  - delay: 92
+    content: ck
+  - delay: 92
+    content: er
+  - delay: 94
+    content: fi
+  - delay: 93
+    content: le-
+  - delay: 93
+    content: 0-
+  - delay: 90
+    content: ba
+  - delay: 184
+    content: se
+  - delay: 91
+    content: "\e["
+  - delay: 95
+    content: 0m
+  - delay: 661
+    content: "\r\n"
+  - delay: 122
+    content: "\r\e[38;5;238m───────┬────────────────────────────────────────────────────────────────────────────────────────────\e[0m\e[m\r\n       \e[38;5;238m│ \e[0mFile: \e[1mdocker/Dockerfile-0-base\e[0m\e[m\r\n\e[38;5;238m───────┼────────────────────────────────────────────────────────────────────────────────────────────\e[0m\e[m\r\n\e[38;5;238m   1\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mFROM\e[0m\e[38;5;231m composer:\e[0m\e[38;5;149m1.7.2\e[0m\e[m\r\n\e[38;5;238m   2\e[0m   \e[38;5;238m│\e[0m \e[m\r\n\e[38;5;238m   3\e[0m   \e[38;5;238m│\e[0m \e[48;5;236;38;5;203mRUN \e[0m\e[48;5;236;38;5;231mapk add --no-cache nodejs\e[0m\e[48;5;236m                                                              \e[0m\e[m\r\n\e[38;5;238m   4\e[0m   \e[38;5;238m│\e[0m \e[48;5;236m                                                                                           \e[0m\e[m\r\n\e[38;5;238m   5\e[0m   \e[38;5;238m│\e[0m \e[48;5;236;38;5;203mCOPY\e[0m\e[48;5;236;38;5;231m TestLibrary.deps.json /dotnet/TestLibrary.deps.json\e[0m\e[48;5;236m                                   \e[0m\e[m\r\n\e[38;5;238m   6\e[0m   \e[38;5;238m│\e[0m \e[48;5;236;38;5;203mCOPY\e[0m\e[48;5;236;38;5;231m composer_laravel.lock /php-app/composer.lock\e[0m\e[48;5;236m                                          \e[0m\e[m\r\n\e[38;5;238m   7\e[0m   \e[38;5;238m│\e[0m \e[48;5;236;38;5;203mCOPY\e[0m\e[48;5;236;38;5;231m Gemfile_rails.lock /ruby-app/Gemfile.lock\e[0m\e[48;5;236m                                             \e[0m\e[m\r\n\e[38;5;238m   8\e[0m   \e[38;5;238m│\e[0m \e[48;5;236;38;5;203mCOPY\e[0m\e[48;5;236;38;5;231m package-lock_react.json /node-app/package-lock.json\e[0m\e[48;5;236m                                   \e[0m\e[m\r\n\e[38;5;238m   9\e[0m   \e[38;5;238m│\e[0m \e[48;5;236;38;5;203mCOPY\e[0m\e[48;5;236;38;5;231m package.json /node-app2/package.json\e[0m\e[48;5;236m                                                  \e[0m\e[m\r\n\e[38;5;238m  10\e[0m   \e[38;5;238m│\e[0m \e[48;5;236;38;5;203mCOPY\e[0m\e[48;5;236;38;5;231m yarn.lock /yarn/yarn.lock\e[0m\e[48;5;236m                                                             \e[0m\e[m\r\n\e[38;5;238m  11\e[0m   \e[38;5;238m│\e[0m \e[48;5;236;38;5;203mCOPY\e[0m\e[48;5;236;38;5;231m Pipfile.lock /python-app/Pipfile.lock\e[0m\e[48;5;236m                                                 \e[0m\e[m\r\n\e[38;5;238m  12\e[0m   \e[38;5;238m│\e[0m \e[48;5;236;38;5;203mCOPY\e[0m\e[48;5;236;38;5;231m requirements.txt /python-app2/requirements.txt\e[0m\e[48;5;236m                                        \e[0m\e[m\r\n\e[38;5;238m  13\e[0m   \e[38;5;238m│\e[0m \e[48;5;236;38;5;203mCOPY\e[0m\e[48;5;236;38;5;231m poetry.lock /python-app3/poetry.lock\e[0m\e[48;5;236m                                                  \e[0m\e[m\r\n\e[38;5;238m  14\e[0m   \e[38;5;238m│\e[0m \e[48;5;236;38;5;203mCOPY\e[0m\e[48;5;236;38;5;231m Cargo.lock /rust-app/Cargo.lock\e[0m\e[48;5;236m                                                       \e[0m\e[m\r\n\e[38;5;238m  15\e[0m   \e[38;5;238m│\e[0m \e[48;5;236;38;5;203mCOPY\e[0m\e[48;5;236;38;5;231m kubectl /bin/kubectl\e[0m\e[48;5;236m                                                                  \e[0m\e[m\r\n\e[38;5;238m───────┴────────────────────────────────────────────────────────────────────────────────────────────\e[0m\e[m\r\n\r\e[K"
+  - delay: 9
+    content: "\e[?1034h$ "
+  - delay: 2319
+    content: "\e"
+  - delay: 187
+    content: '[1'
+  - delay: 94
+    content: ;3
+  - delay: 90
+    content: 7m
+  - delay: 94
+    content: '#'
+  - delay: 91
+    content: ' B'
+  - delay: 93
+    content: ui
+  - delay: 92
+    content: ld
+  - delay: 90
+    content: ' t'
+  - delay: 91
+    content: h
+  - delay: 93
+    content: 'e '
+  - delay: 92
+    content: ba
+  - delay: 184
+    content: se
+  - delay: 94
+    content: ' i'
+  - delay: 90
+    content: m
+  - delay: 95
+    content: ag
+  - delay: 93
+    content: "e\e"
+  - delay: 95
+    content: '[0'
+  - delay: 91
+    content: m
+  - delay: 1208
+    content: "\r\n"
+  - delay: 30
+    content: "Building 0-base: docker build -t sig-honk/malicious-compliance:0-base -f Dockerfile-0-base\r\n"
+  - delay: 544
+    content: "\e[1A\e[1B\e[0G\e[?25l[+] Building 0.0s (0/1)                                                                             \r\n\e[?25h"
+  - delay: 151
+    content: "\e[1A\e[0G\e[?25l[+] Building 0.2s (2/3)                                                                             \r\n\e[34m => [internal] load build definition from Dockerfile-0-base                                    0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 587B                                                           0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                                              0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                                               0.0s\r\n\e[0m => [internal] load metadata for docker.io/library/composer:1.7.2                              0.1s\r\n\e[?25h"
+  - delay: 150
+    content: "\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[0G\e[?25l[+] Building 0.3s (2/3)                                                                             \r\n\e[34m => [internal] load build definition from Dockerfile-0-base                                    0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 587B                                                           0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                                              0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                                               0.0s\r\n\e[0m => [internal] load metadata for docker.io/library/composer:1.7.2                              0.2s\r\n\e[?25h"
+  - delay: 150
+    content: "\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[0G\e[?25l[+] Building 0.5s (2/3)                                                                             \r\n\e[34m => [internal] load build definition from Dockerfile-0-base                                    0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 587B                                                           0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                                              0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                                               0.0s\r\n\e[0m => [internal] load metadata for docker.io/library/composer:1.7.2                              0.4s\r\n\e[?25h"
+  - delay: 149
+    content: "\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[0G\e[?25l[+] Building 0.6s (2/3)                                                                             \r\n\e[34m => [internal] load build definition from Dockerfile-0-base                                    0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 587B                                                           0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                                              0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                                               0.0s\r\n\e[0m => [internal] load metadata for docker.io/library/composer:1.7.2                              0.5s\r\n\e[?25h"
+  - delay: 151
+    content: "\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[0G\e[?25l[+] Building 0.8s (2/3)                                                                             \r\n\e[34m => [internal] load build definition from Dockerfile-0-base                                    0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 587B                                                           0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                                              0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                                               0.0s\r\n\e[0m => [internal] load metadata for docker.io/library/composer:1.7.2                              0.7s\r\n\e[?25h"
+  - delay: 151
+    content: "\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[0G\e[?25l[+] Building 0.9s (2/3)                                                                             \r\n\e[34m => [internal] load build definition from Dockerfile-0-base                                    0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 587B                                                           0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                                              0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                                               0.0s\r\n\e[0m => [internal] load metadata for docker.io/library/composer:1.7.2                              0.8s\r\n\e[?25h"
+  - delay: 151
+    content: "\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[0G\e[?25l[+] Building 1.1s (2/3)                                                                             \r\n\e[34m => [internal] load build definition from Dockerfile-0-base                                    0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 587B                                                           0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                                              0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                                               0.0s\r\n\e[0m => [internal] load metadata for docker.io/library/composer:1.7.2                              1.0s\r\n\e[?25h"
+  - delay: 151
+    content: "\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[0G\e[?25l[+] Building 1.2s (3/4)                                                                             \r\n\e[34m => [internal] load build definition from Dockerfile-0-base                                    0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 587B                                                           0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                                              0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                                               0.0s\r\n\e[0m => [internal] load metadata for docker.io/library/composer:1.7.2                              1.1s\r\n\e[34m => [auth] library/composer:pull token for registry-1.docker.io                                0.0s\r\n\e[0m\e[?25h"
+  - delay: 151
+    content: "\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[0G\e[?25l[+] Building 1.4s (3/4)                                                                             \r\n\e[34m => [internal] load build definition from Dockerfile-0-base                                    0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 587B                                                           0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                                              0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                                               0.0s\r\n\e[0m => [internal] load metadata for docker.io/library/composer:1.7.2                              1.3s\r\n\e[34m => [auth] library/composer:pull token for registry-1.docker.io                                0.0s\r\n\e[0m\e[?25h"
+  - delay: 152
+    content: "\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[0G\e[?25l[+] Building 1.5s (3/4)                                                                             \r\n\e[34m => [internal] load build definition from Dockerfile-0-base                                    0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 587B                                                           0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                                              0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                                               0.0s\r\n\e[0m => [internal] load metadata for docker.io/library/composer:1.7.2                              1.4s\r\n\e[34m => [auth] library/composer:pull token for registry-1.docker.io                                0.0s\r\n\e[0m\e[?25h"
+  - delay: 150
+    content: "\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[0G\e[?25l[+] Building 1.7s (3/4)                                                                             \r\n\e[34m => [internal] load build definition from Dockerfile-0-base                                    0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 587B                                                           0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                                              0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                                               0.0s\r\n\e[0m => [internal] load metadata for docker.io/library/composer:1.7.2                              1.6s\r\n\e[34m => [auth] library/composer:pull token for registry-1.docker.io                                0.0s\r\n\e[0m\e[?25h"
+  - delay: 114
+    content: "\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[0G\e[?25l[+] Building 1.8s (4/4)                                                                             \r\n\e[34m => [internal] load build definition from Dockerfile-0-base                                    0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 587B                                                           0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                                              0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                                               0.0s\r\n\e[0m\e[34m => [internal] load metadata for docker.io/library/composer:1.7.2                              1.7s\r\n\e[0m\e[34m => [auth] library/composer:pull token for registry-1.docker.io                                0.0s\r\n\e[0m\e[?25h"
+  - delay: 64
+    content: "\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[0G\e[?25l[+] Building 1.8s (19/19) FINISHED                                                                  \r\n\e[34m => [internal] load build definition from Dockerfile-0-base                                    0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 587B                                                           0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                                              0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                                               0.0s\r\n\e[0m\e[34m => [internal] load metadata for docker.io/library/composer:1.7.2                              1.7s\r\n\e[0m\e[34m => [auth] library/composer:pull token for registry-1.docker.io                                0.0s\r\n\e[0m\e[34m => [ 1/13] FROM docker.io/library/composer:1.7.2@sha256:6f41f70a173b142bff863970e5a53468601d  0.0s\r\n\e[0m\e[34m => [internal] load build context                                                              0.0s\r\n\e[0m\e[34m => => transferring context: 388B                                                              0.0s\r\n\e[0m\e[34m => CACHED [ 2/13] RUN apk add --no-cache nodejs                                               0.0s\r\n\e[0m\e[34m => CACHED [ 3/13] COPY TestLibrary.deps.json /dotnet/TestLibrary.deps.json                    0.0s\r\n\e[0m\e[34m => CACHED [ 4/13] COPY composer_laravel.lock /php-app/composer.lock                           0.0s\r\n\e[0m\e[34m => CACHED [ 5/13] COPY Gemfile_rails.lock /ruby-app/Gemfile.lock                              0.0s\r\n\e[0m\e[34m => CACHED [ 6/13] COPY package-lock_react.json /node-app/package-lock.json                    0.0s\r\n\e[0m\e[34m => CACHED [ 7/13] COPY package.json /node-app2/package.json                                   0.0s\r\n\e[0m\e[34m => CACHED [ 8/13] COPY yarn.lock /yarn/yarn.lock                                              0.0s\r\n\e[0m\e[34m => CACHED [ 9/13] COPY Pipfile.lock /python-app/Pipfile.lock                                  0.0s\r\n\e[0m\e[34m => CACHED [10/13] COPY requirements.txt /python-app2/requirements.txt                         0.0s\r\n\e[0m\e[34m => CACHED [11/13] COPY poetry.lock /python-app3/poetry.lock                                   0.0s\r\n\e[0m\e[34m => CACHED [12/13] COPY Cargo.lock /rust-app/Cargo.lock                                        0.0s\r\n\e[0m\e[34m => CACHED [13/13] COPY kubectl /bin/kubectl                                                   0.0s\r\n\e[0m\e[34m => exporting to image                                                                         0.0s\r\n\e[0m\e[34m => => exporting layers                                                                        0.0s\r\n\e[0m\e[34m => => writing image sha256:c526ad42e82265a9a309501dbfec05a32d7052a20f87d2fb27b47fc437c5ef03   0.0s\r\n\e[0m\e[34m => => naming to docker.io/sig-honk/malicious-compliance:0-base                                0.0s\r\n\e[0m\e[?25h"
+  - delay: 19
+    content: "\e[?1034h$ "
+  - delay: 1122
+    content: "\e["
+  - delay: 184
+    content: 1;
+  - delay: 96
+    content: '37'
+  - delay: 90
+    content: mc
+  - delay: 90
+    content: lea
+  - delay: 91
+    content: "r\e"
+  - delay: 94
+    content: '[0'
+  - delay: 95
+    content: m
+  - delay: 890
+    content: "\r\n"
+  - delay: 7
+    content: "\e[H\e[2J"
+  - delay: 13
+    content: "\e[?1034h$ "
+  - delay: 1851
+    content: "\e["
+  - delay: 185
+    content: 1;
+  - delay: 95
+    content: '37'
+  - delay: 90
+    content: m#
+  - delay: 92
+    content: ' Sc'
+  - delay: 94
+    content: an
+  - delay: 90
+    content: ' t'
+  - delay: 93
+    content: he
+  - delay: 91
+    content: ' i'
+  - delay: 90
+    content: mag
+  - delay: 93
+    content: "e\e"
+  - delay: 90
+    content: '[0'
+  - delay: 183
+    content: m
+  - delay: 973
+    content: "\r\nScanning 0-base with Trivy\r\n"
+  - delay: 1008
+    content: "Scanned 0-base with Trivy\r\n\r\nScanning 0-base with Grype\r\n"
+  - delay: 1010
+    content: "Scanned 0-base with Grype\r\n\r\nScanning 0-base with Docker Scan\r\n"
+  - delay: 1012
+    content: "Scanned 0-base with Docker Scan\r\n\r\nScanning 0-base with Docker Scout\r\n"
+  - delay: 1012
+    content: "Scanned 0-base with Docker Scout\r\n"
+  - delay: 17
+    content: "\e[?1034h$ "
+  - delay: 1125
+    content: "\e"
+  - delay: 184
+    content: '[1'
+  - delay: 91
+    content: ;3
+  - delay: 92
+    content: 7m
+  - delay: 90
+    content: '# '
+  - delay: 94
+    content: Vi
+  - delay: 90
+    content: ew
+  - delay: 91
+    content: ' R'
+  - delay: 91
+    content: es
+  - delay: 93
+    content: ul
+  - delay: 90
+    content: t
+  - delay: 185
+    content: 's '
+  - delay: 90
+    content: Su
+  - delay: 94
+    content: mm
+  - delay: 90
+    content: ar
+  - delay: 92
+    content: "y\e"
+  - delay: 90
+    content: '[0'
+  - delay: 91
+    content: m
+  - delay: 924
+    content: "\r\n"
+  - delay: 6
+    content: "\e[H\e[2J"
+  - delay: 26
+    content: "\r\n"
+  - delay: 306
+    content: "Scanner       Step    OS/PKG    LANG DEPENDENCY    BINARY\r\n------------  ------  --------  -----------------  --------\r\nTrivy         Base    64        18                 3\r\n\r\nGrype         Base    159       97                 54\r\n\r\nDocker Scan   Base    155       -                  4\r\n\r\nDocker Scout  Base    47        70                 29\r\n\r\n"
+  - delay: 15
+    content: "\e[?1034h$ "
+  - delay: 1710
+    content: "\e"
+  - delay: 187
+    content: '[1'
+  - delay: 91
+    content: ;3
+  - delay: 92
+    content: 7m
+  - delay: 91
+    content: '# '
+  - delay: 91
+    content: en
+  - delay: 91
+    content: "d\e"
+  - delay: 95
+    content: '[0'
+  - delay: 90
+    content: m
+  - delay: 763
+    content: "\r\n"

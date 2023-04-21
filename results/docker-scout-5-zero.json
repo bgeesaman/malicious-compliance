@@ -1,0 +1,18 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "fullName": "Docker Scout",
+          "informationUri": "https://docker.com/products/docker-scout",
+          "name": "Scout",
+          "rules": [],
+          "version": "v0.6.0"
+        }
+      },
+      "results": []
+    }
+  ]
+}

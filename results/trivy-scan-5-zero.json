@@ -1,0 +1,38 @@
+{
+  "SchemaVersion": 2,
+  "ArtifactName": "sig-honk/malicious-compliance:5-zero",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "ImageID": "sha256:53012445d4106fed6804350cea2196260e5383de25b199d08c3c16389b554a03",
+    "DiffIDs": [
+      "sha256:a386df5737b0af2cf9e932092e9cc3ccaa6200ce3b83bb6f16288279e5c65d36"
+    ],
+    "RepoTags": [
+      "sig-honk/malicious-compliance:5-zero"
+    ],
+    "ImageConfig": {
+      "architecture": "amd64",
+      "created": "2023-04-17T14:31:24.896071958Z",
+      "history": [
+        {
+          "created": "2023-04-17T14:31:24Z",
+          "created_by": "COPY / . # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:a386df5737b0af2cf9e932092e9cc3ccaa6200ce3b83bb6f16288279e5c65d36"
+        ]
+      },
+      "config": {
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ],
+        "WorkingDir": "/"
+      }
+    }
+  }
+}

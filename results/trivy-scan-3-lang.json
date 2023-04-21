@@ -1,0 +1,583 @@
+{
+  "SchemaVersion": 2,
+  "ArtifactName": "sig-honk/malicious-compliance:3-lang",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "OS": {
+      "Family": "alpine",
+      "Name": "3.7.1",
+      "EOSL": true
+    },
+    "ImageID": "sha256:287dbc70fe1159cf5c0fc89a51e9a647eb030b308a16945662d0174572c6f735",
+    "DiffIDs": [
+      "sha256:ebf12965380b39889c99a9c02e82ba465f887b45975b6e389d42e9e6a3857888",
+      "sha256:0ea33a93585cf1917ba522b2304634c3073654062d5282c1346322967790ef33",
+      "sha256:9922bc15eeefe1637b803ef2106f178152ce19a391f24aec838cbe2e48e73303",
+      "sha256:dc00fbef458ad3204bbb548e2d766813f593d857b845a940a0de76aed94c94d1",
+      "sha256:5cb2a5009179b1e78ecfef81a19756328bb266456cf9a9dbbcf9af8b83b735f0",
+      "sha256:9bdb2c849099a99c8ab35f6fd7469c623635e8f4479a0a5a3df61e22bae509f6",
+      "sha256:6408527580eade39c2692dbb6b0f6a9321448d06ea1c2eef06bb7f37da9c5013",
+      "sha256:83abef706f5ae199af65d1c13d737d0eb36219f0d18e36c6d8ff06159df39a63",
+      "sha256:c03283c257abd289a30b4f5e9e1345da0e9bfdc6ca398ee7e8fac6d2c1456227",
+      "sha256:2da3602d664dd3f71fae83cbc566d4e80b432c6ee8bb4efd94c8e85122f503d4",
+      "sha256:82c59ac8ee582542648e634ca5aff9a464c68ff8a054f105a58689fb52209e34",
+      "sha256:2f4a5c9187c249834ebc28783bd3c65bdcbacaa8baa6620ddaa27846dd3ef708",
+      "sha256:6ca56f561e677ae06c3bc87a70792642d671a4416becb9a101577c1a6e090e36",
+      "sha256:154ad0735c360b212b167f424d33a62305770a1fcfb6363882f5c436cfbd9812",
+      "sha256:b2a1a2d80bf0c747a4f6b0ca6af5eef23f043fcdb1ed4f3a3e750aef2dc68079",
+      "sha256:3e92c04ecf901a992676ed74cb8163d3c5ec3e0410e8b2d6a9462be32dabb1f8",
+      "sha256:0920f3423fa9472e64c9f8398841b844d99a5594de995db0c12fdeaa7d62d355",
+      "sha256:93ccce1df717db574b35910156a384a40dc7e79d4c7c9e83be887848adf7e56d",
+      "sha256:085b28d8bccebf25f384afc5040f55156916dfb79c5643cb4d5a79b5cbc0fd84",
+      "sha256:19bfe926f08e0039f7c4fd99057731fbacd93f54439cedaceb3caf603efa6688",
+      "sha256:7da2a70927f776ce1309eb27f7c686bdaffe3bb8012c37a8c1518b8b1e5560ad",
+      "sha256:7b0545cd206ea88be7330aa1ea1867d057360ef180b3da9e1af072cb3c88c57a",
+      "sha256:b2d4fddbd5c3eb2ac9d049d629fe7d3cb38855c2f4302a2538430cb991daae1c",
+      "sha256:9ff2cac265078412f4e7fb8d969ec201f7a3dbb678a9cf0b69e358abb77cfc5b",
+      "sha256:fcc5726f546e1c4f3b0367f1b21a7a9efefa6abfef5b84a09e1f165667a20cde",
+      "sha256:810b0c064108ce36f652eeddc3e3c772d5a9da353b7274e8244480e6035cede0",
+      "sha256:06a6e6d7831e6caeddaa6c4404ed00c6696fa190fb8236cfb26076fd17f86392",
+      "sha256:45691d3922dfff19406f07db81fe89f58d26210463afc1cf5f72bad8bcbd6b50",
+      "sha256:d12d0ef76cd791f70f3639856abc26875acc6b9d89b6c008553f3146a69ea103",
+      "sha256:5e1e16e01e72f7c9e129aafdbffd1e38ebcb7e220defadd5f5ff89dd2358df9f",
+      "sha256:35e20a8051e64c9deb15cbe91b84cb1c1acc94d6c25d929b3a6122f7cbdcbfd4",
+      "sha256:a2a29c2000cf2556cadc7ed2055c861fa8d4de21d43152bf703ccc232c6b65a1",
+      "sha256:33a05194823bf1c481a0e90ca727177d690ef04b4d6b98be17340dc6c5dc4e6c",
+      "sha256:6b604b1c0ad6fa9bd5023df4a4f1dabb7600130cdea1829494a26f73436131c6",
+      "sha256:78902d72bd2cd088800bbf0e3eb231dee08c3b6991d1b37d4a14d506e71fe31b",
+      "sha256:1c9d69c9bd901726b037dc08124cbfe4916344371d9613d8d115d24118379f38",
+      "sha256:32c4866a9b073f3a5521548931fe4ab09a98e3ffa553b334c82648df80d53a33",
+      "sha256:9c488e1d43f22041181cd178247fabb4fea8857dd951f6053f3f7bb532894d67",
+      "sha256:be0b1607c66adb5ff04df62b44634cd96db288460ecf3526420c0984e00cacf7",
+      "sha256:0022bb45365db7b2b236eb3218d940db285434768d92bebda00c67873d7f9feb",
+      "sha256:33b59e71c06e852c8953c24ce11e74bbf4253ae4a85d199f1611cd2b83eb8b35",
+      "sha256:65258d70a8378e06a663b706576038433647010b38a2b2f5899c3870538c4887",
+      "sha256:4e0335328099af8a62935c820aa6ab909cc5ccbe8d270db916d676b03f108264",
+      "sha256:591af41f61cfa9e5ad0e6710ce91cce66a38411fa34aa3b3a47751e57a27872c"
+    ],
+    "RepoTags": [
+      "sig-honk/malicious-compliance:3-lang"
+    ],
+    "ImageConfig": {
+      "architecture": "amd64",
+      "created": "2023-04-17T14:29:40.992356054Z",
+      "history": [
+        {
+          "created": "2018-09-11T22:19:38.88529994Z",
+          "created_by": "/bin/sh -c #(nop) ADD file:49f9e47e678d868d5b023482aa8dded71276a241a665c4f8b55ca77269321b34 in / "
+        },
+        {
+          "created": "2018-09-11T22:19:39.058628442Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"/bin/sh\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-09-12T01:26:59.951316015Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PHPIZE_DEPS=autoconf \t\tdpkg-dev dpkg \t\tfile \t\tg++ \t\tgcc \t\tlibc-dev \t\tmake \t\tpkgconf \t\tre2c",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-09-12T01:27:01.470388635Z",
+          "created_by": "/bin/sh -c apk add --no-cache --virtual .persistent-deps \t\tca-certificates \t\tcurl \t\ttar \t\txz \t\tlibressl"
+        },
+        {
+          "created": "2018-09-12T01:27:02.432381785Z",
+          "created_by": "/bin/sh -c set -x \t\u0026\u0026 addgroup -g 82 -S www-data \t\u0026\u0026 adduser -u 82 -D -S -G www-data www-data"
+        },
+        {
+          "created": "2018-09-12T01:27:02.715120309Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PHP_INI_DIR=/usr/local/etc/php",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-09-12T01:27:03.655421341Z",
+          "created_by": "/bin/sh -c mkdir -p $PHP_INI_DIR/conf.d"
+        },
+        {
+          "created": "2018-09-12T01:27:03.931799562Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-09-12T01:27:04.210945499Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-09-12T01:27:04.523116501Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-09-12T01:27:04.795176159Z",
+          "created_by": "/bin/sh -c #(nop)  ENV GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 B1B44D8F021E4E2D6021E995DC9FF8D3EE5AF27F",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T19:02:18.415761689Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PHP_VERSION=7.2.11",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T19:02:18.599097853Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PHP_URL=https://secure.php.net/get/php-7.2.11.tar.xz/from/this/mirror PHP_ASC_URL=https://secure.php.net/get/php-7.2.11.tar.xz.asc/from/this/mirror",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T19:02:18.782890412Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PHP_SHA256=da1a705c0bc46410e330fc6baa967666c8cd2985378fb9707c01a8e33b01d985 PHP_MD5=",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T19:02:22.795846753Z",
+          "created_by": "/bin/sh -c set -xe; \t\tapk add --no-cache --virtual .fetch-deps \t\tgnupg \t\twget \t; \t\tmkdir -p /usr/src; \tcd /usr/src; \t\twget -O php.tar.xz \"$PHP_URL\"; \t\tif [ -n \"$PHP_SHA256\" ]; then \t\techo \"$PHP_SHA256 *php.tar.xz\" | sha256sum -c -; \tfi; \tif [ -n \"$PHP_MD5\" ]; then \t\techo \"$PHP_MD5 *php.tar.xz\" | md5sum -c -; \tfi; \t\tif [ -n \"$PHP_ASC_URL\" ]; then \t\twget -O php.tar.xz.asc \"$PHP_ASC_URL\"; \t\texport GNUPGHOME=\"$(mktemp -d)\"; \t\tfor key in $GPG_KEYS; do \t\t\tgpg --keyserver ha.pool.sks-keyservers.net --recv-keys \"$key\"; \t\tdone; \t\tgpg --batch --verify php.tar.xz.asc php.tar.xz; \t\tcommand -v gpgconf \u003e /dev/null \u0026\u0026 gpgconf --kill all; \t\trm -rf \"$GNUPGHOME\"; \tfi; \t\tapk del .fetch-deps"
+        },
+        {
+          "created": "2018-10-15T19:02:23.071406376Z",
+          "created_by": "/bin/sh -c #(nop) COPY file:207c686e3fed4f71f8a7b245d8dcae9c9048d276a326d82b553c12a90af0c0ca in /usr/local/bin/ "
+        },
+        {
+          "created": "2018-10-15T19:07:13.09339668Z",
+          "created_by": "/bin/sh -c set -xe \t\u0026\u0026 apk add --no-cache --virtual .build-deps \t\t$PHPIZE_DEPS \t\tcoreutils \t\tcurl-dev \t\tlibedit-dev \t\tlibressl-dev \t\tlibsodium-dev \t\tlibxml2-dev \t\tsqlite-dev \t\t\u0026\u0026 export CFLAGS=\"$PHP_CFLAGS\" \t\tCPPFLAGS=\"$PHP_CPPFLAGS\" \t\tLDFLAGS=\"$PHP_LDFLAGS\" \t\u0026\u0026 docker-php-source extract \t\u0026\u0026 cd /usr/src/php \t\u0026\u0026 gnuArch=\"$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)\" \t\u0026\u0026 ./configure \t\t--build=\"$gnuArch\" \t\t--with-config-file-path=\"$PHP_INI_DIR\" \t\t--with-config-file-scan-dir=\"$PHP_INI_DIR/conf.d\" \t\t\t\t--enable-option-checking=fatal \t\t\t\t--with-mhash \t\t\t\t--enable-ftp \t\t--enable-mbstring \t\t--enable-mysqlnd \t\t--with-sodium=shared \t\t\t\t--with-curl \t\t--with-libedit \t\t--with-openssl \t\t--with-zlib \t\t\t\t$(test \"$gnuArch\" = 's390x-linux-gnu' \u0026\u0026 echo '--without-pcre-jit') \t\t\t\t$PHP_EXTRA_CONFIGURE_ARGS \t\u0026\u0026 make -j \"$(nproc)\" \t\u0026\u0026 make install \t\u0026\u0026 { find /usr/local/bin /usr/local/sbin -type f -perm +0111 -exec strip --strip-all '{}' + || true; } \t\u0026\u0026 make clean \t\t\u0026\u0026 cp -v php.ini-* \"$PHP_INI_DIR/\" \t\t\u0026\u0026 cd / \t\u0026\u0026 docker-php-source delete \t\t\u0026\u0026 runDeps=\"$( \t\tscanelf --needed --nobanner --format '%n#p' --recursive /usr/local \t\t\t| tr ',' '\\n' \t\t\t| sort -u \t\t\t| awk 'system(\"[ -e /usr/local/lib/\" $1 \" ]\") == 0 { next } { print \"so:\" $1 }' \t)\" \t\u0026\u0026 apk add --no-cache --virtual .php-rundeps $runDeps \t\t\u0026\u0026 apk del .build-deps \t\t\u0026\u0026 pecl update-channels \t\u0026\u0026 rm -rf /tmp/pear ~/.pearrc"
+        },
+        {
+          "created": "2018-10-15T19:07:13.722586262Z",
+          "created_by": "/bin/sh -c #(nop) COPY multi:2cdcedabcf5a3b9ae610fab7848e94bc2f64b4d85710d55fd6f79e44dacf73d8 in /usr/local/bin/ "
+        },
+        {
+          "created": "2018-10-15T19:07:14.618087104Z",
+          "created_by": "/bin/sh -c docker-php-ext-enable sodium"
+        },
+        {
+          "created": "2018-10-15T19:07:14.826981756Z",
+          "created_by": "/bin/sh -c #(nop)  ENTRYPOINT [\"docker-php-entrypoint\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T19:07:15.010831572Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"php\" \"-a\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T21:28:21.919735971Z",
+          "created_by": "/bin/sh -c apk --no-cache add git subversion openssh mercurial tini bash patch"
+        },
+        {
+          "created": "2018-10-15T21:28:22.611763893Z",
+          "created_by": "/bin/sh -c echo \"memory_limit=-1\" \u003e \"$PHP_INI_DIR/conf.d/memory-limit.ini\"  \u0026\u0026 echo \"date.timezone=${PHP_TIMEZONE:-UTC}\" \u003e \"$PHP_INI_DIR/conf.d/date_timezone.ini\""
+        },
+        {
+          "created": "2018-10-15T21:28:50.224278478Z",
+          "created_by": "/bin/sh -c apk add --no-cache --virtual .build-deps zlib-dev  \u0026\u0026 docker-php-ext-install zip  \u0026\u0026 runDeps=\"$(     scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions     | tr ',' '\\n'     | sort -u     | awk 'system(\"[ -e /usr/local/lib/\" $1 \" ]\") == 0 { next } { print \"so:\" $1 }'     )\"  \u0026\u0026 apk add --virtual .composer-phpext-rundeps $runDeps  \u0026\u0026 apk del .build-deps"
+        },
+        {
+          "created": "2018-10-15T21:28:50.503010161Z",
+          "created_by": "/bin/sh -c #(nop)  ENV COMPOSER_ALLOW_SUPERUSER=1",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T21:28:50.775378559Z",
+          "created_by": "/bin/sh -c #(nop)  ENV COMPOSER_HOME=/tmp",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T21:28:51.035012363Z",
+          "created_by": "/bin/sh -c #(nop)  ENV COMPOSER_VERSION=1.7.2",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T21:28:52.491402624Z",
+          "created_by": "/bin/sh -c curl --silent --fail --location --retry 3 --output /tmp/installer.php --url https://raw.githubusercontent.com/composer/getcomposer.org/b107d959a5924af895807021fcef4ffec5a76aa9/web/installer  \u0026\u0026 php -r \"     \\$signature = '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061';     \\$hash = hash('SHA384', file_get_contents('/tmp/installer.php'));     if (!hash_equals(\\$signature, \\$hash)) {         unlink('/tmp/installer.php');         echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL;         exit(1);     }\"  \u0026\u0026 php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION}  \u0026\u0026 composer --ansi --version --no-interaction  \u0026\u0026 rm -rf /tmp/* /tmp/.htaccess"
+        },
+        {
+          "created": "2018-10-15T21:28:52.948859545Z",
+          "created_by": "/bin/sh -c #(nop) COPY file:295943a303e8f27de4302b6aa3687bce4b1d1392335efaaab9ecd37bec5ab4c5 in /docker-entrypoint.sh "
+        },
+        {
+          "created": "2018-10-15T21:28:53.295399872Z",
+          "created_by": "/bin/sh -c #(nop) WORKDIR /app"
+        },
+        {
+          "created": "2018-10-15T21:28:53.582920705Z",
+          "created_by": "/bin/sh -c #(nop)  ENTRYPOINT [\"/bin/sh\" \"/docker-entrypoint.sh\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2018-10-15T21:28:53.798628678Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"composer\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-04-07T22:05:52.001631657Z",
+          "created_by": "RUN /bin/sh -c apk add --no-cache nodejs # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:57.769552505Z",
+          "created_by": "COPY TestLibrary.deps.json /dotnet/TestLibrary.deps.json-orig # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:57.832198942Z",
+          "created_by": "COPY composer_laravel.lock /php-app/composer.lock-orig # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:57.893769419Z",
+          "created_by": "COPY Gemfile_rails.lock /ruby-app/Gemfile.lock-orig # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:57.951180073Z",
+          "created_by": "COPY package-lock_react.json /node-app/package-lock.json-orig # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:58.005790875Z",
+          "created_by": "COPY package.json /node-app2/package.json-orig # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:58.067505146Z",
+          "created_by": "COPY yarn.lock /yarn/yarn.lock-orig # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:58.128630415Z",
+          "created_by": "COPY Pipfile.lock /python-app/Pipfile.lock-orig # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:58.191293397Z",
+          "created_by": "COPY requirements.txt /python-app2/requirements.txt-orig # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:58.255912619Z",
+          "created_by": "COPY poetry.lock /python-app3/poetry.lock-orig # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:58.321670999Z",
+          "created_by": "COPY Cargo.lock /rust-app/Cargo.lock-orig # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:58.537410079Z",
+          "created_by": "COPY kubectl /bin/kubectl # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:59.034785113Z",
+          "created_by": "RUN /bin/sh -c ln -s /dotnet/TestLibrary.deps.json-orig /dotnet/TestLibrary.deps.json # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:59.548762384Z",
+          "created_by": "RUN /bin/sh -c ln -s /php-app/composer.lock-orig /php-app/composer.lock # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:05:59.956252132Z",
+          "created_by": "RUN /bin/sh -c ln -s /ruby-app/Gemfile.lock-orig /ruby-app/Gemfile.lock # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:06:00.464548889Z",
+          "created_by": "RUN /bin/sh -c ln -s /node-app/package-lock.json-orig /node-app/package-lock.json # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:06:01.381883933Z",
+          "created_by": "RUN /bin/sh -c ln -s /node-app2/package.json-orig /node-app2/package.json # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:06:01.914208769Z",
+          "created_by": "RUN /bin/sh -c ln -s /yarn/yarn.lock-orig /yarn/yarn.lock # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:06:02.325795195Z",
+          "created_by": "RUN /bin/sh -c ln -s /python-app/Pipfile.lock-orig /python-app/Pipfile.lock # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:06:02.643359967Z",
+          "created_by": "RUN /bin/sh -c ln -s /python-app2/requirements.txt-orig /python-app2/requirements.txt # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:06:03.09589985Z",
+          "created_by": "RUN /bin/sh -c ln -s /python-app3/poetry.lock-orig /python-app3/poetry.lock # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:06:03.646694456Z",
+          "created_by": "RUN /bin/sh -c ln -s /rust-app/Cargo.lock-orig /rust-app/Cargo.lock # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-07T22:15:15.909319912Z",
+          "created_by": "RUN /bin/sh -c find /usr/lib/node_modules -name package.json -type f -delete # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-17T14:29:39.535844947Z",
+          "created_by": "RUN /bin/sh -c find / -name *.egg-info -type f -delete # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-17T14:29:39.772230975Z",
+          "created_by": "RUN /bin/sh -c echo -e 'PRETTY_NAME=\"Linux\"\\nNAME=\"Linux\"\\nVERSION_ID=\"99\"\\nVERSION=\"99 (honk)\"\\nID=Linux' \u003e /etc/os-release # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-17T14:29:40.17315264Z",
+          "created_by": "RUN /bin/sh -c rm -f /etc/lsb-release # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-17T14:29:40.470704798Z",
+          "created_by": "RUN /bin/sh -c rm -f /etc/alpine-release # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-17T14:29:40.692564153Z",
+          "created_by": "RUN /bin/sh -c rm -rf /etc/apk # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2023-04-17T14:29:40.992356054Z",
+          "created_by": "RUN /bin/sh -c rm -rf /lib/apk # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:ebf12965380b39889c99a9c02e82ba465f887b45975b6e389d42e9e6a3857888",
+          "sha256:0ea33a93585cf1917ba522b2304634c3073654062d5282c1346322967790ef33",
+          "sha256:9922bc15eeefe1637b803ef2106f178152ce19a391f24aec838cbe2e48e73303",
+          "sha256:dc00fbef458ad3204bbb548e2d766813f593d857b845a940a0de76aed94c94d1",
+          "sha256:5cb2a5009179b1e78ecfef81a19756328bb266456cf9a9dbbcf9af8b83b735f0",
+          "sha256:9bdb2c849099a99c8ab35f6fd7469c623635e8f4479a0a5a3df61e22bae509f6",
+          "sha256:6408527580eade39c2692dbb6b0f6a9321448d06ea1c2eef06bb7f37da9c5013",
+          "sha256:83abef706f5ae199af65d1c13d737d0eb36219f0d18e36c6d8ff06159df39a63",
+          "sha256:c03283c257abd289a30b4f5e9e1345da0e9bfdc6ca398ee7e8fac6d2c1456227",
+          "sha256:2da3602d664dd3f71fae83cbc566d4e80b432c6ee8bb4efd94c8e85122f503d4",
+          "sha256:82c59ac8ee582542648e634ca5aff9a464c68ff8a054f105a58689fb52209e34",
+          "sha256:2f4a5c9187c249834ebc28783bd3c65bdcbacaa8baa6620ddaa27846dd3ef708",
+          "sha256:6ca56f561e677ae06c3bc87a70792642d671a4416becb9a101577c1a6e090e36",
+          "sha256:154ad0735c360b212b167f424d33a62305770a1fcfb6363882f5c436cfbd9812",
+          "sha256:b2a1a2d80bf0c747a4f6b0ca6af5eef23f043fcdb1ed4f3a3e750aef2dc68079",
+          "sha256:3e92c04ecf901a992676ed74cb8163d3c5ec3e0410e8b2d6a9462be32dabb1f8",
+          "sha256:0920f3423fa9472e64c9f8398841b844d99a5594de995db0c12fdeaa7d62d355",
+          "sha256:93ccce1df717db574b35910156a384a40dc7e79d4c7c9e83be887848adf7e56d",
+          "sha256:085b28d8bccebf25f384afc5040f55156916dfb79c5643cb4d5a79b5cbc0fd84",
+          "sha256:19bfe926f08e0039f7c4fd99057731fbacd93f54439cedaceb3caf603efa6688",
+          "sha256:7da2a70927f776ce1309eb27f7c686bdaffe3bb8012c37a8c1518b8b1e5560ad",
+          "sha256:7b0545cd206ea88be7330aa1ea1867d057360ef180b3da9e1af072cb3c88c57a",
+          "sha256:b2d4fddbd5c3eb2ac9d049d629fe7d3cb38855c2f4302a2538430cb991daae1c",
+          "sha256:9ff2cac265078412f4e7fb8d969ec201f7a3dbb678a9cf0b69e358abb77cfc5b",
+          "sha256:fcc5726f546e1c4f3b0367f1b21a7a9efefa6abfef5b84a09e1f165667a20cde",
+          "sha256:810b0c064108ce36f652eeddc3e3c772d5a9da353b7274e8244480e6035cede0",
+          "sha256:06a6e6d7831e6caeddaa6c4404ed00c6696fa190fb8236cfb26076fd17f86392",
+          "sha256:45691d3922dfff19406f07db81fe89f58d26210463afc1cf5f72bad8bcbd6b50",
+          "sha256:d12d0ef76cd791f70f3639856abc26875acc6b9d89b6c008553f3146a69ea103",
+          "sha256:5e1e16e01e72f7c9e129aafdbffd1e38ebcb7e220defadd5f5ff89dd2358df9f",
+          "sha256:35e20a8051e64c9deb15cbe91b84cb1c1acc94d6c25d929b3a6122f7cbdcbfd4",
+          "sha256:a2a29c2000cf2556cadc7ed2055c861fa8d4de21d43152bf703ccc232c6b65a1",
+          "sha256:33a05194823bf1c481a0e90ca727177d690ef04b4d6b98be17340dc6c5dc4e6c",
+          "sha256:6b604b1c0ad6fa9bd5023df4a4f1dabb7600130cdea1829494a26f73436131c6",
+          "sha256:78902d72bd2cd088800bbf0e3eb231dee08c3b6991d1b37d4a14d506e71fe31b",
+          "sha256:1c9d69c9bd901726b037dc08124cbfe4916344371d9613d8d115d24118379f38",
+          "sha256:32c4866a9b073f3a5521548931fe4ab09a98e3ffa553b334c82648df80d53a33",
+          "sha256:9c488e1d43f22041181cd178247fabb4fea8857dd951f6053f3f7bb532894d67",
+          "sha256:be0b1607c66adb5ff04df62b44634cd96db288460ecf3526420c0984e00cacf7",
+          "sha256:0022bb45365db7b2b236eb3218d940db285434768d92bebda00c67873d7f9feb",
+          "sha256:33b59e71c06e852c8953c24ce11e74bbf4253ae4a85d199f1611cd2b83eb8b35",
+          "sha256:65258d70a8378e06a663b706576038433647010b38a2b2f5899c3870538c4887",
+          "sha256:4e0335328099af8a62935c820aa6ab909cc5ccbe8d270db916d676b03f108264",
+          "sha256:591af41f61cfa9e5ad0e6710ce91cce66a38411fa34aa3b3a47751e57a27872c"
+        ]
+      },
+      "config": {
+        "Cmd": [
+          "composer"
+        ],
+        "Entrypoint": [
+          "/bin/sh",
+          "/docker-entrypoint.sh"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "PHPIZE_DEPS=autoconf \t\tdpkg-dev dpkg \t\tfile \t\tg++ \t\tgcc \t\tlibc-dev \t\tmake \t\tpkgconf \t\tre2c",
+          "PHP_INI_DIR=/usr/local/etc/php",
+          "PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2",
+          "PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2",
+          "PHP_LDFLAGS=-Wl,-O1 -Wl,--hash-style=both -pie",
+          "GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 B1B44D8F021E4E2D6021E995DC9FF8D3EE5AF27F",
+          "PHP_VERSION=7.2.11",
+          "PHP_URL=https://secure.php.net/get/php-7.2.11.tar.xz/from/this/mirror",
+          "PHP_ASC_URL=https://secure.php.net/get/php-7.2.11.tar.xz.asc/from/this/mirror",
+          "PHP_SHA256=da1a705c0bc46410e330fc6baa967666c8cd2985378fb9707c01a8e33b01d985",
+          "PHP_MD5=",
+          "COMPOSER_ALLOW_SUPERUSER=1",
+          "COMPOSER_HOME=/tmp",
+          "COMPOSER_VERSION=1.7.2"
+        ],
+        "WorkingDir": "/app",
+        "ArgsEscaped": true
+      }
+    }
+  },
+  "Results": [
+    {
+      "Target": "sig-honk/malicious-compliance:3-lang (alpine 3.7.1)",
+      "Class": "os-pkgs",
+      "Type": "alpine"
+    },
+    {
+      "Target": "bin/kubectl",
+      "Class": "lang-pkgs",
+      "Type": "gobinary",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2022-41723",
+          "PkgName": "golang.org/x/net",
+          "InstalledVersion": "v0.3.1-0.20221206200815-1e63c2f08a10",
+          "FixedVersion": "0.7.0",
+          "Layer": {
+            "DiffID": "sha256:06a6e6d7831e6caeddaa6c4404ed00c6696fa190fb8236cfb26076fd17f86392"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-41723",
+          "DataSource": {
+            "ID": "go-vulndb",
+            "Name": "The Go Vulnerability Database",
+            "URL": "https://github.com/golang/vulndb"
+          },
+          "Title": "golang.org/x/net/http2: avoid quadratic complexity in HPACK decoding",
+          "Description": "A maliciously crafted HTTP/2 stream could cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-400"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-41723",
+            "https://github.com/advisories/GHSA-vvpx-j8f3-3w6h",
+            "https://go.dev/cl/468135",
+            "https://go.dev/cl/468295",
+            "https://go.dev/issue/57855",
+            "https://groups.google.com/g/golang-announce/c/V0aBFqaFs_E",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4MA5XS5DAOJ5PKKNG5TUXKPQOFHT5VBC/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RLBQ3A7ROLEQXQLXFDLNJ7MYPKG5GULE/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-41723",
+            "https://pkg.go.dev/vuln/GO-2023-1571",
+            "https://vuln.go.dev/ID/GO-2023-1571.json",
+            "https://www.cve.org/CVERecord?id=CVE-2022-41723"
+          ],
+          "PublishedDate": "2023-02-28T18:15:00Z",
+          "LastModifiedDate": "2023-04-15T04:16:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-41717",
+          "PkgName": "golang.org/x/net",
+          "InstalledVersion": "v0.3.1-0.20221206200815-1e63c2f08a10",
+          "FixedVersion": "0.4.0",
+          "Layer": {
+            "DiffID": "sha256:06a6e6d7831e6caeddaa6c4404ed00c6696fa190fb8236cfb26076fd17f86392"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-41717",
+          "DataSource": {
+            "ID": "go-vulndb",
+            "Name": "The Go Vulnerability Database",
+            "URL": "https://github.com/golang/vulndb"
+          },
+          "Title": "golang: net/http: An attacker can cause excessive memory growth in a Go server accepting HTTP/2 requests",
+          "Description": "An attacker can cause excessive memory growth in a Go server accepting HTTP/2 requests. HTTP/2 server connections contain a cache of HTTP header keys sent by the client. While the total number of entries in this cache is capped, an attacker sending very large keys can cause the server to allocate approximately 64 MiB per open connection.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-770"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-41717",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41717",
+            "https://github.com/advisories/GHSA-xrjj-mj9h-534m",
+            "https://github.com/golang/go/commit/618120c165669c00a1606505defea6ca755cdc27 (go1.19.4)",
+            "https://github.com/golang/go/commit/76cad4edc29d28432a7a0aa27e87385d3d7db7a1 (go1.18.9)",
+            "https://go.dev/cl/455635",
+            "https://go.dev/cl/455717",
+            "https://go.dev/issue/56350",
+            "https://groups.google.com/g/golang-announce/c/L_3rmdT0BMU",
+            "https://groups.google.com/g/golang-announce/c/L_3rmdT0BMU/m/yZDrXjIiBQAJ",
+            "https://linux.oracle.com/cve/CVE-2022-41717.html",
+            "https://linux.oracle.com/errata/ELSA-2023-18908.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-41717",
+            "https://pkg.go.dev/vuln/GO-2022-1144",
+            "https://www.cve.org/CVERecord?id=CVE-2022-41717"
+          ],
+          "PublishedDate": "2022-12-08T20:15:00Z",
+          "LastModifiedDate": "2022-12-12T17:50:00Z"
+        },
+        {
+          "VulnerabilityID": "GHSA-vvpx-j8f3-3w6h",
+          "PkgName": "golang.org/x/net",
+          "InstalledVersion": "v0.3.1-0.20221206200815-1e63c2f08a10",
+          "FixedVersion": "0.7.0",
+          "Layer": {
+            "DiffID": "sha256:06a6e6d7831e6caeddaa6c4404ed00c6696fa190fb8236cfb26076fd17f86392"
+          },
+          "PrimaryURL": "https://github.com/advisories/GHSA-vvpx-j8f3-3w6h",
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Title": "Uncontrolled Resource Consumption",
+          "Description": "A maliciously crafted HTTP/2 stream could cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests.",
+          "Severity": "UNKNOWN",
+          "References": [
+            "https://github.com/advisories/GHSA-vvpx-j8f3-3w6h",
+            "https://go.dev/cl/468135",
+            "https://go.dev/issue/57855",
+            "https://groups.google.com/g/golang-announce/c/V0aBFqaFs_E",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-41723",
+            "https://vuln.go.dev/ID/GO-2023-1571.json"
+          ]
+        }
+      ]
+    }
+  ]
+}

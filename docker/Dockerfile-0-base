@@ -1,0 +1,15 @@
+FROM composer:1.7.2
+
+RUN apk add --no-cache nodejs
+
+COPY TestLibrary.deps.json /dotnet/TestLibrary.deps.json
+COPY composer_laravel.lock /php-app/composer.lock
+COPY Gemfile_rails.lock /ruby-app/Gemfile.lock
+COPY package-lock_react.json /node-app/package-lock.json
+COPY package.json /node-app2/package.json
+COPY yarn.lock /yarn/yarn.lock
+COPY Pipfile.lock /python-app/Pipfile.lock
+COPY requirements.txt /python-app2/requirements.txt
+COPY poetry.lock /python-app3/poetry.lock
+COPY Cargo.lock /rust-app/Cargo.lock
+COPY kubectl /bin/kubectl

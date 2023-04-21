@@ -1,0 +1,8 @@
+{ "Scanner": "Trivy",        "Step": "5-zero", "OS/PKG": "-", "DEPENDENCY FILE": "-", "BINARY": "-" }
+{ "Scanner": "",             "Step": "",       "OS/PKG":  "", "DEPENDENCY FILE":  "", "BINARY":  "" }
+{ "Scanner": "Grype",        "Step": "5-zero", "OS/PKG": "-", "DEPENDENCY FILE": "-", "BINARY": "-" }
+{ "Scanner": "",             "Step": "",       "OS/PKG":  "", "DEPENDENCY FILE":  "", "BINARY":  "" }
+{ "Scanner": "Docker Scan",  "Step": "5-zero", "OS/PKG": "-", "DEPENDENCY FILE": "-", "BINARY": "-" }
+{ "Scanner": "",             "Step": "",       "OS/PKG":  "", "DEPENDENCY FILE":  "", "BINARY":  "" }
+{ "Scanner": "Docker Scout", "Step": "5-zero", "OS/PKG": "-", "DEPENDENCY FILE": "-", "BINARY": "-" }
+{ "Scanner": "",             "Step": "",       "OS/PKG":  "", "DEPENDENCY FILE":  "", "BINARY":  "" }
