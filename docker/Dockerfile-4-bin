@@ -38,7 +38,6 @@ RUN find /usr/lib/node_modules -name package.json -type f -delete
 RUN find / -name *.egg-info -type f -delete
 
 # UPX pack those binaries
-RUN apk add --no-cache upx
 
 RUN mv /usr/lib/libpython2.7.so.1.0 /usr/lib/lib-python2.7.so.1.0
 RUN ln -s /usr/lib/lib-python2.7.so.1.0 /usr/lib/libpython2.7.so.1.0
