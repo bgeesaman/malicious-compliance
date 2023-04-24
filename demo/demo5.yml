@@ -1,0 +1,661 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: make demo5
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /Users/bg/code/github/container-total/malicious-compliance
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 75
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 23
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 99
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 330
+    content: "\e[H\e[2J\r\n"
+  - delay: 6
+    content: "\e[?1034h$ "
+  - delay: 831
+    content: "\e["
+  - delay: 188
+    content: 1;
+  - delay: 93
+    content: '37'
+  - delay: 92
+    content: m#
+  - delay: 95
+    content: ' O'
+  - delay: 93
+    content: ur
+  - delay: 91
+    content: ' D'
+  - delay: 94
+    content: oc
+  - delay: 94
+    content: ke
+  - delay: 92
+    content: rf
+  - delay: 92
+    content: il
+  - delay: 92
+    content: 'e '
+  - delay: 92
+    content: us
+  - delay: 182
+    content: in
+  - delay: 92
+    content: 'g '
+  - delay: 90
+    content: al
+  - delay: 91
+    content: 'l '
+  - delay: 91
+    content: te
+  - delay: 92
+    content: ch
+  - delay: 95
+    content: ni
+  - delay: 91
+    content: qu
+  - delay: 93
+    content: es
+  - delay: 95
+    content: ' s'
+  - delay: 90
+    content: qu
+  - delay: 93
+    content: as
+  - delay: 183
+    content: he
+  - delay: 93
+    content: 'd '
+  - delay: 91
+    content: in
+  - delay: 91
+    content: to
+  - delay: 93
+    content: ' a'
+  - delay: 92
+    content: ' s'
+  - delay: 92
+    content: in
+  - delay: 95
+    content: gl
+  - delay: 91
+    content: 'e '
+  - delay: 93
+    content: la
+  - delay: 95
+    content: ye
+  - delay: 90
+    content: "r\e"
+  - delay: 185
+    content: '[0'
+  - delay: 91
+    content: m
+  - delay: 287
+    content: "\r\ncat Dockerfile-5-zero\r\n"
+  - delay: 42
+    content: "\e[?1049h\e[?1h\e=\r\e[38;5;238m───────┬───────────────────────────────────────────────────────────────────\e[0m\e[m\r\n       \e[38;5;238m│ \e[0mFile: \e[1mdocker/Dockerfile-5-zero\e[0m\e[m\r\n\e[38;5;238m───────┼───────────────────────────────────────────────────────────────────\e[0m\e[m\r\n\e[38;5;238m   1\e[0m   \e[38;5;238m│\e[0m \e[48;5;236;38;5;203mFROM\e[0m\e[48;5;236;38;5;231m composer:\e[0m\e[48;5;236;38;5;149m1.7.2\e[0m\e[48;5;236;38;5;231m \e[0m\e[48;5;236;38;5;203mas\e[0m\e[48;5;236;38;5;231m \e[0m\e[48;5;236;38;5;231mbuilder\e[0m\e[48;5;236m                                    \e[0m\e[m\r\n\e[38;5;238m   2\e[0m   \e[38;5;238m│\e[0m \e[m\r\n\e[38;5;238m   3\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mapk add --no-cache upx binutils nodejs\e[0m\e[m\r\n\e[38;5;238m   4\e[0m   \e[38;5;238m│\e[0m \e[m\r\n\e[38;5;238m   5\e[0m   \e[38;5;238m│\e[0m \e[38;5;242m#\e[0m\e[38;5;242m Attempt to avoid OS detection\e[0m\e[m\r\n\e[38;5;238m   6\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mecho -e \e[0m\e[38;5;186m'\e[0m\e[38;5;186mPRETTY_NAME=\"Linux\"\e[0m\e[38;5;141m\\n\e[0m\e[38;5;186mNAME=\"Linux\"\e[0m\e[38;5;141m\\n\e[0m\e[38;5;186mVERSION_ID=\"99\"\e[0m\e[38;5;141m\\n\e[0m\e[38;5;186mV\e[0m\e[m\r\n\e[38;5;238m    \e[0m   \e[38;5;238m│\e[0m \e[38;5;186mERSION=\"99 (honk)\"\e[0m\e[38;5;141m\\n\e[0m\e[38;5;186mID=Linux\e[0m\e[38;5;186m'\e[0m\e[38;5;231m > /etc/os-release\e[0m\e[m\r\n\e[38;5;238m   7\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mrm -f /etc/lsb-release\e[0m\e[m\r\n\e[38;5;238m   8\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mrm -f /etc/alpine-release\e[0m\e[m\r\n\e[38;5;238m   9\e[0m   \e[38;5;238m│\e[0m \e[m\r\n\e[38;5;238m  10\e[0m   \e[38;5;238m│\e[0m \e[38;5;242m#\e[0m\e[38;5;242m Delete the APK metadata and package cache\e[0m\e[m\r\n\e[38;5;238m  11\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mrm -rf /etc/apk\e[0m\e[m\r\n\e[38;5;238m  12\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mrm -rf /lib/apk\e[0m\e[m\r\n\e[38;5;238m  13\e[0m   \e[38;5;238m│\e[0m \e[m\r\n\e[38;5;238m  14\e[0m   \e[38;5;238m│\e[0m \e[38;5;242m#\e[0m\e[38;5;242m Hide language dependency files behind symlinks\e[0m\e[m\r\n\e[38;5;238m  15\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mCOPY\e[0m\e[38;5;231m TestLibrary.deps.json /dotnet/TestLibrary.deps.json-orig\e[0m\e[m\r\n\e[38;5;238m  16\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mCOPY\e[0m\e[38;5;231m composer_laravel.lock /php-app/composer.lock-orig\e[0m\e[m\r\n\e[38;5;238m  17\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mCOPY\e[0m\e[38;5;231m Gemfile_rails.lock /ruby-app/Gemfile.lock-orig\e[0m\e[m\r\n\e[38;5;238m  18\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mCOPY\e[0m\e[38;5;231m package-lock_react.json /node-app/package-lock.json-orig\e[0m\e[m\r\n:\e[K"
+  - delay: 1203
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  19\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mCOPY\e[0m\e[38;5;231m package.json /node-app2/package.json-orig\e[0m\e[m\r\n:\e[K"
+  - delay: 416
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  20\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mCOPY\e[0m\e[38;5;231m yarn.lock /yarn/yarn.lock-orig\e[0m\e[m\r\n:\e[K"
+  - delay: 337
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  21\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mCOPY\e[0m\e[38;5;231m Pipfile.lock /python-app/Pipfile.lock-orig\e[0m\e[m\r\n:\e[K"
+  - delay: 826
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  22\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mCOPY\e[0m\e[38;5;231m requirements.txt /python-app2/requirements.txt-orig\e[0m\e[m\r\n:\e[K"
+  - delay: 278
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  23\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mCOPY\e[0m\e[38;5;231m poetry.lock /python-app3/poetry.lock-orig\e[0m\e[m\r\n:\e[K"
+  - delay: 200
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  24\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mCOPY\e[0m\e[38;5;231m Cargo.lock /rust-app/Cargo.lock-orig\e[0m\e[m\r\n:\e[K"
+  - delay: 194
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  25\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mCOPY\e[0m\e[38;5;231m kubectl /bin/kubectl\e[0m\e[m\r\n:\e[K"
+  - delay: 177
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  26\e[0m   \e[38;5;238m│\e[0m \e[48;5;236;38;5;203mCOPY\e[0m\e[48;5;236;38;5;231m eicar.txt /eicar.txt\e[0m\e[48;5;236m                                         \e[0m\e[m\r\n:\e[K"
+  - delay: 186
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  27\e[0m   \e[38;5;238m│\e[0m \e[48;5;236;38;5;203mRUN \e[0m\e[48;5;236;38;5;231mcp /eicar.txt /bin/bash\e[0m\e[48;5;236m                                       \e[0m\e[m\r\n:\e[K"
+  - delay: 169
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  28\e[0m   \e[38;5;238m│\e[0m \e[48;5;236;38;5;203mRUN \e[0m\e[48;5;236;38;5;231mchmod +x /bin/bash\e[0m\e[48;5;236m                                            \e[0m\e[m\r\n:\e[K"
+  - delay: 183
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  29\e[0m   \e[38;5;238m│\e[0m \e[m\r\n:\e[K"
+  - delay: 180
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  30\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mln -s /dotnet/TestLibrary.deps.json-orig /dotnet/TestLibrary.d\e[0m\e[m\r\n:\e[K"
+  - delay: 183
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m    \e[0m   \e[38;5;238m│\e[0m \e[38;5;231meps.json\e[0m\e[m\r\n:\e[K"
+  - delay: 704
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  31\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mln -s /php-app/composer.lock-orig /php-app/composer.lock\e[0m\e[m\r\n:\e[K"
+  - delay: 417
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  32\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mln -s /ruby-app/Gemfile.lock-orig /ruby-app/Gemfile.lock\e[0m\e[m\r\n:\e[K"
+  - delay: 33
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  33\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mln -s /node-app/package-lock.json-orig /node-app/package-lock.\e[0m\e[m\r\n:\e[K"
+  - delay: 34
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m    \e[0m   \e[38;5;238m│\e[0m \e[38;5;231mjson\e[0m\e[m\r\n:\e[K"
+  - delay: 33
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  34\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mln -s /node-app2/package.json-orig /node-app2/package.json\e[0m\e[m\r\n:\e[K"
+  - delay: 32
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  35\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mln -s /yarn/yarn.lock-orig /yarn/yarn.lock\e[0m\e[m\r\n:\e[K"
+  - delay: 36
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  36\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mln -s /python-app/Pipfile.lock-orig /python-app/Pipfile.lock\e[0m\e[m\r\n:\e[K"
+  - delay: 32
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  37\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mln -s /python-app2/requirements.txt-orig /python-app2/requirem\e[0m\e[m\r\n:\e[K"
+  - delay: 34
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m    \e[0m   \e[38;5;238m│\e[0m \e[38;5;231ments.txt\e[0m\e[m\r\n:\e[K"
+  - delay: 35
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  38\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mln -s /python-app3/poetry.lock-orig /python-app3/poetry.lock\e[0m\e[m\r\n:\e[K"
+  - delay: 35
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  39\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mln -s /rust-app/Cargo.lock-orig /rust-app/Cargo.lock\e[0m\e[m\r\n:\e[K"
+  - delay: 33
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  40\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mfind /usr/lib/node_modules -name package.json -type f -delete\e[0m\e[m\r\n:\e[K"
+  - delay: 48
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  41\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mfind / -name *.egg-info -type f -delete\e[0m\e[m\r\n:\e[K"
+  - delay: 21
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  42\e[0m   \e[38;5;238m│\e[0m \e[m\r\n:\e[K"
+  - delay: 30
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  43\e[0m   \e[38;5;238m│\e[0m \e[38;5;242m#\e[0m\e[38;5;242m UPX pack those binaries\e[0m\e[m\r\n:\e[K"
+  - delay: 36
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  44\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mmv /usr/lib/libpython2.7.so.1.0 /usr/lib/lib-python2.7.so.1.0\e[0m\e[m\r\n:\e[K"
+  - delay: 34
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  45\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mln -s /usr/lib/lib-python2.7.so.1.0 /usr/lib/libpython2.7.so.1\e[0m\e[m\r\n:\e[K"
+  - delay: 31
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m    \e[0m   \e[38;5;238m│\e[0m \e[38;5;231m.0\e[0m\e[m\r\n:\e[K"
+  - delay: 35
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  46\e[0m   \e[38;5;238m│\e[0m \e[m\r\n:\e[K"
+  - delay: 91
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  47\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mfind /usr/bin -type f -perm 0755 -print0 | xargs -0 upx || exi\e[0m\e[m\r\n:\e[K"
+  - delay: 522
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m    \e[0m   \e[38;5;238m│\e[0m \e[38;5;231mt 0\e[0m\e[m\r\n:\e[K"
+  - delay: 60
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  48\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mfind /usr/lib -type f -perm 0755 -print0 | xargs -0 upx || exi\e[0m\e[m\r\n:\e[K"
+  - delay: 536
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m    \e[0m   \e[38;5;238m│\e[0m \e[38;5;231mt 0\e[0m\e[m\r\n:\e[K"
+  - delay: 417
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  49\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mfind /usr/local/bin -type f -perm 0755 -print0 | xargs -0 upx \e[0m\e[m\r\n:\e[K"
+  - delay: 34
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m    \e[0m   \e[38;5;238m│\e[0m \e[38;5;231m|| exit 0\e[0m\e[m\r\n:\e[K"
+  - delay: 34
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  50\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mfind /usr/bin -type f -perm 0775 -print0 | xargs -0 upx || exi\e[0m\e[m\r\n:\e[K"
+  - delay: 36
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m    \e[0m   \e[38;5;238m│\e[0m \e[38;5;231mt 0\e[0m\e[m\r\n:\e[K"
+  - delay: 29
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  51\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mfind /usr/lib -type f -perm 0775 -print0 | xargs -0 upx || exi\e[0m\e[m\r\n:\e[K"
+  - delay: 34
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m    \e[0m   \e[38;5;238m│\e[0m \e[38;5;231mt 0\e[0m\e[m\r\n:\e[K"
+  - delay: 34
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  52\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mfind /usr/local/bin -type f -perm 0775 -print0 | xargs -0 upx \e[0m\e[m\r\n:\e[K"
+  - delay: 32
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m    \e[0m   \e[38;5;238m│\e[0m \e[38;5;231m|| exit 0\e[0m\e[m\r\n:\e[K"
+  - delay: 37
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  53\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mfind /usr/bin -type f -perm 0777 -print0 | xargs -0 upx || exi\e[0m\e[m\r\n:\e[K"
+  - delay: 32
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m    \e[0m   \e[38;5;238m│\e[0m \e[38;5;231mt 0\e[0m\e[m\r\n:\e[K"
+  - delay: 37
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  54\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mfind /usr/lib -type f -perm 0777 -print0 | xargs -0 upx || exi\e[0m\e[m\r\n:\e[K"
+  - delay: 31
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m    \e[0m   \e[38;5;238m│\e[0m \e[38;5;231mt 0\e[0m\e[m\r\n:\e[K"
+  - delay: 33
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  55\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mfind /usr/local/bin -type f -perm 0777 -print0 | xargs -0 upx \e[0m\e[m\r\n:\e[K"
+  - delay: 32
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m    \e[0m   \e[38;5;238m│\e[0m \e[38;5;231m|| exit 0\e[0m\e[m\r\n:\e[K"
+  - delay: 35
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  56\e[0m   \e[38;5;238m│\e[0m \e[m\r\n:\e[K"
+  - delay: 33
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  57\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mRUN \e[0m\e[38;5;231mupx /bin/kubectl\e[0m\e[m\r\n:\e[K"
+  - delay: 33
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  58\e[0m   \e[38;5;238m│\e[0m \e[48;5;236;38;5;203mRUN \e[0m\e[48;5;236;38;5;231mupx /bin/busybox\e[0m\e[48;5;236m                                              \e[0m\e[m\r\n:\e[K"
+  - delay: 33
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  59\e[0m   \e[38;5;238m│\e[0m \e[48;5;236m                                                                  \e[0m\e[m\r\n:\e[K"
+  - delay: 37
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  60\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mFROM\e[0m\e[38;5;231m scratch\e[0m\e[m\r\n:\e[K"
+  - delay: 30
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m  61\e[0m   \e[38;5;238m│\e[0m \e[38;5;203mCOPY\e[0m\e[38;5;231m --from=\e[0m\e[38;5;231mbuilder\e[0m\e[38;5;231m / .\e[0m\e[m\r\n:\e[K"
+  - delay: 33
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\e[38;5;238m───────┴───────────────────────────────────────────────────────────────────\e[0m\e[m\r\n:\e[K"
+  - delay: 36
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\a\r\e[K\e[7m(END)\e[27m\e[K"
+  - delay: 34
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\r\e[K\e[7m(END)\e[27m\e[K"
+  - delay: 34
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\r\e[K\e[7m(END)\e[27m\e[K"
+  - delay: 34
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\r\e[K\e[7m(END)\e[27m\e[K"
+  - delay: 33
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\r\e[K\e[7m(END)\e[27m\e[K"
+  - delay: 35
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\r\e[K\e[7m(END)\e[27m\e[K"
+  - delay: 33
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\r\e[K\e[7m(END)\e[27m\e[K"
+  - delay: 34
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\r\e[K\e[7m(END)\e[27m\e[K"
+  - delay: 33
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\r\e[K\e[7m(END)\e[27m\e[K"
+  - delay: 34
+    content: "\r\e[K \e[KESC\b\b\bESC\e[KO\bO\e[KB\bB\r\e[K\r\e[K\e[7m(END)\e[27m\e[K"
+  - delay: 5026
+    content: "\r\e[K\e[?1l\e>\e[?1049l"
+  - delay: 18
+    content: "\e[?1034h$ "
+  - delay: 1393
+    content: "\e"
+  - delay: 188
+    content: '[1'
+  - delay: 91
+    content: ;3
+  - delay: 95
+    content: 7m
+  - delay: 91
+    content: '#'
+  - delay: 91
+    content: ' B'
+  - delay: 92
+    content: ui
+  - delay: 90
+    content: ld
+  - delay: 93
+    content: ' t'
+  - delay: 91
+    content: h
+  - delay: 92
+    content: 'e '
+  - delay: 94
+    content: mo
+  - delay: 94
+    content: di
+  - delay: 185
+    content: fi
+  - delay: 91
+    content: e
+  - delay: 91
+    content: 'd '
+  - delay: 91
+    content: im
+  - delay: 91
+    content: ag
+  - delay: 95
+    content: "e\e"
+  - delay: 90
+    content: '['
+  - delay: 96
+    content: 0m
+  - delay: 316
+    content: "\r\n"
+  - delay: 27
+    content: "Building 5-zero\r\n"
+  - delay: 288
+    content: "\e[1A\e[1B\e[0G\e[?25l[+] Building 0.0s (0/1)                                                    \r\n\e[?25h"
+  - delay: 151
+    content: "\e[1A\e[0G\e[?25l[+] Building 0.2s (2/3)                                                    \r\n\e[34m => [internal] load build definition from Dockerfile-5-zero           0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 2.72kB                                0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                     0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                      0.0s\r\n\e[0m => [internal] load metadata for docker.io/library/composer:1.7.2     0.1s\r\n\e[?25h"
+  - delay: 150
+    content: "\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[0G\e[?25l[+] Building 0.3s (2/3)                                                    \r\n\e[34m => [internal] load build definition from Dockerfile-5-zero           0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 2.72kB                                0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                     0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                      0.0s\r\n\e[0m => [internal] load metadata for docker.io/library/composer:1.7.2     0.2s\r\n\e[?25h"
+  - delay: 150
+    content: "\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[0G\e[?25l[+] Building 0.5s (2/3)                                                    \r\n\e[34m => [internal] load build definition from Dockerfile-5-zero           0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 2.72kB                                0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                     0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                      0.0s\r\n\e[0m => [internal] load metadata for docker.io/library/composer:1.7.2     0.4s\r\n\e[?25h"
+  - delay: 151
+    content: "\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[0G\e[?25l[+] Building 0.6s (3/4)                                                    \r\n\e[34m => [internal] load build definition from Dockerfile-5-zero           0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 2.72kB                                0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                     0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                      0.0s\r\n\e[0m => [internal] load metadata for docker.io/library/composer:1.7.2     0.5s\r\n\e[34m => [auth] library/composer:pull token for registry-1.docker.io       0.0s\r\n\e[0m\e[?25h"
+  - delay: 128
+    content: "\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[0G\e[?25l[+] Building 0.7s (4/4)                                                    \r\n\e[34m => [internal] load build definition from Dockerfile-5-zero           0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 2.72kB                                0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                     0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                      0.0s\r\n\e[0m\e[34m => [internal] load metadata for docker.io/library/composer:1.7.2     0.6s\r\n\e[0m\e[34m => [auth] library/composer:pull token for registry-1.docker.io       0.0s\r\n\e[0m\e[?25h"
+  - delay: 44
+    content: "\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[1A\e[0G\e[?25l[+] Building 0.8s (53/53) FINISHED                                         \r\n\e[34m => [internal] load build definition from Dockerfile-5-zero           0.0s\r\n\e[0m\e[34m => => transferring dockerfile: 2.72kB                                0.0s\r\n\e[0m\e[34m => [internal] load .dockerignore                                     0.0s\r\n\e[0m\e[34m => => transferring context: 34B                                      0.0s\r\n\e[0m\e[34m => [internal] load metadata for docker.io/library/composer:1.7.2     0.6s\r\n\e[0m\e[34m => [auth] library/composer:pull token for registry-1.docker.io       0.0s\r\n\e[0m\e[34m => [internal] load build context                                     0.0s\r\n\e[0m\e[34m => => transferring context: 494B                                     0.0s\r\n\e[0m\e[34m => [builder  1/46] FROM docker.io/library/composer:1.7.2@sha256:6f4  0.0s\r\n\e[0m\e[34m => CACHED [builder  2/46] RUN apk add --no-cache upx binutils nodej  0.0s\r\n\e[0m\e[34m => CACHED [builder  3/46] RUN echo -e 'PRETTY_NAME=\"Linux\"\\nNAME=\"L  0.0s\r\n\e[0m\e[34m => CACHED [builder  4/46] RUN rm -f /etc/lsb-release                 0.0s\r\n\e[0m\e[34m => CACHED [builder  5/46] RUN rm -f /etc/alpine-release              0.0s\r\n\e[0m\e[34m => CACHED [builder  6/46] RUN rm -rf /etc/apk                        0.0s\r\n\e[0m\e[34m => CACHED [builder  7/46] RUN rm -rf /lib/apk                        0.0s\r\n\e[0m\e[34m => CACHED [builder  8/46] COPY TestLibrary.deps.json /dotnet/TestLi  0.0s\r\n\e[0m\e[34m => CACHED [builder  9/46] COPY composer_laravel.lock /php-app/compo  0.0s\r\n\e[0m\e[34m => CACHED [builder 10/46] COPY Gemfile_rails.lock /ruby-app/Gemfile  0.0s\r\n\e[0m\e[34m => CACHED [builder 11/46] COPY package-lock_react.json /node-app/pa  0.0s\r\n\e[0m\e[34m => CACHED [builder 12/46] COPY package.json /node-app2/package.json  0.0s\r\n\e[0m\e[34m => CACHED [builder 13/46] COPY yarn.lock /yarn/yarn.lock-orig        0.0s\r\n\e[0m\e[34m => CACHED [builder 14/46] COPY Pipfile.lock /python-app/Pipfile.loc  0.0s\r\n\e[0m\e[34m => CACHED [builder 15/46] COPY requirements.txt /python-app2/requir  0.0s\r\n\e[0m\e[34m => CACHED [builder 16/46] COPY poetry.lock /python-app3/poetry.lock  0.0s\r\n\e[0m\e[34m => CACHED [builder 17/46] COPY Cargo.lock /rust-app/Cargo.lock-orig  0.0s\r\n\e[0m\e[34m => CACHED [builder 18/46] COPY kubectl /bin/kubectl                  0.0s\r\n\e[0m\e[34m => CACHED [builder 19/46] COPY eicar.txt /eicar.txt                  0.0s\r\n\e[0m\e[34m => CACHED [builder 20/46] RUN cp /eicar.txt /bin/bash                0.0s\r\n\e[0m\e[34m => CACHED [builder 21/46] RUN chmod +x /bin/bash                     0.0s\r\n\e[0m\e[34m => CACHED [builder 22/46] RUN ln -s /dotnet/TestLibrary.deps.json-o  0.0s\r\n\e[0m\e[34m => CACHED [builder 23/46] RUN ln -s /php-app/composer.lock-orig /ph  0.0s\r\n\e[0m\e[34m => CACHED [builder 24/46] RUN ln -s /ruby-app/Gemfile.lock-orig /ru  0.0s\r\n\e[0m\e[34m => CACHED [builder 25/46] RUN ln -s /node-app/package-lock.json-ori  0.0s\r\n\e[0m\e[34m => CACHED [builder 26/46] RUN ln -s /node-app2/package.json-orig /n  0.0s\r\n\e[0m\e[34m => CACHED [builder 27/46] RUN ln -s /yarn/yarn.lock-orig /yarn/yarn  0.0s\r\n\e[0m\e[34m => CACHED [builder 28/46] RUN ln -s /python-app/Pipfile.lock-orig /  0.0s\r\n\e[0m\e[34m => CACHED [builder 29/46] RUN ln -s /python-app2/requirements.txt-o  0.0s\r\n\e[0m\e[34m => CACHED [builder 30/46] RUN ln -s /python-app3/poetry.lock-orig /  0.0s\r\n\e[0m\e[34m => CACHED [builder 31/46] RUN ln -s /rust-app/Cargo.lock-orig /rust  0.0s\r\n\e[0m\e[34m => CACHED [builder 32/46] RUN find /usr/lib/node_modules -name pack  0.0s\r\n\e[0m\e[34m => CACHED [builder 33/46] RUN find / -name *.egg-info -type f -dele  0.0s\r\n\e[0m\e[34m => CACHED [builder 34/46] RUN mv /usr/lib/libpython2.7.so.1.0 /usr/  0.0s\r\n\e[0m\e[34m => CACHED [builder 35/46] RUN ln -s /usr/lib/lib-python2.7.so.1.0 /  0.0s\r\n\e[0m\e[34m => CACHED [builder 36/46] RUN find /usr/bin -type f -perm 0755 -pri  0.0s\r\n\e[0m\e[34m => CACHED [builder 37/46] RUN find /usr/lib -type f -perm 0755 -pri  0.0s\r\n\e[0m\e[34m => CACHED [builder 38/46] RUN find /usr/local/bin -type f -perm 075  0.0s\r\n\e[0m\e[34m => CACHED [builder 39/46] RUN find /usr/bin -type f -perm 0775 -pri  0.0s\r\n\e[0m\e[34m => CACHED [builder 40/46] RUN find /usr/lib -type f -perm 0775 -pri  0.0s\r\n\e[0m\e[34m => CACHED [builder 41/46] RUN find /usr/local/bin -type f -perm 077  0.0s\r\n\e[0m\e[34m => CACHED [builder 42/46] RUN find /usr/bin -type f -perm 0777 -pri  0.0s\r\n\e[0m\e[34m => CACHED [builder 43/46] RUN find /usr/lib -type f -perm 0777 -pri  0.0s\r\n\e[0m\e[34m => CACHED [builder 44/46] RUN find /usr/local/bin -type f -perm 077  0.0s\r\n\e[0m\e[34m => CACHED [builder 45/46] RUN upx /bin/kubectl                       0.0s\r\n\e[0m\e[34m => CACHED [builder 46/46] RUN upx /bin/busybox                       0.0s\r\n\e[0m\e[34m => CACHED [stage-1 1/1] COPY --from=builder / .                      0.0s\r\n\e[0m\e[34m => exporting to image                                                0.0s\r\n\e[0m\e[34m => => exporting layers                                               0.0s\r\n\e[0m\e[34m => => writing image sha256:52fe5e2f319b28d6bc3b340054b291f9f5f1e516  0.0s\r\n\e[0m\e[34m => => naming to docker.io/sig-honk/malicious-compliance:5-zero       0.0s\r\n\e[0m\e[?25h"
+  - delay: 19
+    content: "\e[?1034h$ "
+  - delay: 943
+    content: "\e["
+  - delay: 181
+    content: 1;
+  - delay: 94
+    content: '37'
+  - delay: 90
+    content: md
+  - delay: 91
+    content: oc
+  - delay: 91
+    content: ke
+  - delay: 94
+    content: 'r '
+  - delay: 90
+    content: im
+  - delay: 92
+    content: ag
+  - delay: 91
+    content: es
+  - delay: 92
+    content: ' s'
+  - delay: 182
+    content: ig
+  - delay: 91
+    content: '-h'
+  - delay: 92
+    content: 'on'
+  - delay: 91
+    content: k/
+  - delay: 91
+    content: ma
+  - delay: 91
+    content: li
+  - delay: 92
+    content: ci
+  - delay: 93
+    content: ou
+  - delay: 92
+    content: s-
+  - delay: 91
+    content: co
+  - delay: 91
+    content: mp
+  - delay: 184
+    content: li
+  - delay: 90
+    content: an
+  - delay: 96
+    content: ce
+  - delay: 91
+    content: ':4'
+  - delay: 93
+    content: '-b'
+  - delay: 92
+    content: in
+  - delay: 92
+    content: "\e["
+  - delay: 95
+    content: 0m
+  - delay: 322
+    content: "\r\n"
+  - delay: 134
+    content: "REPOSITORY                      TAG       IMAGE ID       CREATED      SIZE\r\nsig-honk/malicious-compliance   4-bin     7c7960ae4174   3 days ago   318MB\r\n"
+  - delay: 11
+    content: "\e[?1034h$ "
+  - delay: 748
+    content: "\e"
+  - delay: 186
+    content: '[1'
+  - delay: 95
+    content: ;3
+  - delay: 91
+    content: 7m
+  - delay: 90
+    content: do
+  - delay: 95
+    content: ck
+  - delay: 94
+    content: er
+  - delay: 92
+    content: ' i'
+  - delay: 95
+    content: ma
+  - delay: 91
+    content: ge
+  - delay: 91
+    content: s
+  - delay: 91
+    content: ' s'
+  - delay: 92
+    content: ig
+  - delay: 187
+    content: '-h'
+  - delay: 93
+    content: 'on'
+  - delay: 93
+    content: k/
+  - delay: 94
+    content: ma
+  - delay: 91
+    content: li
+  - delay: 92
+    content: ci
+  - delay: 91
+    content: ou
+  - delay: 91
+    content: s
+  - delay: 92
+    content: '-c'
+  - delay: 91
+    content: om
+  - delay: 91
+    content: pl
+  - delay: 91
+    content: ia
+  - delay: 184
+    content: nc
+  - delay: 91
+    content: 'e:'
+  - delay: 94
+    content: 5-
+  - delay: 92
+    content: ze
+  - delay: 92
+    content: ro
+  - delay: 90
+    content: "\e"
+  - delay: 91
+    content: '[0'
+  - delay: 95
+    content: m
+  - delay: 63
+    content: "\r\n"
+  - delay: 106
+    content: "REPOSITORY                      TAG       IMAGE ID       CREATED      SIZE\r\nsig-honk/malicious-compliance   5-zero    52fe5e2f319b   3 days ago   166MB\r\n"
+  - delay: 13
+    content: "\e[?1034h$ "
+  - delay: 891
+    content: "\e"
+  - delay: 184
+    content: '[1'
+  - delay: 91
+    content: ;3
+  - delay: 90
+    content: 7m
+  - delay: 94
+    content: cl
+  - delay: 91
+    content: ea
+  - delay: 91
+    content: "r\e"
+  - delay: 91
+    content: '[0'
+  - delay: 91
+    content: m
+  - delay: 908
+    content: "\r\n"
+  - delay: 6
+    content: "\e[H\e[2J"
+  - delay: 13
+    content: "\e[?1034h$ "
+  - delay: 669
+    content: "\e["
+  - delay: 189
+    content: 1;
+  - delay: 91
+    content: '37'
+  - delay: 94
+    content: m#
+  - delay: 91
+    content: ' S'
+  - delay: 92
+    content: ca
+  - delay: 91
+    content: 'n '
+  - delay: 93
+    content: th
+  - delay: 94
+    content: 'e '
+  - delay: 93
+    content: im
+  - delay: 92
+    content: ag
+  - delay: 92
+    content: "e\e"
+  - delay: 93
+    content: '[0'
+  - delay: 183
+    content: m
+  - delay: 228
+    content: "\r\nScanning 5-zero with Trivy\r\n"
+  - delay: 1008
+    content: "Scanned 5-zero with Trivy\r\n\r\nScanning 5-zero with Grype\r\n"
+  - delay: 1011
+    content: "Scanned 5-zero with Grype\r\n\r\nScanning 5-zero with Docker Scan\r\n"
+  - delay: 1009
+    content: "Scanned 5-zero with Docker Scan\r\n\r\nScanning 5-zero with Docker Scout\r\n"
+  - delay: 1008
+    content: "Scanned 5-zero with Docker Scout\r\n"
+  - delay: 18
+    content: "\e[?1034h$ "
+  - delay: 554
+    content: "\e["
+  - delay: 185
+    content: 1;
+  - delay: 92
+    content: '37'
+  - delay: 93
+    content: m#
+  - delay: 95
+    content: ' V'
+  - delay: 95
+    content: ie
+  - delay: 91
+    content: 'w '
+  - delay: 93
+    content: re
+  - delay: 93
+    content: su
+  - delay: 90
+    content: lt
+  - delay: 90
+    content: "s\e"
+  - delay: 91
+    content: '[0'
+  - delay: 182
+    content: m
+  - delay: 193
+    content: "\r\n"
+  - delay: 7
+    content: "\e[H\e[2J"
+  - delay: 25
+    content: "\r\n"
+  - delay: 59
+    content: "Scanner       Step    OS/PKG    DEPENDENCY FILE    BINARY\r\n------------  ------  --------  -----------------  --------\r\nTrivy         5-zero  -         -                  -\r\n\r\nGrype         5-zero  -         -                  -\r\n\r\nDocker Scan   5-zero  -         -                  -\r\n\r\nDocker Scout  5-zero  -         -                  -\r\n\r\n"
+  - delay: 15
+    content: "\e[?1034h$ "
+  - delay: 1303
+    content: "\e"
+  - delay: 181
+    content: '[1'
+  - delay: 91
+    content: ;
+  - delay: 93
+    content: '37'
+  - delay: 91
+    content: m#
+  - delay: 95
+    content: ' '
+  - delay: 91
+    content: en
+  - delay: 93
+    content: d
+  - delay: 92
+    content: "\e["
+  - delay: 91
+    content: 0m
+  - delay: 319
+    content: "\r\n"
+  - delay: 5
+    content: "\e[H\e[2J"

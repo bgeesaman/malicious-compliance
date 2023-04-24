@@ -37,6 +37,10 @@ demo4:
 demo5:
 	@./demo/5.sh
 
+.PHONY: demosbom
+demosbom:
+	@./demo/sbom1.sh && ./demo/sbom3.sh
+
 .PHONY: demosbom1
 demosbom1:
 	@./demo/sbom1.sh
