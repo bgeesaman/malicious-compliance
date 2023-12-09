@@ -2,7 +2,7 @@
 
 ## KubeCon EU 2023 Amsterdam
 
-- [Talk Recording](#TBD)
+- [Talk Recording](https://www.youtube.com/watch?v=9weGi0csBZM&list=PLj6h78yzYM2PyrvCoOii4rAopBswfz1p7&index=212)
 - [Slides PDF](https://static.sched.com/hosted_files/kccnceu2023/c1/Malicious%20Compliance.pdf)
 - [Talk Abstract and Details](https://sched.co/1Hybu)
 
